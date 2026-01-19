@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/css.css">
+    <title>Home Page</title>
+</head>
+<style>
+    /* section 01 */
+    #z2d2 {padding: 20px 0;}
+    #z2bt1{border: 1px solid var(--dark-blue);background: none;color: var(--dark-blue);font-size: 60px;width: 25%;}
+    #z2d3{width: 75%;}
+
+    /* =========================
+    Ads / Customer Section
+    ========================= */
+
+    .ad-area{ padding: 30px 0; }
+    .ad-wrap{gap: 40px;align-items: center;}
+
+    /* base card */
+    .ad-card{width: 260px;height: 360px;border: 2px solid var(--dark-blue);background: #fff;position: relative;border-radius: 6px;overflow: hidden;}
+
+    /* NEW upload box */
+    .ad-new{display: flex;align-items: center;justify-content: center;flex-direction: column;cursor: pointer;}
+    .ad-plus{font-size: 90px;color: var(--dark-blue);line-height: 1;}
+    .ad-new-text{margin-top: 10px;font-weight: 700;color: var(--dark-blue);}
+
+    /* SLIDER window: show 3 ads */
+    .ad-slider{width: 840px;height: 360px;overflow: hidden;}
+
+    /* track that moves left */
+    .ad-track{display: flex;gap: 30px;height: 360px;transform: translateX(0);transition: transform 450ms ease;}
+
+    /* slides are normal cards inside track */
+    .ad-slide{flex: 0 0 auto;}
+
+    /* ad image = full body */
+    .ad-img{width: 100%;height: 100%;object-fit: cover;}
+
+    /* profile circle top-right */
+    .ad-profile{position: absolute;top: 14px;right: 14px;width: 52px;height: 52px;border-radius: 50%;border: 2px solid var(--dark-blue);overflow: hidden;background: #fff;z-index: 2;}
+    .ad-profile img{width: 100%;height: 100%;object-fit: cover;}
+
+    /* RIGHT controls */
+    .ad-controls{width: 220px;display: flex;flex-direction: column;align-items: center;gap: 26px;}
+    .ad-ctrl-btn{width: 170px;background: #fff;color: var(--dark-blue);border: 2px solid var(--dark-blue);font-weight: 700;padding: 14px 18px;}
+
+    /* pole + dot */
+    .ad-pole{width: 180px;height: 6px;background: #fff;border: 2px solid var(--dark-blue);position: relative;}
+    .ad-dot{position: absolute;top: 50%;left: 0%;width: 18px;height: 18px;border-radius: 50%;background: #fff;border: 2px solid var(--dark-blue);transform: translate(-50%, -50%);}
+
+
+
+
+
+    #z1n1 {margin: 10px 0;}
+
+
+
+    /* ===== Post Card (Ad) ===== */
+.post-card{
+  width: 100%;
+  max-width: 920px;
+  background: #fff;
+  border: 2px solid var(--dark-blue);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.post-top{
+  padding: 18px 18px 10px;
+}
+
+.post-user{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--dark-blue);
+  overflow: hidden;
+  background: var(--white);
+  flex: 0 0 auto;
+}
+.avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-meta{display:flex;flex-direction:column;gap:6px;}
+.user-name{
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+.user-sub{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#6d7a88;
+  font-size:14px;
+}
+.dot{
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display:inline-block;
+}
+.dot.online{ background: #2ecc71; }
+.sep{ opacity:.7; }
+
+/* Media */
+.post-media{ padding: 0 18px 16px; }
+.media-placeholder{
+  height: 320px;
+  border-radius: 14px;
+  background: #e9eef5;
+  border: 2px solid #d8e2ef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  overflow:hidden;
+}
+.media-placeholder img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.camera{
+  width: 130px;
+  height: 90px;
+  border-radius: 14px;
+  border: 2px solid #aab7c6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  color:#7a8796;
+  font-size: 34px;
+  background: #f6f8fb;
+}
+.plus-ic{
+  position:absolute;
+  bottom:-8px;
+  right:-8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background:#fff;
+  border:2px solid #aab7c6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:18px;
+}
+
+/* Info area */
+.post-info{
+  display:flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 18px 14px;
+}
+
+.info-left{ flex: 1; min-width: 0; }
+.post-title{
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.tag-row, .feat-row{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tag{
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  border: 2px solid #d9e3f0;
+  background: #f5f8fc;
+  color: var(--dark-blue);
+  font-size: 14px;
+}
+
+.tag-vip{
+  background: #ffd27a;
+  border-color: #ffc24b;
+  color: #6b3f00;
+}
+
+.tag-360{
+  background: #e8f1ff;
+  border-color: #cfe0ff;
+}
+
+.pill{
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #eef3fb;
+  border: 2px solid #d9e3f0;
+  font-weight: 800;
+  color: var(--dark-blue);
+  min-width: 84px;
+  text-align:center;
+}
+
+/* Right price panel */
+.info-right{
+  width: 280px;
+  flex: 0 0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.price-box{
+  width: 100%;
+  border-left: 2px solid #d9e3f0;
+  padding-left: 14px;
+}
+
+.price-line{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.lbl{ color:#6d7a88; font-weight:700; }
+.val{
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.loan-line{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 2px solid #d9e3f0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f7fafc;
+}
+.loan-lbl{
+  color:#6d7a88;
+  font-weight: 800;
+  font-size: 14px;
+}
+.loan-val{
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.badge.negotiable{
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid #d9e3f0;
+  background: #f7fafc;
+  font-weight: 900;
+  color:#7b8794;
+}
+
+/* CTA row */
+.post-cta{
+  padding: 0 18px 14px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.visit-btn{
+  flex: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--dark-blue);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 18px;
+  text-decoration:none;
+}
+
+.quick-actions{
+  display:flex;
+  gap: 10px;
+}
+
+.qbtn{
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--dark-blue);
+  background: #fff;
+  color: var(--dark-blue);
+  font-weight: 900;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+/* Bottom action bar */
+.post-actions{
+  border-top: 2px solid #d9e3f0;
+  background: #f7fafc;
+  padding: 12px;
+  display:flex;
+  gap: 10px;
+}
+
+.act-btn{
+  flex: 1;
+  padding: 12px 10px;
+  border-radius: 12px;
+  border: 2px solid #d9e3f0;
+  background: #fff;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .post-info{ flex-direction: column; }
+  .info-right{ width: 100%; align-items: flex-start; }
+  .price-box{ border-left: none; padding-left: 0; border-top: 2px solid #d9e3f0; padding-top: 12px; }
+  .post-cta{ flex-direction: column; align-items: stretch; }
+  .quick-actions{ width:100%; }
+  .qbtn{ flex:1; text-align:center; }
+}
+
+</style>
+<body>
+    <header>
+        <div class="w fsb">
+            <div><img src="img/bbest_logo.webp" alt="Be Best Logo"></div>
+            <nav class="fcc" id="n1">
+                <a href="#" class="a1">Properties</a>
+                <a href="#" class="a1">Vehicles</a>
+                <a href="#" class="a1">Property Services</a>
+                <a href="#" class="a1">Vehicle Services</a>
+            </nav>
+            <div class="fcc">
+                <button class="bt1">සි</button>
+                <button class="bt1">En</button>
+                <button class="bt1">Ta</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="ad-area w">
+        <div class="ad-wrap fsb">
+
+            <!-- LEFT: New Ad Upload -->
+            <div class="ad-card ad-new" onclick="openUploadModal()">
+                <div class="ad-plus">+</div>
+                <div class="ad-new-text">Add New Ad</div>
+            </div>
+
+            <!-- MIDDLE: Slider (3 visible) -->
+            <div class="ad-slider">
+                <div class="ad-track" id="adTrack">
+
+                    <!-- Ad 1 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/man.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_1.webp" alt="Ad 1">
+                    </div>
+
+                    <!-- Ad 2 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/women.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_2.webp" alt="Ad 2">
+                    </div>
+
+                    <!-- Ad 3 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/man.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_1.webp" alt="Ad 3">
+                    </div>
+
+                    <!-- Ad 4 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/women.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_2.webp" alt="Ad 4">
+                    </div>
+
+                    <!-- Ad 5 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/man.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_1.webp" alt="Ad 5">
+                    </div>
+
+                    <!-- Ad 6 -->
+                    <div class="ad-card ad-slide">
+                        <div class="ad-profile">
+                            <img src="img/women.webp" alt="Customer">
+                        </div>
+                        <img class="ad-img" src="img/land_2.webp" alt="Ad 6">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: Controls (button + pole + button) -->
+            <div class="ad-controls">
+                <button class="ad-ctrl-btn" type="button" onclick="prevAd()">LOAN</button>
+
+                <div class="ad-pole">
+                    <div class="ad-dot" id="adDot"></div>
+                </div>
+
+                <button class="ad-ctrl-btn" type="button" onclick="nextAd()">PRICE</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="w">
+            <nav class="fcc" id="z1n1">
+                <a href="#" class="a1">House</a>
+                <a href="#" class="a1">Land</a>
+                <a href="#" class="a1">Rental</a>
+                <a href="#" class="a1">Apartment</a>
+                <a href="#" class="a1">Lorem</a>
+                <a href="#" class="a1">Ipsum</a>
+            </nav>
+            <div class="fsb" id="d5">
+                <input type="text" placeholder="Search" id="in1">
+                <button id="bt5"><img src="img/icons/search.svg" alt="Search"></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cp">
+        <div class="w post-card">
+            <!-- Top: Profile row -->
+            <div class="post-top">
+                <div class="post-user">
+                    <div class="avatar">
+                        <img src="img/man.webp" alt="User">
+                    </div>
+                    <div class="user-meta">
+                        <div class="user-name">John Doe</div>
+                        <div class="user-sub">
+                            <span class="dot online"></span>
+                            <span class="sub-txt">Post ID : 12345</span>
+                            <span class="sep">•</span>
+                            <span class="sub-txt">27 mins ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main: Image -->
+            <div class="post-media">
+                <div class="media-placeholder">
+                    <!-- Replace with <img> when you have real image -->
+                    <img src="img/main_image.webp" alt="Ad Image">
+                </div>
+            </div>
+            
+            <!-- Info row: Left (location/tags) + Right (price/loan) -->
+            <div class="post-info">
+                <div class="info-left">
+                    <h3 class="post-title">Moratuwa - Lakshapathiya</h3>
+            
+                    <div class="tag-row">
+                        <span class="tag tag-place">Place</span>
+                        <span class="tag tag-vip">video</span>
+                        <span class="tag tag-360">360° View</span>
+                    </div>
+            
+                    <div class="feat-row">
+                        <span class="pill">Perch</span>
+                        <span class="pill">Bed</span>
+                        <span class="pill">Bath</span>
+                        <span class="pill">Sqf.</span>
+                    </div>
+                </div>
+            
+                <div class="info-right">
+                    <div class="price-box">
+                        <div class="price-line">
+                            <span class="lbl">Price :</span>
+                            <span class="val">100M</span>
+                        </div>
+                
+                        <div class="loan-line">
+                            <span class="loan-lbl">Loan Pro</span>
+                            <span class="loan-lbl">LOLC Monthly</span>
+                            <span class="loan-val">Rs 245,000</span>
+                        </div>
+                    </div>
+            
+                    <div class="badge negotiable">Negotiable</div>
+                </div>
+            </div>
+            
+            <!-- Visit + Quick contact -->
+            <div class="post-cta">
+                <a class="visit-btn" href="#">Visit Time → 8.00 a.m to 5.00 p.m</a>
+            
+                <div class="quick-actions">
+                    <a class="qbtn" href="tel:+94770000000">Call</a>
+                    <a class="qbtn" href="#">WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Bottom action bar -->
+            <div class="post-actions">
+                <button class="act-btn" type="button">List</button>
+                <button class="act-btn" type="button">Like</button>
+                <button class="act-btn" type="button">Comment</button>
+                <button class="act-btn" type="button">Share →</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="ft">
+        <div class="w fsb">
+            <nav class="fcc">
+                <a href="#" class="a2">Home</a>
+                <a href="#" class="a2">About Us</a>
+                <a href="#" class="a2">About Web</a>
+                <a href="#" class="a2">Dummy</a>
+            </nav>
+            <div id="d1">
+                <button id="bt2">+</button>
+            </div>
+            <ul class="fcc">
+                <li><button class="bt3">List</button></li>
+                <li><button class="bt3">Notice</button></li>
+                <li><button class="bt3">Message</button></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+  const track = document.getElementById('adTrack');
+  const dot = document.getElementById('adDot');
+
+  let intervalMs = 2000;  // speed
+  let moving = false;
+  let timer = null;
+
+  // dot steps for 6 ads (feel free to change)
+  const dotSteps = [0, 20, 40, 60, 80, 100];
+  let dotIndex = 0;
+
+  function updateDot(){
+    dot.style.left = dotSteps[dotIndex] + '%';
+  }
+
+  function slideLeftOne(){
+    if(moving) return;
+    moving = true;
+
+    const first = track.querySelector('.ad-card');
+    if(!first) return;
+
+    const gap = 30; // must match CSS gap
+    const step = first.offsetWidth + gap;
+
+    track.style.transition = 'transform 450ms ease';
+    track.style.transform = `translateX(-${step}px)`;
+
+    setTimeout(() => {
+      track.style.transition = 'none';
+      track.appendChild(track.firstElementChild);
+      track.style.transform = 'translateX(0)';
+      moving = false;
+
+      dotIndex = (dotIndex + 1) % dotSteps.length;
+      updateDot();
+    }, 470);
+  }
+
+  function slideRightOne(){
+    if(moving) return;
+    moving = true;
+
+    const gap = 30;
+    const first = track.querySelector('.ad-card');
+    const step = first.offsetWidth + gap;
+
+    track.style.transition = 'none';
+    track.insertBefore(track.lastElementChild, track.firstElementChild);
+    track.style.transform = `translateX(-${step}px)`;
+
+    setTimeout(() => {
+      track.style.transition = 'transform 450ms ease';
+      track.style.transform = 'translateX(0)';
+    }, 30);
+
+    setTimeout(() => {
+      moving = false;
+      dotIndex = (dotIndex - 1 + dotSteps.length) % dotSteps.length;
+      updateDot();
+    }, 500);
+  }
+
+  function startAuto(){
+    stopAuto();
+    timer = setInterval(slideLeftOne, intervalMs);
+  }
+
+  function stopAuto(){
+    if(timer) clearInterval(timer);
+    timer = null;
+  }
+
+  // right buttons
+  function nextAd(){
+    stopAuto();
+    slideLeftOne();
+    startAuto();
+  }
+  function prevAd(){
+    stopAuto();
+    slideRightOne();
+    startAuto();
+  }
+
+  function openUploadModal(){
+    alert('Open upload form here');
+    // window.location.href = "add-ad.php";
+  }
+
+  // init
+  updateDot();
+  startAuto();
+</script>
+
+
+
