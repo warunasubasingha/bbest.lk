@@ -7,7 +7,7 @@
     --white:#F2F2F2;
 }
 
-*{margin: 0; padding: 0; box-sizing: border-box;font-family: var(--font-1);background: #defff3ee;}
+*{margin: 0; padding: 0; box-sizing: border-box;font-family: var(--font-1);}
 .w{width: 1200px; margin: 0 auto;}
 .fsb{display: flex;justify-content: space-between;}
 .fcc{display: flex;align-items: center;justify-content: center;}
@@ -20,7 +20,7 @@ button {border: none;}
 
 /* header */
 header , header > div , header > div > * {background :#fefefe;}
-header {padding: 20px 0;}
+header {padding: 20px 0;background: #defff3ee;}
 
 .a1{ margin-right: 5px;}
 #bt2{padding: 0 !important;
