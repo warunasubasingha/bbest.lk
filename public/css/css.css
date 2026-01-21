@@ -20,7 +20,8 @@ button {border: none;}
 
 /* header */
 header , header > div , header > div > * {background :#fefefe;}
-header {padding: 20px 0;background: #defff3ee;}
+header {padding: 20px 0;}
+body {background: #defff3ee;}
 
 .a1{ margin-right: 5px;}
 #bt2{padding: 0 !important;
