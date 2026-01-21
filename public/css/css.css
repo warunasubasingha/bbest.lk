@@ -65,6 +65,9 @@ body {background: #defff3ee;}
     cursor:pointer;
     color:#244E73;
 }
+.search-icon > img {
+        width: 25px;
+}
 
 .header-logo img{
     height:42px;
