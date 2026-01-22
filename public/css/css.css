@@ -124,10 +124,10 @@ body {background: #defff3ee;}
         gap:12px;
     }
     .cat-item span{
-        font-size:12px !importnat;
+        font-size:12px;
     }
     .cat-item img{
-        height:35px !importnat;
+        height:35px;
     }
 }
 
