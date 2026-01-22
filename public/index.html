@@ -366,7 +366,7 @@
 
         <!-- Right: Search -->
         <button class="search-icon">
-          <img src="img/icons/search.svg" alt="">
+            <img src="img/icons/search.svg" alt="">
         </button>
 
     </div>
@@ -610,27 +610,34 @@
   const track = document.getElementById('adTrack');
   const dot = document.getElementById('adDot');
 
-  let intervalMs = 2000;  // speed
+  let intervalMs = 2000;
   let moving = false;
   let timer = null;
 
-  // dot steps for 6 ads (feel free to change)
+  // Dot steps (6 ads)
   const dotSteps = [0, 20, 40, 60, 80, 100];
   let dotIndex = 0;
 
   function updateDot(){
+    if(!dot) return; // if pole hidden on mobile
     dot.style.left = dotSteps[dotIndex] + '%';
   }
 
+  function getStep(){
+    const first = track?.querySelector('.ad-card');
+    if(!first) return 0;
+
+    // Read real gap from CSS (responsive)
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return first.getBoundingClientRect().width + gap;
+  }
+
   function slideLeftOne(){
-    if(moving) return;
+    if(moving || !track) return;
+    const step = getStep();
+    if(step <= 0) return;
+
     moving = true;
-
-    const first = track.querySelector('.ad-card');
-    if(!first) return;
-
-    const gap = 30; // must match CSS gap
-    const step = first.offsetWidth + gap;
 
     track.style.transition = 'transform 450ms ease';
     track.style.transform = `translateX(-${step}px)`;
@@ -647,21 +654,23 @@
   }
 
   function slideRightOne(){
-    if(moving) return;
-    moving = true;
+    if(moving || !track) return;
+    const step = getStep();
+    if(step <= 0) return;
 
-    const gap = 30;
-    const first = track.querySelector('.ad-card');
-    const step = first.offsetWidth + gap;
+    moving = true;
 
     track.style.transition = 'none';
     track.insertBefore(track.lastElementChild, track.firstElementChild);
     track.style.transform = `translateX(-${step}px)`;
 
-    setTimeout(() => {
-      track.style.transition = 'transform 450ms ease';
-      track.style.transform = 'translateX(0)';
-    }, 30);
+    // animate back to zero
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        track.style.transition = 'transform 450ms ease';
+        track.style.transform = 'translateX(0)';
+      });
+    });
 
     setTimeout(() => {
       moving = false;
@@ -680,12 +689,12 @@
     timer = null;
   }
 
-  // right buttons
   function nextAd(){
     stopAuto();
     slideLeftOne();
     startAuto();
   }
+
   function prevAd(){
     stopAuto();
     slideRightOne();
@@ -694,13 +703,20 @@
 
   function openUploadModal(){
     alert('Open upload form here');
-    // window.location.href = "add-ad.php";
   }
+
+  // Keep slider stable after resize (mobile rotation / resizing)
+  window.addEventListener('resize', () => {
+    if(!track) return;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
+  });
 
   // init
   updateDot();
   startAuto();
 </script>
+
 
 
 

@@ -65,9 +65,6 @@ body {background: #defff3ee;}
     cursor:pointer;
     color:#244E73;
 }
-.search-icon > img {
-        width: 25px;
-}
 
 .header-logo img{
     height:42px;
@@ -93,13 +90,13 @@ body {background: #defff3ee;}
 }
 
 .cat-item img{
-    width:32px;
-    height:32px;
+    width:80px;
+    height:80px;
     object-fit:contain;
 }
 
 .cat-item span{
-    font-size:14px;
+    font-size:16px;
     color:#244E73;
     font-weight:600;
 }
@@ -115,6 +112,11 @@ body {background: #defff3ee;}
     border-bottom:1px solid #e3e3e3;
 }
 
+.search-icon > img {
+        width: 25px;
+}
+
+
 
 /* Responsive */
 @media(max-width:600px){
@@ -122,7 +124,10 @@ body {background: #defff3ee;}
         gap:12px;
     }
     .cat-item span{
-        font-size:12px;
+        font-size:12px !importnat;
+    }
+    .cat-item img{
+        height:35px !importnat;
     }
 }
 
@@ -134,4 +139,244 @@ body {background: #defff3ee;}
 
 @media screen and (max-width: 1220px) {
     .w {width: 96%;margin: 0 2%;}
+}
+
+/* =========================
+   RESPONSIVE: 1200px -> 320px
+   Add this at the END of your CSS
+========================= */
+
+/* Make container flexible always */
+.w{
+  max-width: 1200px;
+  width: 96%;
+  margin: 0 auto;
+}
+
+/* Safer buttons/links wrapping */
+#z1n1{
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#z1n1 a{
+  margin-right: 0; /* remove desktop spacing */
+}
+
+/* Search bar responsive */
+#d5{
+  flex-wrap: nowrap;
+}
+#in1{
+  width: 100%;
+  min-width: 0;
+}
+#bt5{
+  width: 52px; /* fixed button width for mobile */
+}
+
+/* -------------------------
+   Header (top-header) responsive
+------------------------- */
+.header-inner{
+  gap: 10px;
+}
+.header-logo img{
+  height: 100px;
+}
+.cat-nav{
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+.cat-nav::-webkit-scrollbar{ height: 6px; }
+.cat-item{
+  flex: 0 0 auto;     /* allow horizontal scrolling */
+  min-width: 80px;
+}
+.cat-item span{
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+/* -------------------------
+   Ads section: desktop 3 columns -> tablet 2 rows -> mobile stack
+------------------------- */
+
+/* Use CSS variable for slider gap (JS will read it) */
+:root{
+  --ad-gap: 30px;
+}
+
+/* default desktop already ok */
+.ad-wrap{
+  display: flex;
+}
+
+/* Tablet */
+@media (max-width: 1100px){
+  .ad-wrap{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .ad-slider{
+    width: 100%;
+    max-width: 840px;
+  }
+
+  .ad-controls{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .ad-pole{
+    width: 220px;
+  }
+}
+
+/* Mobile: show 1 card width, stack everything */
+@media (max-width: 600px){
+  :root{ --ad-gap: 16px; }
+
+  .ad-area{
+    padding: 18px 0;
+  }
+
+  .ad-wrap{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  /* Cards become full width */
+  .ad-card{
+    width: 100%;
+    height: 260px;
+  }
+
+  /* Slider becomes full width */
+  .ad-slider{
+    width: 100% !important;
+    height: 260px !important;
+  }
+
+  .ad-track{
+    height: 260px;
+    gap: var(--ad-gap);
+  }
+
+  /* controls row */
+  .ad-controls{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .ad-ctrl-btn{
+    width: 48%;
+    padding: 12px 10px;
+  }
+
+  .ad-pole{
+    display: none; /* hide pole in very small screens (optional) */
+  }
+
+  .ad-profile{
+    width: 44px;
+    height: 44px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Very small phones 320px */
+@media (max-width: 360px){
+  .ad-card,
+  .ad-slider{
+    height: 230px;
+  }
+  .ad-plus{ font-size: 64px; }
+  .ad-new-text{ font-size: 14px; }
+}
+
+/* -------------------------
+   Post Card responsive improvements
+------------------------- */
+@media (max-width: 900px){
+  .post-card{
+    border-radius: 14px;
+  }
+  .post-title{
+    font-size: 20px;
+  }
+  .media-placeholder{
+    height: 240px;
+  }
+  .pill{
+    min-width: 70px;
+    padding: 8px 10px;
+  }
+  .visit-btn{
+    font-size: 15px;
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 480px){
+  .post-top{ padding: 14px 14px 8px; }
+  .post-media{ padding: 0 14px 12px; }
+  .post-info{ padding: 0 14px 12px; }
+  .post-cta{ padding: 0 14px 12px; }
+
+  .avatar{
+    width: 54px;
+    height: 54px;
+  }
+  .user-name{ font-size: 18px; }
+  .user-sub{ font-size: 12px; gap: 6px; }
+
+  .tag{ font-size: 12px; padding: 6px 10px; }
+  .val{ font-size: 24px; }
+
+  .post-actions{
+    flex-wrap: wrap;
+  }
+  .act-btn{
+    flex: 1 1 48%;
+  }
+}
+
+.ad-track { display:flex; gap: var(--ad-gap); }
+
+/* -------------------------
+   Footer responsive
+------------------------- */
+@media (max-width: 900px){
+  #ft .w{
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #ft > nav, #ft ul{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #d1{
+    padding: 18px 30px 26px;
+  }
+
+  #ft{
+    border-radius: 40px 40px 0 0;
+    padding-bottom: 30px;
+  }
 }
