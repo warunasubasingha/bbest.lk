@@ -351,294 +351,490 @@
 
 </style>
 <body>
-    <header class="top-header">
-    <div class="w header-inner">
+<header class="top-header" id="topHeader">
+  <div class="w topbar">
+    <!-- Left -->
+    <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">
+      ☰
+    </button>
 
-        <!-- Left: Hamburger -->
-        <button class="menu-icon" id="menuToggle">
-            &#9776;
+    <!-- Middle -->
+    <a class="brand" href="#" aria-label="Home">
+      <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
+    </a>
+
+    <!-- Right -->
+    <div class="topbar-right">
+      <button class="icon-btn search-btn" id="searchToggle" type="button" aria-label="Search" aria-expanded="false">
+        <img src="img/icons/search.svg" alt="">
+      </button>
+
+      <button class="profile-btn" id="profileBtn" type="button" aria-label="Profile">
+        <img src="img/man.webp" alt="Profile">
+      </button>
+    </div>
+  </div>
+
+  <!-- Search drawer -->
+  <div class="search-drawer" id="searchDrawer" aria-hidden="true">
+    <div class="w search-inner">
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search..." autocomplete="off">
+        <button class="search-go" id="searchGo" type="button" aria-label="Go">
+          <img src="img/icons/search.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category row + Language dropdown (RIGHT) -->
+  <div class="cat-row">
+    <div class="w cat-row-inner">
+
+      <nav class="cat-nav" aria-label="Categories">
+        <a class="cat-item" href="#">
+          <img src="img/icons/1.png" alt="">
+          <span>Property</span>
+        </a>
+
+        <a class="cat-item" href="#">
+          <img src="img/icons/2.png" alt="">
+          <span>Vehicles</span>
+        </a>
+
+        <a class="cat-item" href="#">
+          <img src="img/icons/3.png" alt="">
+          <span>Property services</span>
+        </a>
+
+        <a class="cat-item" href="#">
+          <img src="img/icons/4.png" alt="">
+          <span>Vehicle Service</span>
+        </a>
+      </nav>
+
+      <!-- Language dropdown -->
+      <div class="lang-dd" id="langDd">
+        <button class="lang-btn" id="langBtn" type="button" aria-expanded="false">
+          <span id="langCurrent">EN</span>
+          <span class="lang-caret">▾</span>
         </button>
 
-        <!-- Middle: Logo -->
-        <div class="header-logo">
-            <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
+        <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
+          <button class="lang-item" type="button" data-lang="SI" role="menuitem">Si</button>
+          <button class="lang-item" type="button" data-lang="TA" role="menuitem">Ta</button>
         </div>
-
-        <!-- Right: Search -->
-        <button class="search-icon">
-            <img src="img/icons/search.svg" alt="">
-        </button>
+      </div>
 
     </div>
-
-    <!-- Category Icons Row -->
-    <nav class="cat-nav w">
-
-        <div class="cat-item">
-            <img src="img/icons/1.png" alt="">
-            <span>Property</span>
-        </div>
-
-        <div class="cat-item">
-            <img src="img/icons/2.png" alt="">
-            <span>Vehicles</span>
-        </div>
-
-        <div class="cat-item">
-            <img src="img/icons/3.png" alt="">
-            <span>Property services</span>
-        </div>
-
-        <div class="cat-item">
-            <img src="img/icons/4.png" alt="">
-            <span>Vehicle Service</span>
-        </div>
-
-        <div class="cat-item">
-            <img src="img/icons/2.png" alt="">
-            <span>Service</span>
-        </div>
-
-    </nav>
+  </div>
 </header>
 
 
-    <section class="ad-area w">
-        <div class="ad-wrap fsb">
 
-            <!-- LEFT: New Ad Upload -->
-            <div class="ad-card ad-new" onclick="openUploadModal()">
-                <div class="ad-plus">+</div>
-                <div class="ad-new-text">Add New Ad</div>
-            </div>
 
-            <!-- MIDDLE: Slider (3 visible) -->
-            <div class="ad-slider">
-                <div class="ad-track" id="adTrack">
+<section class="ad-area w">
+  <div class="ad-wrap-stories">
 
-                    <!-- Ad 1 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/man.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_1.webp" alt="Ad 1">
-                    </div>
+    <!-- ALWAYS visible New Ad -->
+    <div class="ad-card ad-new ad-new-sticky" onclick="openUploadModal()">
+      <div class="ad-plus">+</div>
+      <div class="ad-new-text">Add New Ad</div>
+    </div>
 
-                    <!-- Ad 2 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/women.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_2.webp" alt="Ad 2">
-                    </div>
+    <!-- Stories slider -->
+    <div class="ad-slider" id="adSlider">
+      <div class="ad-track" id="adTrack">
 
-                    <!-- Ad 3 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/man.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_1.webp" alt="Ad 3">
-                    </div>
-
-                    <!-- Ad 4 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/women.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_2.webp" alt="Ad 4">
-                    </div>
-
-                    <!-- Ad 5 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/man.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_1.webp" alt="Ad 5">
-                    </div>
-
-                    <!-- Ad 6 -->
-                    <div class="ad-card ad-slide">
-                        <div class="ad-profile">
-                            <img src="img/women.webp" alt="Customer">
-                        </div>
-                        <img class="ad-img" src="img/land_2.webp" alt="Ad 6">
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- RIGHT: Controls (button + pole + button) -->
-            <div class="ad-controls">
-                <button class="ad-ctrl-btn" type="button" onclick="prevAd()">LOAN</button>
-
-                <div class="ad-pole">
-                    <div class="ad-dot" id="adDot"></div>
-                </div>
-
-                <button class="ad-ctrl-btn" type="button" onclick="nextAd()">PRICE</button>
-            </div>
-
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_1.webp" alt="Ad 1">
         </div>
-    </section>
 
-    <section>
-        <div class="w">
-            <nav class="fcc" id="z1n1">
-                <a href="#" class="a1">House</a>
-                <a href="#" class="a1">Land</a>
-                <a href="#" class="a1">Rental</a>
-                <a href="#" class="a1">Apartment</a>
-                <a href="#" class="a1">Lorem</a>
-                <a href="#" class="a1">Ipsum</a>
-            </nav>
-            <div class="fsb" id="d5">
-                <input type="text" placeholder="Search" id="in1">
-                <button id="bt5"><img src="img/icons/search.svg" alt="Search"></button>
-            </div>
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_2.webp" alt="Ad 2">
         </div>
-    </section>
 
-
-    <section class="cp">
-        <div class="w post-card">
-            <!-- Top: Profile row -->
-            <div class="post-top">
-                <div class="post-user">
-                    <div class="avatar">
-                        <img src="img/man.webp" alt="User">
-                    </div>
-                    <div class="user-meta">
-                        <div class="user-name">John Doe</div>
-                        <div class="user-sub">
-                            <span class="dot online"></span>
-                            <span class="sub-txt">Post ID : 12345</span>
-                            <span class="sep">•</span>
-                            <span class="sub-txt">27 mins ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Main: Image -->
-            <div class="post-media">
-                <div class="media-placeholder">
-                    <!-- Replace with <img> when you have real image -->
-                    <img src="img/main_image.webp" alt="Ad Image">
-                </div>
-            </div>
-            
-            <!-- Info row: Left (location/tags) + Right (price/loan) -->
-            <div class="post-info">
-                <div class="info-left">
-                    <h3 class="post-title">Moratuwa - Lakshapathiya</h3>
-            
-                    <div class="tag-row">
-                        <span class="tag tag-place">Place</span>
-                        <span class="tag tag-vip">video</span>
-                        <span class="tag tag-360">360° View</span>
-                    </div>
-            
-                    <div class="feat-row">
-                        <span class="pill">Perch</span>
-                        <span class="pill">Bed</span>
-                        <span class="pill">Bath</span>
-                        <span class="pill">Sqf.</span>
-                    </div>
-                </div>
-            
-                <div class="info-right">
-                    <div class="price-box">
-                        <div class="price-line">
-                            <span class="lbl">Price :</span>
-                            <span class="val">100M</span>
-                        </div>
-                
-                        <div class="loan-line">
-                            <span class="loan-lbl">Loan Pro</span>
-                            <span class="loan-lbl">LOLC Monthly</span>
-                            <span class="loan-val">Rs 245,000</span>
-                        </div>
-                    </div>
-            
-                    <div class="badge negotiable">Negotiable</div>
-                </div>
-            </div>
-            
-            <!-- Visit + Quick contact -->
-            <div class="post-cta">
-                <a class="visit-btn" href="#">Visit Time → 8.00 a.m to 5.00 p.m</a>
-            
-                <div class="quick-actions">
-                    <a class="qbtn" href="tel:+94770000000">Call</a>
-                    <a class="qbtn" href="#">WhatsApp</a>
-                </div>
-            </div>
-            
-            <!-- Bottom action bar -->
-            <div class="post-actions">
-                <button class="act-btn" type="button">List</button>
-                <button class="act-btn" type="button">Like</button>
-                <button class="act-btn" type="button">Comment</button>
-                <button class="act-btn" type="button">Share →</button>
-            </div>
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_1.webp" alt="Ad 3">
         </div>
-    </section>
 
-
-    <footer id="ft">
-        <div class="w fsb">
-            <nav class="fcc">
-                <a href="#" class="a2">Home</a>
-                <a href="#" class="a2">About Us</a>
-                <a href="#" class="a2">About Web</a>
-                <a href="#" class="a2">Dummy</a>
-            </nav>
-            <div id="d1">
-                <button id="bt2">+</button>
-            </div>
-            <ul class="fcc">
-                <li><button class="bt3">List</button></li>
-                <li><button class="bt3">Notice</button></li>
-                <li><button class="bt3">Message</button></li>
-            </ul>
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_2.webp" alt="Ad 4">
         </div>
-    </footer>
+
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_1.webp" alt="Ad 5">
+        </div>
+
+        <div class="ad-card ad-slide">
+          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <img class="ad-img" src="img/land_2.webp" alt="Ad 6">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="filter-sec">
+  <div class="w">
+
+    <div class="filter-wrap">
+
+      <!-- 1) Location -->
+      <div class="filter-row">
+        <button class="loc-btn" id="locOpen" type="button">
+          <span class="loc-title">Location</span>
+          <span class="loc-value" id="locValue">Select District & City</span>
+          <span class="loc-caret">▾</span>
+        </button>
+
+        <!-- Location dropdown panel -->
+        <div class="loc-panel" id="locPanel" aria-hidden="true">
+          <div class="loc-cols">
+
+            <div class="loc-col">
+              <div class="loc-head">District</div>
+              <div class="loc-list" id="districtList"></div>
+            </div>
+
+            <div class="loc-col">
+              <div class="loc-head">City</div>
+              <div class="loc-list" id="cityList">
+                <div class="loc-empty">Select a district first</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) KM Pole -->
+      <div class="filter-row km-row">
+        <div class="km-labels">
+          <span class="km-min">1km</span>
+          <span class="km-now" id="kmNow">8 km</span>
+          <span class="km-max">15km</span>
+        </div>
+
+        <div class="km-pole">
+          <input class="km-range" id="kmRange" type="range" min="1" max="15" value="8" />
+        </div>
+      </div>
+
+      <!-- 3) Min / Max price -->
+      <div class="filter-row price-row">
+        <button class="price-field" id="minPriceBtn" type="button">
+          <span class="price-label">Min Price</span>
+          <span class="price-val" id="minPriceText">Any</span>
+        </button>
+
+        <button class="price-field" id="maxPriceBtn" type="button">
+          <span class="price-label">Max Price</span>
+          <span class="price-val" id="maxPriceText">Any</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICE POPUP -->
+<div class="modal" id="priceModal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalClose"></div>
+
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-top">
+      <div class="modal-title" id="modalTitle">Enter Price</div>
+      <button class="modal-x" id="modalX" type="button">✕</button>
+    </div>
+
+    <div class="modal-input-wrap">
+      <span class="rs">Rs</span>
+      <input id="modalInput" class="modal-input" inputmode="numeric" placeholder="0" />
+    </div>
+
+    <div class="keypad">
+      <button class="k" data-k="1">1</button>
+      <button class="k" data-k="2">2</button>
+      <button class="k" data-k="3">3</button>
+      <button class="k" data-k="4">4</button>
+      <button class="k" data-k="5">5</button>
+      <button class="k" data-k="6">6</button>
+      <button class="k" data-k="7">7</button>
+      <button class="k" data-k="8">8</button>
+      <button class="k" data-k="9">9</button>
+      <button class="k" data-k="00">00</button>
+      <button class="k" data-k="0">0</button>
+      <button class="k k-del" data-k="del">⌫</button>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-lite" id="modalClear" type="button">Clear</button>
+      <button class="btn-main" id="modalDone" type="button">Done</button>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="cp">
+  <div class="w post-card v2">
+
+    <!-- Media (1:1) with overlays -->
+    <div class="post-media v2">
+
+      <!-- Background image -->
+      <img class="post-img" src="img/main_image.webp" alt="Ad Image">
+
+      <!-- TOP-LEFT overlay: profile + details -->
+      <div class="ov ov-top-left">
+        <div class="ov-user">
+          <div class="avatar sm">
+            <img src="img/man.webp" alt="User">
+          </div>
+
+          <div class="user-meta">
+            <div class="user-name">John Doe</div>
+            <div class="user-sub">
+              <span class="dot online"></span>
+              <span class="sub-txt">Post ID : 12345</span>
+              <span class="sep">•</span>
+              <span class="sub-txt">27 mins ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP-RIGHT overlay: price (click to toggle LKR/USD) -->
+      <button class="ov ov-top-right price-pill" id="priceToggle" type="button" aria-label="Toggle currency">
+        <span class="n-badge">N</span>
+        <span class="price-label" id="priceCurrency">LKR</span>
+        <span class="price-value" id="priceValue">100M</span>
+      </button>
+
+      <!-- BOTTOM-LEFT overlay: title + chips -->
+      <div class="ov ov-bottom-left">
+        <div class="ov-title">Moratuwa - Lakshapathiya</div>
+
+        <div class="chip-row">
+          <span class="chip">Place</span>
+          <span class="chip chip-warn">Video</span>
+          <span class="chip chip-blue">360° View</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM-RIGHT overlay: action buttons with numbers -->
+      <div class="ov ov-bottom-right">
+        <a class="ov-btn call" href="tel:+94770000000" aria-label="Call">
+          <!-- phone icon -->
+          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true">
+            <path d="M6.6 10.8c1.6 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.4 22 2 13.6 2 3c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
+          </svg>
+          <span class="ov-btn-txt">Call</span>
+          <span class="ov-btn-sub">+94 77 000 0000</span>
+        </a>
+
+        <a class="ov-btn wa" href="https://wa.me/94770000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <!-- whatsapp icon -->
+          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true">
+            <path d="M20 11.9a8 8 0 0 1-11.9 7L4 20l1.2-4.1A8 8 0 1 1 20 11.9zm-8-6.7c-.4 0-.8 0-1 .5-.3.5-1 1.2-1 2.4 0 1.2 1 2.5 1.2 2.7.2.2 2.1 3.3 5.2 4.5 2.6 1 3.1.8 3.7.7.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.4-.2-.8-.4-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8l.5-.5c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.8-2.1-1.1-2.8-.3-.7-.6-.6-.9-.6z"/>
+          </svg>
+          <span class="ov-btn-txt">WhatsApp</span>
+          <span class="ov-btn-sub">+94 77 000 0000</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Details row (icons for bed/bath/etc) -->
+    <div class="post-body v2">
+
+      <div class="feat-row v2">
+        <div class="feat">
+          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+            <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
+          </svg>
+          <span>Bed</span>
+        </div>
+
+        <div class="feat">
+          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+            <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
+          </svg>
+          <span>Bath</span>
+        </div>
+
+        <div class="feat">
+          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+            <path d="M4 20h16v2H4v-2zm2-6h12l1 6H5l1-6zm2-10h8l2 10H6L8 4z"/>
+          </svg>
+          <span>Perch</span>
+        </div>
+
+        <div class="feat">
+          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+            <path d="M4 4h7v2H6v5H4V4zm14 0h2v7h-2V6h-5V4h5zM4 13h2v5h5v2H4v-7zm16 0v7h-7v-2h5v-5h2z"/>
+          </svg>
+          <span>Sqf.</span>
+        </div>
+      </div>
+
+      <!-- Visit + Apply (Negotiable -> Apply) -->
+      <div class="post-cta v2">
+        <a class="visit-btn v2" href="#">Visit Time → 8.00 a.m to 5.00 p.m</a>
+        <button class="apply-btn" type="button">Apply</button>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="post-actions v2">
+        <button class="act-btn" type="button">List</button>
+        <button class="act-btn" type="button">Like</button>
+        <button class="act-btn" type="button">Comment</button>
+        <button class="act-btn" type="button">Share →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 </body>
 </html>
 
 <script>
-  const track = document.getElementById('adTrack');
-  const dot = document.getElementById('adDot');
+  // ===== Search drawer =====
+  const header = document.getElementById('topHeader');
+  const searchToggle = document.getElementById('searchToggle');
+  const searchDrawer = document.getElementById('searchDrawer');
+  const searchInput = document.getElementById('searchInput');
+  const searchGo = document.getElementById('searchGo');
 
-  let intervalMs = 2000;
-  let moving = false;
-  let timer = null;
-
-  // Dot steps (6 ads)
-  const dotSteps = [0, 20, 40, 60, 80, 100];
-  let dotIndex = 0;
-
-  function updateDot(){
-    if(!dot) return; // if pole hidden on mobile
-    dot.style.left = dotSteps[dotIndex] + '%';
+  function openSearch(){
+    header.classList.add('is-search-open');
+    searchToggle.setAttribute('aria-expanded', 'true');
+    searchDrawer.setAttribute('aria-hidden', 'false');
+    setTimeout(() => searchInput.focus(), 80);
   }
 
-  function getStep(){
+  function closeSearch(){
+    header.classList.remove('is-search-open');
+    searchToggle.setAttribute('aria-expanded', 'false');
+    searchDrawer.setAttribute('aria-hidden', 'true');
+  }
+
+  searchToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (header.classList.contains('is-search-open')) closeSearch();
+    else openSearch();
+  });
+
+  function doSearch(){
+    const q = searchInput.value.trim();
+    if(!q) return;
+    alert('Searching: ' + q);
+    // window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+  }
+
+  searchGo.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Escape') closeSearch();
+  });
+
+  // Close search when click outside
+  document.addEventListener('click', (e) => {
+    if (!header.classList.contains('is-search-open')) return;
+    if (!header.contains(e.target)) closeSearch();
+  });
+
+  // ===== Language dropdown =====
+  const langDd = document.getElementById('langDd');
+  const langBtn = document.getElementById('langBtn');
+  const langMenu = document.getElementById('langMenu');
+  const langCurrent = document.getElementById('langCurrent');
+
+  function openLang(){
+    langDd.classList.add('is-open');
+    langBtn.setAttribute('aria-expanded', 'true');
+    langMenu.setAttribute('aria-hidden', 'false');
+  }
+  function closeLang(){
+    langDd.classList.remove('is-open');
+    langBtn.setAttribute('aria-expanded', 'false');
+    langMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  langBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (langDd.classList.contains('is-open')) closeLang();
+    else openLang();
+  });
+
+  document.querySelectorAll('.lang-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const lang = item.dataset.lang; // SI / TA
+      langCurrent.textContent = (lang === 'SI') ? 'SI' : 'TA';
+      localStorage.setItem('site_lang', lang);
+      closeLang();
+      // Here you can call your real language switching function later
+    });
+  });
+
+  // Default EN
+  const savedLang = localStorage.getItem('site_lang');
+  if(savedLang === 'SI') langCurrent.textContent = 'SI';
+  if(savedLang === 'TA') langCurrent.textContent = 'TA';
+
+  // Close dropdown when click outside
+  document.addEventListener('click', () => {
+    closeLang();
+  });
+
+  // ESC closes both
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape'){
+      closeLang();
+      closeSearch();
+    }
+  });
+</script>
+
+
+<script>
+  const track = document.getElementById('adTrack');
+  const slider = document.getElementById('adSlider');
+
+  let timer = null;
+  let intervalMs = 2200;
+  let moving = false;
+
+  function isMobile(){
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  // ---- Desktop loop (transform + appendChild) ----
+  function getStepDesktop(){
     const first = track?.querySelector('.ad-card');
     if(!first) return 0;
-
-    // Read real gap from CSS (responsive)
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     return first.getBoundingClientRect().width + gap;
   }
 
-  function slideLeftOne(){
+  function slideDesktopLeft(){
     if(moving || !track) return;
-    const step = getStep();
+    const step = getStepDesktop();
     if(step <= 0) return;
 
     moving = true;
-
     track.style.transition = 'transform 450ms ease';
     track.style.transform = `translateX(-${step}px)`;
 
@@ -647,41 +843,39 @@
       track.appendChild(track.firstElementChild);
       track.style.transform = 'translateX(0)';
       moving = false;
-
-      dotIndex = (dotIndex + 1) % dotSteps.length;
-      updateDot();
     }, 470);
   }
 
-  function slideRightOne(){
-    if(moving || !track) return;
-    const step = getStep();
+  // ---- Mobile auto-scroll (scrollLeft) ----
+  function getStepMobile(){
+    const first = track?.querySelector('.ad-card');
+    if(!first) return 0;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  function slideMobileNext(){
+    if(!slider) return;
+    const step = getStepMobile();
     if(step <= 0) return;
 
-    moving = true;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
 
-    track.style.transition = 'none';
-    track.insertBefore(track.lastElementChild, track.firstElementChild);
-    track.style.transform = `translateX(-${step}px)`;
+    // if at end, go back to start
+    if (slider.scrollLeft >= maxScroll - 5) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+      return;
+    }
 
-    // animate back to zero
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        track.style.transition = 'transform 450ms ease';
-        track.style.transform = 'translateX(0)';
-      });
-    });
-
-    setTimeout(() => {
-      moving = false;
-      dotIndex = (dotIndex - 1 + dotSteps.length) % dotSteps.length;
-      updateDot();
-    }, 500);
+    slider.scrollTo({ left: slider.scrollLeft + step, behavior: 'smooth' });
   }
 
   function startAuto(){
     stopAuto();
-    timer = setInterval(slideLeftOne, intervalMs);
+    timer = setInterval(() => {
+      if(isMobile()) slideMobileNext();
+      else slideDesktopLeft();
+    }, intervalMs);
   }
 
   function stopAuto(){
@@ -689,34 +883,273 @@
     timer = null;
   }
 
-  function nextAd(){
-    stopAuto();
-    slideLeftOne();
-    startAuto();
+  // Pause when user touches/swipes on mobile
+  if(slider){
+    slider.addEventListener('touchstart', stopAuto, {passive:true});
+    slider.addEventListener('touchend', startAuto, {passive:true});
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
   }
 
-  function prevAd(){
-    stopAuto();
-    slideRightOne();
+  // Reset on resize
+  window.addEventListener('resize', () => {
+    if(!track || !slider) return;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
     startAuto();
-  }
+  });
+
+  // init
+  startAuto();
 
   function openUploadModal(){
     alert('Open upload form here');
   }
-
-  // Keep slider stable after resize (mobile rotation / resizing)
-  window.addEventListener('resize', () => {
-    if(!track) return;
-    track.style.transition = 'none';
-    track.style.transform = 'translateX(0)';
-  });
-
-  // init
-  updateDot();
-  startAuto();
 </script>
 
 
 
+<script>
+/* =========================
+   1) District -> City data
+========================= */
+const SL = {
+  "Colombo": ["Colombo", "Kotte", "Dehiwala", "Moratuwa", "Maharagama", "Homagama", "Piliyandala", "Nugegoda"],
+  "Gampaha": ["Negombo", "Gampaha", "Ja-Ela", "Wattala", "Kelaniya", "Minuwangoda", "Ragama", "Kadawatha"],
+  "Kalutara": ["Kalutara", "Panadura", "Horana", "Beruwala", "Aluthgama", "Bandaragama", "Matugama"],
+  "Kandy": ["Kandy", "Peradeniya", "Katugastota", "Gampola", "Nawalapitiya", "Kundasale"],
+  "Matale": ["Matale", "Dambulla", "Sigiriya", "Ukuwela", "Rattota"],
+  "Nuwara Eliya": ["Nuwara Eliya", "Hatton", "Talawakele", "Nanu Oya", "Walapane"],
+  "Galle": ["Galle", "Hikkaduwa", "Ambalangoda", "Elpitiya", "Karapitiya"],
+  "Matara": ["Matara", "Weligama", "Akuressa", "Kamburupitiya", "Mirissa"],
+  "Hambantota": ["Hambantota", "Tangalle", "Tissamaharama", "Ambalantota", "Kataragama"],
+  "Jaffna": ["Jaffna", "Nallur", "Chavakachcheri", "Point Pedro", "Karainagar"],
+  "Kilinochchi": ["Kilinochchi", "Paranthan", "Pooneryn"],
+  "Mannar": ["Mannar", "Pesalai", "Mulankavil"],
+  "Vavuniya": ["Vavuniya", "Cheddikulam", "Nedunkeni"],
+  "Mullaitivu": ["Mullaitivu", "Puthukkudiyiruppu", "Oddusuddan"],
+  "Batticaloa": ["Batticaloa", "Kattankudy", "Eravur", "Kaluwanchikudy"],
+  "Ampara": ["Ampara", "Kalmunai", "Akkaraipattu", "Sainthamaruthu"],
+  "Trincomalee": ["Trincomalee", "Kinniya", "Kantale", "Nilaveli"],
+  "Kurunegala": ["Kurunegala", "Kuliyapitiya", "Polgahawela", "Wariyapola", "Narammala"],
+  "Puttalam": ["Chilaw", "Puttalam", "Wennappuwa", "Marawila", "Anamaduwa"],
+  "Anuradhapura": ["Anuradhapura", "Kekirawa", "Medawachchiya", "Mihintale"],
+  "Polonnaruwa": ["Polonnaruwa", "Hingurakgoda", "Medirigiriya"],
+  "Badulla": ["Badulla", "Bandarawela", "Haputale", "Ella", "Mahiyanganaya"],
+  "Monaragala": ["Monaragala", "Wellawaya", "Buttala", "Bibile"],
+  "Ratnapura": ["Ratnapura", "Balangoda", "Pelmadulla", "Kuruwita"],
+  "Kegalle": ["Kegalle", "Mawanella", "Rambukkana", "Warakapola"]
+};
 
+let selectedDistrict = "";
+let selectedCity = "";
+
+/* =========================
+   Location UI
+========================= */
+const locOpen = document.getElementById("locOpen");
+const locPanel = document.getElementById("locPanel");
+const districtList = document.getElementById("districtList");
+const cityList = document.getElementById("cityList");
+const locValue = document.getElementById("locValue");
+
+function openLoc(){
+  locPanel.classList.add("open");
+  locPanel.setAttribute("aria-hidden", "false");
+}
+function closeLoc(){
+  locPanel.classList.remove("open");
+  locPanel.setAttribute("aria-hidden", "true");
+}
+
+locOpen.addEventListener("click", (e)=>{
+  e.stopPropagation();
+  locPanel.classList.contains("open") ? closeLoc() : openLoc();
+});
+
+document.addEventListener("click", ()=>{
+  if(locPanel.classList.contains("open")) closeLoc();
+});
+
+function renderDistricts(){
+  const dists = Object.keys(SL);
+  districtList.innerHTML = "";
+  dists.forEach(d=>{
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "loc-item" + (d === selectedDistrict ? " active" : "");
+    b.textContent = d;
+    b.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      selectedDistrict = d;
+      selectedCity = "";
+      renderDistricts();
+      renderCities();
+    });
+    districtList.appendChild(b);
+  });
+}
+
+function renderCities(){
+  cityList.innerHTML = "";
+  if(!selectedDistrict){
+    cityList.innerHTML = `<div class="loc-empty">Select a district first</div>`;
+    return;
+  }
+  SL[selectedDistrict].forEach(c=>{
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "loc-item" + (c === selectedCity ? " active" : "");
+    b.textContent = c;
+    b.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      selectedCity = c;
+      locValue.textContent = `${selectedDistrict} - ${selectedCity}`;
+      closeLoc();
+    });
+    cityList.appendChild(b);
+  });
+}
+
+renderDistricts();
+renderCities();
+
+/* =========================
+   2) KM Slider
+========================= */
+const kmRange = document.getElementById("kmRange");
+const kmNow = document.getElementById("kmNow");
+
+function updateKm(){
+  kmNow.textContent = `${kmRange.value} km`;
+}
+kmRange.addEventListener("input", updateKm);
+updateKm();
+
+/* =========================
+   3) Price modal (big popup)
+========================= */
+const priceModal = document.getElementById("priceModal");
+const modalClose = document.getElementById("modalClose");
+const modalX = document.getElementById("modalX");
+const modalInput = document.getElementById("modalInput");
+const modalDone = document.getElementById("modalDone");
+const modalClear = document.getElementById("modalClear");
+
+const minPriceBtn = document.getElementById("minPriceBtn");
+const maxPriceBtn = document.getElementById("maxPriceBtn");
+const minPriceText = document.getElementById("minPriceText");
+const maxPriceText = document.getElementById("maxPriceText");
+
+let activePriceTarget = "min"; // or "max"
+
+function openPriceModal(target){
+  activePriceTarget = target;
+  priceModal.classList.add("open");
+  priceModal.setAttribute("aria-hidden", "false");
+
+  const current = (target === "min" ? minPriceText.textContent : maxPriceText.textContent);
+  modalInput.value = (current === "Any") ? "" : current.replaceAll(",", "").replace("Rs", "").trim();
+
+  setTimeout(()=> modalInput.focus(), 50);
+}
+
+function closePriceModal(){
+  priceModal.classList.remove("open");
+  priceModal.setAttribute("aria-hidden", "true");
+}
+
+minPriceBtn.addEventListener("click", ()=> openPriceModal("min"));
+maxPriceBtn.addEventListener("click", ()=> openPriceModal("max"));
+modalClose.addEventListener("click", closePriceModal);
+modalX.addEventListener("click", closePriceModal);
+
+function formatRs(numStr){
+  const n = Number(numStr || 0);
+  if(!n) return "Any";
+  return "Rs " + n.toLocaleString("en-LK");
+}
+
+document.querySelectorAll(".k").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const k = btn.dataset.k;
+    if(k === "del"){
+      modalInput.value = modalInput.value.slice(0, -1);
+      return;
+    }
+    modalInput.value += k;
+  });
+});
+
+modalClear.addEventListener("click", ()=>{
+  modalInput.value = "";
+});
+
+modalDone.addEventListener("click", ()=>{
+  const v = modalInput.value.replace(/\D/g, "");
+  const out = v ? formatRs(v) : "Any";
+
+  if(activePriceTarget === "min") minPriceText.textContent = out;
+  else maxPriceText.textContent = out;
+
+  closePriceModal();
+});
+
+// ESC closes
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape") closePriceModal();
+});
+
+/* Upload example */
+function openUploadModal(){
+  alert("Open upload form here");
+}
+</script>
+
+
+<script>
+  // 6) Price toggle: default LKR, click shows USD
+  const priceToggle = document.getElementById("priceToggle");
+  const priceCurrency = document.getElementById("priceCurrency");
+  const priceValue = document.getElementById("priceValue");
+
+  // Example base prices (replace with real data)
+  const LKR_TEXT = "100M";      // you can also store numeric
+  const USD_TEXT = "$ 312,000"; // example
+
+  let isUSD = false;
+
+  priceToggle?.addEventListener("click", () => {
+    isUSD = !isUSD;
+    if(isUSD){
+      priceCurrency.textContent = "USD";
+      priceValue.textContent = USD_TEXT;
+    }else{
+      priceCurrency.textContent = "LKR";
+      priceValue.textContent = LKR_TEXT;
+    }
+  });
+</script>
+
+
+<script>
+const priceToggle = document.getElementById("priceToggle");
+const priceCurrency = document.getElementById("priceCurrency");
+const priceValue   = document.getElementById("priceValue");
+
+const LKR_TEXT = "100M";
+const USD_TEXT = "$312K";
+
+let isUSD = false;
+
+priceToggle?.addEventListener("click", ()=>{
+    isUSD = !isUSD;
+    if(isUSD){
+        priceCurrency.textContent = "USD";
+        priceValue.textContent = USD_TEXT;
+    } else {
+        priceCurrency.textContent = "LKR";
+        priceValue.textContent = LKR_TEXT;
+    }
+});
+</script>
