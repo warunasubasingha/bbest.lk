@@ -11,345 +11,6 @@
     <link rel="stylesheet" href="css/css.css">
     <title>Home Page</title>
 </head>
-<style>
-    /* section 01 */
-    #z2d2 {padding: 20px 0;}
-    #z2bt1{border: 1px solid var(--dark-blue);background: none;color: var(--dark-blue);font-size: 60px;width: 25%;}
-    #z2d3{width: 75%;}
-
-    /* =========================
-    Ads / Customer Section
-    ========================= */
-
-    .ad-area{ padding: 30px 0; }
-    .ad-wrap{gap: 40px;align-items: center;}
-
-    /* base card */
-    .ad-card{width: 260px;height: 360px;border: 2px solid var(--dark-blue);background: #fff;position: relative;border-radius: 6px;overflow: hidden;}
-
-    /* NEW upload box */
-    .ad-new{display: flex;align-items: center;justify-content: center;flex-direction: column;cursor: pointer;}
-    .ad-plus{font-size: 90px;color: var(--dark-blue);line-height: 1;}
-    .ad-new-text{margin-top: 10px;font-weight: 700;color: var(--dark-blue);}
-
-    /* SLIDER window: show 3 ads */
-    .ad-slider{width: 840px;height: 360px;overflow: hidden;}
-
-    /* track that moves left */
-    .ad-track{display: flex;gap: 30px;height: 360px;transform: translateX(0);transition: transform 450ms ease;}
-
-    /* slides are normal cards inside track */
-    .ad-slide{flex: 0 0 auto;}
-
-    /* ad image = full body */
-    .ad-img{width: 100%;height: 100%;object-fit: cover;}
-
-    /* profile circle top-right */
-    .ad-profile{position: absolute;top: 14px;right: 14px;width: 52px;height: 52px;border-radius: 50%;border: 2px solid var(--dark-blue);overflow: hidden;background: #fff;z-index: 2;}
-    .ad-profile img{width: 100%;height: 100%;object-fit: cover;}
-
-    /* RIGHT controls */
-    .ad-controls{width: 220px;display: flex;flex-direction: column;align-items: center;gap: 26px;}
-    .ad-ctrl-btn{width: 170px;background: #fff;color: var(--dark-blue);border: 2px solid var(--dark-blue);font-weight: 700;padding: 14px 18px;}
-
-    /* pole + dot */
-    .ad-pole{width: 180px;height: 6px;background: #fff;border: 2px solid var(--dark-blue);position: relative;}
-    .ad-dot{position: absolute;top: 50%;left: 0%;width: 18px;height: 18px;border-radius: 50%;background: #fff;border: 2px solid var(--dark-blue);transform: translate(-50%, -50%);}
-
-
-
-
-
-    #z1n1 {margin: 10px 0;}
-
-
-
-    /* ===== Post Card (Ad) ===== */
-.post-card{
-  width: 100%;
-  max-width: 920px;
-  background: #fff;
-  border: 2px solid var(--dark-blue);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
-}
-
-.post-top{
-  padding: 18px 18px 10px;
-}
-
-.post-user{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.avatar{
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 2px solid var(--dark-blue);
-  overflow: hidden;
-  background: var(--white);
-  flex: 0 0 auto;
-}
-.avatar img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.user-meta{display:flex;flex-direction:column;gap:6px;}
-.user-name{
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--dark-blue);
-}
-.user-sub{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:#6d7a88;
-  font-size:14px;
-}
-.dot{
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  display:inline-block;
-}
-.dot.online{ background: #2ecc71; }
-.sep{ opacity:.7; }
-
-/* Media */
-.post-media{ padding: 0 18px 16px; }
-.media-placeholder{
-  height: 320px;
-  border-radius: 14px;
-  background: #e9eef5;
-  border: 2px solid #d8e2ef;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position: relative;
-  overflow:hidden;
-}
-.media-placeholder img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-.camera{
-  width: 130px;
-  height: 90px;
-  border-radius: 14px;
-  border: 2px solid #aab7c6;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position: relative;
-  color:#7a8796;
-  font-size: 34px;
-  background: #f6f8fb;
-}
-.plus-ic{
-  position:absolute;
-  bottom:-8px;
-  right:-8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background:#fff;
-  border:2px solid #aab7c6;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  font-size:18px;
-}
-
-/* Info area */
-.post-info{
-  display:flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 0 18px 14px;
-}
-
-.info-left{ flex: 1; min-width: 0; }
-.post-title{
-  color: var(--dark-blue);
-  font-weight: 900;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.tag-row, .feat-row{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.tag{
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-weight: 800;
-  border: 2px solid #d9e3f0;
-  background: #f5f8fc;
-  color: var(--dark-blue);
-  font-size: 14px;
-}
-
-.tag-vip{
-  background: #ffd27a;
-  border-color: #ffc24b;
-  color: #6b3f00;
-}
-
-.tag-360{
-  background: #e8f1ff;
-  border-color: #cfe0ff;
-}
-
-.pill{
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: #eef3fb;
-  border: 2px solid #d9e3f0;
-  font-weight: 800;
-  color: var(--dark-blue);
-  min-width: 84px;
-  text-align:center;
-}
-
-/* Right price panel */
-.info-right{
-  width: 280px;
-  flex: 0 0 auto;
-  display:flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-}
-
-.price-box{
-  width: 100%;
-  border-left: 2px solid #d9e3f0;
-  padding-left: 14px;
-}
-
-.price-line{
-  display:flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.lbl{ color:#6d7a88; font-weight:700; }
-.val{
-  font-size: 30px;
-  font-weight: 900;
-  color: var(--dark-blue);
-}
-
-.loan-line{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 10px;
-  border: 2px solid #d9e3f0;
-  border-radius: 12px;
-  padding: 10px 12px;
-  background: #f7fafc;
-}
-.loan-lbl{
-  color:#6d7a88;
-  font-weight: 800;
-  font-size: 14px;
-}
-.loan-val{
-  font-weight: 900;
-  color: var(--dark-blue);
-}
-
-.badge.negotiable{
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 2px solid #d9e3f0;
-  background: #f7fafc;
-  font-weight: 900;
-  color:#7b8794;
-}
-
-/* CTA row */
-.post-cta{
-  padding: 0 18px 14px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.visit-btn{
-  flex: 1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: var(--dark-blue);
-  color: var(--white);
-  font-weight: 900;
-  font-size: 18px;
-  text-decoration:none;
-}
-
-.quick-actions{
-  display:flex;
-  gap: 10px;
-}
-
-.qbtn{
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 2px solid var(--dark-blue);
-  background: #fff;
-  color: var(--dark-blue);
-  font-weight: 900;
-  text-decoration:none;
-  white-space: nowrap;
-}
-
-/* Bottom action bar */
-.post-actions{
-  border-top: 2px solid #d9e3f0;
-  background: #f7fafc;
-  padding: 12px;
-  display:flex;
-  gap: 10px;
-}
-
-.act-btn{
-  flex: 1;
-  padding: 12px 10px;
-  border-radius: 12px;
-  border: 2px solid #d9e3f0;
-  background: #fff;
-  color: var(--dark-blue);
-  font-weight: 900;
-}
-
-/* Responsive */
-@media (max-width: 900px){
-  .post-info{ flex-direction: column; }
-  .info-right{ width: 100%; align-items: flex-start; }
-  .price-box{ border-left: none; padding-left: 0; border-top: 2px solid #d9e3f0; padding-top: 12px; }
-  .post-cta{ flex-direction: column; align-items: stretch; }
-  .quick-actions{ width:100%; }
-  .qbtn{ flex:1; text-align:center; }
-}
-
-</style>
 <body>
 <header class="top-header" id="topHeader">
   <div class="w topbar">
@@ -421,8 +82,8 @@
         </button>
 
         <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
-          <button class="lang-item" type="button" data-lang="SI" role="menuitem">Si</button>
-          <button class="lang-item" type="button" data-lang="TA" role="menuitem">Ta</button>
+          <button class="lang-item" type="button" data-lang="SI" role="menuitem">සි</button>
+          <button class="lang-item" type="button" data-lang="TA" role="menuitem">தமி</button>
         </div>
       </div>
 
@@ -483,102 +144,124 @@
 </section>
 
 
+<!-- =========================
+     LOCATION FILTER (Accordion)
+     Option B - Clean & Working
+========================== -->
+
 <section class="filter-sec">
   <div class="w">
 
     <div class="filter-wrap">
 
-      <!-- 1) Location -->
+      <!-- Location Button -->
       <div class="filter-row">
-        <button class="loc-btn" id="locOpen" type="button">
+        <button class="loc-btn" id="locOpen" type="button" aria-expanded="false">
           <span class="loc-title">Location</span>
           <span class="loc-value" id="locValue">Select District & City</span>
           <span class="loc-caret">▾</span>
         </button>
 
-        <!-- Location dropdown panel -->
+        <!-- Location Panel (Accordion List) -->
         <div class="loc-panel" id="locPanel" aria-hidden="true">
-          <div class="loc-cols">
-
-            <div class="loc-col">
-              <div class="loc-head">District</div>
-              <div class="loc-list" id="districtList"></div>
-            </div>
-
-            <div class="loc-col">
-              <div class="loc-head">City</div>
-              <div class="loc-list" id="cityList">
-                <div class="loc-empty">Select a district first</div>
-              </div>
-            </div>
-
-          </div>
+          <ul class="dist-list" id="distList"></ul>
         </div>
-      </div>
-
-      <!-- 2) KM Pole -->
-      <div class="filter-row km-row">
-        <div class="km-labels">
-          <span class="km-min">1km</span>
-          <span class="km-now" id="kmNow">8 km</span>
-          <span class="km-max">15km</span>
-        </div>
-
-        <div class="km-pole">
-          <input class="km-range" id="kmRange" type="range" min="1" max="15" value="8" />
-        </div>
-      </div>
-
-      <!-- 3) Min / Max price -->
-      <div class="filter-row price-row">
-        <button class="price-field" id="minPriceBtn" type="button">
-          <span class="price-label">Min Price</span>
-          <span class="price-val" id="minPriceText">Any</span>
-        </button>
-
-        <button class="price-field" id="maxPriceBtn" type="button">
-          <span class="price-label">Max Price</span>
-          <span class="price-val" id="maxPriceText">Any</span>
-        </button>
       </div>
 
     </div>
   </div>
 </section>
+      <div class="loc-panel" id="locPanel">
 
-<!-- PRICE POPUP -->
-<div class="modal" id="priceModal" aria-hidden="true">
-  <div class="modal-backdrop" id="modalClose"></div>
+              <ul class="dist-list" id="distList"></ul>
 
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-top">
-      <div class="modal-title" id="modalTitle">Enter Price</div>
-      <button class="modal-x" id="modalX" type="button">✕</button>
+            </div>
+
+      <!-- 2) KM Pole -->
+      <div class="filter-row km-row" id="kmWrap">
+
+        <div class="km-labels">
+          <span class="km-min">0km</span>
+          <span class="km-max">25km</span>
+        </div>
+
+        <div class="km-pole dual">
+
+          <!-- base track + selected range -->
+          <div class="km-track"></div>
+          <div class="km-fill" id="kmFill"></div>
+
+          <!-- 2 sliders -->
+          <input class="km-range km-minR" id="kmMin" type="range" min="0" max="26" step="1" value="0">
+          <input class="km-range km-maxR" id="kmMax" type="range" min="0" max="26" step="1" value="26">
+
+
+          <!-- labels above dots -->
+          <div class="km-bubble" id="minBubble">1km</div>
+          <div class="km-bubble" id="maxBubble">15km</div>
+
+        </div>
+      </div>
+
+
+
+
+     <!-- 3) Min / Max price -->
+<div class="filter-row price-row">
+  <button class="price-field" id="minPriceBtn" type="button">
+    <span class="price-label">Min Price</span>
+    <span class="price-val" id="minPriceText">Any</span>
+  </button>
+
+  <button class="price-field" id="maxPriceBtn" type="button">
+    <span class="price-label">Max Price</span>
+    <span class="price-val" id="maxPriceText">Any</span>
+  </button>
+</div>
+</section>
+
+<!-- PRICE POPUP (NEW) -->
+<div class="pmodal" id="priceModal" aria-hidden="true">
+  <div class="pmodal-backdrop" id="priceBackdrop"></div>
+
+  <div class="pmodal-card" role="dialog" aria-modal="true" aria-labelledby="priceTitle">
+    <div class="pmodal-top">
+      <div class="pmodal-title" id="priceTitle">Enter Price</div>
+      <button class="pmodal-x" id="priceClose" type="button" aria-label="Close">✕</button>
     </div>
 
-    <div class="modal-input-wrap">
-      <span class="rs">Rs</span>
-      <input id="modalInput" class="modal-input" inputmode="numeric" placeholder="0" />
+    <!-- Currency -->
+    <div class="seg-row" role="group" aria-label="Currency">
+      <button class="seg-btn is-active" type="button" data-cur="LKR">LKR</button>
+      <button class="seg-btn" type="button" data-cur="USD">$</button>
     </div>
 
-    <div class="keypad">
-      <button class="k" data-k="1">1</button>
-      <button class="k" data-k="2">2</button>
-      <button class="k" data-k="3">3</button>
-      <button class="k" data-k="4">4</button>
-      <button class="k" data-k="5">5</button>
-      <button class="k" data-k="6">6</button>
-      <button class="k" data-k="7">7</button>
-      <button class="k" data-k="8">8</button>
-      <button class="k" data-k="9">9</button>
-      <button class="k" data-k="00">00</button>
-      <button class="k" data-k="0">0</button>
-      <button class="k k-del" data-k="del">⌫</button>
+    <!-- Amount input -->
+    <div class="pinput-wrap">
+      <span class="pcur" id="curPrefix">LKR</span>
+      <input
+        id="priceInput"
+        class="pinput"
+        type="text"
+        inputmode="numeric"
+        autocomplete="off"
+        placeholder="0"
+      />
+      <span class="psuf" id="unitSuffix">L</span>
     </div>
 
-    <div class="modal-actions">
-      <button class="btn-lite" id="modalClear" type="button">Clear</button>
-      <button class="btn-main" id="modalDone" type="button">Done</button>
+    <!-- Unit buttons -->
+    <div class="unit-row" role="group" aria-label="Unit">
+      <button class="unit-btn is-active" type="button" data-unit="L" data-name="Lak">Lak</button>
+      <button class="unit-btn" type="button" data-unit="M" data-name="Million">Million</button>
+      <button class="unit-btn" type="button" data-unit="C" data-name="Crore">Crore</button>
+      <button class="unit-btn" type="button" data-unit="B" data-name="Billion">Billion</button>
+    </div>
+
+    <!-- Footer buttons -->
+    <div class="pmodal-actions">
+      <button class="btn-lite" id="priceReset" type="button">Reset</button>
+      <button class="btn-main" id="priceDone" type="button">Done</button>
     </div>
   </div>
 </div>
@@ -586,119 +269,134 @@
 
 
 <section class="cp">
-  <div class="w post-card v2">
+  <div class="w post-card-sketch">
 
-    <!-- Media (1:1) with overlays -->
-    <div class="post-media v2">
+    <!-- 1) MEDIA AREA -->
+    <div class="pc-media">
+      <img class="pc-img" src="img/main_image.webp" alt="Ad Image">
 
-      <!-- Background image -->
-      <img class="post-img" src="img/main_image.webp" alt="Ad Image">
+      <!-- Top left: user -->
+      <div class="pc-user">
+        <div class="pc-avatar">
+          <img src="img/man.webp" alt="User">
+        </div>
 
-      <!-- TOP-LEFT overlay: profile + details -->
-      <div class="ov ov-top-left">
-        <div class="ov-user">
-          <div class="avatar sm">
-            <img src="img/man.webp" alt="User">
-          </div>
-
-          <div class="user-meta">
-            <div class="user-name">John Doe</div>
-            <div class="user-sub">
-              <span class="dot online"></span>
-              <span class="sub-txt">Post ID : 12345</span>
-              <span class="sep">•</span>
-              <span class="sub-txt">27 mins ago</span>
-            </div>
+        <div class="pc-user-meta">
+          <div class="pc-user-name">John Doe</div>
+          <div class="pc-user-sub">
+            <span class="pc-dot"></span>
+            <span>Post ID 1234</span>
+            <span class="pc-sep">•</span>
+            <span>27 mins ago</span>
           </div>
         </div>
       </div>
 
-      <!-- TOP-RIGHT overlay: price (click to toggle LKR/USD) -->
-      <button class="ov ov-top-right price-pill" id="priceToggle" type="button" aria-label="Toggle currency">
-        <span class="n-badge">N</span>
-        <span class="price-label" id="priceCurrency">LKR</span>
-        <span class="price-value" id="priceValue">100M</span>
-      </button>
+      <!-- Bottom left: media icons + title -->
+      <div class="pc-bottom-left">
+        <div class="pc-media-icons">
+          <!-- Photo -->
+          <span class="pc-ic-badge" title="Photo">
+            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
+              <path d="M4 6h4l1-2h6l1 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
+            </svg>
+          </span>
 
-      <!-- BOTTOM-LEFT overlay: title + chips -->
-      <div class="ov ov-bottom-left">
-        <div class="ov-title">Moratuwa - Lakshapathiya</div>
+          <!-- Video -->
+          <span class="pc-ic-badge" title="Video">
+            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
+              <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
+            </svg>
+          </span>
 
-        <div class="chip-row">
-          <span class="chip">Place</span>
-          <span class="chip chip-warn">Video</span>
-          <span class="chip chip-blue">360° View</span>
+          <!-- 360 -->
+          <span class="pc-360">360°</span>
         </div>
+
+        <div class="pc-title">Moratuwa - Lakshapathiya</div>
       </div>
 
-      <!-- BOTTOM-RIGHT overlay: action buttons with numbers -->
-      <div class="ov ov-bottom-right">
-        <a class="ov-btn call" href="tel:+94770000000" aria-label="Call">
-          <!-- phone icon -->
-          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true">
-            <path d="M6.6 10.8c1.6 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.4 22 2 13.6 2 3c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
-          </svg>
-          <span class="ov-btn-txt">Call</span>
-          <span class="ov-btn-sub">+94 77 000 0000</span>
-        </a>
-
-        <a class="ov-btn wa" href="https://wa.me/94770000000" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <!-- whatsapp icon -->
-          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true">
-            <path d="M20 11.9a8 8 0 0 1-11.9 7L4 20l1.2-4.1A8 8 0 1 1 20 11.9zm-8-6.7c-.4 0-.8 0-1 .5-.3.5-1 1.2-1 2.4 0 1.2 1 2.5 1.2 2.7.2.2 2.1 3.3 5.2 4.5 2.6 1 3.1.8 3.7.7.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.4-.2-.8-.4-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8l.5-.5c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.8-2.1-1.1-2.8-.3-.7-.6-.6-.9-.6z"/>
-          </svg>
-          <span class="ov-btn-txt">WhatsApp</span>
-          <span class="ov-btn-sub">+94 77 000 0000</span>
-        </a>
+      <!-- Bottom right: price -->
+      <div class="pc-price">
+        <span class="pc-price-label">Price :</span>
+        <span class="pc-price-val">100M</span>
       </div>
-
     </div>
 
-    <!-- Details row (icons for bed/bath/etc) -->
-    <div class="post-body v2">
+    <!-- 2) DETAILS AREA -->
+    <div class="pc-body">
 
-      <div class="feat-row v2">
-        <div class="feat">
-          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+      <!-- row: Perch + bed + bath + sqf -->
+      <div class="pc-stats">
+        <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
+
+        <div class="pc-stat pc-stat-ic">
+          <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
             <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
           </svg>
-          <span>Bed</span>
+          <span>3</span>
         </div>
 
-        <div class="feat">
-          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
+        <div class="pc-stat pc-stat-ic">
+          <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
             <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
           </svg>
-          <span>Bath</span>
+          <span>2</span>
         </div>
 
-        <div class="feat">
-          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
-            <path d="M4 20h16v2H4v-2zm2-6h12l1 6H5l1-6zm2-10h8l2 10H6L8 4z"/>
-          </svg>
-          <span>Perch</span>
-        </div>
+        <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
+      </div>
 
-        <div class="feat">
-          <svg viewBox="0 0 24 24" class="fic" aria-hidden="true">
-            <path d="M4 4h7v2H6v5H4V4zm14 0h2v7h-2V6h-5V4h5zM4 13h2v5h5v2H4v-7zm16 0v7h-7v-2h5v-5h2z"/>
-          </svg>
-          <span>Sqf.</span>
+      <!-- Visit time row -->
+      <div class="pc-visit">
+        <span class="pc-visit-lbl">Visit Time</span>
+        <span class="pc-pill">Today</span>
+        <span class="pc-pill">8.00 AM - 5.00 PM</span>
+      </div>
+
+      <!-- Loan box + apply -->
+      <div class="pc-loan-row">
+        <div class="pc-loan-box">
+          <div class="pc-loan-top">
+            <span class="pc-loan-lbl">Loan</span>
+
+            <button class="pc-loan-chip is-active" type="button">LOLC</button>
+            <button class="pc-loan-chip" type="button">HNB</button>
+          </div>
+
+          <div class="pc-loan-mid">
+            <div class="pc-loan-month">Monthly</div>
+            <div class="pc-loan-amt">Rs 245,000</div>
+          </div>
+
+          <button class="pc-apply" type="button">APPLY NOW</button>
         </div>
       </div>
 
-      <!-- Visit + Apply (Negotiable -> Apply) -->
-      <div class="post-cta v2">
-        <a class="visit-btn v2" href="#">Visit Time → 8.00 a.m to 5.00 p.m</a>
-        <button class="apply-btn" type="button">Apply</button>
+      <!-- Action buttons -->
+      <div class="pc-actions">
+        <button class="pc-btn" type="button">List</button>
+
+        <a class="pc-btn" href="tel:+94770000000">
+          <svg viewBox="0 0 24 24" class="pc-btn-ic" aria-hidden="true">
+            <path d="M6.6 10.8c1.6 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.4 22 2 13.6 2 3c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
+          </svg>
+          Call
+        </a>
+
+        <a class="pc-btn" href="https://wa.me/94770000000" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="pc-btn-ic" aria-hidden="true">
+            <path d="M20 11.9a8 8 0 0 1-11.9 7L4 20l1.2-4.1A8 8 0 1 1 20 11.9zm-8-6.7c-.4 0-.8 0-1 .5-.3.5-1 1.2-1 2.4 0 1.2 1 2.5 1.2 2.7.2.2 2.1 3.3 5.2 4.5 2.6 1 3.1.8 3.7.7.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.4-.2-.8-.4-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8l.5-.5c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.8-2.1-1.1-2.8-.3-.7-.6-.6-.9-.6z"/>
+          </svg>
+          WhatsApp
+        </a>
       </div>
 
-      <!-- Bottom bar -->
-      <div class="post-actions v2">
-        <button class="act-btn" type="button">List</button>
-        <button class="act-btn" type="button">Like</button>
-        <button class="act-btn" type="button">Comment</button>
-        <button class="act-btn" type="button">Share →</button>
+      <!-- Like / Comment / Share row -->
+      <div class="pc-social">
+        <button type="button" class="pc-social-btn">Like ♥</button>
+        <button type="button" class="pc-social-btn">Comment</button>
+        <button type="button" class="pc-social-btn">Share ↗</button>
       </div>
 
     </div>
@@ -809,7 +507,7 @@
 </script>
 
 
-<script>
+<!-- <script>
   const track = document.getElementById('adTrack');
   const slider = document.getElementById('adSlider');
 
@@ -905,205 +603,389 @@
   function openUploadModal(){
     alert('Open upload form here');
   }
-</script>
+</script> -->
 
 
 
 <script>
 /* =========================
-   1) District -> City data
+   LOCATION UI (Accordion) - JS
+   Option B - Clean & Working
 ========================= */
+
+/* 1) District -> Cities Database (Full Sri Lanka as you gave) */
 const SL = {
-  "Colombo": ["Colombo", "Kotte", "Dehiwala", "Moratuwa", "Maharagama", "Homagama", "Piliyandala", "Nugegoda"],
-  "Gampaha": ["Negombo", "Gampaha", "Ja-Ela", "Wattala", "Kelaniya", "Minuwangoda", "Ragama", "Kadawatha"],
-  "Kalutara": ["Kalutara", "Panadura", "Horana", "Beruwala", "Aluthgama", "Bandaragama", "Matugama"],
-  "Kandy": ["Kandy", "Peradeniya", "Katugastota", "Gampola", "Nawalapitiya", "Kundasale"],
-  "Matale": ["Matale", "Dambulla", "Sigiriya", "Ukuwela", "Rattota"],
-  "Nuwara Eliya": ["Nuwara Eliya", "Hatton", "Talawakele", "Nanu Oya", "Walapane"],
-  "Galle": ["Galle", "Hikkaduwa", "Ambalangoda", "Elpitiya", "Karapitiya"],
-  "Matara": ["Matara", "Weligama", "Akuressa", "Kamburupitiya", "Mirissa"],
-  "Hambantota": ["Hambantota", "Tangalle", "Tissamaharama", "Ambalantota", "Kataragama"],
-  "Jaffna": ["Jaffna", "Nallur", "Chavakachcheri", "Point Pedro", "Karainagar"],
-  "Kilinochchi": ["Kilinochchi", "Paranthan", "Pooneryn"],
-  "Mannar": ["Mannar", "Pesalai", "Mulankavil"],
-  "Vavuniya": ["Vavuniya", "Cheddikulam", "Nedunkeni"],
-  "Mullaitivu": ["Mullaitivu", "Puthukkudiyiruppu", "Oddusuddan"],
-  "Batticaloa": ["Batticaloa", "Kattankudy", "Eravur", "Kaluwanchikudy"],
-  "Ampara": ["Ampara", "Kalmunai", "Akkaraipattu", "Sainthamaruthu"],
-  "Trincomalee": ["Trincomalee", "Kinniya", "Kantale", "Nilaveli"],
-  "Kurunegala": ["Kurunegala", "Kuliyapitiya", "Polgahawela", "Wariyapola", "Narammala"],
-  "Puttalam": ["Chilaw", "Puttalam", "Wennappuwa", "Marawila", "Anamaduwa"],
-  "Anuradhapura": ["Anuradhapura", "Kekirawa", "Medawachchiya", "Mihintale"],
-  "Polonnaruwa": ["Polonnaruwa", "Hingurakgoda", "Medirigiriya"],
-  "Badulla": ["Badulla", "Bandarawela", "Haputale", "Ella", "Mahiyanganaya"],
-  "Monaragala": ["Monaragala", "Wellawaya", "Buttala", "Bibile"],
-  "Ratnapura": ["Ratnapura", "Balangoda", "Pelmadulla", "Kuruwita"],
-  "Kegalle": ["Kegalle", "Mawanella", "Rambukkana", "Warakapola"]
+  "Colombo": [
+    "Colombo","Pettah","Fort","Borella","Rajagiriya","Nugegoda","Maharagama","Kotte",
+    "Battaramulla","Wellawatte","Dehiwala","Mount Lavinia","Ratmalana","Kolonnawa",
+    "Angoda","Mulleriyawa","Malabe","Homagama","Kaduwela","Athurugiriya",
+    "Pannipitiya","Kahathuduwa","Moratuwa","Piliyandala"
+  ],
+  "Gampaha": [
+    "Gampaha","Negombo","Katunayake","Wattala","Ja-Ela","Ragama","Kelaniya",
+    "Kiribathgoda","Kadawatha","Delgoda","Dompe","Mirigama","Minuwangoda",
+    "Nittambuwa","Veyangoda","Seeduwa","Ekala","Kandana","Hendala"
+  ],
+  "Kalutara": [
+    "Kalutara","Panadura","Wadduwa","Horana","Bandaragama","Mathugama",
+    "Aluthgama","Beruwala","Payagala","Ingiriya","Bulathsinhala","Millaniya"
+  ],
+  "Kandy": [
+    "Kandy","Peradeniya","Katugastota","Kundasale","Gampola","Nawalapitiya",
+    "Akurana","Poojapitiya","Digana","Menikhinna","Galagedara"
+  ],
+  "Matale": ["Matale","Dambulla","Sigiriya","Rattota","Ukuwela","Pallepola"],
+  "Nuwara Eliya": ["Nuwara Eliya","Hatton","Talawakele","Lindula","Ragala","Kotagala","Maskeliya"],
+  "Galle": ["Galle","Hikkaduwa","Unawatuna","Ahangama","Weligama","Ambalangoda","Baddegama","Elpitiya","Karapitiya"],
+  "Matara": ["Matara","Weligama","Mirissa","Akuressa","Deniyaya","Hakmana","Kamburupitiya"],
+  "Hambantotat": ["Hambantota","Tangalle","Tissamaharama","Ambalantota","Weeraketiya","Beliatta","Lunugamvehera"],
+  "Kurunegala": ["Kurunegala","Kuliyapitiya","Narammala","Pannala","Polgahawela","Wariyapola","Ibbagamuwa","Melsiripura"],
+  "Puttalam": ["Puttalam","Chilaw","Wennappuwa","Marawila","Dankotuwa","Anamaduwa","Mundel"],
+  "Anuradhapura": ["Anuradhapura","Kekirawa","Mihintale","Medawachchiya","Thambuttegama","Galenbindunuwewa"],
+  "Polonnaruwa": ["Polonnaruwa","Hingurakgoda","Medirigiriya","Kaduruwela"],
+  "Badullat": ["Badulla","Bandarawela","Ella","Hali-Ela","Mahiyanganaya","Passara","Diyatalawa"],
+  "Monaragala": ["Monaragala","Wellawaya","Buttala","Bibile","Kataragama"],
+  "Ratnapura": ["Ratnapura","Balangoda","Embilipitiya","Pelmadulla","Kuruwita","Godakawela"],
+  "Kegalle": ["Kegalle","Mawanella","Warakapola","Rambukkana","Ruwanwella","Dehiowita"],
+  "Jaffna": ["Jaffna","Nallur","Chavakachcheri","Point Pedro","Velanai"],
+  "Kilinochchi": ["Kilinochchi","Pooneryn"],
+  "Mannar": ["Mannar","Madhu"],
+  "Mullaitivu": ["Mullaitivu"],
+  "Vavuniya": ["Vavuniya"],
+  "Trincomalee": ["Trincomalee","Kinniya","Kantale","Nilaveli"],
+  "Batticaloa": ["Batticaloa","Eravur","Kalkudah","Pasikudah"],
+  "Ampara": ["Ampara","Kalmunai","Akkaraipattu","Sammanthurai"]
 };
 
+/* 2) Elements */
+const locOpen  = document.getElementById("locOpen");
+const locPanel = document.getElementById("locPanel");
+const distList = document.getElementById("distList");
+const locValue = document.getElementById("locValue");
+
+/* 3) State */
+let openDistrict = "";       // which accordion is open
 let selectedDistrict = "";
 let selectedCity = "";
 
-/* =========================
-   Location UI
-========================= */
-const locOpen = document.getElementById("locOpen");
-const locPanel = document.getElementById("locPanel");
-const districtList = document.getElementById("districtList");
-const cityList = document.getElementById("cityList");
-const locValue = document.getElementById("locValue");
-
+/* 4) Open/Close panel */
 function openLoc(){
   locPanel.classList.add("open");
-  locPanel.setAttribute("aria-hidden", "false");
+  locPanel.setAttribute("aria-hidden","false");
+  locOpen.setAttribute("aria-expanded","true");
 }
 function closeLoc(){
   locPanel.classList.remove("open");
-  locPanel.setAttribute("aria-hidden", "true");
+  locPanel.setAttribute("aria-hidden","true");
+  locOpen.setAttribute("aria-expanded","false");
 }
 
+/* Toggle panel */
 locOpen.addEventListener("click", (e)=>{
   e.stopPropagation();
   locPanel.classList.contains("open") ? closeLoc() : openLoc();
 });
 
+/* Close when clicking outside */
 document.addEventListener("click", ()=>{
   if(locPanel.classList.contains("open")) closeLoc();
 });
 
-function renderDistricts(){
-  const dists = Object.keys(SL);
-  districtList.innerHTML = "";
-  dists.forEach(d=>{
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "loc-item" + (d === selectedDistrict ? " active" : "");
-    b.textContent = d;
-    b.addEventListener("click", (e)=>{
-      e.stopPropagation();
-      selectedDistrict = d;
-      selectedCity = "";
-      renderDistricts();
-      renderCities();
+/* Prevent inside clicks closing */
+locPanel.addEventListener("click", (e)=> e.stopPropagation());
+
+/* 5) Render accordion */
+function renderAccordion(){
+  distList.innerHTML = "";
+
+  Object.keys(SL).forEach((district) => {
+    const li = document.createElement("li");
+    li.className = "dist-item" + (openDistrict === district ? " open" : "");
+
+    /* District Button */
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "dist-btn";
+    btn.innerHTML = `<span>${district}</span><span class="caret">▾</span>`;
+
+    btn.addEventListener("click", ()=>{
+      openDistrict = (openDistrict === district) ? "" : district;
+      renderAccordion();
     });
-    districtList.appendChild(b);
+
+    /* Cities List */
+    const cityUl = document.createElement("ul");
+    cityUl.className = "city-ul";
+
+    SL[district].forEach((city) => {
+      const cityLi = document.createElement("li");
+      cityLi.className = "city-li" + ((selectedDistrict === district && selectedCity === city) ? " active" : "");
+      cityLi.textContent = city;
+
+      cityLi.addEventListener("click", ()=>{
+        selectedDistrict = district;
+        selectedCity = city;
+
+        locValue.textContent = `${district} - ${city}`;
+        closeLoc();
+
+        // Keep that district open next time (optional)
+        openDistrict = district;
+
+        // refresh selection highlight
+        renderAccordion();
+      });
+
+      cityUl.appendChild(cityLi);
+    });
+
+    li.appendChild(btn);
+    li.appendChild(cityUl);
+    distList.appendChild(li);
   });
 }
 
-function renderCities(){
-  cityList.innerHTML = "";
-  if(!selectedDistrict){
-    cityList.innerHTML = `<div class="loc-empty">Select a district first</div>`;
-    return;
-  }
-  SL[selectedDistrict].forEach(c=>{
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "loc-item" + (c === selectedCity ? " active" : "");
-    b.textContent = c;
-    b.addEventListener("click", (e)=>{
-      e.stopPropagation();
-      selectedCity = c;
-      locValue.textContent = `${selectedDistrict} - ${selectedCity}`;
-      closeLoc();
-    });
-    cityList.appendChild(b);
-  });
-}
+/* Init */
+renderAccordion();
 
-renderDistricts();
-renderCities();
+
+
 
 /* =========================
    2) KM Slider
 ========================= */
-const kmRange = document.getElementById("kmRange");
-const kmNow = document.getElementById("kmNow");
+const KM_POINTS = [
+  0, 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
+  1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,22,25
+];
 
-function updateKm(){
-  kmNow.textContent = `${kmRange.value} km`;
-}
-kmRange.addEventListener("input", updateKm);
-updateKm();
+// NOTE: now points length is 27 (index 0..26)
+const kmWrap = document.getElementById("kmWrap");
+const kmMin  = document.getElementById("kmMin");
+const kmMax  = document.getElementById("kmMax");
+const kmFill = document.getElementById("kmFill");
+const minBubble = document.getElementById("minBubble");
+const maxBubble = document.getElementById("maxBubble");
 
-/* =========================
-   3) Price modal (big popup)
-========================= */
-const priceModal = document.getElementById("priceModal");
-const modalClose = document.getElementById("modalClose");
-const modalX = document.getElementById("modalX");
-const modalInput = document.getElementById("modalInput");
-const modalDone = document.getElementById("modalDone");
-const modalClear = document.getElementById("modalClear");
+let t = null;
 
-const minPriceBtn = document.getElementById("minPriceBtn");
-const maxPriceBtn = document.getElementById("maxPriceBtn");
-const minPriceText = document.getElementById("minPriceText");
-const maxPriceText = document.getElementById("maxPriceText");
-
-let activePriceTarget = "min"; // or "max"
-
-function openPriceModal(target){
-  activePriceTarget = target;
-  priceModal.classList.add("open");
-  priceModal.setAttribute("aria-hidden", "false");
-
-  const current = (target === "min" ? minPriceText.textContent : maxPriceText.textContent);
-  modalInput.value = (current === "Any") ? "" : current.replaceAll(",", "").replace("Rs", "").trim();
-
-  setTimeout(()=> modalInput.focus(), 50);
+function fmt(v){
+  if (typeof v !== "number" || Number.isNaN(v)) return "0km";
+  if (v === 0) return "0km";
+  return v < 1 ? `${Math.round(v * 1000)}m` : `${v}km`;
 }
 
-function closePriceModal(){
-  priceModal.classList.remove("open");
-  priceModal.setAttribute("aria-hidden", "true");
+function clampIndex(i){
+  i = Number(i);
+  if (Number.isNaN(i)) return 0;
+  return Math.max(0, Math.min(26, i));
 }
 
-minPriceBtn.addEventListener("click", ()=> openPriceModal("min"));
-maxPriceBtn.addEventListener("click", ()=> openPriceModal("max"));
-modalClose.addEventListener("click", closePriceModal);
-modalX.addEventListener("click", closePriceModal);
+function updateRange(){
+  let a = clampIndex(kmMin.value);
+  let b = clampIndex(kmMax.value);
 
-function formatRs(numStr){
-  const n = Number(numStr || 0);
-  if(!n) return "Any";
-  return "Rs " + n.toLocaleString("en-LK");
+  // keep order correct
+  if(a > b){
+    const tmp = a; a = b; b = tmp;
+    kmMin.value = a;
+    kmMax.value = b;
+  }
+
+  const minPct = (a / 26) * 100;
+  const maxPct = (b / 26) * 100;
+
+  // selected bar
+  kmFill.style.left = `${minPct}%`;
+  kmFill.style.width = `${maxPct - minPct}%`;
+
+  // values (never undefined)
+  const minVal = KM_POINTS[a] ?? 0;
+  const maxVal = KM_POINTS[b] ?? 25;
+
+  minBubble.textContent = fmt(minVal);
+  maxBubble.textContent = fmt(maxVal);
+
+  minBubble.style.left = `${minPct}%`;
+  maxBubble.style.left = `${maxPct}%`;
+
+  // after 2 seconds, only change bar color
+  kmWrap.classList.remove("is-after2s");
+  clearTimeout(t);
+  t = setTimeout(() => kmWrap.classList.add("is-after2s"), 2000);
 }
 
-document.querySelectorAll(".k").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    const k = btn.dataset.k;
-    if(k === "del"){
-      modalInput.value = modalInput.value.slice(0, -1);
+kmMin.addEventListener("input", updateRange);
+kmMax.addEventListener("input", updateRange);
+
+// ✅ first load shows 0km and 25km
+updateRange();
+
+
+
+
+
+// ===== Price Modal v2 (Min/Max) =====
+// =====================
+// PRICE MODAL (Fixed JS)
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Elements
+  const priceModal     = document.getElementById("priceModal");
+  const priceBackdrop  = document.getElementById("priceBackdrop");
+  const priceClose     = document.getElementById("priceClose");
+  const priceInput     = document.getElementById("priceInput");
+  const priceDone      = document.getElementById("priceDone");
+  const priceReset     = document.getElementById("priceReset");
+
+  const minPriceBtn    = document.getElementById("minPriceBtn");
+  const maxPriceBtn    = document.getElementById("maxPriceBtn");
+  const minPriceText   = document.getElementById("minPriceText");
+  const maxPriceText   = document.getElementById("maxPriceText");
+
+  const curPrefix      = document.getElementById("curPrefix");
+  const unitSuffix     = document.getElementById("unitSuffix");
+
+  const curBtns  = [...document.querySelectorAll(".seg-btn")];
+  const unitBtns = [...document.querySelectorAll(".unit-btn")];
+
+  // State
+  let activeTarget = "min";   // "min" | "max"
+  let selectedCur  = "LKR";   // default currency
+  let selectedUnit = "";      // default NO unit
+
+  // Safe set UI helpers
+  function setCurrency(cur){
+    selectedCur = cur;
+    if(curPrefix) curPrefix.textContent = (cur === "USD") ? "$" : "LKR";
+
+    curBtns.forEach(b => b.classList.toggle("is-active", b.dataset.cur === cur));
+  }
+
+  function setUnit(unit){
+    selectedUnit = unit || "";
+    if(unitSuffix) unitSuffix.textContent = selectedUnit;
+
+    // active button only if unit exists
+    unitBtns.forEach(b => b.classList.toggle("is-active", b.dataset.unit === selectedUnit));
+  }
+
+  // Parse text like: "LKR 120M", "$ 200L", "Any"
+  function loadFromText(text){
+    const t = (text || "").trim();
+    if(!t || t.toLowerCase() === "any"){
+      priceInput.value = "";
+      setCurrency("LKR"); // keep default
+      setUnit("");        // no unit
       return;
     }
-    modalInput.value += k;
+
+    // Currency
+    if(t.startsWith("$")) setCurrency("USD");
+    else setCurrency("LKR");
+
+    // Extract number + suffix
+    // Examples: "LKR 120M", "$ 1500", "LKR 250L"
+    const numMatch = t.match(/(\d+)/);
+    priceInput.value = numMatch ? numMatch[1] : "";
+
+    const unitMatch = t.match(/([LMCB])\s*$/);
+    setUnit(unitMatch ? unitMatch[1] : "");
+  }
+
+  function openPriceModal(target){
+    if(!priceModal) return;
+
+    activeTarget = target;
+    priceModal.classList.add("open");
+    priceModal.setAttribute("aria-hidden", "false");
+
+    // Load current value into modal
+    const currentText = (target === "min") ? minPriceText?.textContent : maxPriceText?.textContent;
+    loadFromText(currentText);
+
+    setTimeout(() => priceInput?.focus(), 80);
+  }
+
+  function closePriceModal(){
+    if(!priceModal) return;
+    priceModal.classList.remove("open");
+    priceModal.setAttribute("aria-hidden", "true");
+  }
+
+  // Allow only numbers
+  if(priceInput){
+    priceInput.addEventListener("input", () => {
+      priceInput.value = priceInput.value.replace(/\D/g, "");
+    });
+  }
+
+  // Currency buttons
+  curBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      setCurrency(btn.dataset.cur || "LKR");
+    });
   });
+
+  // Unit buttons
+  unitBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      setUnit(btn.dataset.unit || "");
+    });
+  });
+
+  // Open modal (min/max)
+  minPriceBtn?.addEventListener("click", () => openPriceModal("min"));
+  maxPriceBtn?.addEventListener("click", () => openPriceModal("max"));
+
+  // Close actions
+  priceBackdrop?.addEventListener("click", closePriceModal);
+  priceClose?.addEventListener("click", closePriceModal);
+
+  // RESET button
+  priceReset?.addEventListener("click", () => {
+    if(priceInput) priceInput.value = "";
+    setCurrency("LKR");
+    setUnit(""); // no unit selected
+    setTimeout(() => priceInput?.focus(), 50);
+  });
+
+  // DONE button
+  priceDone?.addEventListener("click", () => {
+    const num = (priceInput?.value || "").trim();
+
+    // Empty = Any
+    if(!num){
+      if(activeTarget === "min" && minPriceText) minPriceText.textContent = "Any";
+      if(activeTarget === "max" && maxPriceText) maxPriceText.textContent = "Any";
+      closePriceModal();
+      return;
+    }
+
+    const prefix = (selectedCur === "USD") ? "$" : "LKR";
+    const suffix = selectedUnit ? selectedUnit : "";
+    const out = `${prefix} ${num}${suffix}`;
+
+    if(activeTarget === "min" && minPriceText) minPriceText.textContent = out;
+    if(activeTarget === "max" && maxPriceText) maxPriceText.textContent = out;
+
+    closePriceModal();
+  });
+
+  // ESC close
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape") closePriceModal();
+  });
+
+  // Initial UI state (important)
+  setCurrency("LKR");
+  setUnit(""); // ❗ no default unit
+
 });
 
-modalClear.addEventListener("click", ()=>{
-  modalInput.value = "";
-});
 
-modalDone.addEventListener("click", ()=>{
-  const v = modalInput.value.replace(/\D/g, "");
-  const out = v ? formatRs(v) : "Any";
 
-  if(activePriceTarget === "min") minPriceText.textContent = out;
-  else maxPriceText.textContent = out;
-
-  closePriceModal();
-});
-
-// ESC closes
-document.addEventListener("keydown", (e)=>{
-  if(e.key === "Escape") closePriceModal();
-});
-
-/* Upload example */
-function openUploadModal(){
-  alert("Open upload form here");
-}
 </script>
 
 
@@ -1153,3 +1035,80 @@ priceToggle?.addEventListener("click", ()=>{
     }
 });
 </script>
+
+<script>
+  const actions = document.querySelector(".post-actions.v2");
+  const commentBox = document.getElementById("commentBox");
+  const commentInput = document.getElementById("commentInput");
+  const toast = document.getElementById("toast");
+
+  function showToast(msg="Link copied"){
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(()=> toast.classList.remove("show"), 1400);
+  }
+
+  async function copyText(text){
+    try{
+      await navigator.clipboard.writeText(text);
+      return true;
+    }catch(e){
+      // fallback
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    }
+  }
+
+  document.querySelectorAll(".post-actions.v2 .act-btn").forEach(btn=>{
+    btn.addEventListener("click", async ()=>{
+      const type = btn.dataset.act;
+
+      // SAVE + LIKE => toggle + color change
+      if(type === "save" || type === "like"){
+        btn.classList.toggle("is-active");
+        btn.setAttribute("aria-pressed", btn.classList.contains("is-active") ? "true" : "false");
+        return;
+      }
+
+      // COMMENT => open box, no color change
+      if(type === "comment"){
+        const open = !commentBox.classList.contains("is-open");
+        commentBox.classList.toggle("is-open", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        if(open) setTimeout(()=> commentInput.focus(), 50);
+        return;
+      }
+
+      // SHARE => copy link, no color change
+      if(type === "share"){
+        const url = actions.getAttribute("data-share-url") || window.location.href;
+        const ok = await copyText(url);
+        showToast(ok ? "Link copied" : "Copy failed");
+        return;
+      }
+    });
+  });
+
+  // Optional: Enter to send comment
+  document.getElementById("commentSend").addEventListener("click", ()=>{
+    const text = commentInput.value.trim();
+    if(!text) return;
+    // Here you can send to backend
+    console.log("Comment:", text);
+    commentInput.value = "";
+    showToast("Comment sent");
+  });
+
+  commentInput.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter") document.getElementById("commentSend").click();
+    if(e.key === "Escape") commentBox.classList.remove("is-open");
+  });
+</script>
+
+
