@@ -173,6 +173,7 @@
 .cat-nav::-webkit-scrollbar{ height: 6px; }
 
 .cat-item{
+  text-decoration: none;
   flex: 0 0 auto;
   display:flex;
   flex-direction:column;
@@ -193,7 +194,7 @@
 }
 .cat-item span{
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--dark-blue);
   white-space: nowrap;
 }
@@ -270,7 +271,7 @@
 
   .cat-row-inner{ gap: 10px; }
   .cat-item img{ width: 34px; height: 34px; }
-  .cat-item span{ font-size: 12px; white-space: wrap; }
+  .cat-item span{ font-size: 10px; white-space: wrap; }
   .lang-btn{ height: 40px; min-width: 76px; }
   .top-header a {width: 20%;}
 }
@@ -431,7 +432,7 @@
 .loc-value{
   flex: 1;
   text-align: center;
-  font-weight: 800;
+  font-weight: 400;
   opacity: .9;
 }
 .loc-caret{ font-size: 14px; opacity:.8; }
@@ -542,7 +543,8 @@
   justify-content: space-between;
   margin-bottom: 10px;
   color: var(--dark-blue);
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 10px;
 }
 .km-now{
   background: rgba(78,152,217,.18);
@@ -570,7 +572,6 @@
   justify-content: space-between;
   margin-bottom: 14px;
   color: var(--dark-blue);
-  font-weight: 900;
 }
 
 /* pole area */
@@ -646,9 +647,9 @@
   position:absolute;
   top: -20px;
   transform: translateX(-50%);
-  font-weight: 900;
+  font-weight: 400;
   color: var(--dark-blue);
-  font-size: 14px;
+  font-size: 10px;
   padding: 2px 8px;
   border-radius: 8px;
   background: #fff;
@@ -932,7 +933,7 @@
 .pc-price{
   position:absolute;
   right: 12px;
-  bottom: 16px;
+  bottom: 40px;
   display:flex;
   gap: 10px;
   align-items: baseline;
