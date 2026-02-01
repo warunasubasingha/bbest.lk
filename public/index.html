@@ -856,74 +856,104 @@ renderAccordion();
 
 
 /* =========================
-   2) KM Slider
+   2) KM Slider (Dual Range)
 ========================= */
 const KM_POINTS = [
   0, 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
   1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,22,25
-];
+]; // index 0..26 (27 points)
 
-// NOTE: now points length is 27 (index 0..26)
-const kmWrap = document.getElementById("kmWrap");
-const kmMin  = document.getElementById("kmMin");
-const kmMax  = document.getElementById("kmMax");
-const kmFill = document.getElementById("kmFill");
+const kmWrap    = document.getElementById("kmWrap");
+const kmMin     = document.getElementById("kmMin");
+const kmMax     = document.getElementById("kmMax");
+const kmFill    = document.getElementById("kmFill");
 const minBubble = document.getElementById("minBubble");
 const maxBubble = document.getElementById("maxBubble");
 
-let t = null;
+let lockTimer = null;
 
+/* format: 0 => 0km, 0.1 => 100m, 1 => 1km */
 function fmt(v){
   if (typeof v !== "number" || Number.isNaN(v)) return "0km";
   if (v === 0) return "0km";
-  return v < 1 ? `${Math.round(v * 1000)}m` : `${v}km`;
+  if (v < 1) return `${Math.round(v * 1000)}m`;
+  return `${v}km`;
 }
 
 function clampIndex(i){
-  i = Number(i);
-  if (Number.isNaN(i)) return 0;
-  return Math.max(0, Math.min(26, i));
+  const n = Number(i);
+  if (Number.isNaN(n)) return 0;
+  return Math.max(0, Math.min(KM_POINTS.length - 1, n));
+}
+
+/* set bubble text + arrows based on position */
+function setBubble(bubbleEl, pct, labelText){
+  bubbleEl.innerHTML = `
+    <span class="arr l">&lt;</span>
+    <span class="lbl">${labelText}</span>
+    <span class="arr r">&gt;</span>
+  `;
+
+  // reset classes
+  bubbleEl.classList.remove("only-left", "only-right");
+
+  // edges: show only one arrow
+  if (pct <= 18) {
+    bubbleEl.classList.add("only-right"); // show >
+  } else if (pct >= 82) {
+    bubbleEl.classList.add("only-left");  // show <
+  }
 }
 
 function updateRange(){
+  // get indices
   let a = clampIndex(kmMin.value);
   let b = clampIndex(kmMax.value);
 
-  // keep order correct
+  // keep min <= max
   if(a > b){
     const tmp = a; a = b; b = tmp;
     kmMin.value = a;
     kmMax.value = b;
   }
 
-  const minPct = (a / 26) * 100;
-  const maxPct = (b / 26) * 100;
+  const lastIndex = KM_POINTS.length - 1; // 26
+  const minPct = (a / lastIndex) * 100;
+  const maxPct = (b / lastIndex) * 100;
 
-  // selected bar
-  kmFill.style.left = `${minPct}%`;
+  // range fill
+  kmFill.style.left  = `${minPct}%`;
   kmFill.style.width = `${maxPct - minPct}%`;
 
   // values (never undefined)
   const minVal = KM_POINTS[a] ?? 0;
   const maxVal = KM_POINTS[b] ?? 25;
 
-  minBubble.textContent = fmt(minVal);
-  maxBubble.textContent = fmt(maxVal);
+  // bubble labels + arrows
+  setBubble(minBubble, minPct, fmt(minVal));
+  setBubble(maxBubble, maxPct, fmt(maxVal));
 
+  // bubble positions
   minBubble.style.left = `${minPct}%`;
   maxBubble.style.left = `${maxPct}%`;
 
   // after 2 seconds, only change bar color
   kmWrap.classList.remove("is-after2s");
-  clearTimeout(t);
-  t = setTimeout(() => kmWrap.classList.add("is-after2s"), 2000);
+  clearTimeout(lockTimer);
+  lockTimer = setTimeout(() => {
+    kmWrap.classList.add("is-after2s");
+  }, 2000);
 }
 
+// Events
 kmMin.addEventListener("input", updateRange);
 kmMax.addEventListener("input", updateRange);
 
-// ✅ first load shows 0km and 25km
+// ✅ first load: 0km and 25km
+kmMin.value = 0;
+kmMax.value = KM_POINTS.length - 1;
 updateRange();
+
 
 
 
