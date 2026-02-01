@@ -182,11 +182,18 @@
 
       <!-- Location Button -->
       <div class="filter-row">
-        <button class="loc-btn" id="locOpen" type="button" aria-expanded="false">
-          <span class="loc-title">Location</span>
-          <span class="loc-value" id="locValue">Select District & City</span>
-          <span class="loc-caret">▾</span>
-        </button>
+        <div class="fsb">
+          <button class="loc-btn" id="locOpen" type="button" aria-expanded="false">
+            <span class="loc-title">Location</span>
+            <span class="loc-value" id="locValue">Select District & City</span>
+            <span class="loc-caret">▾</span>
+          </button>
+
+          <button class="filter-bottum">
+            <span>☰</span>
+            <span>Filter</span>
+          </button>
+        </div>
 
         <!-- Location Panel (Accordion List) -->
         <div class="loc-panel" id="locPanel" aria-hidden="true">
@@ -390,7 +397,6 @@
                 <span class="pc-loan-lbl">Loan</span>
     
                 <button class="pc-loan-chip is-active" type="button">LOLC</button>
-                <!--<button class="pc-loan-chip" type="button">HNB</button>-->
               </div>
     
               <div class="pc-loan-mid">
@@ -439,6 +445,67 @@
     </div>
   </div>
 </section>
+
+
+<!-- ✅ Bottom Nav Footer -->
+<footer class="bb-footer" aria-label="Bottom navigation">
+  <nav class="bb-nav">
+
+    <a class="bb-item is-active" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- home -->
+        <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+      </span>
+      <span class="bb-txt">Home</span>
+    </a>
+
+    <a class="bb-item" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- users -->
+        <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11zM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zM8 13c-2.33 0-7 1.17-7 3.5V19h7v-2c0-1.44.62-2.64 1.77-3.57A12.5 12.5 0 0 0 8 13z"/></svg>
+      </span>
+      <span class="bb-txt">About Us</span>
+    </a>
+
+    <a class="bb-item" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- chat -->
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+      </span>
+      <span class="bb-txt">Dummy</span>
+    </a>
+
+    <!-- Center + button -->
+    <button class="bb-center" type="button" aria-label="Add">
+      <span class="bb-plus" aria-hidden="true">+</span>
+    </button>
+
+    <a class="bb-item" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- list -->
+        <svg viewBox="0 0 24 24"><path d="M4 6h2v2H4V6zm4 0h14v2H8V6zM4 11h2v2H4v-2zm4 0h14v2H8v-2zM4 16h2v2H4v-2zm4 0h14v2H8v-2z"/></svg>
+      </span>
+      <span class="bb-txt">List</span>
+    </a>
+
+    <a class="bb-item" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- bell -->
+        <svg viewBox="0 0 24 24"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22zm7-6V11a7 7 0 0 0-5-6.7V3a2 2 0 0 0-4 0v1.3A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+      </span>
+      <span class="bb-txt">Notice</span>
+    </a>
+
+    <a class="bb-item" href="#">
+      <span class="bb-ic" aria-hidden="true">
+        <!-- message -->
+        <svg viewBox="0 0 24 24"><path d="M21 6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l4-3h12a2 2 0 0 0 2-2V6z"/></svg>
+      </span>
+      <span class="bb-txt">Message</span>
+    </a>
+
+  </nav>
+</footer>
 
 
 
