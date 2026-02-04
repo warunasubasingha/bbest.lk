@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
     <title>Home Page</title>
 </head>
 <body>
+  <!-- header -->
 <header class="top-header" id="topHeader">
   <div class="w topbar">
     <!-- Left -->
@@ -91,9 +91,7 @@
   </div>
 </header>
 
-
-
-
+<!-- stories -->
 <section class="ad-area w">
   <div class="ad-wrap-stories">
 
@@ -143,6 +141,7 @@
   </div>
 </section>
 
+<!-- sub-categories -->
 <section class="cp">
   <div class="w">
     <nav class="cat-nav" aria-label="Categories">
@@ -169,15 +168,9 @@
   </div>
 </section>
 
-
-<!-- =========================
-     LOCATION FILTER (Accordion)
-     Option B - Clean & Working
-========================== -->
-
+<!-- Location List  and Fillter-->
 <section class="filter-sec">
   <div class="w">
-
     <div class="filter-wrap">
 
       <!-- Location Button -->
@@ -196,6 +189,17 @@
         </div>
 
         <!-- Location Panel (Accordion List) -->
+        <div class="loc-panel" id="locPanel">
+  
+          <!-- Search input -->
+          <div class="fcc loc-search">
+            <input type="text" id="locSearch" placeholder="Search district or city..." autocomplete="off">
+          </div>
+
+          <ul class="dist-list" id="distList"></ul>
+
+        </div>
+
         <div class="loc-panel" id="locPanel" aria-hidden="true">
           <ul class="dist-list" id="distList"></ul>
         </div>
@@ -204,103 +208,107 @@
     </div>
   </div>
 </section>
-      <div class="loc-panel" id="locPanel">
 
-              <ul class="dist-list" id="distList"></ul>
-
-            </div>
-
-      <!-- 2) KM Pole -->
-      <div class="filter-row km-row" id="kmWrap">
-
-        <div class="km-labels">
-          <span class="km-min">0km</span>
-          <span class="km-max">25km</span>
-        </div>
-
-        <div class="km-pole dual">
-
-          <!-- base track + selected range -->
-          <div class="km-track"></div>
-          <div class="km-fill" id="kmFill"></div>
-
-          <!-- 2 sliders -->
-          <input class="km-range km-minR" id="kmMin" type="range" min="0" max="26" step="1" value="0">
-          <input class="km-range km-maxR" id="kmMax" type="range" min="0" max="26" step="1" value="26">
-
-
-          <!-- labels above dots -->
-          <div class="km-bubble" id="minBubble">1km</div>
-          <div class="km-bubble" id="maxBubble">15km</div>
-
-        </div>
+<!-- Location Pole -->
+<section>
+  <div class="w">
+    <div class="loc-panel" id="locPanel">
+      <ul class="dist-list" id="distList"></ul>
+    </div>
+  
+    <!-- 2) KM Pole -->
+    <div class="filter-row km-row" id="kmWrap">
+  
+      
+      <div class="km-pole dual">
+  
+        <!-- base track + selected range -->
+        <div class="km-track"></div>
+        <div class="km-fill" id="kmFill"></div>
+        
+        <!-- 2 sliders -->
+        <input class="km-range km-minR" id="kmMin" type="range" min="0" max="26" step="1" value="0">
+        <input class="km-range km-maxR" id="kmMax" type="range" min="0" max="26" step="1" value="26">
+        
+        
+        <!-- labels above dots -->
+        <div class="km-bubble" id="minBubble">1km</div>
+        <div class="km-bubble" id="maxBubble">15km</div>
+        
       </div>
+    </div>
+    <div class="km-labels">
+      <span class="km-min">0km</span>
+      <span class="km-max">25km</span>
+    </div>
 
+  </div>
+</section>
 
-
-
-     <!-- 3) Min / Max price -->
-<div class="filter-row price-row">
-  <button class="price-field" id="minPriceBtn" type="button">
-    <span class="price-label">Min Price</span>
-    <span class="price-val" id="minPriceText">Any</span>
-  </button>
-
-  <button class="price-field" id="maxPriceBtn" type="button">
-    <span class="price-label">Max Price</span>
-    <span class="price-val" id="maxPriceText">Any</span>
-  </button>
-</div>
+<!-- 3) Min / Max price -->
+<section>
+  <div class="filter-row price-row">
+    <button class="price-field" id="minPriceBtn" type="button">
+      <span class="price-label">Min Price</span>
+      <span class="price-val" id="minPriceText">Any</span>
+    </button>
+  
+    <button class="price-field" id="maxPriceBtn" type="button">
+      <span class="price-label">Max Price</span>
+      <span class="price-val" id="maxPriceText">Any</span>
+    </button>
+  </div>
 </section>
 
 <!-- PRICE POPUP (NEW) -->
-<div class="pmodal" id="priceModal" aria-hidden="true">
-  <div class="pmodal-backdrop" id="priceBackdrop"></div>
-
-  <div class="pmodal-card" role="dialog" aria-modal="true" aria-labelledby="priceTitle">
-    <div class="pmodal-top">
-      <div class="pmodal-title" id="priceTitle">Enter Price</div>
-      <button class="pmodal-x" id="priceClose" type="button" aria-label="Close">✕</button>
-    </div>
-
-    <!-- Currency -->
-    <div class="seg-row" role="group" aria-label="Currency">
-      <button class="seg-btn is-active" type="button" data-cur="LKR">LKR</button>
-      <button class="seg-btn" type="button" data-cur="USD">$</button>
-    </div>
-
-    <!-- Amount input -->
-    <div class="pinput-wrap">
-      <span class="pcur" id="curPrefix">LKR</span>
-      <input
-        id="priceInput"
-        class="pinput"
-        type="text"
-        inputmode="numeric"
-        autocomplete="off"
-        placeholder="0"
-      />
-      <span class="psuf" id="unitSuffix">L</span>
-    </div>
-
-    <!-- Unit buttons -->
-    <div class="unit-row" role="group" aria-label="Unit">
-      <button class="unit-btn is-active" type="button" data-unit="L" data-name="Lak">Lak</button>
-      <button class="unit-btn" type="button" data-unit="M" data-name="Million">Million</button>
-      <button class="unit-btn" type="button" data-unit="C" data-name="Crore">Crore</button>
-      <button class="unit-btn" type="button" data-unit="B" data-name="Billion">Billion</button>
-    </div>
-
-    <!-- Footer buttons -->
-    <div class="pmodal-actions">
-      <button class="btn-lite" id="priceReset" type="button">Reset</button>
-      <button class="btn-main" id="priceDone" type="button">Done</button>
+<section>
+  <div class="w pmodal" id="priceModal" aria-hidden="true">
+    <div class="pmodal-backdrop" id="priceBackdrop"></div>
+  
+    <div class="pmodal-card" role="dialog" aria-modal="true" aria-labelledby="priceTitle">
+      <div class="pmodal-top">
+        <div class="pmodal-title" id="priceTitle">Enter Price</div>
+        <button class="pmodal-x" id="priceClose" type="button" aria-label="Close">✕</button>
+      </div>
+  
+      <!-- Currency -->
+      <div class="seg-row" role="group" aria-label="Currency">
+        <button class="seg-btn is-active" type="button" data-cur="LKR">LKR</button>
+        <button class="seg-btn" type="button" data-cur="USD">$</button>
+      </div>
+  
+      <!-- Amount input -->
+      <div class="pinput-wrap">
+        <span class="pcur" id="curPrefix">LKR</span>
+        <input
+          id="priceInput"
+          class="pinput"
+          type="text"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="0"
+        />
+        <span class="psuf" id="unitSuffix">L</span>
+      </div>
+  
+      <!-- Unit buttons -->
+      <div class="unit-row" role="group" aria-label="Unit">
+        <button class="unit-btn is-active" type="button" data-unit="L" data-name="Lak">Lak</button>
+        <button class="unit-btn" type="button" data-unit="M" data-name="Million">Million</button>
+        <button class="unit-btn" type="button" data-unit="C" data-name="Crore">Crore</button>
+        <button class="unit-btn" type="button" data-unit="B" data-name="Billion">Billion</button>
+      </div>
+  
+      <!-- Footer buttons -->
+      <div class="pmodal-actions">
+        <button class="btn-lite" id="priceReset" type="button">Reset</button>
+        <button class="btn-main" id="priceDone" type="button">Done</button>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-
-
+<!-- post card -->
 <section class="cp">
   <div class="w post-card-sketch">
 
@@ -361,6 +369,11 @@
       <div class="fsb">
         <div>
           <!-- row: Perch + bed + bath + sqf -->
+          <div class="purpose">
+            <span class="purpose-idea">Sale</span>
+            <span>-</span>
+            <span class="purpose-idea">Land</span>
+          </div>
           <div class="pc-stats">
             <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
     
@@ -446,68 +459,68 @@
   </div>
 </section>
 
-
-<!-- ✅ Bottom Nav Footer -->
+<!-- Bottom Nav Footer -->
 <footer class="bb-footer" aria-label="Bottom navigation">
-  <nav class="bb-nav">
-
-    <a class="bb-item is-active" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- home -->
-        <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
-      </span>
-      <span class="bb-txt">Home</span>
-    </a>
-
-    <a class="bb-item" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- users -->
-        <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11zM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zM8 13c-2.33 0-7 1.17-7 3.5V19h7v-2c0-1.44.62-2.64 1.77-3.57A12.5 12.5 0 0 0 8 13z"/></svg>
-      </span>
-      <span class="bb-txt">About Us</span>
-    </a>
-
-    <a class="bb-item" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- chat -->
-        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
-      </span>
-      <span class="bb-txt">Dummy</span>
-    </a>
+  <nav class="w bb-nav">
+    <div class="fsb ftd1">
+      <a class="fcc bb-item is-active" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- home -->
+          <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+        </span>
+        <span class="bb-txt">Home</span>
+      </a>
+  
+      <a class="fcc bb-item" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- users -->
+          <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11zM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zM8 13c-2.33 0-7 1.17-7 3.5V19h7v-2c0-1.44.62-2.64 1.77-3.57A12.5 12.5 0 0 0 8 13z"/></svg>
+        </span>
+        <span class="bb-txt">About Us</span>
+      </a>
+  
+      <a class="fcc bb-item" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- chat -->
+          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        </span>
+        <span class="bb-txt">Dummy</span>
+      </a>
+    </div>
 
     <!-- Center + button -->
     <button class="bb-center" type="button" aria-label="Add">
       <span class="bb-plus" aria-hidden="true">+</span>
     </button>
 
-    <a class="bb-item" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- list -->
-        <svg viewBox="0 0 24 24"><path d="M4 6h2v2H4V6zm4 0h14v2H8V6zM4 11h2v2H4v-2zm4 0h14v2H8v-2zM4 16h2v2H4v-2zm4 0h14v2H8v-2z"/></svg>
-      </span>
-      <span class="bb-txt">List</span>
-    </a>
-
-    <a class="bb-item" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- bell -->
-        <svg viewBox="0 0 24 24"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22zm7-6V11a7 7 0 0 0-5-6.7V3a2 2 0 0 0-4 0v1.3A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
-      </span>
-      <span class="bb-txt">Notice</span>
-    </a>
-
-    <a class="bb-item" href="#">
-      <span class="bb-ic" aria-hidden="true">
-        <!-- message -->
-        <svg viewBox="0 0 24 24"><path d="M21 6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l4-3h12a2 2 0 0 0 2-2V6z"/></svg>
-      </span>
-      <span class="bb-txt">Message</span>
-    </a>
+    <div class="fsb ftd1">
+      <a class="fcc bb-item" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- list -->
+          <svg viewBox="0 0 24 24"><path d="M4 6h2v2H4V6zm4 0h14v2H8V6zM4 11h2v2H4v-2zm4 0h14v2H8v-2zM4 16h2v2H4v-2zm4 0h14v2H8v-2z"/></svg>
+        </span>
+        <span class="bb-txt">List</span>
+      </a>
+  
+      <a class="fcc bb-item" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- bell -->
+          <svg viewBox="0 0 24 24"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22zm7-6V11a7 7 0 0 0-5-6.7V3a2 2 0 0 0-4 0v1.3A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+        </span>
+        <span class="bb-txt">Notice</span>
+      </a>
+  
+      <a class="fcc bb-item" href="#">
+        <span class="bb-ic" aria-hidden="true">
+          <!-- message -->
+          <svg viewBox="0 0 24 24"><path d="M21 6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l4-3h12a2 2 0 0 0 2-2V6z"/></svg>
+        </span>
+        <span class="bb-txt">Message</span>
+      </a>
+    </div>
 
   </nav>
 </footer>
-
-
 
 </body>
 </html>
@@ -610,114 +623,13 @@
   });
 </script>
 
-
-<!-- <script>
-  const track = document.getElementById('adTrack');
-  const slider = document.getElementById('adSlider');
-
-  let timer = null;
-  let intervalMs = 2200;
-  let moving = false;
-
-  function isMobile(){
-    return window.matchMedia("(max-width: 600px)").matches;
-  }
-
-  // ---- Desktop loop (transform + appendChild) ----
-  function getStepDesktop(){
-    const first = track?.querySelector('.ad-card');
-    if(!first) return 0;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return first.getBoundingClientRect().width + gap;
-  }
-
-  function slideDesktopLeft(){
-    if(moving || !track) return;
-    const step = getStepDesktop();
-    if(step <= 0) return;
-
-    moving = true;
-    track.style.transition = 'transform 450ms ease';
-    track.style.transform = `translateX(-${step}px)`;
-
-    setTimeout(() => {
-      track.style.transition = 'none';
-      track.appendChild(track.firstElementChild);
-      track.style.transform = 'translateX(0)';
-      moving = false;
-    }, 470);
-  }
-
-  // ---- Mobile auto-scroll (scrollLeft) ----
-  function getStepMobile(){
-    const first = track?.querySelector('.ad-card');
-    if(!first) return 0;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return first.getBoundingClientRect().width + gap;
-  }
-
-  function slideMobileNext(){
-    if(!slider) return;
-    const step = getStepMobile();
-    if(step <= 0) return;
-
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-    // if at end, go back to start
-    if (slider.scrollLeft >= maxScroll - 5) {
-      slider.scrollTo({ left: 0, behavior: 'smooth' });
-      return;
-    }
-
-    slider.scrollTo({ left: slider.scrollLeft + step, behavior: 'smooth' });
-  }
-
-  function startAuto(){
-    stopAuto();
-    timer = setInterval(() => {
-      if(isMobile()) slideMobileNext();
-      else slideDesktopLeft();
-    }, intervalMs);
-  }
-
-  function stopAuto(){
-    if(timer) clearInterval(timer);
-    timer = null;
-  }
-
-  // Pause when user touches/swipes on mobile
-  if(slider){
-    slider.addEventListener('touchstart', stopAuto, {passive:true});
-    slider.addEventListener('touchend', startAuto, {passive:true});
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
-  }
-
-  // Reset on resize
-  window.addEventListener('resize', () => {
-    if(!track || !slider) return;
-    track.style.transition = 'none';
-    track.style.transform = 'translateX(0)';
-    startAuto();
-  });
-
-  // init
-  startAuto();
-
-  function openUploadModal(){
-    alert('Open upload form here');
-  }
-</script> -->
-
-
-
 <script>
 /* =========================
    LOCATION UI (Accordion) - JS
    Option B - Clean & Working
 ========================= */
 
-/* 1) District -> Cities Database (Full Sri Lanka as you gave) */
+/* 1) District -> Cities Database */
 const SL = {
   "Colombo": [
     "Colombo","Pettah","Fort","Borella","Rajagiriya","Nugegoda","Maharagama","Kotte",
@@ -742,12 +654,12 @@ const SL = {
   "Nuwara Eliya": ["Nuwara Eliya","Hatton","Talawakele","Lindula","Ragala","Kotagala","Maskeliya"],
   "Galle": ["Galle","Hikkaduwa","Unawatuna","Ahangama","Weligama","Ambalangoda","Baddegama","Elpitiya","Karapitiya"],
   "Matara": ["Matara","Weligama","Mirissa","Akuressa","Deniyaya","Hakmana","Kamburupitiya"],
-  "Hambantotat": ["Hambantota","Tangalle","Tissamaharama","Ambalantota","Weeraketiya","Beliatta","Lunugamvehera"],
+  "Hambantota": ["Hambantota","Tangalle","Tissamaharama","Ambalantota","Weeraketiya","Beliatta","Lunugamvehera"],
   "Kurunegala": ["Kurunegala","Kuliyapitiya","Narammala","Pannala","Polgahawela","Wariyapola","Ibbagamuwa","Melsiripura"],
   "Puttalam": ["Puttalam","Chilaw","Wennappuwa","Marawila","Dankotuwa","Anamaduwa","Mundel"],
   "Anuradhapura": ["Anuradhapura","Kekirawa","Mihintale","Medawachchiya","Thambuttegama","Galenbindunuwewa"],
   "Polonnaruwa": ["Polonnaruwa","Hingurakgoda","Medirigiriya","Kaduruwela"],
-  "Badullat": ["Badulla","Bandarawela","Ella","Hali-Ela","Mahiyanganaya","Passara","Diyatalawa"],
+  "Badulla": ["Badulla","Bandarawela","Ella","Hali-Ela","Mahiyanganaya","Passara","Diyatalawa"],
   "Monaragala": ["Monaragala","Wellawaya","Buttala","Bibile","Kataragama"],
   "Ratnapura": ["Ratnapura","Balangoda","Embilipitiya","Pelmadulla","Kuruwita","Godakawela"],
   "Kegalle": ["Kegalle","Mawanella","Warakapola","Rambukkana","Ruwanwella","Dehiowita"],
@@ -762,13 +674,14 @@ const SL = {
 };
 
 /* 2) Elements */
-const locOpen  = document.getElementById("locOpen");
-const locPanel = document.getElementById("locPanel");
-const distList = document.getElementById("distList");
-const locValue = document.getElementById("locValue");
+const locOpen   = document.getElementById("locOpen");
+const locPanel  = document.getElementById("locPanel");
+const distList  = document.getElementById("distList");
+const locValue  = document.getElementById("locValue");
+const locSearch = document.getElementById("locSearch");
 
 /* 3) State */
-let openDistrict = "";       // which accordion is open
+let openDistrict = "";
 let selectedDistrict = "";
 let selectedCity = "";
 
@@ -777,6 +690,7 @@ function openLoc(){
   locPanel.classList.add("open");
   locPanel.setAttribute("aria-hidden","false");
   locOpen.setAttribute("aria-expanded","true");
+  setTimeout(()=> locSearch?.focus(), 80);
 }
 function closeLoc(){
   locPanel.classList.remove("open");
@@ -798,13 +712,30 @@ document.addEventListener("click", ()=>{
 /* Prevent inside clicks closing */
 locPanel.addEventListener("click", (e)=> e.stopPropagation());
 
-/* 5) Render accordion */
-function renderAccordion(){
+/* Helpers */
+function norm(s){ return String(s || "").toLowerCase().trim(); }
+
+/* 5) Render accordion with optional filter */
+function renderAccordion(filterText = ""){
   distList.innerHTML = "";
 
+  const q = norm(filterText);
+
   Object.keys(SL).forEach((district) => {
+    const distMatch = q && norm(district).includes(q);
+
+    // filter cities
+    let cities = SL[district];
+    let filteredCities = cities;
+
+    if(q && !distMatch){
+      filteredCities = cities.filter(c => norm(c).includes(q));
+      if(filteredCities.length === 0) return; // no match at all
+    }
+
     const li = document.createElement("li");
-    li.className = "dist-item" + (openDistrict === district ? " open" : "");
+    const shouldOpen = q ? true : (openDistrict === district);
+    li.className = "dist-item" + (shouldOpen ? " open" : "");
 
     /* District Button */
     const btn = document.createElement("button");
@@ -813,15 +744,18 @@ function renderAccordion(){
     btn.innerHTML = `<span>${district}</span><span class="caret">▾</span>`;
 
     btn.addEventListener("click", ()=>{
+      // in search mode keep open
+      if(q) return;
+
       openDistrict = (openDistrict === district) ? "" : district;
-      renderAccordion();
+      renderAccordion(locSearch?.value || "");
     });
 
     /* Cities List */
     const cityUl = document.createElement("ul");
     cityUl.className = "city-ul";
 
-    SL[district].forEach((city) => {
+    filteredCities.forEach((city) => {
       const cityLi = document.createElement("li");
       cityLi.className = "city-li" + ((selectedDistrict === district && selectedCity === city) ? " active" : "");
       cityLi.textContent = city;
@@ -831,13 +765,10 @@ function renderAccordion(){
         selectedCity = city;
 
         locValue.textContent = `${district} - ${city}`;
-        closeLoc();
-
-        // Keep that district open next time (optional)
         openDistrict = district;
 
-        // refresh selection highlight
-        renderAccordion();
+        closeLoc();
+        renderAccordion(locSearch?.value || "");
       });
 
       cityUl.appendChild(cityLi);
@@ -847,10 +778,21 @@ function renderAccordion(){
     li.appendChild(cityUl);
     distList.appendChild(li);
   });
+
+  // If nothing found
+  if(!distList.children.length){
+    distList.innerHTML = `<li style="padding:14px;color:#6d7a88;font-weight:600;">No results</li>`;
+  }
 }
+
+/* 6) Search event */
+locSearch.addEventListener("input", () => {
+  renderAccordion(locSearch.value);
+});
 
 /* Init */
 renderAccordion();
+
 
 
 
@@ -1122,7 +1064,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </script>
 
-
 <script>
   // 6) Price toggle: default LKR, click shows USD
   const priceToggle = document.getElementById("priceToggle");
@@ -1146,7 +1087,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 </script>
-
 
 <script>
 const priceToggle = document.getElementById("priceToggle");
@@ -1244,5 +1184,3 @@ priceToggle?.addEventListener("click", ()=>{
     if(e.key === "Escape") commentBox.classList.remove("is-open");
   });
 </script>
-
-
