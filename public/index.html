@@ -571,57 +571,217 @@
     if (!header.contains(e.target)) closeSearch();
   });
 
-  // ===== Language dropdown =====
-  const langDd = document.getElementById('langDd');
-  const langBtn = document.getElementById('langBtn');
-  const langMenu = document.getElementById('langMenu');
-  const langCurrent = document.getElementById('langCurrent');
+// ===== Language dropdown (REAL LETTERS) =====
+const langDd = document.getElementById("langDd");
+const langBtn = document.getElementById("langBtn");
+const langMenu = document.getElementById("langMenu");
+const langCurrent = document.getElementById("langCurrent");
 
-  function openLang(){
-    langDd.classList.add('is-open');
-    langBtn.setAttribute('aria-expanded', 'true');
-    langMenu.setAttribute('aria-hidden', 'false');
-  }
-  function closeLang(){
-    langDd.classList.remove('is-open');
-    langBtn.setAttribute('aria-expanded', 'false');
-    langMenu.setAttribute('aria-hidden', 'true');
-  }
+// LANGUAGE DATA
+const LANGS = [
+  { code: "EN", label: "EN" },
+  { code: "SI", label: "සි" },
+  { code: "TA", label: "தமி" }
+];
 
-  langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (langDd.classList.contains('is-open')) closeLang();
-    else openLang();
-  });
+// OPEN DROPDOWN
+function openLang() {
+  langDd.classList.add("is-open");
+  langBtn.setAttribute("aria-expanded", "true");
+  langMenu.setAttribute("aria-hidden", "false");
+}
 
-  document.querySelectorAll('.lang-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const lang = item.dataset.lang; // SI / TA
-      langCurrent.textContent = (lang === 'SI') ? 'SI' : 'TA';
-      localStorage.setItem('site_lang', lang);
+// CLOSE DROPDOWN
+function closeLang() {
+  langDd.classList.remove("is-open");
+  langBtn.setAttribute("aria-expanded", "false");
+  langMenu.setAttribute("aria-hidden", "true");
+}
+
+// RENDER OTHER LANGUAGES
+function renderMenu(selectedCode) {
+  const others = LANGS.filter(l => l.code !== selectedCode);
+
+  langMenu.innerHTML = others
+    .map(item => `
+      <button class="lang-item" type="button" data-lang="${item.code}">
+        ${item.label}
+      </button>
+    `)
+    .join("");
+
+  // Add click events
+  document.querySelectorAll(".lang-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
       closeLang();
-      // Here you can call your real language switching function later
     });
   });
+}
 
-  // Default EN
-  const savedLang = localStorage.getItem('site_lang');
-  if(savedLang === 'SI') langCurrent.textContent = 'SI';
-  if(savedLang === 'TA') langCurrent.textContent = 'TA';
+// SET ACTIVE LANGUAGE
+function setLanguage(code) {
+  const chosen = LANGS.find(l => l.code === code);
 
-  // Close dropdown when click outside
-  document.addEventListener('click', () => {
-    closeLang();
-  });
+  // SHOW REAL LETTERS IN BUTTON
+  langCurrent.textContent = chosen.label;
 
-  // ESC closes both
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape'){
-      closeLang();
-      closeSearch();
-    }
-  });
+  // SAVE
+  localStorage.setItem("site_lang", code);
+
+  // RENDER THE OTHER TWO
+  renderMenu(code);
+}
+
+// Toggle dropdown
+langBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langDd.classList.contains("is-open") ? closeLang() : openLang();
+});
+
+// Close when click outside
+document.addEventListener("click", () => closeLang());
+
+// ESC to close
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLang();
+});
+
+// INIT — DEFAULT EN
+const saved = localStorage.getItem("site_lang") || "EN";
+setLanguage(saved);
+
+
 </script>
+
+
+
+<script>
+  const track  = document.getElementById('adTrack');
+  const slider = document.getElementById('adSlider');
+
+  let timer = null;
+  let intervalMs = 2200;
+  let moving = false;
+
+  let mobilePrepared = false;
+  let originalCount = 0;
+
+  function isMobile(){
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  function getGap(){
+    return parseFloat(getComputedStyle(track).gap) || 0;
+  }
+
+  // step = one card width + gap
+  function getStep(){
+    const first = track?.querySelector('.ad-card');
+    if(!first) return 0;
+    return first.getBoundingClientRect().width + getGap();
+  }
+
+  // ---------- Desktop (transform + appendChild) ----------
+  function slideDesktopLeft(){
+    if(moving || !track) return;
+    const step = getStep();
+    if(step <= 0) return;
+
+    moving = true;
+    track.style.transition = 'transform 450ms ease';
+    track.style.transform  = `translateX(-${step}px)`;
+
+    setTimeout(() => {
+      track.style.transition = 'none';
+      track.appendChild(track.firstElementChild);
+      track.style.transform = 'translateX(0)';
+      moving = false;
+    }, 470);
+  }
+
+  // ---------- Mobile Infinity (scrollLeft + duplicate) ----------
+  function prepareMobileInfinity(){
+    if(!track || !slider) return;
+    if(mobilePrepared) return;
+
+    // store original cards count (only once)
+    const cards = Array.from(track.children);
+    originalCount = cards.length;
+
+    // duplicate all cards once (so we have 2 sets)
+    cards.forEach(node => track.appendChild(node.cloneNode(true)));
+
+    mobilePrepared = true;
+  }
+
+  function slideMobileNext(){
+    if(!slider || !track) return;
+
+    prepareMobileInfinity();
+
+    const step = getStep();
+    if(step <= 0) return;
+
+    const setWidth = step * originalCount;   // width of the first set
+    const target = slider.scrollLeft + step;
+
+    // smooth scroll to next
+    slider.scrollTo({ left: target, behavior: 'smooth' });
+
+    // after scroll finishes, if we passed first set end -> jump back by 1 set (same visual)
+    setTimeout(() => {
+      if (slider.scrollLeft >= setWidth) {
+        slider.scrollLeft = slider.scrollLeft - setWidth; // NO visible jump (same cards repeated)
+      }
+    }, 520);
+  }
+
+  // ---------- Auto ----------
+  function startAuto(){
+    stopAuto();
+    timer = setInterval(() => {
+      if(isMobile()) slideMobileNext();
+      else slideDesktopLeft();
+    }, intervalMs);
+  }
+
+  function stopAuto(){
+    if(timer) clearInterval(timer);
+    timer = null;
+  }
+
+  // Pause
+  if(slider){
+    slider.addEventListener('touchstart', stopAuto, {passive:true});
+    slider.addEventListener('touchend', startAuto, {passive:true});
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+  }
+
+  // Reset on resize
+  window.addEventListener('resize', () => {
+    if(!track || !slider) return;
+
+    // reset desktop transform
+    track.style.transition = 'none';
+    track.style.transform  = 'translateX(0)';
+    moving = false;
+
+    // reset mobile infinity preparation if switching modes
+    mobilePrepared = false;
+
+    startAuto();
+  });
+
+  // init
+  startAuto();
+
+  function openUploadModal(){
+    alert('Open upload form here');
+  }
+</script>
+
 
 <script>
 /* =========================
