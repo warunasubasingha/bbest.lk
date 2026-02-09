@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="shop-svgrepo-com.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.97125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">shop</title>
+  <desc
+     id="desc1">Created with Sketch Beta.</desc>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#244e73;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#4e98d9;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#244e73;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#4e98d9;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="-0.008"
+       y1="16"
+       x2="32"
+       y2="16"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient5"
+       x1="-0.86899023"
+       y1="16"
+       x2="32.83599"
+       y2="16"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient6"
+       gradientUnits="userSpaceOnUse"
+       x1="-0.86899023"
+       y1="16"
+       x2="32.83599"
+       y2="16" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient7"
+       gradientUnits="userSpaceOnUse"
+       x1="-0.008"
+       y1="16"
+       x2="32"
+       y2="16" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient8"
+       gradientUnits="userSpaceOnUse"
+       x1="-0.86899023"
+       y1="16"
+       x2="32.83599"
+       y2="16" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient9"
+       gradientUnits="userSpaceOnUse"
+       x1="-0.008"
+       y1="16"
+       x2="32"
+       y2="16" />
+  </defs>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     sketch:type="MSPage"
+     style="fill:url(#linearGradient5);stroke:url(#linearGradient3)"
+     transform="matrix(0.92595524,0,0,0.92595524,1.2535451,1.2121176)">
+    <g
+       id="Icon-Set-Filled"
+       sketch:type="MSLayerGroup"
+       transform="translate(-362,-725)"
+       fill="#000000"
+       style="fill:url(#linearGradient8);stroke:url(#linearGradient9)">
+      <path
+         d="M 388.154,725 H 367.813 L 362,735 h 31.967 z M 391,749 H 365.003 L 365,743 h 1.964 c 1.074,0 2.777,-0.958 3.498,-2.424 0.809,1.425 2.319,2.424 3.761,2.424 1.523,0 3.2,-0.906 3.76,-2.216 0.561,1.279 2.203,2.216 3.695,2.216 1.48,0 3.013,-1.088 3.789,-2.574 0.907,1.5 2.198,2.574 3.533,2.574 0.293,0 1.744,0.048 2,0 z M 362.025,737 H 362 c -0.018,0.435 0,1.431 0,2 0,1.065 0.383,2.229 1.001,3 l 0.03,11 c 0,2.209 1.847,4 4.125,4 h 21.655 c 2.278,0 4.189,-1.791 4.189,-4 v -11 c 0.7,-0.824 1,-1.67 1,-3 v -2 z"
+         id="shop"
+         sketch:type="MSShapeGroup"
+         style="fill:url(#linearGradient6);stroke:url(#linearGradient7)" />
+    </g>
+  </g>
+</svg>

@@ -141,32 +141,113 @@
   </div>
 </section>
 
-<!-- sub-categories -->
 <section class="cp">
   <div class="w">
-    <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" href="#">
-          <img src="img/icons/land.svg" alt="">
-          <span>Rent Property</span>
-        </a>
 
-        <a class="cat-item" href="#">
-          <img src="img/icons/apartment.svg" alt="">
-          <span>Sell Property</span>
-        </a>
+    <!-- Categories grid (wrap 4 lines) -->
+    <div class="catgrid" id="catGrid">
 
-        <a class="cat-item" href="#">
-          <img src="img/icons/area.svg" alt="">
-          <span>Apartment</span>
-        </a>
+      <!-- 15 items (you can change icons + text) -->
+      <button class="catbtn" type="button" data-cat="House">
+        <img class="catimg" src="img/icons/house.svg" alt="">
+        <span class="cattxt">House</span>
+        <span class="caret">▾</span>
+      </button>
 
-        <a class="cat-item" href="#">
-          <img src="img/icons/house.svg" alt="">
-          <span>Annex</span>
-        </a>
-      </nav>
+      <button class="catbtn" type="button" data-cat="Land">
+        <img class="catimg" src="img/icons/land.svg" alt="">
+        <span class="cattxt">Land</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Apartment">
+        <img class="catimg" src="img/icons/apartment.svg" alt="">
+        <span class="cattxt">Apartment</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Annex">
+        <img class="catimg" src="img/icons/annex.svg" alt="">
+        <span class="cattxt">Annex</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Commercial">
+        <img class="catimg" src="img/icons/commercial.svg" alt="">
+        <span class="cattxt">Commercial</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Villa">
+        <img class="catimg" src="img/icons/villa.svg" alt="">
+        <span class="cattxt">Villa</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Office">
+        <img class="catimg" src="img/icons/office.svg" alt="">
+        <span class="cattxt">Office</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Shop">
+        <img class="catimg" src="img/icons/shop.svg" alt="">
+        <span class="cattxt">Shop</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Warehouse">
+        <img class="catimg" src="img/icons/warehouse.svg" alt="">
+        <span class="cattxt">Warehouse</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Factory">
+        <img class="catimg" src="img/icons/factory.svg" alt="">
+        <span class="cattxt">Factory</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Hotel">
+        <img class="catimg" src="img/icons/hotel.svg" alt="">
+        <span class="cattxt">Hotel</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Resort">
+        <img class="catimg" src="img/icons/resort.svg" alt="">
+        <span class="cattxt">Resort</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Agricultural">
+        <img class="catimg" src="img/icons/agricultural.svg" alt="">
+        <span class="cattxt">Agri Land</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="NewProject">
+        <img class="catimg" src="img/icons/apartment.svg" alt="">
+        <span class="cattxt">New Project</span>
+        <span class="caret">▾</span>
+      </button>
+
+      <button class="catbtn" type="button" data-cat="Other">
+        <img class="catimg" src="img/icons/house.svg" alt="">
+        <span class="cattxt">Other</span>
+        <span class="caret">▾</span>
+      </button>
+
+    </div>
+
+    <!-- One shared dropdown panel (we will MOVE it under clicked button) -->
+    <div class="catpanel" id="catPanel" aria-hidden="true"></div>
+
   </div>
 </section>
+
+
+
 
 <!-- Location List  and Fillter-->
 <section class="filter-sec">
@@ -236,10 +317,10 @@
         <div class="km-bubble" id="maxBubble">15km</div>
         
       </div>
-    </div>
-    <div class="km-labels">
-      <span class="km-min">0km</span>
-      <span class="km-max">25km</span>
+      <div class="km-labels">
+        <span class="km-min">0km</span>
+        <span class="km-max">25km</span>
+      </div>
     </div>
 
   </div>
@@ -395,12 +476,10 @@
           </div>
           
           
-            <!-- Visit time row -->
-            <div class="pc-visit">
-              <span class="pc-visit-lbl">Visit Time</span>
-              <span class="pc-pill">Today</span>
-              <span class="pc-pill">8.00 AM - 5.00 PM</span>
-            </div>
+          <!-- Visit time row -->
+          <div class="main-details">
+            <span class="main-details-btn">View Details</span>
+          </div>
         </div>
     
           <!-- Loan box + apply -->
@@ -657,129 +736,137 @@ setLanguage(saved);
 
 
 <script>
-  const track  = document.getElementById('adTrack');
-  const slider = document.getElementById('adSlider');
+/* =========================
+   15 Categories + dropdown under clicked button
+========================= */
 
-  let timer = null;
-  let intervalMs = 2200;
-  let moving = false;
+// Dummy data: SAME list for all categories (as you asked)
+const MAIN_LIST = {
+  "For Sale": [
+    { label: "Sub Item 1", url: "#" },
+    { label: "Sub Item 2", url: "#" },
+    { label: "Sub Item 3", url: "#" }
+  ],
+  "For Rent": [
+    { label: "Sub Item A", url: "#" },
+    { label: "Sub Item B", url: "#" }
+  ],
+  "For Lease": [
+    { label: "Sub Item X", url: "#" },
+    { label: "Sub Item Y", url: "#" }
+  ]
+};
 
-  let mobilePrepared = false;
-  let originalCount = 0;
+// If later you want different subitems per category:
+// const CAT_DATA = { House: {...}, Land: {...} };
 
-  function isMobile(){
-    return window.matchMedia("(max-width: 600px)").matches;
-  }
+const catGrid  = document.getElementById("catGrid");
+const catPanel = document.getElementById("catPanel");
 
-  function getGap(){
-    return parseFloat(getComputedStyle(track).gap) || 0;
-  }
+let openCat = "";
+let openMain = "";
 
-  // step = one card width + gap
-  function getStep(){
-    const first = track?.querySelector('.ad-card');
-    if(!first) return 0;
-    return first.getBoundingClientRect().width + getGap();
-  }
+// Build panel UI
+function renderPanel(catName){
+  const wrap = document.createElement("div");
+  wrap.className = "mainlist";
 
-  // ---------- Desktop (transform + appendChild) ----------
-  function slideDesktopLeft(){
-    if(moving || !track) return;
-    const step = getStep();
-    if(step <= 0) return;
+  Object.keys(MAIN_LIST).forEach(mainName => {
+    const item = document.createElement("div");
+    item.className = "mainitem" + (openMain === mainName ? " open" : "");
 
-    moving = true;
-    track.style.transition = 'transform 450ms ease';
-    track.style.transform  = `translateX(-${step}px)`;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "mainbtn";
+    btn.innerHTML = `<span>${mainName}</span><span class="mcaret">▾</span>`;
 
-    setTimeout(() => {
-      track.style.transition = 'none';
-      track.appendChild(track.firstElementChild);
-      track.style.transform = 'translateX(0)';
-      moving = false;
-    }, 470);
-  }
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openMain = (openMain === mainName) ? "" : mainName;
+      openCat = catName;
+      mountPanelUnder(catName);
+    });
 
-  // ---------- Mobile Infinity (scrollLeft + duplicate) ----------
-  function prepareMobileInfinity(){
-    if(!track || !slider) return;
-    if(mobilePrepared) return;
+    const sub = document.createElement("div");
+    sub.className = "sublist";
 
-    // store original cards count (only once)
-    const cards = Array.from(track.children);
-    originalCount = cards.length;
+    MAIN_LIST[mainName].forEach(s => {
+      const a = document.createElement("a");
+      a.href = s.url || "#";
+      a.textContent = s.label;
+      sub.appendChild(a);
+    });
 
-    // duplicate all cards once (so we have 2 sets)
-    cards.forEach(node => track.appendChild(node.cloneNode(true)));
-
-    mobilePrepared = true;
-  }
-
-  function slideMobileNext(){
-    if(!slider || !track) return;
-
-    prepareMobileInfinity();
-
-    const step = getStep();
-    if(step <= 0) return;
-
-    const setWidth = step * originalCount;   // width of the first set
-    const target = slider.scrollLeft + step;
-
-    // smooth scroll to next
-    slider.scrollTo({ left: target, behavior: 'smooth' });
-
-    // after scroll finishes, if we passed first set end -> jump back by 1 set (same visual)
-    setTimeout(() => {
-      if (slider.scrollLeft >= setWidth) {
-        slider.scrollLeft = slider.scrollLeft - setWidth; // NO visible jump (same cards repeated)
-      }
-    }, 520);
-  }
-
-  // ---------- Auto ----------
-  function startAuto(){
-    stopAuto();
-    timer = setInterval(() => {
-      if(isMobile()) slideMobileNext();
-      else slideDesktopLeft();
-    }, intervalMs);
-  }
-
-  function stopAuto(){
-    if(timer) clearInterval(timer);
-    timer = null;
-  }
-
-  // Pause
-  if(slider){
-    slider.addEventListener('touchstart', stopAuto, {passive:true});
-    slider.addEventListener('touchend', startAuto, {passive:true});
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
-  }
-
-  // Reset on resize
-  window.addEventListener('resize', () => {
-    if(!track || !slider) return;
-
-    // reset desktop transform
-    track.style.transition = 'none';
-    track.style.transform  = 'translateX(0)';
-    moving = false;
-
-    // reset mobile infinity preparation if switching modes
-    mobilePrepared = false;
-
-    startAuto();
+    item.appendChild(btn);
+    item.appendChild(sub);
+    wrap.appendChild(item);
   });
 
-  // init
-  startAuto();
+  catPanel.innerHTML = "";
+  catPanel.appendChild(wrap);
+}
 
-  function openUploadModal(){
-    alert('Open upload form here');
+// Move the panel under clicked category (same row position)
+function mountPanelUnder(catName){
+  const btn = catGrid.querySelector(`.catbtn[data-cat="${CSS.escape(catName)}"]`);
+  if(!btn) return;
+
+  // render content
+  renderPanel(catName);
+
+  // Open panel
+  catPanel.classList.add("open");
+  catPanel.setAttribute("aria-hidden","false");
+
+  // Insert panel right after the clicked button in DOM
+  btn.insertAdjacentElement("afterend", catPanel);
+
+  // Scroll into view smoothly on mobile
+  setTimeout(() => {
+    catPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, 30);
+}
+
+function closePanel(){
+  catPanel.classList.remove("open");
+  catPanel.setAttribute("aria-hidden","true");
+  catPanel.innerHTML = "";
+  openCat = "";
+  openMain = "";
+}
+
+// Click category buttons
+catGrid.addEventListener("click", (e) => {
+  const btn = e.target.closest(".catbtn");
+  if(!btn) return;
+
+  const catName = btn.dataset.cat;
+
+  // toggle same
+  if(openCat === catName){
+    closePanel();
+    return;
   }
+
+  openCat = catName;
+  openMain = ""; // reset main open
+  mountPanelUnder(catName);
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+  if(!catPanel.classList.contains("open")) return;
+  if(catPanel.contains(e.target)) return;
+  if(catGrid.contains(e.target)) return;
+  closePanel();
+});
+
+// ESC closes
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closePanel();
+});
+
+
 </script>
 
 
@@ -988,7 +1075,7 @@ function clampIndex(i){
   return Math.max(0, Math.min(KM_POINTS.length - 1, n));
 }
 
-/* set bubble text + arrows based on position */
+/* bubble text + arrows based on position */
 function setBubble(bubbleEl, pct, labelText){
   bubbleEl.innerHTML = `
     <span class="arr l">&lt;</span>
@@ -1005,6 +1092,31 @@ function setBubble(bubbleEl, pct, labelText){
   } else if (pct >= 82) {
     bubbleEl.classList.add("only-left");  // show <
   }
+}
+
+/* keep bubbles inside pole on small screens */
+function clampBubblesMobile(minPct, maxPct){
+  if (!window.matchMedia("(max-width: 500px)").matches) return;
+
+  const pole = kmWrap.querySelector(".km-pole.dual");
+  if (!pole) return;
+
+  const pad = 10;
+  const poleW = pole.getBoundingClientRect().width;
+
+  const minW = minBubble.offsetWidth || 0;
+  const maxW = maxBubble.offsetWidth || 0;
+
+  // convert % -> px inside pole
+  const minCenterPx = (minPct / 100) * poleW;
+  const maxCenterPx = (maxPct / 100) * poleW;
+
+  // clamp center positions (because bubble uses translateX(-50%))
+  const minClamped = Math.max(pad + (minW/2), Math.min(poleW - pad - (minW/2), minCenterPx));
+  const maxClamped = Math.max(pad + (maxW/2), Math.min(poleW - pad - (maxW/2), maxCenterPx));
+
+  minBubble.style.left = `${minClamped}px`;
+  maxBubble.style.left = `${maxClamped}px`;
 }
 
 function updateRange(){
@@ -1035,9 +1147,12 @@ function updateRange(){
   setBubble(minBubble, minPct, fmt(minVal));
   setBubble(maxBubble, maxPct, fmt(maxVal));
 
-  // bubble positions
+  // default bubble positions by %
   minBubble.style.left = `${minPct}%`;
   maxBubble.style.left = `${maxPct}%`;
+
+  // ✅ under 500px keep inside with 10px padding
+  clampBubblesMobile(minPct, maxPct);
 
   // after 2 seconds, only change bar color
   kmWrap.classList.remove("is-after2s");
@@ -1051,15 +1166,13 @@ function updateRange(){
 kmMin.addEventListener("input", updateRange);
 kmMax.addEventListener("input", updateRange);
 
+// Re-clamp on resize (important when rotate phone)
+window.addEventListener("resize", () => updateRange());
+
 // ✅ first load: 0km and 25km
 kmMin.value = 0;
 kmMax.value = KM_POINTS.length - 1;
 updateRange();
-
-
-
-
-
 
 // ===== Price Modal v2 (Min/Max) =====
 // =====================
@@ -1219,7 +1332,44 @@ document.addEventListener("DOMContentLoaded", () => {
   setUnit(""); // ❗ no default unit
 
 });
+</script>
 
+<script>
+/* =========================
+   CATEGORY AUTO SLIDER
+========================= */
+
+const catSlider = document.getElementById("catSlider");
+const catNav = document.getElementById("catNav");
+
+// 1) Duplicate items for smooth infinite loop
+catNav.innerHTML += catNav.innerHTML;
+
+// 2) Auto scroll speed
+let catPos = 0;
+let catSpeed = 0.5; // slower = smoother
+
+function autoSlideCat(){
+  catPos += catSpeed;
+  catNav.style.transform = `translateX(-${catPos}px)`;
+
+  // When first half moved out → reset position
+  if (catPos >= catNav.scrollWidth / 2) {
+    catPos = 0;
+  }
+
+  requestAnimationFrame(autoSlideCat);
+}
+
+autoSlideCat();
+
+/* Pause on hover (desktop) */
+catSlider.addEventListener("mouseenter", () => catSpeed = 0);
+catSlider.addEventListener("mouseleave", () => catSpeed = 0.5);
+
+/* Pause on mobile swipe */
+catSlider.addEventListener("touchstart", () => catSpeed = 0);
+catSlider.addEventListener("touchend", () => catSpeed = 0.5);
 
 
 </script>

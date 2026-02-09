@@ -2,13 +2,14 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
 <svg
-   version="1.1"
-   id="_x32_"
+   version="1.0"
+   id="Layer_1"
    width="800px"
    height="800px"
-   viewBox="0 0 512 512"
+   viewBox="0 0 64 64"
+   enable-background="new 0 0 64 64"
    xml:space="preserve"
-   sodipodi:docname="house-svgrepo-com.svg"
+   sodipodi:docname="building-svgrepo-com.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,10 +28,10 @@
      inkscape:collect="always"
      xlink:href="#linearGradient1"
      id="linearGradient2"
-     x1="0"
-     y1="256"
-     x2="512"
-     y2="256"
+     x1="4"
+     y1="32"
+     x2="60"
+     y2="32"
      gradientUnits="userSpaceOnUse" /></defs><sodipodi:namedview
    id="namedview1"
    pagecolor="#505050"
@@ -48,21 +49,10 @@
    inkscape:window-x="2391"
    inkscape:window-y="-9"
    inkscape:window-maximized="1"
-   inkscape:current-layer="_x32_" />
-<style
-   type="text/css"
-   id="style1">
-<![CDATA[
-	.st0{fill:#000000;}
-]]>
-</style>
-<g
-   id="g1"
-   style="mix-blend-mode:normal;fill:url(#linearGradient2)">
-	<path
-   class="st0"
-   d="M 395.141,193.75 V 90.781 h -47.703 v 55.266 L 294.063,92.656 256,54.625 217.937,92.656 0,310.609 38.063,348.672 79.876,306.844 v 150.531 h 352.25 V 306.844 L 473.939,348.672 512,310.609 Z M 245.578,396.719 h -54.484 v -54.5 h 54.484 z m 0,-75.656 h -54.484 v -54.5 h 54.484 z m 75.328,75.656 h -54.484 v -54.5 h 54.484 z m 0,-75.656 h -54.484 v -54.5 h 54.484 z"
+   inkscape:current-layer="Layer_1" />
+<path
+   fill="#231F20"
+   d="M56,0H8C5.789,0,4,1.789,4,4v56c0,2.211,1.789,4,4,4h20V48h8v16h20c2.211,0,4-1.789,4-4V4  C60,1.789,58.211,0,56,0z M28,40h-8v-8h8V40z M28,24h-8v-8h8V24z M44,40h-8v-8h8V40z M44,24h-8v-8h8V24z"
    id="path1"
    style="fill:url(#linearGradient2)" />
-</g>
 </svg>
