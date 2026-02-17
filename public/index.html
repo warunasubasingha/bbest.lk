@@ -141,116 +141,129 @@
   </div>
 </section>
 
+<!-- ✅ CATEGORY BAR (5 + More) + pill slideshow + dropdown list (10 dummy items) -->
 <section class="cp">
   <div class="w">
+    <div class="catbar" id="catBar">
 
-    <!-- Categories grid (wrap 4 lines) -->
-    <div class="catgrid" id="catGrid">
-
-      <!-- 15 items (you can change icons + text) -->
-      <button class="catbtn" type="button" data-cat="House">
-        <img class="catimg" src="img/icons/house.svg" alt="">
-        <span class="cattxt">House</span>
-        <span class="caret">▾</span>
+      
+      <!-- 5 visible categories -->
+      <button class="cat-tile" type="button" data-cat="House">
+        <span class="cat-ic"><img src="img/icons/house.svg" alt=""></span>
+        <span class="cat-name">House</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Land">
-        <img class="catimg" src="img/icons/land.svg" alt="">
-        <span class="cattxt">Land</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile" type="button" data-cat="Land">
+        <span class="cat-ic"><img src="img/icons/land.svg" alt=""></span>
+        <span class="cat-name">Land</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Apartment">
-        <img class="catimg" src="img/icons/apartment.svg" alt="">
-        <span class="cattxt">Apartment</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile" type="button" data-cat="Apartment">
+        <span class="cat-ic"><img src="img/icons/apartment.svg" alt=""></span>
+        <span class="cat-name">Apartment</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Annex">
-        <img class="catimg" src="img/icons/annex.svg" alt="">
-        <span class="cattxt">Annex</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile" type="button" data-cat="Commercial">
+        <span class="cat-ic"><img src="img/icons/commercial.svg" alt=""></span>
+        <span class="cat-name">Commercial</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Commercial">
-        <img class="catimg" src="img/icons/commercial.svg" alt="">
-        <span class="cattxt">Commercial</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile" type="button" data-cat="New Project">
+        <span class="cat-ic"><img src="img/icons/project.svg" alt=""></span>
+        <span class="cat-name">Industrial Property</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Villa">
-        <img class="catimg" src="img/icons/villa.svg" alt="">
-        <span class="cattxt">Villa</span>
-        <span class="caret">▾</span>
+      <!-- EXTRA categories (hidden until More) -->
+      <button class="cat-tile is-extra" type="button" data-cat="Villa">
+        <span class="cat-ic"><img src="img/icons/villa.svg" alt=""></span>
+        <span class="cat-name">Villa</span>
+        <span class="cat-pill js-pill">For Sale</span>
+      </button>
+      
+      <button class="cat-tile is-extra" type="button" data-cat="Annex">
+        <span class="cat-ic"><img src="img/icons/annex.svg" alt=""></span>
+        <span class="cat-name">Annex</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Office">
-        <img class="catimg" src="img/icons/office.svg" alt="">
-        <span class="cattxt">Office</span>
-        <span class="caret">▾</span>
+
+      <button class="cat-tile is-extra" type="button" data-cat="Office">
+        <span class="cat-ic"><img src="img/icons/office.svg" alt=""></span>
+        <span class="cat-name">Office</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Shop">
-        <img class="catimg" src="img/icons/shop.svg" alt="">
-        <span class="cattxt">Shop</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Shop">
+        <span class="cat-ic"><img src="img/icons/shop.svg" alt=""></span>
+        <span class="cat-name">Shop</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Warehouse">
-        <img class="catimg" src="img/icons/warehouse.svg" alt="">
-        <span class="cattxt">Warehouse</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Warehouse">
+        <span class="cat-ic"><img src="img/icons/warehouse.svg" alt=""></span>
+        <span class="cat-name">Warehouse</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Factory">
-        <img class="catimg" src="img/icons/factory.svg" alt="">
-        <span class="cattxt">Factory</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Factory">
+        <span class="cat-ic"><img src="img/icons/factory.svg" alt=""></span>
+        <span class="cat-name">Factory</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Hotel">
-        <img class="catimg" src="img/icons/hotel.svg" alt="">
-        <span class="cattxt">Hotel</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Hotel / Guest House">
+        <span class="cat-ic"><img src="img/icons/hotel.svg" alt=""></span>
+        <span class="cat-name">Hotel</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Resort">
-        <img class="catimg" src="img/icons/resort.svg" alt="">
-        <span class="cattxt">Resort</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Resort">
+        <span class="cat-ic"><img src="img/icons/resort.svg" alt=""></span>
+        <span class="cat-name">Resort</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Agricultural">
-        <img class="catimg" src="img/icons/agricultural.svg" alt="">
-        <span class="cattxt">Agri Land</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Agricultural Land">
+        <span class="cat-ic"><img src="img/icons/agricultural.svg" alt=""></span>
+        <span class="cat-name">Agri Land</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="NewProject">
-        <img class="catimg" src="img/icons/apartment.svg" alt="">
-        <span class="cattxt">New Project</span>
-        <span class="caret">▾</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Other">
+        <span class="cat-ic"><img src="img/icons/other.svg" alt=""></span>
+        <span class="cat-name">Other</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="catbtn" type="button" data-cat="Other">
-        <img class="catimg" src="img/icons/house.svg" alt="">
-        <span class="cattxt">Other</span>
-        <span class="caret">▾</span>
+      <!-- MORE (always visible - first) -->
+      <button class="cat-tile cat-more" id="catMoreBtn" type="button" aria-expanded="false">
+        <span class="cat-ic">
+          <!-- menu icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+        </span>
+        <span class="cat-name">More</span>
+        <span class="cat-pill">All</span>
       </button>
-
-      <button class="catbtn catmore" id="catMoreBtn" type="button" aria-expanded="false">
-        <span class="cattxt" style="text-align:center;">More</span>
-        <span class="caret">▾</span>
-      </button>
-
+      
 
     </div>
-
-    <!-- One shared dropdown panel (we will MOVE it under clicked button) -->
-    <div class="catpanel" id="catPanel" aria-hidden="true"></div>
-
   </div>
 </section>
+
+<!-- ✅ ONE shared popup (shows near clicked category) -->
+<div class="catpop" id="catPop" aria-hidden="true">
+  <div class="catpop-head">
+    <div class="catpop-title" id="catPopTitle">Category</div>
+    <button class="catpop-x" id="catPopClose" type="button" aria-label="Close">✕</button>
+  </div>
+  <div class="catpop-tabs" id="catPopTabs"></div>
+  <div class="catpop-list" id="catPopList"></div>
+</div>
 
 
 
@@ -270,7 +283,7 @@
           </button>
 
           <button class="filter-bottum">
-            <span>☰</span>
+            <img src="img/icons/23.png" alt="" class="filter-icon">
             <span>Filter</span>
           </button>
         </div>
@@ -396,7 +409,7 @@
 </section>
 
 <!-- post card -->
-<section class="cp">
+<section class="cp cp-bottom">
     
   <!--card-->
   <div class="w post-card-sketch">
@@ -405,7 +418,6 @@
     <div class="pc-media">
       <div class="pc-img">
         <img src="img/main_image.webp" alt="Ad Image">
-        <div class="d1-card"></div>
       </div>
 
       <!-- Top left: user -->
@@ -445,21 +457,24 @@
           <!-- 360 -->
           <span class="pc-360">360°</span>
         </div>
-
-        <div class="pc-title">Moratuwa - Lakshapathiya</div>
       </div>
 
       <!-- Bottom right: price -->
       <div class="pc-price">
-        <span class="pc-price-label">Price :</span>
+        <span class="pc-price-label">LKR :</span>
         <span class="pc-price-val">100M</span>
       </div>
     </div>
 
     <!-- 2) DETAILS AREA -->
     <div class="pc-body">
+      
       <div class="fsb">
         <div>
+          <div class="fsb">
+            <div><img src="img/location.png" alt="" class="location-image"></div>
+            <span class="pc-title">Moratuwa - Lakshapathiya</span>
+          </div>
           <!-- row: Perch + bed + bath + sqf -->
           <div class="purpose">
             <span class="purpose-idea">For Sale</span>
@@ -547,449 +562,7 @@
 
     </div>
   </div>
-  
-  <!--card-->
-  <div class="w post-card-sketch">
 
-    <!-- 1) MEDIA AREA -->
-    <div class="pc-media">
-      <img class="pc-img" src="img/land_2.webp" alt="Ad Image">
-
-      <!-- Top left: user -->
-      <div class="pc-user">
-        <div class="pc-avatar">
-          <img src="img/man.webp" alt="User">
-        </div>
-
-        <div class="pc-user-meta">
-          <div class="pc-user-name">John Doe</div>
-          <div class="pc-user-sub">
-            <span class="pc-dot"></span>
-            <span>Post ID 1234</span>
-            <span class="pc-sep">•</span>
-            <span>27 mins ago</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom left: media icons + title -->
-      <div class="pc-bottom-left">
-        <div class="pc-media-icons">
-          <!-- Photo -->
-          <span class="pc-ic-badge" title="Photo">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M4 6h4l1-2h6l1 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
-            </svg>
-          </span>
-
-          <!-- Video -->
-          <span class="pc-ic-badge" title="Video">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
-            </svg>
-          </span>
-
-          <!-- 360 -->
-          <span class="pc-360">360°</span>
-        </div>
-
-        <div class="pc-title">Moratuwa - Lakshapathiya</div>
-      </div>
-
-      <!-- Bottom right: price -->
-      <div class="pc-price">
-        <span class="pc-price-label">Price :</span>
-        <span class="pc-price-val">100M</span>
-      </div>
-    </div>
-
-    <!-- 2) DETAILS AREA -->
-    <div class="pc-body">
-      <div class="fsb">
-        <div>
-          <!-- row: Perch + bed + bath + sqf -->
-          <div class="purpose">
-            <span class="purpose-idea">For Sale</span>
-            <span>-</span>
-            <span class="purpose-idea">Land</span>
-          </div>
-          <div class="pc-stats">
-            <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
-              </svg>
-              <span>3</span>
-            </div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
-              </svg>
-              <span>2</span>
-            </div>
-    
-            <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
-          </div>
-          
-          
-          <!-- Visit time row -->
-          <div class="main-details">
-            <span class="main-details-btn">View Details</span>
-          </div>
-        </div>
-    
-          <!-- Loan box + apply -->
-          <div class="pc-loan-row">
-            <div class="pc-loan-box">
-              <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
-    
-                <button class="pc-loan-chip is-active" type="button">LOLC</button>
-              </div>
-    
-              <div class="pc-loan-mid">
-                <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
-              </div>
-    
-              <button class="pc-apply" type="button">APPLY NOW</button>
-            </div>
-          </div>
-      </div>
-
-     
-
-      <!-- Action buttons -->
-      <div class="fsb pc-actions">
-        <button class="pc-btn" type="button">List</button>
-
-        <a class="pc-btn" href="tel:+94770000000">
-          <img src="img/icons/call.svg" alt="" class="pc-btn-ic">
-          Call
-        </a>
-
-        <a class="pc-btn" href="https://wa.me/94770000000" target="_blank" rel="noopener">
-          <img src="img/icons/whatsapp.svg" alt="" class="pc-btn-ic">
-          WhatsApp
-        </a>
-      </div>
-
-      <!-- Like / Comment / Share row -->
-      <div class="pc-social">
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/like.svg" alt="" class="pc-btn-ic">
-          <span>Like</span>
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/comment.svg" alt="" class="pc-btn-ic">
-          Comment
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/share.svg" alt="" class="pc-btn-ic">
-          Share
-        </button>
-      </div>
-
-    </div>
-  </div>
-  
-  
-  
-  <!--card-->
-  <div class="w post-card-sketch">
-
-    <!-- 1) MEDIA AREA -->
-    <div class="pc-media">
-      <img class="pc-img" src="img/land_4.webp" alt="Ad Image">
-
-      <!-- Top left: user -->
-      <div class="pc-user">
-        <div class="pc-avatar">
-          <img src="img/man.webp" alt="User">
-        </div>
-
-        <div class="pc-user-meta">
-          <div class="pc-user-name">John Doe</div>
-          <div class="pc-user-sub">
-            <span class="pc-dot"></span>
-            <span>Post ID 1234</span>
-            <span class="pc-sep">•</span>
-            <span>27 mins ago</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom left: media icons + title -->
-      <div class="pc-bottom-left">
-        <div class="pc-media-icons">
-          <!-- Photo -->
-          <span class="pc-ic-badge" title="Photo">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M4 6h4l1-2h6l1 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
-            </svg>
-          </span>
-
-          <!-- Video -->
-          <span class="pc-ic-badge" title="Video">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
-            </svg>
-          </span>
-
-          <!-- 360 -->
-          <span class="pc-360">360°</span>
-        </div>
-
-        <div class="pc-title">Moratuwa - Lakshapathiya</div>
-      </div>
-
-      <!-- Bottom right: price -->
-      <div class="pc-price">
-        <span class="pc-price-label">Price :</span>
-        <span class="pc-price-val">100M</span>
-      </div>
-    </div>
-
-    <!-- 2) DETAILS AREA -->
-    <div class="pc-body">
-      <div class="fsb">
-        <div>
-          <!-- row: Perch + bed + bath + sqf -->
-          <div class="purpose">
-            <span class="purpose-idea">For Sale</span>
-            <span>-</span>
-            <span class="purpose-idea">Land</span>
-          </div>
-          <div class="pc-stats">
-            <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
-              </svg>
-              <span>3</span>
-            </div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
-              </svg>
-              <span>2</span>
-            </div>
-    
-            <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
-          </div>
-          
-          
-          <!-- Visit time row -->
-          <div class="main-details">
-            <span class="main-details-btn">View Details</span>
-          </div>
-        </div>
-    
-          <!-- Loan box + apply -->
-          <div class="pc-loan-row">
-            <div class="pc-loan-box">
-              <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
-    
-                <button class="pc-loan-chip is-active" type="button">LOLC</button>
-              </div>
-    
-              <div class="pc-loan-mid">
-                <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
-              </div>
-    
-              <button class="pc-apply" type="button">APPLY NOW</button>
-            </div>
-          </div>
-      </div>
-
-     
-
-      <!-- Action buttons -->
-      <div class="fsb pc-actions">
-        <button class="pc-btn" type="button">List</button>
-
-        <a class="pc-btn" href="tel:+94770000000">
-          <img src="img/icons/call.svg" alt="" class="pc-btn-ic">
-          Call
-        </a>
-
-        <a class="pc-btn" href="https://wa.me/94770000000" target="_blank" rel="noopener">
-          <img src="img/icons/whatsapp.svg" alt="" class="pc-btn-ic">
-          WhatsApp
-        </a>
-      </div>
-
-      <!-- Like / Comment / Share row -->
-      <div class="pc-social">
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/like.svg" alt="" class="pc-btn-ic">
-          <span>Like</span>
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/comment.svg" alt="" class="pc-btn-ic">
-          Comment
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/share.svg" alt="" class="pc-btn-ic">
-          Share
-        </button>
-      </div>
-
-    </div>
-  </div>
-  
-  <!--card-->
-  <div class="w post-card-sketch">
-
-    <!-- 1) MEDIA AREA -->
-    <div class="pc-media">
-      <img class="pc-img" src="img/land_3.webp" alt="Ad Image">
-
-      <!-- Top left: user -->
-      <div class="pc-user">
-        <div class="pc-avatar">
-          <img src="img/man.webp" alt="User">
-        </div>
-
-        <div class="pc-user-meta">
-          <div class="pc-user-name">John Doe</div>
-          <div class="pc-user-sub">
-            <span class="pc-dot"></span>
-            <span>Post ID 1234</span>
-            <span class="pc-sep">•</span>
-            <span>27 mins ago</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom left: media icons + title -->
-      <div class="pc-bottom-left">
-        <div class="pc-media-icons">
-          <!-- Photo -->
-          <span class="pc-ic-badge" title="Photo">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M4 6h4l1-2h6l1 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm8 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
-            </svg>
-          </span>
-
-          <!-- Video -->
-          <span class="pc-ic-badge" title="Video">
-            <svg viewBox="0 0 24 24" class="pc-ic" aria-hidden="true">
-              <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
-            </svg>
-          </span>
-
-          <!-- 360 -->
-          <span class="pc-360">360°</span>
-        </div>
-
-        <div class="pc-title">Moratuwa - Lakshapathiya</div>
-      </div>
-
-      <!-- Bottom right: price -->
-      <div class="pc-price">
-        <span class="pc-price-label">Price :</span>
-        <span class="pc-price-val">100M</span>
-      </div>
-    </div>
-
-    <!-- 2) DETAILS AREA -->
-    <div class="pc-body">
-      <div class="fsb">
-        <div>
-          <!-- row: Perch + bed + bath + sqf -->
-          <div class="purpose">
-            <span class="purpose-idea">For Sale</span>
-            <span>-</span>
-            <span class="purpose-idea">Land</span>
-          </div>
-          <div class="pc-stats">
-            <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
-              </svg>
-              <span>3</span>
-            </div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
-              </svg>
-              <span>2</span>
-            </div>
-    
-            <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
-          </div>
-          
-          
-          <!-- Visit time row -->
-          <div class="main-details">
-            <span class="main-details-btn">View Details</span>
-          </div>
-        </div>
-    
-          <!-- Loan box + apply -->
-          <div class="pc-loan-row">
-            <div class="pc-loan-box">
-              <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
-    
-                <button class="pc-loan-chip is-active" type="button">LOLC</button>
-              </div>
-    
-              <div class="pc-loan-mid">
-                <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
-              </div>
-    
-              <button class="pc-apply" type="button">APPLY NOW</button>
-            </div>
-          </div>
-      </div>
-
-     
-
-      <!-- Action buttons -->
-      <div class="fsb pc-actions">
-        <button class="pc-btn" type="button">List</button>
-
-        <a class="pc-btn" href="tel:+94770000000">
-          <img src="img/icons/call.svg" alt="" class="pc-btn-ic">
-          Call
-        </a>
-
-        <a class="pc-btn" href="https://wa.me/94770000000" target="_blank" rel="noopener">
-          <img src="img/icons/whatsapp.svg" alt="" class="pc-btn-ic">
-          WhatsApp
-        </a>
-      </div>
-
-      <!-- Like / Comment / Share row -->
-      <div class="pc-social">
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/like.svg" alt="" class="pc-btn-ic">
-          <span>Like</span>
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/comment.svg" alt="" class="pc-btn-ic">
-          Comment
-        </button>
-        <button type="button" class="pc-social-btn fcc">
-          <img src="img/icons/share.svg" alt="" class="pc-btn-ic">
-          Share
-        </button>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 <!-- Bottom Nav Footer -->
@@ -999,7 +572,7 @@
       <a class="fcc bb-item is-active" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- home -->
-          <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+          <img src="img/icons/26.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">Home</span>
       </a>
@@ -1007,7 +580,7 @@
       <a class="fcc bb-item" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- users -->
-          <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11zM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zM8 13c-2.33 0-7 1.17-7 3.5V19h7v-2c0-1.44.62-2.64 1.77-3.57A12.5 12.5 0 0 0 8 13z"/></svg>
+          <img src="img/icons/20.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">About Us</span>
       </a>
@@ -1015,7 +588,7 @@
       <a class="fcc bb-item" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- chat -->
-          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          <img src="img/icons/21.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">About Web</span>
       </a>
@@ -1030,7 +603,7 @@
       <a class="fcc bb-item" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- list -->
-          <svg viewBox="0 0 24 24"><path d="M4 6h2v2H4V6zm4 0h14v2H8V6zM4 11h2v2H4v-2zm4 0h14v2H8v-2zM4 16h2v2H4v-2zm4 0h14v2H8v-2z"/></svg>
+          <img src="img/icons/22.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">List</span>
       </a>
@@ -1038,7 +611,7 @@
       <a class="fcc bb-item" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- bell -->
-          <svg viewBox="0 0 24 24"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22zm7-6V11a7 7 0 0 0-5-6.7V3a2 2 0 0 0-4 0v1.3A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+          <img src="img/icons/24.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">Notification</span>
       </a>
@@ -1046,7 +619,7 @@
       <a class="fcc bb-item" href="#">
         <span class="bb-ic" aria-hidden="true">
           <!-- message -->
-          <svg viewBox="0 0 24 24"><path d="M21 6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l4-3h12a2 2 0 0 0 2-2V6z"/></svg>
+          <img src="img/icons/25.png" alt="" class="footer-icon">
         </span>
         <span class="bb-txt">Message</span>
       </a>
@@ -1191,212 +764,188 @@ setLanguage(saved);
 
 <script>
 /* =========================
-   15 Categories + dropdown under clicked button
+   Category bar + More + pill slideshow (SMOOTH SLIDE) + popup (3 tabs) + 10 dummy items
 ========================= */
 
-// Dummy data: SAME list for all categories (as you asked)
-const MAIN_LIST = {
-  "For Sale": [
-    { label: "Sub Item 1", url: "#" },
-    { label: "Sub Item 2", url: "#" },
-    { label: "Sub Item 3", url: "#" }
-  ],
-  "For Rent": [
-    { label: "Sub Item A", url: "#" },
-    { label: "Sub Item B", url: "#" }
-  ],
-  "For Lease": [
-    { label: "Sub Item X", url: "#" },
-    { label: "Sub Item Y", url: "#" }
-  ]
-};
+/* -------------------------
+   ✅ Smooth sliding pill text
+   (Works with your existing .js-pill elements)
+------------------------- */
+const PILL_ROTATE = ["For Sale", "For Rent", "For Lease"];
+const pillEls = Array.from(document.querySelectorAll(".js-pill"));
+let pillIndex = 0;
 
-// If later you want different subitems per category:
-// const CAT_DATA = { House: {...}, Land: {...} };
-
-const catGrid  = document.getElementById("catGrid");
-const catPanel = document.getElementById("catPanel");
-
-let openCat = "";
-let openMain = "";
-
-// Build panel UI
-function renderPanel(catName){
-  const wrap = document.createElement("div");
-  wrap.className = "mainlist";
-
-  Object.keys(MAIN_LIST).forEach(mainName => {
-    const item = document.createElement("div");
-    item.className = "mainitem" + (openMain === mainName ? " open" : "");
-
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "mainbtn";
-    btn.innerHTML = `<span>${mainName}</span><span class="mcaret">▾</span>`;
-
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      openMain = (openMain === mainName) ? "" : mainName;
-      openCat = catName;
-      mountPanelUnder(catName);
-    });
-
-    const sub = document.createElement("div");
-    sub.className = "sublist";
-
-    MAIN_LIST[mainName].forEach(s => {
-      const a = document.createElement("a");
-      a.href = s.url || "#";
-      a.textContent = s.label;
-      sub.appendChild(a);
-    });
-
-    item.appendChild(btn);
-    item.appendChild(sub);
-    wrap.appendChild(item);
-  });
-
-  catPanel.innerHTML = "";
-  catPanel.appendChild(wrap);
-}
-
-// Move the panel under clicked category (same row position)
-function mountPanelUnder(catName){
-  const btn = catGrid.querySelector(`.catbtn[data-cat="${CSS.escape(catName)}"]`);
-  if(!btn) return;
-
-  // render content
-  renderPanel(catName);
-
-  // Open panel
-  catPanel.classList.add("open");
-  catPanel.setAttribute("aria-hidden","false");
-
-  // Insert panel right after the clicked button in DOM
-  btn.insertAdjacentElement("afterend", catPanel);
-
-  // Scroll into view smoothly on mobile
-  setTimeout(() => {
-    catPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  }, 30);
-}
-
-function closePanel(){
-  catPanel.classList.remove("open");
-  catPanel.setAttribute("aria-hidden","true");
-  catPanel.innerHTML = "";
-  openCat = "";
-  openMain = "";
-}
-
-// Click category buttons
-catGrid.addEventListener("click", (e) => {
-  const btn = e.target.closest(".catbtn");
-  if(!btn) return;
-
-  const catName = btn.dataset.cat;
-
-  // toggle same
-  if(openCat === catName){
-    closePanel();
-    return;
+// Wrap pill text once so we can animate smoothly
+pillEls.forEach(el => {
+  if (!el.querySelector(".pill-inner")) {
+    const inner = document.createElement("span");
+    inner.className = "pill-inner";
+    inner.textContent = (el.textContent || "").trim() || PILL_ROTATE[0];
+    el.textContent = "";
+    el.appendChild(inner);
   }
-
-  openCat = catName;
-  openMain = ""; // reset main open
-  mountPanelUnder(catName);
 });
 
-// Close when clicking outside
-document.addEventListener("click", (e) => {
-  if(!catPanel.classList.contains("open")) return;
-  if(catPanel.contains(e.target)) return;
-  if(catGrid.contains(e.target)) return;
-  closePanel();
-});
+function rotatePillsSmooth(){
+  pillIndex = (pillIndex + 1) % PILL_ROTATE.length;
 
-// ESC closes
-document.addEventListener("keydown", (e) => {
-  if(e.key === "Escape") closePanel();
-});
+  pillEls.forEach(el => {
+    const inner = el.querySelector(".pill-inner");
+
+    // start slide-out
+    el.classList.add("is-anim");
+
+    // after slide-out finishes, change text and slide-in
+    setTimeout(() => {
+      inner.textContent = PILL_ROTATE[pillIndex];
+      el.classList.remove("is-anim");
+    }, 350); // keep same as CSS transition duration
+  });
+}
+
+// auto rotate
+setInterval(rotatePillsSmooth, 2000);
 
 
-</script>
-
-<script>
-  /* =========================
-   Under 400px: show 5 + More
-========================= */
+/* -------------------------
+   More expand/collapse
+------------------------- */
+const catBar = document.getElementById("catBar");
 const catMoreBtn = document.getElementById("catMoreBtn");
 
-function isUnder400(){
-  return window.matchMedia("(max-width: 400px)").matches;
+catMoreBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const expanded = catBar.classList.toggle("is-expanded");
+  catMoreBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+  catMoreBtn.querySelector(".cat-name").textContent = expanded ? "Less" : "More";
+  catMoreBtn.querySelector(".cat-pill").textContent = expanded ? "Hide" : "All";
+});
+
+
+/* -------------------------
+   Popup elements
+------------------------- */
+const catPop = document.getElementById("catPop");
+const catPopTitle = document.getElementById("catPopTitle");
+const catPopTabs = document.getElementById("catPopTabs");
+const catPopList = document.getElementById("catPopList");
+const catPopClose = document.getElementById("catPopClose");
+
+const TABS = ["For Sale", "For Rent", "For Lease"];
+
+// 10 dummy items for each tab (same for all categories)
+function makeDummyItems(tabName){
+  return Array.from({length: 10}).map((_, i) => `${tabName} - Item ${i+1}`);
 }
 
-function getCatButtons(){
-  // all real category buttons (exclude panel + exclude More)
-  return Array.from(catGrid.querySelectorAll(".catbtn")).filter(b => b.id !== "catMoreBtn");
+let activeCat = "";
+let activeTab = "For Sale";
+
+// Render tabs + list
+function renderPopup(){
+  catPopTabs.innerHTML = "";
+  TABS.forEach(t => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "cattab" + (t === activeTab ? " is-active" : "");
+    b.textContent = t;
+    b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      activeTab = t;
+      renderPopup();
+    });
+    catPopTabs.appendChild(b);
+  });
+
+  catPopList.innerHTML = "";
+  makeDummyItems(activeTab).forEach(txt => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "catpop-item";
+    btn.textContent = txt;
+    btn.addEventListener("click", () => {
+      // you can navigate / filter here
+      console.log("Selected:", activeCat, activeTab, txt);
+      closePop();
+    });
+    catPopList.appendChild(btn);
+  });
 }
 
-function applyCatCompact(){
-  if(!catMoreBtn) return;
+function openPopForButton(btn){
+  activeCat = btn.dataset.cat || "Category";
+  activeTab = "For Sale";
+  catPopTitle.textContent = activeCat;
 
-  const btns = getCatButtons();
+  renderPopup();
 
-  // Always show all on >400
-  if(!isUnder400()){
-    btns.forEach(b => b.classList.remove("is-hidden"));
-    catMoreBtn.style.display = "none";
-    catMoreBtn.setAttribute("aria-expanded","false");
-    catMoreBtn.querySelector(".caret").textContent = "▾";
+  // position near clicked tile
+  const r = btn.getBoundingClientRect();
+  catPop.classList.add("open");
+  catPop.setAttribute("aria-hidden", "false");
+
+  // measure width/height
+  const popW = catPop.offsetWidth;
+  const popH = catPop.offsetHeight;
+
+  // place below tile; keep inside viewport
+  let left = r.left + (r.width / 2) - (popW / 2);
+  left = Math.max(8, Math.min(left, window.innerWidth - popW - 8));
+
+  let top = r.bottom + 8;
+  // if not enough space bottom, show above
+  if(top + popH > window.innerHeight - 8){
+    top = r.top - popH - 8;
+    top = Math.max(8, top);
+  }
+
+  catPop.style.left = left + "px";
+  catPop.style.top  = top  + "px";
+}
+
+function closePop(){
+  catPop.classList.remove("open");
+  catPop.setAttribute("aria-hidden", "true");
+}
+
+// click tiles
+catBar.addEventListener("click", (e) => {
+  const btn = e.target.closest(".cat-tile");
+  if(!btn) return;
+
+  // ignore More
+  if(btn.id === "catMoreBtn") return;
+
+  // toggle if same opened
+  if(catPop.classList.contains("open") && activeCat === (btn.dataset.cat || "")){
+    closePop();
     return;
   }
 
-  // Under 400 → show More button
-  catMoreBtn.style.display = "flex";
-
-  const expanded = catGrid.classList.contains("is-expanded");
-
-  if(expanded){
-    // show all
-    btns.forEach(b => b.classList.remove("is-hidden"));
-    catMoreBtn.setAttribute("aria-expanded","true");
-    catMoreBtn.querySelector(".caret").textContent = "▴";
-    catMoreBtn.querySelector(".cattxt").textContent = "Less";
-  }else{
-    // show only first 5
-    btns.forEach((b, i) => {
-      if(i < 5) b.classList.remove("is-hidden");
-      else b.classList.add("is-hidden");
-    });
-    catMoreBtn.setAttribute("aria-expanded","false");
-    catMoreBtn.querySelector(".caret").textContent = "▾";
-    catMoreBtn.querySelector(".cattxt").textContent = "More";
-  }
-}
-
-// toggle
-catMoreBtn?.addEventListener("click", (e) => {
-  e.stopPropagation();
-  catGrid.classList.toggle("is-expanded");
-
-  // close dropdown if open (optional)
-  // closePanel();
-
-  applyCatCompact();
+  openPopForButton(btn);
 });
 
-// re-apply on resize
+// close actions
+catPopClose.addEventListener("click", closePop);
+document.addEventListener("click", (e) => {
+  if(!catPop.classList.contains("open")) return;
+  if(catPop.contains(e.target)) return;
+  if(catBar.contains(e.target)) return;
+  closePop();
+});
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closePop();
+});
+
+// reposition on resize/scroll
 window.addEventListener("resize", () => {
-  // when switching bigger, remove expanded class
-  if(!isUnder400()) catGrid.classList.remove("is-expanded");
-  applyCatCompact();
+  if(catPop.classList.contains("open")) closePop();
 });
-
-// init
-applyCatCompact();
-
+window.addEventListener("scroll", () => {
+  if(catPop.classList.contains("open")) closePop();
+}, {passive:true});
 </script>
+
 
 
 <script>
