@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="list-footer.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.97125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g3"
+     transform="matrix(1.1708375,0,0,1.1708375,-1.9051433,-1.7247723)">
+    <g
+       opacity="0.5"
+       id="g1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1">
+      <path
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 2.25,6 C 2.25,5.58579 2.58579,5.25 3,5.25 h 17 c 0.4142,0 0.75,0.33579 0.75,0.75 0,0.41421 -0.3358,0.75 -0.75,0.75 H 3 C 2.58579,6.75 2.25,6.41421 2.25,6 Z m 0,5 c 0,-0.4142 0.33579,-0.75 0.75,-0.75 h 6 c 0.41421,0 0.75,0.3358 0.75,0.75 0,0.4142 -0.33579,0.75 -0.75,0.75 H 3 C 2.58579,11.75 2.25,11.4142 2.25,11 Z m 0,5 c 0,-0.4142 0.33579,-0.75 0.75,-0.75 h 7 c 0.4142,0 0.75,0.3358 0.75,0.75 0,0.4142 -0.3358,0.75 -0.75,0.75 H 3 C 2.58579,16.75 2.25,16.4142 2.25,16 Z"
+         fill="#1C274C"
+         id="path1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
+    </g>
+    <path
+       d="m 13,11.7148 c 0,1.7526 2.1633,3.6156 3.4901,4.5934 0.4541,0.3348 0.6812,0.5021 1.0099,0.5021 0.3287,0 0.5558,-0.1673 1.0099,-0.502 C 19.8367,15.3304 22,13.4674 22,11.7148 22,9.03759 19.5249,8.03807 17.5,10.1062 15.4751,8.03807 13,9.03759 13,11.7148 Z"
+       fill="#1C274C"
+       id="path2"
+       style="fill:#ffffff;fill-opacity:1" />
+  </g>
+</svg>

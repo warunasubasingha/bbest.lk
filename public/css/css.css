@@ -729,7 +729,7 @@ post-card-sketch
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 3000;
+  z-index: 10000;
 }
 .pmodal.open{ display:block; }
 
@@ -742,7 +742,7 @@ post-card-sketch
 .pmodal-card{
   position:absolute;
   left: 50%;
-  bottom: 18px;
+  bottom: 150px;
   transform: translateX(-50%);
   width: min(520px, 92vw);
   background:#fff;
@@ -971,7 +971,7 @@ post-card-sketch
 .pc-price{
   position:absolute;
   right: 12px;
-  bottom: 40px;
+  bottom: 20px;
   display:flex;
   gap: 10px;
   align-items: baseline;
@@ -1739,18 +1739,15 @@ margin: 20px;}
 
   }
   .cat-ic img {
-    width: 20px;
+    width: 75%;
   }
   .cat-name , .cat-pill {
-    font-size: 6px;
+    font-size: 7px;
   }
   .catbar {
     gap: 5px;
   }
 }
-
-
-
 
 .js-pill .pill-inner{
   display: inline-block;
