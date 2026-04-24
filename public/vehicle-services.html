@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/vehicle-services.css">
     <title>Home Page</title>
     <style>
       #d1000 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
@@ -57,7 +57,7 @@
     <div class="w cat-row-inner">
 
       <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" id="d1000" href="index.html">
+        <a class="cat-item" href="index.html">
           <img src="img/icons/1.png" alt="">
           <span>Property</span>
         </a>
@@ -72,7 +72,7 @@
           <span>Property services</span>
         </a>
 
-        <a class="cat-item" href="vehicle-services.html">
+        <a class="cat-item" id="d1000" href="vehicle-services.html">
           <img src="img/icons/4.png" alt="">
           <span>Vehicle Service</span>
         </a>
@@ -152,89 +152,95 @@
 
       
       <!-- 5 visible categories -->
-      <button class="cat-tile" type="button" data-cat="House">
-        <span class="cat-ic"><img src="img/icons/house.svg" alt=""></span>
-        <span class="cat-name">House</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile" type="button" data-cat="Maintenance">
+        <span class="cat-ic"><img src="img/icons/vehicle_maintainance.png" alt=""></span>
+        <span class="cat-name">Maintenance</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Land">
-        <span class="cat-ic"><img src="img/icons/land.svg" alt=""></span>
-        <span class="cat-name">Land</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile" type="button" data-cat="Repair">
+        <span class="cat-ic"><img src="img/icons/vehicle_repair.png" alt=""></span>
+        <span class="cat-name">Repair</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Apartment">
-        <span class="cat-ic"><img src="img/icons/apartment.svg" alt=""></span>
-        <span class="cat-name">Apartment</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile" type="button" data-cat="Electrical">
+        <span class="cat-ic"><img src="img/icons/vehicle_electrical.png" alt=""></span>
+        <span class="cat-name">Electrical</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Commercial">
-        <span class="cat-ic"><img src="img/icons/commercial.svg" alt=""></span>
-        <span class="cat-name">Commercial</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile" type="button" data-cat="Air Condition">
+        <span class="cat-ic"><img src="img/icons/vehicle_ac.png" alt=""></span>
+        <span class="cat-name">Air Condition</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Annex">
-        <span class="cat-ic"><img src="img/icons/annex.svg" alt=""></span>
-        <span class="cat-name">Annex</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Tires">
+        <span class="cat-ic"><img src="img/icons/vehicle_tires.png" alt=""></span>
+        <span class="cat-name">Tires</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
       <!-- EXTRA categories (hidden until More) -->
-      <button class="cat-tile is-extra" type="button" data-cat="Villa">
-        <span class="cat-ic"><img src="img/icons/villa.svg" alt=""></span>
-        <span class="cat-name">Villa</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Body & Paint">
+        <span class="cat-ic"><img src="img/icons/vehicle_paint.png" alt=""></span>
+        <span class="cat-name">Body & Paint</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
       
-      <button class="cat-tile is-extra" type="button" data-cat="Office">
-        <span class="cat-ic"><img src="img/icons/office.svg" alt=""></span>
-        <span class="cat-name">Office</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Glass">
+        <span class="cat-ic"><img src="img/icons/vehicle_glass.png" alt=""></span>
+        <span class="cat-name">Glass</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Shop">
-        <span class="cat-ic"><img src="img/icons/shop.svg" alt=""></span>
-        <span class="cat-name">Shop</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Modification">
+        <span class="cat-ic"><img src="img/icons/vehicle_modification.png" alt=""></span>
+        <span class="cat-name">Modification</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Warehouse">
-        <span class="cat-ic"><img src="img/icons/warehouse.svg" alt=""></span>
-        <span class="cat-name">Warehouse</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Transport">
+        <span class="cat-ic"><img src="img/icons/vehicle_transport.png" alt=""></span>
+        <span class="cat-name">Transport</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Factory">
-        <span class="cat-ic"><img src="img/icons/factory.svg" alt=""></span>
-        <span class="cat-name">Factory</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Inspection">
+        <span class="cat-ic"><img src="img/icons/vehicle_inspection.png" alt=""></span>
+        <span class="cat-name">Inspection</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Hotel / Guest House">
-        <span class="cat-ic"><img src="img/icons/hotel.svg" alt=""></span>
-        <span class="cat-name">Hotel</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Driving Training">
+        <span class="cat-ic"><img src="img/icons/driving_training.png" alt=""></span>
+        <span class="cat-name">Driving Training</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Resort">
-        <span class="cat-ic"><img src="img/icons/resort.svg" alt=""></span>
-        <span class="cat-name">Resort</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Technology">
+        <span class="cat-ic"><img src="img/icons/vehicle_technology.png" alt=""></span>
+        <span class="cat-name">Technology</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Agricultural Land">
-        <span class="cat-ic"><img src="img/icons/agricultural.svg" alt=""></span>
-        <span class="cat-name">Agri Land</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Battery">
+        <span class="cat-ic"><img src="img/icons/vehicle_battery.png" alt=""></span>
+        <span class="cat-name">Battery</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Other">
-        <span class="cat-ic"><img src="img/icons/other_lands.svg" alt=""></span>
-        <span class="cat-name">Other</span>
-        <span class="cat-pill js-pill">For Sale</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Valuation">
+        <span class="cat-ic"><img src="img/icons/vehicle_valuation.png" alt=""></span>
+        <span class="cat-name">Valuation</span>
+        <span class="cat-pill js-pill">Service Providers</span>
+      </button>
+
+      <button class="cat-tile is-extra" type="button" data-cat="Cleaning">
+        <span class="cat-ic"><img src="img/icons/vehicle_cleaning.png" alt=""></span>
+        <span class="cat-name">Cleaning</span>
+        <span class="cat-pill js-pill">Service Providers</span>
       </button>
 
       <!-- MORE (always visible - first) -->
@@ -251,6 +257,87 @@
     </div>
   </div>
 </section>
+<!-- FILTER BUTTONS -->
+<div class="filter-group fsb">
+
+  <!-- House Type -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+      <span>Type & Brand</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Type 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Type 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Type 3</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Machine -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+
+      <!-- ICON IMAGE -->
+      <img src="img/icons/vehicle_maintainance.png" class="btn-icon">
+
+      <span>Machine</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Machine 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Machine 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Machine 3</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Tools -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+
+      <!-- ICON IMAGE -->
+      <img src="img/icons/vehicle_technology.png" class="btn-icon">
+
+      <span>Tools</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Tool 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Tool 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Tool 3</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
 
 <!-- ✅ ONE shared popup (shows near clicked category) -->
 <div class="catpop" id="catPop" aria-hidden="true">
@@ -261,6 +348,7 @@
   <div class="catpop-tabs" id="catPopTabs"></div>
   <div class="catpop-list" id="catPopList"></div>
 </div>
+
 
 <!-- Wanted Slider Row -->
 <div class="wanted-row">
@@ -275,28 +363,30 @@
       <div class="wanted-track" id="wantedTrack">
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/1.png" alt="Van">
+            <img src="img/icons/vehicle_technology.png" alt="Van">
           </span>
-          <span class="wanted-name">02 Story House - For rent</span>
+          <span class="wanted-name">Sensor Adjestment</span>
         </a>
 
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/land.svg" alt="Car">
+            <img src="img/icons/vehicle_tires.png" alt="Car">
           </span>
-          <span class="wanted-name">Land - For Sale</span>
+          <span class="wanted-name">Tires for 10 vans</span>
         </a>
 
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/apartment.svg" alt="Bus">
+            <img src="img/icons/vehicle_glass.png" alt="Bus">
           </span>
-          <span class="wanted-name">Apartment - For Sale</span>
+          <span class="wanted-name">Vehicle Glass for van</span>
         </a>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 <!-- Location List  and Fillter-->
@@ -551,9 +641,9 @@
           
           
           <!-- Visit time row -->
-          <a href="single-property.html" class="fcc main-details">
-             <span class="main-details-btn">View Details</span>
-           </a>
+          <div class="main-details">
+            <span class="main-details-btn">View Details</span>
+          </div>
         </div>
     
           <!-- Loan box + apply -->
@@ -819,7 +909,7 @@ setLanguage(saved);
 /* -------------------------
    ✅ Smooth sliding pill text
 ------------------------- */
-const PILL_ROTATE = ["For Sale", "For Rent", "For Lease"];
+const PILL_ROTATE = ["Service Providers", "Suppliers & Shops Products", "Workers & Professionals"];
 const pillEls = Array.from(document.querySelectorAll(".js-pill"));
 let pillIndex = 0;
 
@@ -871,10 +961,10 @@ const catPopTabs = document.getElementById("catPopTabs");
 const catPopList = document.getElementById("catPopList");
 const catPopClose = document.getElementById("catPopClose");
 
-const TABS = ["For Sale", "For Rent", "For Lease"];
+const TABS = ["Service Providers", "Suppliers & Shops Products", "Workers & Professionals"];
 
 let activeCat = "";
-let activeTab = "For Sale";
+let activeTab = "Service Providers";
 
 /* -------------------------
    ✅ Different subcategories per main category
@@ -882,327 +972,602 @@ let activeTab = "For Sale";
 ------------------------- */
 // ✅ Full subcategory dataset (as you requested) — use this as SUBCATS
 const SUBCATS = {
-  "House": {
-    "For Sale": [
-      "Single Storey House",
-      "Two Storey House",
-      "Three Storey House",
-      "Luxury House",
-      "Modern House",
-      "Newly Built House",
-      "Used / Pre-owned House",
-      "Old House",
-      "House with Land",
-      "House with Shop / Commercial Front",
-      "House with Separate Annex",
-      "House (Incomplete / Under Construction)",
-      "House (Facing Main Road)",
-      "House (Corner Plot)",
-      "Gated Community House",
-      "Townhouse"
+  "Maintenance": {
+    "Service Providers": [
+      "Vehicle Maintenance Centers",
+      "Periodic Service Centers",
+      "Quick Service Centers",
+      "Preventive Maintenance Centers",
+      "Fleet Maintenance Companies",
+      "Mobile Maintenance Services",
+      "Lubrication Service Centers",
+      "Underbody Maintenance Centers",
+      "Multi-brand Auto Service Centers",
+      "Premium Vehicle Maintenance Centers"
     ],
-    "For Rent": [
-      "Full House",
-      "Family House",
-      "Furnished House",
-      "Semi Furnished House",
-      "Unfurnished House",
-      "Short Term House (Daily / Weekly)",
-      "Long Term House (Monthly / Yearly)",
-      "Upper Floor House",
-      "Downstairs / Ground Floor House",
-      "Shared House (Shared Kitchen/Facilities)"
+    "Suppliers & Shops Products": [
+      "Auto Spare Parts Shops",
+      "Engine Oil Shops",
+      "Lubricant Dealers",
+      "Oil Filter Shops",
+      "Air Filter Shops",
+      "Fuel Filter Shops",
+      "Coolant Shops",
+      "Brake Fluid Shops",
+      "Transmission Oil Shops",
+      "Grease & Maintenance Chemical Shops",
+      "Car Care Product Shops",
+      "Service Consumable Suppliers"
     ],
-    "For Lease": [
-      "House Lease (Residential)",
-      "House Lease (Commercial Use)",
-      "Long Term Lease House (5–30 Years)"
+    "Workers & Professionals": [
+      "Vehicle Service Technicians",
+      "Auto Maintenance Technicians",
+      "Lubrication Technicians",
+      "Preventive Maintenance Technicians",
+      "Fleet Service Technicians",
+      "Mobile Service Mechanics",
+      "Service Advisors",
+      "Workshop Supervisors",
+      "Diagnostic Maintenance Technicians",
+      "Automobile Maintenance Inspectors"
     ]
   },
 
-  "Land": {
-    "For Sale": [
-      "Residential Land",
-      "Commercial Land",
-      "Industrial Land",
-      "Agricultural Land",
-      "Bare Land / Plot",
-      "Subdivided Plot / Lot",
-      "Road Front Land",
-      "Main Road Facing Land",
-      "Corner Land",
-      "Land with Building / Old House",
-      "Beachfront Land",
-      "River / Lake Side Land",
-      "Hilltop / Scenic Land",
-      "Investment Land"
+  "Repair": {
+    "Service Providers": [
+      "Auto Repair Garages",
+      "Engine Repair Centers",
+      "Gearbox Repair Centers",
+      "Transmission Repair Centers",
+      "Suspension Repair Centers",
+      "Steering Repair Centers",
+      "Brake Repair Centers",
+      "Clutch Repair Centers",
+      "Exhaust Repair Centers",
+      "Radiator Repair Centers",
+      "Fuel System Repair Centers",
+      "Differential Repair Centers",
+      "Drivetrain Repair Centers",
+      "General Mechanical Repair Centers",
+      "Heavy Vehicle Repair Workshops"
     ],
-    "For Rent": [
-      "Land for Temporary Use",
-      "Land for Parking",
-      "Land for Storage / Yard",
-      "Land for Events / Functions"
+    "Suppliers & Shops Products": [
+      "Engine Parts Shops",
+      "Gearbox Parts Shops",
+      "Clutch Parts Shops",
+      "Brake Parts Shops",
+      "Suspension Parts Shops",
+      "Steering Parts Shops",
+      "Radiator Parts Shops",
+      "Exhaust Parts Shops",
+      "Fuel System Parts Shops",
+      "Bearing & Seal Shops",
+      "Gasket & Sealant Shops",
+      "Mechanical Spare Parts Dealers",
+      "Recondition Parts Shops"
     ],
-    "For Lease": [
-      "Land Lease (Residential)",
-      "Land Lease (Commercial)",
-      "Land Lease (Industrial)",
-      "Land Lease (Agricultural / Cultivation)",
-      "Long Term Land Lease (5–99 Years)"
+    "Workers & Professionals": [
+      "Auto Mechanics",
+      "Engine Mechanics",
+      "Transmission Mechanics",
+      "Suspension Mechanics",
+      "Brake Mechanics",
+      "Steering Mechanics",
+      "Clutch Technicians",
+      "Radiator Repair Technicians",
+      "Exhaust Technicians",
+      "Fuel Injection Technicians",
+      "Drivetrain Mechanics",
+      "Workshop Repair Supervisors"
     ]
   },
 
-  "Apartment / Condominium": {
-    "For Sale": [
-      "Studio Apartment",
-      "1 Bedroom Apartment",
-      "2 Bedroom Apartment",
-      "3 Bedroom Apartment",
-      "4+ Bedroom Apartment",
-      "Condominium Unit",
-      "Luxury Condominium",
-      "Penthouse",
-      "Duplex Apartment",
-      "Serviced Apartment (Sale)"
+  "Electrical": {
+    "Service Providers": [
+      "Auto Electrical Repair Centers",
+      "Wiring Repair Centers",
+      "Alternator Repair Centers",
+      "Starter Motor Repair Centers",
+      "Lighting System Repair Centers",
+      "Power Window Repair Centers",
+      "Central Locking Repair Centers",
+      "Charging System Repair Centers",
+      "ECU/Electronic Module Repair Centers",
+      "Hybrid/EV Electrical Service Centers"
     ],
-    "For Rent": [
-      "Studio (Rent)",
-      "1 Bedroom (Rent)",
-      "2 Bedroom (Rent)",
-      "3 Bedroom (Rent)",
-      "Furnished Apartment",
-      "Semi Furnished Apartment",
-      "Unfurnished Apartment",
-      "Serviced Apartment (Rent)",
-      "Short Stay Apartment (Daily/Weekly)",
-      "Long Term Apartment (Monthly/Yearly)"
+    "Suppliers & Shops Products": [
+      "Auto Electrical Parts Shops",
+      "Battery Cable Shops",
+      "Wiring Harness Shops",
+      "Fuse & Relay Shops",
+      "Vehicle Bulb & Lighting Shops",
+      "Alternator Parts Shops",
+      "Starter Motor Parts Shops",
+      "Sensor Shops",
+      "Switch & Control Module Shops",
+      "ECU Parts Dealers",
+      "Horn & Electrical Accessory Shops"
     ],
-    "For Lease": [
-      "Apartment Lease (Long Term)",
-      "Condominium Lease (Long Term)",
-      "Corporate Lease Apartment",
-      "Serviced Apartment Lease"
+    "Workers & Professionals": [
+      "Auto Electricians",
+      "Vehicle Wiring Technicians",
+      "ECU Technicians",
+      "Electrical Diagnostic Technicians",
+      "Lighting System Technicians",
+      "Alternator Technicians",
+      "Starter Motor Technicians",
+      "Electronic Module Repair Technicians",
+      "Hybrid Vehicle Electrical Technicians",
+      "Automotive Electrical Inspectors"
     ]
   },
 
-  "Commercial Property": {
-    "For Sale": [
-      "Commercial Building",
-      "Office Building",
-      "Shop Building",
-      "Showroom Building",
-      "Mixed-Use Building",
-      "Commercial Land with Building",
-      "Supermarket / Retail Space (Building)",
-      "Restaurant / Cafe Property",
-      "Hotel Building (Small)",
-      "Business Premises (General)"
+  "Air Condition": {
+    "Service Providers": [
+      "Car AC Repair Centers",
+      "Car AC Gas Refilling Centers",
+      "AC Diagnostic Centers",
+      "AC Compressor Repair Centers",
+      "Climate Control Repair Centers",
+      "Bus/Van AC Service Centers",
+      "Mobile Vehicle AC Services"
     ],
-    "For Rent": [
-      "Office Space",
-      "Co-working / Shared Office",
-      "Shop / Retail Space",
-      "Showroom",
-      "Restaurant / Cafe Space",
-      "Commercial Hall / Function Space",
-      "Bank / Finance Suitable Space",
-      "Medical / Clinic Space",
-      "Salon / Spa Space",
-      "Ground Floor Commercial",
-      "Upper Floor Commercial"
+    "Suppliers & Shops Products": [
+      "Auto AC Parts Shops",
+      "AC Compressor Shops",
+      "Condenser Shops",
+      "Evaporator Shops",
+      "AC Hose & Pipe Shops",
+      "Refrigerant Gas Dealers",
+      "AC Filter Shops",
+      "Blower Motor Shops",
+      "AC Control Unit Shops",
+      "AC Cooling Spare Parts Dealers"
     ],
-    "For Lease": [
-      "Commercial Building Lease",
-      "Long Term Shop Lease",
-      "Long Term Office Lease",
-      "Showroom Lease",
-      "Restaurant Lease",
-      "Business Lease (Turnkey Space)"
+    "Workers & Professionals": [
+      "Auto AC Technicians",
+      "AC Gas Refill Technicians",
+      "AC Diagnostic Technicians",
+      "Compressor Repair Technicians",
+      "Climate Control Technicians",
+      "Refrigeration Mechanics",
+      "Mobile AC Service Technicians"
     ]
   },
 
-  "Industrial Property": {
-    "For Sale": [
-      "Factory",
-      "Warehouse",
-      "Industrial Building",
-      "Workshop",
-      "Production / Manufacturing Unit",
-      "Industrial Yard / Open Storage Yard",
-      "Industrial Land (with Utilities)",
-      "Cold Room / Cold Storage Facility"
+  "Tires": {
+    "Service Providers": [
+      "Tire Replacement Centers",
+      "Tire Repair Centers",
+      "Wheel Alignment Centers",
+      "Wheel Balancing Centers",
+      "Tire Rotation Centers",
+      "Nitrogen Filling Centers",
+      "Alloy Wheel Repair Centers",
+      "Puncture Repair Centers",
+      "Tire Inspection Centers",
+      "Fleet Tire Service Centers"
     ],
-    "For Rent": [
-      "Warehouse Space",
-      "Factory Space",
-      "Workshop Space",
-      "Industrial Yard (Rent)",
-      "Cold Storage (Rent)"
+    "Suppliers & Shops Products": [
+      "Tire Shops",
+      "Alloy Wheel Shops",
+      "Wheel Rim Shops",
+      "Tube Shops",
+      "Valve Shops",
+      "Tire Accessory Shops",
+      "Wheel Nut & Bolt Shops",
+      "Tire Sealant Shops",
+      "Used Tire Dealers",
+      "Fleet Tire Suppliers"
     ],
-    "For Lease": [
-      "Factory Lease (Long Term)",
-      "Warehouse Lease (Long Term)",
-      "Industrial Yard Lease",
-      "Industrial Land Lease",
-      "Manufacturing Unit Lease"
+    "Workers & Professionals": [
+      "Tire Technicians",
+      "Wheel Alignment Technicians",
+      "Wheel Balancing Technicians",
+      "Puncture Repair Technicians",
+      "Alloy Wheel Repair Technicians",
+      "Tire Fitting Technicians",
+      "Tire Inspectors"
     ]
   },
 
-  "Villa": {
-    "For Sale": [
-      "Luxury Villa",
-      "Beach Villa",
-      "Lake / River Side Villa",
-      "Garden Villa",
-      "Holiday Villa",
-      "Private Pool Villa",
-      "Gated Community Villa"
+  "Body & Paint": {
+    "Service Providers": [
+      "Auto Body Repair Centers",
+      "Accident Repair Centers",
+      "Dent Repair Centers",
+      "Panel Beating Centers",
+      "Chassis Straightening Centers",
+      "Vehicle Painting Centers",
+      "Touch-up Paint Centers",
+      "Rust Repair Centers",
+      "Bumper Repair Centers",
+      "Insurance Claim Body Repair Centers",
+      "Body Restoration Workshops"
     ],
-    "For Rent": [
-      "Holiday Villa (Daily)",
-      "Short Term Villa (Daily/Weekly)",
-      "Long Term Villa (Monthly/Yearly)",
-      "Furnished Villa",
-      "Pool Villa (Rent)",
-      "Beach Villa (Rent)"
+    "Suppliers & Shops Products": [
+      "Auto Paint Shops",
+      "Body Parts Shops",
+      "Bumper Shops",
+      "Fender & Panel Shops",
+      "Paint Mixing Shops",
+      "Putty & Filler Suppliers",
+      "Primer & Clear Coat Suppliers",
+      "Sanding Material Shops",
+      "Body Repair Tool Shops",
+      "Rust Protection Chemical Shops",
+      "Vehicle Sticker & Decal Shops"
     ],
-    "For Lease": [
-      "Villa Lease (Long Term)",
-      "Holiday Villa Lease (Seasonal/Long)"
+    "Workers & Professionals": [
+      "Denter/Basher Workers",
+      "Panel Beaters",
+      "Vehicle Painters",
+      "Spray Painters",
+      "Body Repair Technicians",
+      "Chassis Alignment Technicians",
+      "Dent Removal Specialists",
+      "Color Matching Technicians",
+      "Auto Body Estimators",
+      "Insurance Repair Assessors"
     ]
   },
 
-  "Hotel / Resort": {
-    "For Sale": [
-      "Hotel",
-      "Resort",
-      "Boutique Hotel",
-      "Guest House",
-      "Villa Hotel / Villa Collection",
-      "Eco Resort / Eco Lodge",
-      "Beach Resort",
-      "Apartment Hotel / Serviced Residence",
-      "Tourism Property (Operating Business)"
+  "Glass": {
+    "Service Providers": [
+      "Auto Glass Replacement Centers",
+      "Windshield Repair Centers",
+      "Windshield Replacement Centers",
+      "Door Glass Repair Centers",
+      "Rear Glass Replacement Centers",
+      "Quarter Glass Replacement Centers",
+      "Mobile Auto Glass Services",
+      "Window Tinting Centers"
     ],
-    "For Rent": [
-      "Hotel (Rent Basis)",
-      "Restaurant Area (Hotel)",
-      "Banquet / Hall (Hotel)",
-      "Rooms / Floors (Rent)",
-      "Tourism Property (Rent)"
+    "Suppliers & Shops Products": [
+      "Auto Glass Shops",
+      "Windshield Dealers",
+      "Door Glass Dealers",
+      "Rear Screen Glass Shops",
+      "Tint Film Shops",
+      "Glass Rubber Beading Shops",
+      "Wiper Shops",
+      "Glass Fitting Consumable Shops",
+      "Defogger Line Repair Material Shops"
     ],
-    "For Lease": [
-      "Full Hotel Lease",
-      "Resort Lease",
-      "Guest House Lease",
-      "Boutique Hotel Lease",
-      "Management Lease / Operator Lease",
-      "Restaurant Lease (Within Hotel/Resort)",
-      "Banquet Hall Lease"
+    "Workers & Professionals": [
+      "Auto Glass Technicians",
+      "Windshield Repair Technicians",
+      "Glass Fitting Technicians",
+      "Window Tint Technicians",
+      "Wiper System Technicians",
+      "Mobile Glass Installation Workers"
     ]
   },
 
-  "Annex / Portion": {
-    "For Sale": [
-      "Annex (Separate Unit)",
-      "Portion (Upper Floor)",
-      "Portion (Downstairs)",
-      "Duplex Portion",
-      "House with Separate Portion (Deed/Unit)"
+  "Modification": {
+    "Service Providers": [
+      "Vehicle Modification Garages",
+      "Performance Upgrade Centers",
+      "Off-road Modification Centers",
+      "Suspension Modification Centers",
+      "Exhaust Upgrade Centers",
+      "Body Kit Installation Centers",
+      "Vehicle Lowering/Lifting Centers",
+      "Custom Lighting Upgrade Centers",
+      "Audio Modification Centers",
+      "4x4 Accessory Fitment Centers",
+      "Vehicle Wrapping Centers",
+      "Custom Build Workshops"
     ],
-    "For Rent": [
-      "Annex (Family)",
-      "Annex (Single)",
-      "Furnished Annex",
-      "Semi Furnished Annex",
-      "Unfurnished Annex",
-      "Portion (Upper Floor) Rent",
-      "Portion (Downstairs) Rent",
-      "Short Term Annex (Daily/Weekly)",
-      "Long Term Annex (Monthly/Yearly)"
+    "Suppliers & Shops Products": [
+      "Performance Parts Shops",
+      "Body Kit Shops",
+      "Spoiler Shops",
+      "Custom Exhaust Shops",
+      "Suspension Upgrade Shops",
+      "Off-road Accessory Shops",
+      "Custom Lighting Shops",
+      "Alloy Upgrade Shops",
+      "Vehicle Wrap & Vinyl Shops",
+      "Car Audio Upgrade Shops",
+      "Turbo/Performance Accessory Shops",
+      "Seat & Interior Upgrade Shops"
     ],
-    "For Lease": [
-      "Annex Lease (Long Term)",
-      "Portion Lease (Long Term)"
+    "Workers & Professionals": [
+      "Vehicle Modification Technicians",
+      "Performance Mechanics",
+      "Fabrication Technicians",
+      "Custom Exhaust Technicians",
+      "Suspension Modification Technicians",
+      "Car Audio Installers",
+      "Vehicle Wrap Technicians",
+      "Custom Lighting Technicians",
+      "Body Kit Installers",
+      "Tuning Specialists"
     ]
   },
 
-  "Boarding / Hostel": {
-    "For Sale": [
-      "Hostel Building",
-      "Boarding House",
-      "Staff Quarters Building",
-      "Student Accommodation Building"
+  "Interior Design": {
+    "Service Providers": [
+      "Car Interior Customization Centers",
+      "Upholstery Service Centers",
+      "Seat Repair Centers",
+      "Dashboard Repair Centers",
+      "Roof Lining Repair Centers",
+      "Carpet & Flooring Installation Centers",
+      "Interior Trim Restoration Centers",
+      "Luxury Interior Upgrade Centers",
+      "Leather Interior Service Centers",
+      "Sound Insulation Installation Centers"
     ],
-    "For Rent": [
-      "Boys Hostel",
-      "Girls Hostel",
-      "Mixed Hostel",
-      "Student Boarding",
-      "Worker Hostel",
-      "Staff Accommodation",
-      "Single Rooms (Boarding)",
-      "Shared Rooms (Boarding)",
-      "Bed Space / Sharing Basis"
+    "Suppliers & Shops Products": [
+      "Seat Cover Shops",
+      "Upholstery Material Shops",
+      "Leather & Fabric Dealers",
+      "Dashboard Accessories Shops",
+      "Vehicle Carpet Shops",
+      "Floor Mat Shops",
+      "Interior Trim Shops",
+      "Roof Lining Material Shops",
+      "Steering Cover Shops",
+      "Soundproof Material Shops",
+      "Interior Lighting Accessory Shops"
     ],
-    "For Lease": [
-      "Hostel Lease (Building)",
-      "Boarding House Lease",
-      "Staff Quarters Lease",
-      "Long Term Accommodation Lease"
+    "Workers & Professionals": [
+      "Auto Upholstery Workers",
+      "Seat Repair Technicians",
+      "Interior Fitment Technicians",
+      "Dashboard Repair Technicians",
+      "Trim Technicians",
+      "Leather Work Specialists",
+      "Interior Designers for Vehicles",
+      "Soundproofing Installers",
+      "Roof Lining Workers"
     ]
   },
 
-  "Agricultural Property": {
-    "For Sale": [
-      "Paddy Field",
-      "Coconut Land",
-      "Tea Estate",
-      "Rubber Estate",
-      "Cinnamon Land",
-      "Pepper / Spice Land",
-      "Fruit Farm / Orchard",
-      "Farm Land (General)",
-      "Plantation Land (General)",
-      "Agricultural Land with House",
-      "Agricultural Land with Well/Water Source"
+  "Transport": {
+    "Service Providers": [
+      "Vehicle Transport Services",
+      "Car Carrier Transport Services",
+      "Breakdown Transport Services",
+      "Recovery Truck Services",
+      "Tow Truck Services",
+      "Vehicle Delivery Services",
+      "Intercity Vehicle Movers",
+      "Fleet Transport Services",
+      "Auction Vehicle Transport Services",
+      "New Vehicle Delivery Companies"
     ],
-    "For Rent": [
-      "Cultivation Land (Short Term)",
-      "Farm Land (Seasonal Rent)",
-      "Agricultural Plot (Rent)"
+    "Suppliers & Shops Products": [
+      "Towing Equipment Shops",
+      "Recovery Equipment Dealers",
+      "Trailer Accessory Shops",
+      "Tie-down & Securing Equipment Shops",
+      "Transport Safety Equipment Shops",
+      "Vehicle Loading Ramp Suppliers"
     ],
-    "For Lease": [
-      "Agricultural Land Lease",
-      "Paddy Field Lease",
-      "Plantation Lease (Tea/Rubber/Coconut)",
-      "Farm Lease (Long Term)",
-      "Orchard Lease",
-      "Livestock / Farm Yard Lease"
+    "Workers & Professionals": [
+      "Tow Truck Drivers",
+      "Recovery Vehicle Operators",
+      "Vehicle Carrier Drivers",
+      "Heavy Vehicle Transport Drivers",
+      "Loading Coordinators",
+      "Dispatch Coordinators",
+      "Vehicle Handling Staff"
     ]
   },
 
-  "New Development / Project": {
-    "For Sale": [
-      "Apartment Project Units",
-      "Condominium Project Units",
-      "Housing Scheme Units",
-      "Townhouse Project Units",
-      "Villa Project Units",
-      "Land Development Plots (Project)",
-      "Off-Plan Units",
-      "Ready-to-Move Units"
+  "Inspection": {
+    "Service Providers": [
+      "Vehicle Inspection Centers",
+      "Pre-purchase Inspection Centers",
+      "Emission Testing Centers",
+      "Safety Inspection Centers",
+      "Insurance Inspection Centers",
+      "Fleet Inspection Services",
+      "Mechanical Inspection Centers",
+      "Accident Damage Inspection Centers",
+      "Compliance Inspection Centers",
+      "Roadworthiness Testing Centers"
     ],
-    "For Rent": [
-      "Project Rental Units",
-      "Brand-New Unit for Rent",
-      "Serviced Residence (Project) Rent"
+    "Suppliers & Shops Products": [
+      "Inspection Equipment Suppliers",
+      "Emission Testing Equipment Dealers",
+      "Diagnostic Tool Shops",
+      "Safety Testing Equipment Shops",
+      "Brake Testing Equipment Dealers",
+      "Workshop Inspection Tool Suppliers"
     ],
-    "For Lease": [
-      "Project Lease Units (Long Term)",
-      "Commercial Units in Project (Lease)",
-      "Shop/Office Units in Project (Lease)",
-      "Bulk Lease (Multiple Units)"
+    "Workers & Professionals": [
+      "Vehicle Inspectors",
+      "Mechanical Inspectors",
+      "Emission Test Technicians",
+      "Roadworthiness Inspectors",
+      "Insurance Vehicle Assessors",
+      "Pre-purchase Inspection Experts",
+      "Compliance Officers",
+      "Diagnostic Inspectors"
+    ]
+  },
+
+  "Driving Training": {
+    "Service Providers": [
+      "Driving Schools",
+      "Driver Training Institutes",
+      "Defensive Driving Training Centers",
+      "Heavy Vehicle Training Schools",
+      "Automatic Driving Training Schools",
+      "Manual Driving Training Schools",
+      "Refresher Driving Schools",
+      "Corporate Driver Training Providers",
+      "Commercial Driver Training Centers",
+      "Simulation Driving Training Centers"
+    ],
+    "Suppliers & Shops Products": [
+      "Driving School Vehicle Suppliers",
+      "Driving Training Material Shops",
+      "Learner Signboard Shops",
+      "Dual Control Kit Suppliers",
+      "Driving Simulator Dealers",
+      "Training Cone & Road Marker Shops"
+    ],
+    "Workers & Professionals": [
+      "Driving Instructors",
+      "Defensive Driving Trainers",
+      "Heavy Vehicle Instructors",
+      "Road Safety Trainers",
+      "Driver Assessors",
+      "Driving Test Preparation Coaches",
+      "Simulator Trainers"
+    ]
+  },
+
+  "Technology": {
+    "Service Providers": [
+      "GPS Installation Centers",
+      "Vehicle Tracking Installation Services",
+      "Dashcam Installation Centers",
+      "Reverse Camera Installation Centers",
+      "Parking Sensor Installation Centers",
+      "Car Audio Installation Centers",
+      "Infotainment Upgrade Centers",
+      "Alarm System Installation Centers",
+      "Immobilizer Installation Centers",
+      "Remote Start Installation Centers",
+      "ECU Programming Centers",
+      "Vehicle Diagnostic Service Centers",
+      "ADAS Calibration Centers",
+      "EV Software Diagnostic Centers"
+    ],
+    "Suppliers & Shops Products": [
+      "GPS Device Shops",
+      "Vehicle Tracker Shops",
+      "Dashcam Shops",
+      "Reverse Camera Shops",
+      "Parking Sensor Shops",
+      "Car Audio Shops",
+      "Infotainment System Shops",
+      "Alarm & Security Device Shops",
+      "Immobilizer Shops",
+      "Diagnostic Scanner Shops",
+      "ECU Programming Tool Shops",
+      "EV Diagnostic Tool Dealers",
+      "ADAS Sensor Shops"
+    ],
+    "Workers & Professionals": [
+      "GPS Installation Technicians",
+      "Vehicle Tracking Technicians",
+      "Dashcam Installers",
+      "Reverse Camera Technicians",
+      "Car Audio Technicians",
+      "Infotainment Technicians",
+      "Auto Security System Technicians",
+      "ECU Programmers",
+      "Diagnostic Technicians",
+      "ADAS Calibration Technicians",
+      "EV Electronics Technicians"
+    ]
+  },
+
+  "Battery": {
+    "Service Providers": [
+      "Battery Replacement Centers",
+      "Battery Charging Centers",
+      "Battery Testing Centers",
+      "Battery Repair Centers",
+      "Mobile Battery Services",
+      "Fleet Battery Service Providers",
+      "Hybrid Battery Service Centers",
+      "EV Battery Service Centers"
+    ],
+    "Suppliers & Shops Products": [
+      "Car Battery Shops",
+      "Battery Dealers",
+      "Battery Charger Shops",
+      "Jumper Cable Shops",
+      "Battery Terminal Shops",
+      "Distilled Water Shops",
+      "Inverter/Backup Battery Shops for Vehicles",
+      "Hybrid Battery Parts Dealers",
+      "EV Battery Component Dealers"
+    ],
+    "Workers & Professionals": [
+      "Battery Technicians",
+      "Mobile Battery Technicians",
+      "Battery Testing Technicians",
+      "Charging System Technicians",
+      "Hybrid Battery Technicians",
+      "EV Battery Technicians",
+      "Battery Installation Workers"
+    ]
+  },
+
+  "Valuation": {
+    "Service Providers": [
+      "Vehicle Valuation Centers",
+      "Used Vehicle Appraisal Services",
+      "Insurance Valuation Services",
+      "Accident Damage Valuation Services",
+      "Fleet Valuation Companies",
+      "Auction Valuation Services",
+      "Pre-sale Vehicle Assessment Centers",
+      "Lease Return Evaluation Services"
+    ],
+    "Suppliers & Shops Products": [
+      "Valuation Software Providers",
+      "Vehicle History Report Service Providers",
+      "Appraisal Tool Providers",
+      "Market Pricing Data Providers"
+    ],
+    "Workers & Professionals": [
+      "Vehicle Valuers",
+      "Auto Appraisers",
+      "Insurance Assessors",
+      "Accident Damage Assessors",
+      "Fleet Evaluation Specialists",
+      "Auction Evaluators",
+      "Residual Value Analysts"
+    ]
+  },
+
+  "Cleaning": {
+    "Service Providers": [
+      "Car Wash Centers",
+      "Vehicle Detailing Centers",
+      "Interior Cleaning Centers",
+      "Exterior Cleaning Centers",
+      "Steam Cleaning Centers",
+      "Engine Bay Cleaning Centers",
+      "Seat Shampooing Centers",
+      "Foam Wash Centers",
+      "Pressure Wash Centers",
+      "Dry Wash Services",
+      "Mobile Car Wash Services",
+      "Sanitization & Odor Removal Services",
+      "Ceramic Coating Centers",
+      "Polish & Wax Centers"
+    ],
+    "Suppliers & Shops Products": [
+      "Car Cleaning Product Shops",
+      "Detailing Chemical Shops",
+      "Polish & Wax Shops",
+      "Microfiber & Cleaning Accessory Shops",
+      "Pressure Washer Dealers",
+      "Vacuum & Detailing Machine Suppliers",
+      "Ceramic Coating Product Shops",
+      "Interior Cleaning Chemical Shops",
+      "Odor Removal Product Shops"
+    ],
+    "Workers & Professionals": [
+      "Car Wash Workers",
+      "Vehicle Detailers",
+      "Interior Cleaning Technicians",
+      "Exterior Cleaning Technicians",
+      "Polishing Technicians",
+      "Ceramic Coating Technicians",
+      "Steam Cleaning Operators",
+      "Mobile Cleaning Workers"
     ]
   }
 };
@@ -1263,7 +1628,7 @@ function renderPopup(){
 
 function openPopForButton(btn){
   activeCat = btn.dataset.cat || "Category";
-  activeTab = "For Sale";
+  activeTab = "Service Providers";
   catPopTitle.textContent = activeCat;
 
   renderPopup();
@@ -2029,6 +2394,7 @@ view360Btn.addEventListener("click",function(){
 });
 </script>
 
+
 <script>
 /* =========================
    WANTED AUTO SLIDER
@@ -2074,4 +2440,76 @@ if (wantedSlider && wantedTrack) {
   wantedSlider.addEventListener("touchstart", () => wantedPaused = true, { passive: true });
   wantedSlider.addEventListener("touchend", () => wantedPaused = false, { passive: true });
 }
+</script>
+
+<script>
+/* =========================
+   WANTED AUTO SLIDER
+========================= */
+const wantedSlider = document.getElementById("wantedSlider");
+const wantedTrack  = document.getElementById("wantedTrack");
+
+if (wantedSlider && wantedTrack) {
+  const originalItems = Array.from(wantedTrack.children);
+
+  // duplicate items for smooth loop
+  originalItems.forEach(item => {
+    wantedTrack.appendChild(item.cloneNode(true));
+  });
+
+  let wantedIndex = 0;
+  const totalOriginal = originalItems.length;
+  let wantedPaused = false;
+
+  function goWantedSlide(index, animate = true){
+    wantedTrack.style.transition = animate ? "transform 450ms ease" : "none";
+    wantedTrack.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextWantedSlide(){
+    if (wantedPaused) return;
+
+    wantedIndex++;
+    goWantedSlide(wantedIndex, true);
+
+    if (wantedIndex === totalOriginal) {
+      setTimeout(() => {
+        wantedIndex = 0;
+        goWantedSlide(wantedIndex, false);
+      }, 470);
+    }
+  }
+
+  let wantedTimer = setInterval(nextWantedSlide, 2500);
+
+  wantedSlider.addEventListener("mouseenter", () => wantedPaused = true);
+  wantedSlider.addEventListener("mouseleave", () => wantedPaused = false);
+  wantedSlider.addEventListener("touchstart", () => wantedPaused = true, { passive: true });
+  wantedSlider.addEventListener("touchend", () => wantedPaused = false, { passive: true });
+}
+</script>
+
+
+<script>
+const filters = document.querySelectorAll(".filter-item");
+
+filters.forEach(item => {
+  const btn = item.querySelector(".filter-btn");
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // close others
+    filters.forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+
+// close on outside click
+document.addEventListener("click", () => {
+  filters.forEach(i => i.classList.remove("active"));
+});
 </script>

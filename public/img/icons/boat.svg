@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   data-name="Layer 1"
+   id="Layer_1"
+   version="1.1"
+   sodipodi:docname="boat-cruise-sailing-svgrepo-com.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#244e73;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#4e98d9;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="0.03900222"
+       y1="11.858748"
+       x2="23.896131"
+       y2="11.858748"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.97125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title1" />
+  <path
+     d="M 14.263732,14.606922 V 0.07980695 L 12.484206,1.2085649 A 22.52536,22.146231 0 0 0 3.10438,14.324733 L 3.035495,14.606922 H 0.03900222 L 1.6348356,19.291267 A 3.4442446,3.3862738 0 0 0 0.48675402,19.121954 v 2.257516 c 0.64292568,0 0.91846528,0.248326 1.48102528,0.801418 a 4.1216128,4.0522411 0 0 0 3.1113009,1.456098 4.0871703,4.0183783 0 0 0 3.0998203,-1.456098 C 8.7414604,21.627796 9.017,21.37947 9.6599252,21.37947 c 0.6429258,0 0.9184658,0.248326 1.4925048,0.801418 a 3.9953238,3.9280777 0 0 0 6.211123,0 c 0.56256,-0.553092 0.838099,-0.801418 1.492506,-0.801418 0.654406,0 0.918465,0.248326 1.481024,0.801418 a 4.1216128,4.0522411 0 0 0 3.111302,1.456098 V 21.37947 c -0.642926,0 -0.918466,-0.248327 -1.481026,-0.801418 l -0.06889,-0.06773 1.997662,-5.903404 z m -2.296163,0 H 5.4005431 A 20.240678,19.900003 0 0 1 11.967569,4.4481002 Z"
+     id="path1"
+     style="stroke-width:1.13838;fill:url(#linearGradient2)" />
+</svg>

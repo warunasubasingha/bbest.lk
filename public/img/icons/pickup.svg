@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="pickup-truck-svgrepo-com.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#244e73;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#4e98d9;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="1"
+       y1="12"
+       x2="23"
+       y2="12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.085644,0,0,1.085644,-1.1049491,-1.5415935)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.97125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 16.265357,4.9722709 H 10.294313 V 9.3148473 H -0.01930501 V 14.743068 H 2.1519832 a 3.2569323,3.2569323 0 0 0 6.5138645,0 h 6.5138653 a 3.2569322,3.2569322 0 0 0 6.513864,0 h 2.171288 V 11.486136 A 2.1712882,2.1712882 0 0 0 21.693577,9.3148473 H 19.522289 L 16.265357,4.9722709 m -4.342578,1.6284662 h 3.799756 l 2.171288,2.7141102 H 11.922779 V 6.6007371 M 5.4089154,13.114602 a 1.6284662,1.6284662 0 1 1 -1.6284662,1.628466 1.6284662,1.6284662 0 0 1 1.6284662,-1.628466 m 13.0277296,0 a 1.6284662,1.6284662 0 1 1 -1.628466,1.628466 1.6284662,1.6284662 0 0 1 1.628466,-1.628466 z"
+     id="path1"
+     style="fill:url(#linearGradient2);stroke-width:1.08564" />
+  <rect
+     width="24"
+     height="24"
+     fill="none"
+     id="rect1" />
+</svg>
