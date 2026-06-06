@@ -238,11 +238,10 @@
       <span class="loan-monthly-label">Monthly</span>
       <span class="loan-monthly-value">245,000</span>
     </div>
-
-    <button class="loan-apply-btn" type="button">
+    <a href="apply-loan.html" class="loan-apply-btn">
       <span class="loan-apply-icon">🏛</span>
       <span>Apply for Loan</span>
-    </button>
+    </a>
   </div>
 
 </section>
@@ -831,11 +830,13 @@
 
   <!-- INQUIRY BOX -->
   <div class="visit-form-box">
-
-    <label class="visit-checkbox">
-      <input type="checkbox">
-      <span>Send Inquiry</span>
-    </label>
+    
+    <div class="fa">
+      <div class="fcc">
+        <img src="img/icons/e-mail.svg" alt="" class="inquiryImage">
+      </div>
+      <span class="inquaryTitle">Send Inquiry</span>
+    </div>
 
     <div class="visit-field">
       <label>Offers</label>
@@ -851,17 +852,22 @@
       <input type="text" placeholder="Phone Number">
     </div>
 
-    <!-- interest options -->
-    <div class="visit-interest">
-      <label class="visit-checkbox">
-        <input type="checkbox" checked>
-        <span>I'm interested in this property</span>
-      </label>
+    <div class="visit-field">
+      <label>Your Message</label>
+      <textarea id="inquiryMessage" placeholder="Write your message here..."></textarea>
+    </div>
 
       <div class="visit-tags">
-        <button type="button" class="visit-tag">Can't Visit</button>
-        <button type="button" class="visit-tag">Negotiable</button>
-        <button type="button" class="visit-tag">Send Location</button>
+        <button type="button" class="visit-tag">I’m interested in this property.</button>
+        <button type="button" class="visit-tag">Is this property still available?</button>
+        <button type="button" class="visit-tag">Can I schedule a visit?</button>
+        <button type="button" class="visit-tag">Please share more details.</button>
+        <button type="button" class="visit-tag">Is the price negotiable?</button>
+        <button type="button" class="visit-tag">Can you send the exact location?</button>
+        <button type="button" class="visit-tag">I can’t visit, please share more photos/videos.</button>
+        <button type="button" class="visit-tag">Is bank loan available?</button>
+        <button type="button" class="visit-tag">Are the legal documents clear?</button>
+        <button type="button" class="visit-tag">I’m a serious buyer, please contact me.</button>
       </div>
     </div>
 
@@ -880,14 +886,23 @@
 
 <section class="spd-shell sp-wrap">
 
+
+
+  <!-- new -->
+
   <div class="sp-head">
     <h2 class="sp-main-title">Similar Property</h2>
   </div>
 
-  <!-- Similar Area -->
-  <div class="sp-group">
-    <h3 class="sp-group-title">Similar Area</h3>
+  <div class="similar-tabs">
+    <button class="similar-tab is-active" data-tab="area">Similar Area</button>
+    <button class="similar-tab" data-tab="budget">Similar Budget</button>
+    <button class="similar-tab" data-tab="type">Similar Type</button>
+  </div>
 
+
+  <div class="sp-group similar-panel is-show" data-panel="area">
+    <h3 class="sp-group-title">Similar Area</h3>
     <div class="sp-grid">
       <article class="sp-card">
         <div class="sp-thumb-wrap">
@@ -917,63 +932,19 @@
 
       <article class="sp-card">
         <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Property">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop" alt="Property">
           <span class="sp-badge">FOR SALE</span>
         </div>
         <div class="sp-body">
-          <div class="sp-location">📍 Katubedda</div>
-          <div class="sp-price">LKR 105M</div>
+          <div class="sp-location">📍 Piliyandala</div>
+          <div class="sp-price">LKR 101M</div>
           <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 12</div>
+            <div class="sp-meta-item">Perch: 11</div>
             <div class="sp-meta-item">Bed: 4</div>
             <div class="sp-meta-item">Bath: 3</div>
-            <div class="sp-meta-item">Sqft: 3200</div>
+            <div class="sp-meta-item">Sqft: 3100</div>
           </div>
-          <div class="sp-road">🛣 8 mins to Main Road</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Ratmalana</div>
-          <div class="sp-price">LKR 94M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 10</div>
-            <div class="sp-meta-item">Bed: 3</div>
-            <div class="sp-meta-item">Bath: 2</div>
-            <div class="sp-meta-item">Sqft: 2600</div>
-          </div>
-          <div class="sp-road">🛣 4 mins to Railway</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Dehiwala</div>
-          <div class="sp-price">LKR 102M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 13</div>
-            <div class="sp-meta-item">Bed: 4</div>
-            <div class="sp-meta-item">Bath: 3</div>
-            <div class="sp-meta-item">Sqft: 3400</div>
-          </div>
-          <div class="sp-road">🛣 5 mins to Galle Road</div>
+          <div class="sp-road">🛣 10 mins to Main Road</div>
           <div class="sp-actions">
             <button type="button" class="sp-btn sp-btn-view">👁 View</button>
             <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
@@ -983,26 +954,28 @@
     </div>
   </div>
 
-  <!-- Similar Budget -->
-  <div class="sp-group">
+  <div class="sp-group similar-panel" data-panel="budget">
     <h3 class="sp-group-title">Similar Budget</h3>
-
     <div class="sp-grid">
       <article class="sp-card">
         <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="Property">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Property">
           <span class="sp-badge">FOR SALE</span>
         </div>
+
         <div class="sp-body">
-          <div class="sp-location">📍 Moratuwa</div>
-          <div class="sp-price">LKR 99M</div>
+          <div class="sp-location">📍 Moratuwa - Lakshapathiya</div>
+          <div class="sp-price">LKR 98M</div>
+
           <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 10</div>
+            <div class="sp-meta-item">Perch: 11</div>
             <div class="sp-meta-item">Bed: 3</div>
-            <div class="sp-meta-item">Bath: 2</div>
-            <div class="sp-meta-item">Sqft: 2800</div>
+            <div class="sp-meta-item">Bath: 3</div>
+            <div class="sp-meta-item">Sqft: 3000</div>
           </div>
-          <div class="sp-road">🛣 7 mins to Town</div>
+
+          <div class="sp-road">🛣 6 mins to Galle Road</div>
+
           <div class="sp-actions">
             <button type="button" class="sp-btn sp-btn-view">👁 View</button>
             <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
@@ -1031,73 +1004,31 @@
           </div>
         </div>
       </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1597047084897-51e81819a499?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Kesbewa</div>
-          <div class="sp-price">LKR 97M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 10.5</div>
-            <div class="sp-meta-item">Bed: 3</div>
-            <div class="sp-meta-item">Bath: 2</div>
-            <div class="sp-meta-item">Sqft: 2700</div>
-          </div>
-          <div class="sp-road">🛣 9 mins to City Center</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Panadura</div>
-          <div class="sp-price">LKR 103M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 12</div>
-            <div class="sp-meta-item">Bed: 4</div>
-            <div class="sp-meta-item">Bath: 3</div>
-            <div class="sp-meta-item">Sqft: 3300</div>
-          </div>
-          <div class="sp-road">🛣 6 mins to Highway</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
 
-  <!-- Similar Type -->
-  <div class="sp-group">
+  <div class="sp-group similar-panel" data-panel="type">
     <h3 class="sp-group-title">Similar Type</h3>
-
     <div class="sp-grid">
       <article class="sp-card">
         <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop" alt="Property">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Property">
           <span class="sp-badge">FOR SALE</span>
         </div>
+
         <div class="sp-body">
-          <div class="sp-location">📍 3 Story House - Moratuwa</div>
-          <div class="sp-price">LKR 106M</div>
+          <div class="sp-location">📍 Moratuwa - Lakshapathiya</div>
+          <div class="sp-price">LKR 98M</div>
+
           <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 12</div>
-            <div class="sp-meta-item">Bed: 5</div>
+            <div class="sp-meta-item">Perch: 11</div>
+            <div class="sp-meta-item">Bed: 3</div>
             <div class="sp-meta-item">Bath: 3</div>
-            <div class="sp-meta-item">Sqft: 3500</div>
+            <div class="sp-meta-item">Sqft: 3000</div>
           </div>
-          <div class="sp-road">🛣 5 mins to Main Road</div>
+
+          <div class="sp-road">🛣 6 mins to Galle Road</div>
+
           <div class="sp-actions">
             <button type="button" class="sp-btn sp-btn-view">👁 View</button>
             <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
@@ -1107,63 +1038,19 @@
 
       <article class="sp-card">
         <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1200&auto=format&fit=crop" alt="Property">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop" alt="Property">
           <span class="sp-badge">FOR SALE</span>
         </div>
         <div class="sp-body">
-          <div class="sp-location">📍 Family House - Colombo</div>
-          <div class="sp-price">LKR 110M</div>
+          <div class="sp-location">📍 Piliyandala</div>
+          <div class="sp-price">LKR 101M</div>
           <div class="sp-meta">
             <div class="sp-meta-item">Perch: 11</div>
             <div class="sp-meta-item">Bed: 4</div>
             <div class="sp-meta-item">Bath: 3</div>
-            <div class="sp-meta-item">Sqft: 3200</div>
+            <div class="sp-meta-item">Sqft: 3100</div>
           </div>
-          <div class="sp-road">🛣 8 mins to School</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Residence House - Dehiwala</div>
-          <div class="sp-price">LKR 96M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 10</div>
-            <div class="sp-meta-item">Bed: 3</div>
-            <div class="sp-meta-item">Bath: 2</div>
-            <div class="sp-meta-item">Sqft: 2750</div>
-          </div>
-          <div class="sp-road">🛣 7 mins to Market</div>
-          <div class="sp-actions">
-            <button type="button" class="sp-btn sp-btn-view">👁 View</button>
-            <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="sp-card">
-        <div class="sp-thumb-wrap">
-          <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?q=80&w=1200&auto=format&fit=crop" alt="Property">
-          <span class="sp-badge">FOR SALE</span>
-        </div>
-        <div class="sp-body">
-          <div class="sp-location">📍 Single Story House - Ratmalana</div>
-          <div class="sp-price">LKR 92M</div>
-          <div class="sp-meta">
-            <div class="sp-meta-item">Perch: 9.5</div>
-            <div class="sp-meta-item">Bed: 3</div>
-            <div class="sp-meta-item">Bath: 2</div>
-            <div class="sp-meta-item">Sqft: 2400</div>
-          </div>
-          <div class="sp-road">🛣 4 mins to Hospital</div>
+          <div class="sp-road">🛣 10 mins to Main Road</div>
           <div class="sp-actions">
             <button type="button" class="sp-btn sp-btn-view">👁 View</button>
             <button type="button" class="sp-btn sp-btn-call">📞 Call</button>
@@ -1172,8 +1059,24 @@
       </article>
     </div>
   </div>
-
+  <!-- new close -->
 </section>
+
+<div class="bottom-contact">
+  
+  <a href="#" class="contact-btn whatsapp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <a href="tel:+94123456789" class="contact-btn call">
+    <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Call">
+  </a>
+
+  <a href="sms:+94123456789" class="contact-btn message">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Message">
+  </a>
+
+</div>
 </body>
 </html>
 <script>
@@ -1212,6 +1115,55 @@ document.addEventListener("DOMContentLoaded", () => {
     fade.style.maxHeight = "none";
     fade.style.overflow = "visible";
     btn.style.display = "none";
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const messageBox = document.getElementById("inquiryMessage");
+  const quickMessages = document.querySelectorAll(".visit-tag");
+
+  quickMessages.forEach(btn => {
+    btn.addEventListener("click", () => {
+      messageBox.value = btn.textContent.trim();
+      messageBox.focus();
+    });
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const backBtn = document.querySelector(".goToBack");
+
+  backBtn.addEventListener("click", () => {
+    if (document.referrer !== "") {
+      window.history.back(); // go to previous page
+    } else {
+      window.location.href = "index.html"; // fallback if no history
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".similar-tab");
+  const panels = document.querySelectorAll(".similar-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
+
+      tabs.forEach(btn => btn.classList.remove("is-active"));
+      tab.classList.add("is-active");
+
+      panels.forEach(panel => {
+        panel.classList.toggle("is-show", panel.dataset.panel === target);
+      });
+    });
   });
 });
 </script>

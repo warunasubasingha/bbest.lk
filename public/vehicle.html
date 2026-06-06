@@ -19,10 +19,25 @@
 <header class="top-header" id="topHeader">
   <div class="w topbar">
     <!-- Left -->
-    <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">
+     <div class="fsb">
+      <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">
       ☰
     </button>
+    <!-- Language dropdown -->
+    <div class="lang-dd" id="langDd">
+      <button class="lang-btn" id="langBtn" type="button" aria-expanded="false">
+        <span id="langCurrent">EN</span>
+        <span class="lang-caret">▾</span>
+      </button>
 
+      <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
+        <button class="lang-item" type="button" data-lang="SI" role="menuitem">සි</button>
+        <button class="lang-item" type="button" data-lang="TA" role="menuitem">தமி</button>
+      </div>
+    </div>
+
+     </div>
+    
     <!-- Middle -->
     <a class="brand" href="#" aria-label="Home">
       <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
@@ -34,9 +49,9 @@
         <img src="img/icons/search.svg" alt="">
       </button>
 
-      <button class="profile-btn" id="profileBtn" type="button" aria-label="Profile">
+      <a href="customer-profile.html" class="profile-btn">
         <img src="img/man.webp" alt="Profile">
-      </button>
+      </a>
     </div>
   </div>
 
@@ -57,7 +72,7 @@
     <div class="w cat-row-inner">
 
       <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" href="index.html">
+        <a class="cat-item" id="d1000" href="index.html">
           <img src="img/icons/1.png" alt="">
           <span>Property</span>
         </a>
@@ -78,18 +93,7 @@
         </a>
       </nav>
 
-      <!-- Language dropdown -->
-      <div class="lang-dd" id="langDd">
-        <button class="lang-btn" id="langBtn" type="button" aria-expanded="false">
-          <span id="langCurrent">EN</span>
-          <span class="lang-caret">▾</span>
-        </button>
-
-        <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
-          <button class="lang-item" type="button" data-lang="SI" role="menuitem">සි</button>
-          <button class="lang-item" type="button" data-lang="TA" role="menuitem">தமி</button>
-        </div>
-      </div>
+      
 
     </div>
   </div>
@@ -110,32 +114,32 @@
       <div class="ad-track" id="adTrack">
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_1.webp" alt="Ad 1">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_2.webp" alt="Ad 2">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_3.webp" alt="Ad 3">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_4.webp" alt="Ad 4">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_2.webp" alt="Ad 5">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/vehicle_card_3.webp" alt="Ad 6">
         </div>
 
@@ -568,12 +572,12 @@
 
       <!-- Top left: user -->
       <div class="pc-user">
-        <div class="pc-avatar">
-          <img src="img/man.webp" alt="User">
-        </div>
-
+        <a href="single-profile.html" class="pc-avatar">
+          <img src="img/man.webp" alt="Customer">
+        </a>
+        
         <div class="pc-user-meta">
-          <div class="pc-user-name">John Doe</div>
+          <a href="single-profile.html" class="pc-user-name">John Doe</a>
           <div class="pc-user-sub">
             <span class="pc-dot"></span>
             <span>Post ID 1234</span>
@@ -667,9 +671,9 @@
           
           
           <!-- Visit time row -->
-          <div class="main-details">
+          <a href="single-vehicle.html" class="main-details">
             <span class="main-details-btn">View Details</span>
-          </div>
+          </a>
         </div>
     
           <!-- Loan box + apply -->
@@ -686,7 +690,7 @@
                 <div class="pc-loan-amt">Rs 45,000</div>
               </div>
     
-              <button class="pc-apply" type="button">APPLY NOW</button>
+              <a  class="pc-apply" href="apply-loan.html">APPLY NOW</a>
             </div>
           </div>
       </div>

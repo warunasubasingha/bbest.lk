@@ -19,10 +19,25 @@
 <header class="top-header" id="topHeader">
   <div class="w topbar">
     <!-- Left -->
-    <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">
+     <div class="fsb">
+      <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu">
       ☰
     </button>
+    <!-- Language dropdown -->
+    <div class="lang-dd" id="langDd">
+      <button class="lang-btn" id="langBtn" type="button" aria-expanded="false">
+        <span id="langCurrent">EN</span>
+        <span class="lang-caret">▾</span>
+      </button>
 
+      <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
+        <button class="lang-item" type="button" data-lang="SI" role="menuitem">සි</button>
+        <button class="lang-item" type="button" data-lang="TA" role="menuitem">தமி</button>
+      </div>
+    </div>
+
+     </div>
+    
     <!-- Middle -->
     <a class="brand" href="#" aria-label="Home">
       <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
@@ -34,9 +49,9 @@
         <img src="img/icons/search.svg" alt="">
       </button>
 
-      <button class="profile-btn" id="profileBtn" type="button" aria-label="Profile">
+      <a href="customer-profile.html" class="profile-btn">
         <img src="img/man.webp" alt="Profile">
-      </button>
+      </a>
     </div>
   </div>
 
@@ -57,7 +72,7 @@
     <div class="w cat-row-inner">
 
       <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" href="index.html">
+        <a class="cat-item" id="d1000" href="index.html">
           <img src="img/icons/1.png" alt="">
           <span>Property</span>
         </a>
@@ -78,18 +93,7 @@
         </a>
       </nav>
 
-      <!-- Language dropdown -->
-      <div class="lang-dd" id="langDd">
-        <button class="lang-btn" id="langBtn" type="button" aria-expanded="false">
-          <span id="langCurrent">EN</span>
-          <span class="lang-caret">▾</span>
-        </button>
-
-        <div class="lang-menu" id="langMenu" role="menu" aria-hidden="true">
-          <button class="lang-item" type="button" data-lang="SI" role="menuitem">සි</button>
-          <button class="lang-item" type="button" data-lang="TA" role="menuitem">தமி</button>
-        </div>
-      </div>
+      
 
     </div>
   </div>
@@ -110,32 +114,32 @@
       <div class="ad-track" id="adTrack">
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-1.webp" alt="Ad 1">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-2.webp" alt="Ad 2">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-3.webp" alt="Ad 3">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-1.webp" alt="Ad 4">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/man.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-2.webp" alt="Ad 5">
         </div>
 
         <div class="ad-card ad-slide">
-          <div class="ad-profile"><img src="img/women.webp" alt="Customer"></div>
+          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
           <img class="ad-img" src="img/property-services-3.webp" alt="Ad 6">
         </div>
 
@@ -533,41 +537,31 @@
 </section>
 
 <!-- post card -->
-<section class="cp cp-bottom">
-    
-  <!--card-->
-  <div class="w post-card-sketch">
+<section class="w ps-main-card-wrap">
 
-    <!-- 1) MEDIA AREA -->
-    <div class="pc-media">
-      <div class="pc-img">
+  <article class="service-main-card">
 
-        <!-- IMAGE -->
-        <img src="img/property-services-3.webp" alt="Ad Image" id="propertyImage">
+    <div class="service-card-top">
+      <div class="service-company">
+        <a href="customer-profile.html" class="service-avatar">
+          <img src="img/man.webp" alt="Company">
+        </a>
 
-        <!-- VIDEO -->
-        <video id="propertyVideo" class="pc-video" controls>
-          <source src="video/property-services/property-service-01.mp4" type="video/mp4">
-        </video>
+        <div>
+          <div class="service-name-row">
+            <a href="customer-profile.html"><h3>BBest Construction</h3></a>
+            <span class="verified-badge"><span>✔</span>  Verified Dealer</span>
+          </div>
 
-      </div>
-
-      <!-- Top left: user -->
-      <div class="pc-user">
-        <div class="pc-avatar">
-          <img src="img/man.webp" alt="User">
-        </div>
-
-        <div class="pc-user-meta">
-          <div class="pc-user-name">B Best Construction</div>
-          <div class="pc-user-sub">
-            <span class="pc-dot"></span>
-            <span>Post ID 1234</span>
-            <span class="pc-sep">•</span>
-            <span>27 mins ago</span>
+          <div class="service-sub">
+            Industrial Company <span>★★★★</span>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="service-media">
+      <img src="img/property-services-3.webp" alt="Renovation Works">
 
       <!-- Bottom left: media icons + title -->
       <div class="pc-bottom-left">
@@ -585,29 +579,301 @@
               <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
             </svg>
           </span>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="service-body">
+
+      <div class="service-title-row">
+        <h2>Renovation Works</h2>
+        <span class="available-badge">Available Now</span>
+      </div>
+
+      <div class="service-location">
+        <img src="img/location.png" alt="">
+        <span>Colombo - No 30, Wellawatha, DB Perera Mawatha</span>
+      </div>
+
+      <div class="service-title-small">Top Services</div>
+
+      <div class="service-tags">
+        <span>🏗 Construction</span>
+        <span>🎨 Painting</span>
+        <span>▣ Tiling</span>
+        <span>🔧 Renovating</span>
+        <span>🪵 Wood Work</span>
+        <span>⚡ Electrical</span>
+      </div>
+
+      <div class="service-stats">
+        <div>
+          <strong>12+</strong>
+          <span>Years Exp.</span>
+        </div>
+        <div>
+          <strong>4.8</strong>
+          <span>Rating</span>
+        </div>
+        <div>
+          <strong>Registered</strong>
+          <span>Company</span>
+        </div>
+        <div>
+          <strong>100K</strong>
+          <span>Projects</span>
         </div>
       </div>
 
-    <!-- 2) DETAILS AREA -->
-    <div class="pc-body">
-      
-      <div>
-          <div class="serivice-title">
-            <span class="pc-title">Title :</span>
-            <span class="pc-title card-title">B Best Construction</span>
-          </div>
-          <div class="area-field">
-            <span class="service-area">Service Area :</span>
-            <span class="service-area-title">Kurunegala , Kuliyapitiya , Pannala , Dankotuwa</span>
-          </div>
-          
-          <!-- Visit time row -->
-           <a href="single-property.html" class="fcc main-details">
-             <span class="main-details-btn">View Details</span>
-           </a>
+      <p class="service-desc">
+        We provide company-level construction, renovation, painting, tiling, wood work and electrical services with experienced professionals.
+      </p>
+
+      <div class="service-main-actions">
+        <a href="customer-profile.html">View Details</a>
+        <!-- =========================
+QUOTE BUTTON
+========================= -->
+
+<a href="#" class="quote-btn" id="openQuoteModal">
+  GET A QUOTE
+</a>
+
+
+<!-- =========================
+QUOTE MODAL
+========================= -->
+
+<div class="quote-modal" id="quoteModal">
+
+  <!-- overlay -->
+  <div class="quote-overlay" id="closeQuoteModal"></div>
+
+  <!-- modal box -->
+  <div class="quote-box">
+
+    <!-- header -->
+    <div class="quote-header">
+
+      <div class="quote-header-left">
+        <button type="button" class="quote-back-btn" id="quoteBackBtn">
+          ←
+        </button>
+
+        <div>
+          <h2>Request a Quote</h2>
+          <span>BBest Construction</span>
+        </div>
       </div>
 
-     
+      <div class="verified-tag">
+        ✔ Verified Dealer
+      </div>
+
+    </div>
+
+
+    <!-- COMPANY CARD -->
+    <div class="quote-company-card">
+
+      <div class="quote-company-top">
+
+        <div class="quote-company-avatar">
+          <img src="img/man.webp" alt="">
+        </div>
+
+        <div class="quote-company-info">
+          <h3>BBest Construction</h3>
+          <p>Industrial Company ★★★★★</p>
+        </div>
+
+      </div>
+
+      <div class="quote-stats">
+
+        <div>
+          <strong>12+</strong>
+          <span>Years Exp.</span>
+        </div>
+
+        <div>
+          <strong>4.8</strong>
+          <span>Rating</span>
+        </div>
+
+        <div>
+          <strong>100K+</strong>
+          <span>Projects</span>
+        </div>
+
+        <div>
+          <strong>Colombo</strong>
+          <span>Service Area</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <form class="quote-form">
+
+      <!-- services -->
+      <div class="quote-section">
+        <h3>1. Select Service</h3>
+
+        <div class="service-grid">
+
+          <button type="button" class="service-item">
+            🏗 Construction
+          </button>
+
+          <button type="button" class="service-item">
+            🎨 Painting
+          </button>
+
+          <button type="button" class="service-item">
+            ▣ Tiling
+          </button>
+
+          <button type="button" class="service-item active">
+            🔧 Renovating ✔
+          </button>
+
+          <button type="button" class="service-item">
+            🪵 Wood Work
+          </button>
+
+          <button type="button" class="service-item">
+            ⚡ Electrical
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- project details -->
+      <div class="quote-section">
+
+        <h3>2. Project Details</h3>
+
+        <div class="field-group">
+          <label>Project Title</label>
+          <input type="text" placeholder="e.g. House Renovation">
+        </div>
+
+        <div class="field-group">
+          <label>Property Type</label>
+
+          <select>
+            <option>Select Property Type</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Commercial</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Project Location</label>
+          <input type="text" placeholder="Enter full address">
+        </div>
+
+        <div class="field-group">
+          <label>Description</label>
+
+          <textarea placeholder="Describe your project, requirements and preferences..."></textarea>
+        </div>
+
+      </div>
+
+
+      <!-- upload -->
+      <div class="quote-section">
+
+        <h3>3. Add Photos (Optional)</h3>
+
+        <label class="upload-box">
+
+          <input type="file" multiple hidden>
+
+          <div>
+            <strong>📷 Upload Photos</strong>
+            <span>You can select up to 5 images</span>
+          </div>
+
+          <small>0/5</small>
+
+        </label>
+
+      </div>
+
+
+      <!-- budget -->
+      <div class="quote-section">
+
+        <h3>4. Budget & Timeline</h3>
+
+        <div class="budget-grid">
+
+          <div class="field-group">
+            <label>Estimated Budget</label>
+
+            <select>
+              <option>Select Budget Range</option>
+              <option>LKR 100,000</option>
+              <option>LKR 500,000</option>
+              <option>LKR 1,000,000</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Preferred Start Date</label>
+
+            <input type="date">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- contact -->
+      <div class="quote-section">
+
+        <h3>5. Contact Information</h3>
+
+        <div class="field-group">
+          <input type="text" placeholder="Your Full Name">
+        </div>
+
+        <div class="field-group">
+          <input type="tel" placeholder="Your Phone Number">
+        </div>
+
+        <div class="secure-note">
+          🔒 Your information will be kept secure and only shared with the service provider.
+        </div>
+
+      </div>
+
+
+      <!-- submit -->
+      <button type="submit" class="submit-quote-btn">
+        SUBMIT QUOTE REQUEST
+      </button>
+
+      <div class="submit-note">
+        ✔ You will receive responses from BBest Construction soon.
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+      </div>
 
       <!-- Action buttons -->
       <div class="fsb pc-actions">
@@ -641,7 +907,8 @@
       </div>
 
     </div>
-  </div>
+
+  </article>
 
 </section>
 
@@ -1992,4 +2259,74 @@ filters.forEach(item => {
 document.addEventListener("click", () => {
   filters.forEach(i => i.classList.remove("active"));
 });
+</script>
+
+<script>
+
+const quoteModal = document.getElementById("quoteModal");
+
+const openQuoteBtn = document.getElementById("openQuoteModal");
+
+const closeQuoteModal = document.getElementById("closeQuoteModal");
+
+const quoteBackBtn = document.getElementById("quoteBackBtn");
+
+
+// OPEN
+openQuoteBtn.addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  quoteModal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+
+});
+
+
+// CLOSE
+function closeQuote(){
+
+  quoteModal.classList.remove("show");
+
+  document.body.style.overflow = "";
+
+}
+
+closeQuoteModal.addEventListener("click", closeQuote);
+
+quoteBackBtn.addEventListener("click", closeQuote);
+
+
+// ESC CLOSE
+document.addEventListener("keydown", function(e){
+
+  if(e.key === "Escape"){
+
+    closeQuote();
+
+  }
+
+});
+
+
+// SERVICE SELECT
+const serviceItems = document.querySelectorAll(".service-item");
+
+serviceItems.forEach(item => {
+
+  item.addEventListener("click", function(){
+
+    serviceItems.forEach(btn => {
+
+      btn.classList.remove("active");
+
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
+
 </script>

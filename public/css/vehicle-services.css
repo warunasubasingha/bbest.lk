@@ -35,10 +35,16 @@ post-card-sketch
 }
 
 /* Neutralize your global a/button styles inside header */
-.top-header a,
 .top-header button{
   background: none;
   padding: 0;
+  color: var(--dark-blue);
+  border: none;
+  text-decoration: none;
+}
+.top-header > a{
+  background: none;
+  padding: 8px 0;
   color: var(--dark-blue);
   border: none;
   text-decoration: none;
@@ -162,9 +168,9 @@ post-card-sketch
 .cat-row-inner{
   display:flex;
   align-items:center;
-  justify-content:space-between;
   gap: 12px;
   padding: 10px 0;
+  
 }
 
 /* Category nav */
@@ -173,12 +179,13 @@ post-card-sketch
   gap: 14px;
   white-space: nowrap;
   will-change: transform;
+  justify-content:space-between;
+  width: 100%;
 }
 .cat-nav::-webkit-scrollbar{ height: 6px; }
 
 .cat-item {
   text-decoration: none;
-  flex: 0 0 auto;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -189,6 +196,7 @@ post-card-sketch
   background: linear-gradient(180deg, rgba(78,152,217,.18), rgba(255,255,255,1));
   box-shadow: 0 8px 16px rgba(36,78,115,.06);
   transition: transform .12s ease, box-shadow .12s ease;
+  width: 23%;
 }
 .catbtn{
   text-decoration: none;
@@ -286,17 +294,16 @@ post-card-sketch
 ========================= */
 @media (max-width: 480px){
   .brand img{ height: 38px; }
-  .icon-btn, .profile-btn{ width: 40px; height: 40px; }
+  .icon-btn, .profile-btn{ width: 40px !important; height: 40px; }
   .search-btn img{ width: 22px; height: 22px; }
 
   /* .cat-row-inner{ gap: 10px; } */
   .cat-item img { width: 34px; height: 34px; }
   .catbtn img{ width: 15px; height: 15px; }
-  .cat-item span { font-size: 10px; white-space: wrap; }
+  .cat-item span { font-size: 12px; white-space: wrap; }
   .catbtn span{ font-size: 8px; white-space: wrap; }
   .sub-categories-under {font-size: 7px !important;}
   .lang-btn{ height: 40px; min-width: 76px; }
-  .top-header a {width: 20%;}
   .cat-arr {font-size: 20px !important;}
 }
 
@@ -305,7 +312,6 @@ post-card-sketch
   .cat-item , .catbtn{ padding: 7px 9px; }
   .lang-btn{ padding: 0 10px; }
 }
-
 
 
 /* ====== Stories wrapper ====== */
@@ -2076,3 +2082,6 @@ margin: 20px;}
   }
 }
 
+.pc-user-meta > a {
+  text-decoration: none;
+}
