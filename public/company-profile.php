@@ -1,5 +1,6 @@
+<?php require_once __DIR__ . '/../includes/lang.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars(html_lang_attr()) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/company-profile.css">
-    <title>Company Profile</title>
+    <title><?= htmlspecialchars(t('company_profile')) ?></title>
     <style>
      
     </style>
@@ -24,7 +25,7 @@
     </button>
 
     <div class="company-share">
-      <span>Share</span>
+      <span><?= htmlspecialchars(t('share') ?? 'Share') ?></span>
       <button type="button"><img src="img/icons/share.svg" alt=""></button>
     </div>
 
@@ -40,7 +41,7 @@
         <h1>ACB Construction (Pvt) Ltd</h1>
 
         <div class="company-badges">
-          <span class="verified-badge">🛡 Verified Dealer</span>
+          <span class="verified-badge">🛡 <?= htmlspecialchars(t('verified_dealer')) ?></span>
           <span># 48</span>
           <span>(120 Reviews)</span>
         </div>
@@ -48,8 +49,8 @@
         <div class="company-location">
           <span>📍</span>
           <div>
-            <strong>Colombo - No 33, Galle Road, Wallawatta</strong>
-            <p>Head Office</p>
+            <strong><?= htmlspecialchars(t('head_office') ?? 'Colombo - No 33, Galle Road, Wallawatta') ?></strong>
+            <p><?= htmlspecialchars(t('head_office_label') ?? 'Head Office') ?></p>
           </div>
         </div>
       </div>
@@ -147,12 +148,9 @@
   </div>
 
   <div class="co-card">
-    <h3>🏢 About Company</h3>
+    <h3>🏢 <?= htmlspecialchars(t('about_company')) ?></h3>
     <p>
-      ACB Construction (Pvt) Ltd is a leading construction company in Sri Lanka,
-      delivering high-quality construction solutions for residential, commercial,
-      industrial and infrastructure sectors. With over a decade of experience,
-      a skilled team, and modern technology, we turn visions into reality.
+      <?= htmlspecialchars(t('company_about_paragraph') ?? 'ACB Construction (Pvt) Ltd is a leading construction company in Sri Lanka, delivering high-quality construction solutions for residential, commercial, industrial and infrastructure sectors. With over a decade of experience, a skilled team, and modern technology, we turn visions into reality.') ?>
     </p>
   </div>
 
@@ -241,7 +239,7 @@
       <div><strong>📐 Design & Consultation</strong><span>Architecture Design & Engineering</span></div>
     </div>
 
-    <button class="co-main-btn">View All Services →</button>
+    <button class="co-main-btn"><?= htmlspecialchars(t('view_all_services')) ?> →</button>
   </div>
 
   <div class="co-card">

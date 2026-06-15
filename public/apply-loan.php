@@ -1,5 +1,6 @@
+<?php require_once __DIR__ . '/../includes/lang.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars(html_lang_attr()) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/apply-loan.css">
-    <title>Apply Loan</title>
+    <title><?= htmlspecialchars(t('apply_loan_title')) ?></title>
     <style>
     </style>
 </head>
@@ -18,7 +19,7 @@
   <div class="loan-topbar">
     <button class="loan-back-btn" onclick="history.back()">←</button>
     <span class="loan-home-icon">🏠</span>
-    <h2>Bank Loan Dashboard</h2>
+    <h2><?= htmlspecialchars(t('bank_loan_dashboard')) ?></h2>
 
     <div class="loan-user">
       <img src="img/man.webp" alt="User">
@@ -63,7 +64,7 @@
 
   <!-- BRANCH -->
   <div class="loan-card">
-    <h3 class="loan-section-title">Branches</h3>
+    <h3 class="loan-section-title"><?= htmlspecialchars(t('branches')) ?></h3>
 
     <button class="loan-branch-select">
       <span>📍 Panadura – Keselwatta</span>
@@ -84,10 +85,10 @@
     </div>
 
     <div class="loan-contact-row">
-      <a href="tel:0112356789" class="loan-contact-btn dark">📞 Hotline</a>
+      <a href="tel:0112356789" class="loan-contact-btn dark">📞 <?= htmlspecialchars(t('hotline')) ?></a>
       <a href="tel:+94112356789" class="loan-contact-btn">📞 +94 11 2 35 6789</a>
-      <a href="mailto:bank@example.com" class="loan-contact-btn">✉ Email</a>
-      <a href="tel:+94112356789" class="loan-contact-btn dark">📞 Call Direct</a>
+      <a href="mailto:bank@example.com" class="loan-contact-btn">✉ <?= htmlspecialchars(t('email_label')) ?></a>
+      <a href="tel:+94112356789" class="loan-contact-btn dark">📞 <?= htmlspecialchars(t('call_direct')) ?></a>
     </div>
   </div>
 
@@ -96,7 +97,7 @@
 
     <div class="loan-range-block">
       <div class="loan-row-title">
-        <strong>▦ Loan Amount</strong>
+        <strong>▦ <?= htmlspecialchars(t('loan_amount')) ?></strong>
         <span>LKR <b id="loanAmountText">1,000,000</b> ›</span>
       </div>
       <input type="range" id="loanAmount" min="100000" max="30000000" step="100000" value="1000000">
@@ -105,7 +106,7 @@
 
     <div class="loan-range-block">
       <div class="loan-row-title">
-        <strong>💰 Down Payment <span id="downPercentBadge">40%</span></strong>
+        <strong>💰 <?= htmlspecialchars(t('down_payment')) ?> <span id="downPercentBadge">40%</span></strong>
         <span>LKR <b id="downPaymentText">400,000</b></span>
       </div>
       <input type="range" id="downPayment" min="10" max="90" step="5" value="40">
@@ -114,7 +115,7 @@
 
     <!-- Loan time -->
     <div class="loan-time-row">
-      <h3>Loan Time <span>(Years)</span></h3>
+      <h3><?= htmlspecialchars(t('loan_time')) ?> <span>(Years)</span></h3>
       <button>10 Years ›</button>
     </div>
 
@@ -136,7 +137,7 @@
       <button class="loan-product-btn">🚗 Vehicle Lease</button>
     </div>
 
-    <button class="loan-apply-main-btn">Apply for Loan</button>
+    <button class="loan-apply-main-btn"><?= htmlspecialchars(t('apply_for_loan')) ?></button>
   </div>
 
 </section>
@@ -146,7 +147,7 @@
 <section class="loan-apply-section">
 
   <div class="loan-topbar loan-apply-topbar">
-    <h2 class="loan-application-title">Loan Application</h2>
+    <h2 class="loan-application-title"><?= htmlspecialchars(t('loan_application')) ?></h2>
 
     <div class="loan-user">
       <img src="img/man.webp" alt="User">
@@ -158,10 +159,10 @@
   <div class="loan-apply-card">
 
     <!-- Progress -->
-    <div class="loan-apply-progress">
-      <button class="loan-progress-active">👤 Personal Details</button>
+      <div class="loan-apply-progress">
+      <button class="loan-progress-active">👤 <?= htmlspecialchars(t('personal_details')) ?></button>
       <span class="loan-progress-line"></span>
-      <span class="loan-progress-text">Submit & Save</span>
+      <span class="loan-progress-text"><?= htmlspecialchars(t('submit_save')) ?></span>
       <span class="loan-progress-arrow">›</span>
     </div>
 
@@ -170,24 +171,24 @@
     <!-- Form -->
     <div class="loan-form-box">
 
-      <label class="loan-form-label">👤 Full Name</label>
-      <input type="text" placeholder="👤 Enter your full name">
+      <label class="loan-form-label">👤 <?= htmlspecialchars(t('full_name')) ?></label>
+      <input type="text" placeholder="👤 <?= htmlspecialchars(t('full_name')) ?>">
 
       <div class="loan-form-row">
         <div class="loan-form-left">
           <span>▦ Birth</span>
           <input type="text" placeholder="Select birthdate">
         </div>
-        <button class="loan-scan-btn">📷 ID Card Scan</button>
+        <button class="loan-scan-btn">📷 <?= htmlspecialchars(t('id_scan')) ?></button>
       </div>
 
       <div class="loan-field-group">
-        <label>📍 Address</label>
-        <input type="text" placeholder="📍 Enter your address">
+        <label>📍 <?= htmlspecialchars(t('address')) ?></label>
+        <input type="text" placeholder="📍 <?= htmlspecialchars(t('address')) ?>">
       </div>
 
       <div class="loan-mobile-row">
-        <span>▣ Mobile Number</span>
+        <span>▣ <?= htmlspecialchars(t('mobile_number')) ?></span>
         <span class="loan-country">🇱🇰</span>
         <input type="text" value="+94 | 77 123 4567">
         <span>›</span>
