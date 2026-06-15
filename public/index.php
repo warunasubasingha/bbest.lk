@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/lang.php';
 
 // Handle language selection via GET or POST
 if(isset($_GET['lang'])){
@@ -24,7 +25,7 @@ if (isset($_SESSION['user_id'])) {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars(html_lang_attr()) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,7 @@ if (isset($_SESSION['user_id'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
-    <title>Home Page</title>
+    <title><?= htmlspecialchars(t('home_title')) ?></title>
     <style>
       #d1000 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
       #d1000 > span {color: #fefefe;}
@@ -65,13 +66,13 @@ if (isset($_SESSION['user_id'])) {
      </div>
     
     <!-- Middle -->
-    <a class="brand" href="index.php" aria-label="Home">
+    <a class="brand" href="index.php" aria-label="<?= htmlspecialchars(t('home_title')) ?>">
       <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
     </a>
 
     <!-- Right -->
     <div class="topbar-right">
-      <button class="icon-btn search-btn" id="searchToggle" type="button" aria-label="Search" aria-expanded="false">
+      <button class="icon-btn search-btn" id="searchToggle" type="button" aria-label="<?= htmlspecialchars(t('search')) ?>" aria-expanded="false">
         <img src="img/icons/search.svg" alt="">
       </button>
 
@@ -84,7 +85,7 @@ if (isset($_SESSION['user_id'])) {
           <img src="<?= htmlspecialchars($profilePic) ?>" alt="Profile" style="border-radius: 50%; object-fit: cover;">
         </a>
       <?php else: ?>
-        <button class="profile-btn" id="loginPopupOpen" type="button" aria-label="Login or Sign up">
+        <button class="profile-btn" id="loginPopupOpen" type="button" aria-label="<?= htmlspecialchars(t('login_or_signup')) ?>">
           <img src="img/man.webp" alt="Profile">
         </button>
       <?php endif; ?>
@@ -103,27 +104,27 @@ if (isset($_SESSION['user_id'])) {
       <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
     </div>
 
-    <h3 class="login-title">Login or Sign Up</h3>
-    <p class="login-subtitle">Choose a method to continue your account</p>
+    <h3 class="login-title"><?= htmlspecialchars(t('login_or_signup')) ?></h3>
+    <p class="login-subtitle"><?= htmlspecialchars(t('search')) ?> <?= htmlspecialchars(t('home_title')) ?></p>
 
     <button class="login-option phone-login" type="button">
       <span class="login-icon">✉</span>
-      <span>Continue with E-mail</span>
+      <span><?= htmlspecialchars(t('continue_with_email')) ?></span>
     </button>
 
 
     <button class="login-option phone-login" type="button">
       <span class="login-icon">☎</span>
-      <span>Continue with Phone Number</span>
+      <span><?= htmlspecialchars(t('continue_with_phone')) ?></span>
     </button>
 
     <button class="login-option register-btn" type="button" onclick="openRegister()">
-  <span class="login-icon">📝</span>
-  <span>Register New Account</span>
-</button>
+      <span class="login-icon">📝</span>
+      <span><?= htmlspecialchars(t('register_new_account')) ?></span>
+    </button>
 
     <p class="login-note">
-      By continuing, you agree to our Terms & Privacy Policy.
+      <?= htmlspecialchars(t('terms_privacy')) ?>
     </p>
   </div>
 
@@ -169,7 +170,7 @@ if (isset($_SESSION['user_id'])) {
   <div class="search-drawer" id="searchDrawer" aria-hidden="true">
     <div class="w search-inner">
       <div class="search-box">
-        <input id="searchInput" type="text" placeholder="Search..." autocomplete="off">
+        <input id="searchInput" type="text" placeholder="<?= htmlspecialchars(t('search')) ?>..." autocomplete="off">
         <button class="search-go" id="searchGo" type="button" aria-label="Go">
           <img src="img/icons/search.svg" alt="">
         </button>
@@ -184,28 +185,22 @@ if (isset($_SESSION['user_id'])) {
       <nav class="cat-nav" aria-label="Categories">
         <a class="cat-item" id="d1000" href="index.php">
           <img src="img/icons/1.png" alt="">
-          <span> <?php if($currentLang=='SI'){
-    $welcomeText = 'ඉඩම්';
-} elseif($currentLang=='TA'){
-    $welcomeText = 'நிலம்';
-} else {
-    $welcomeText = 'Property';
-} ?> </span>
+          <span><?= htmlspecialchars(t('property')) ?></span>
         </a>
 
         <a class="cat-item" id="d1001" href="vehicle.php">
           <img src="img/icons/2.png" alt="">
-          <span>Vehicles</span>
+          <span><?= htmlspecialchars(t('vehicles')) ?></span>
         </a>
 
         <a class="cat-item" href="property-services.php">
           <img src="img/icons/3.png" alt="">
-          <span>Property services</span>
+          <span><?= htmlspecialchars(t('property_services')) ?></span>
         </a>
 
         <a class="cat-item" href="vehicle-services.php">
           <img src="img/icons/4.png" alt="">
-          <span>Vehicle Service</span>
+          <span><?= htmlspecialchars(t('vehicle_service')) ?></span>
         </a>
       </nav>
 
