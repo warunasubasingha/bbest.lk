@@ -644,11 +644,11 @@
         <div><img src="img/icons/go_to_back.webp" alt=""></div>
       </button>
 
-      <a class="wanted-logo" href="index.html" aria-label="Bbest home">
+      <a class="wanted-logo" href="index.php" aria-label="Bbest home">
         <div><img src="img/bbest_logo.webp" alt=""></div>
       </a>
 
-      <a class="profile-ring" href="customer-profile.html" aria-label="Profile">
+      <a class="profile-ring" href="customer-profile.php" aria-label="Profile">
         <svg viewBox="0 0 24 24"><path d="M12 12.2a4.8 4.8 0 1 0 0-9.6 4.8 4.8 0 0 0 0 9.6Zm0 1.7c-4.4 0-8 2.8-8 6.2v1.3h16v-1.3c0-3.4-3.6-6.2-8-6.2Zm0-3.4a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2Zm-6.2 9.2c.3-2.3 3-4.1 6.2-4.1s5.9 1.8 6.2 4.1H5.8Z"/></svg>
       </a>
     </header>
@@ -904,12 +904,12 @@
 
       <!-- Top left: user -->
       <div class="pc-user">
-        <a href="customer-profile.html" class="pc-avatar">
+        <a href="customer-profile.php" class="pc-avatar">
           <img src="img/man.webp" alt="User">
         </a>
 
         <div class="pc-user-meta">
-          <a href="customer-profile.html" class="pc-user-name">John Doe</a>
+          <a href="customer-profile.php" class="pc-user-name">John Doe</a>
           <div class="pc-user-sub">
             <span class="pc-dot"></span>
             <span>Post ID 1234</span>
@@ -951,8 +951,8 @@
     <!-- 2) DETAILS AREA -->
     <div class="pc-body">
       
-      <div class="fsb">
-        <div>
+     
+        <div class="pc-details">
           <div class="fsb">
             <div><img src="img/location.png" alt="" class="location-image"></div>
             <span class="pc-title">Moratuwa - Lakshapathiya</span>
@@ -985,40 +985,9 @@
           
           
           <!-- Visit time row -->
-          <a href="single-property.html" class="fcc main-details">
+          <a href="single-property.php" class="fcc main-details">
              <span class="main-details-btn">View Details</span>
            </a>
-        </div>
-    
-          <!-- Loan box + apply -->
-          <div class="pc-loan-row">
-            <div class="pc-loan-box">
-              <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
-    
-                <button class="pc-loan-chip is-active" type="button">LOLC</button>
-              </div>
-    
-              <div class="pc-loan-mid">
-                <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
-              </div>
-    
-              <a class="pc-apply" href="apply-loan.html">APPLY NOW</a>
-            </div>
-          </div>
-      </div>
-
-     
-
-     <!-- Action buttons -->
-      <div class="response-actions">
-          <a href="single-property.html">View Details</a>
-          <button type="button"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8.7L4 20.7V4Z"/></svg>Chat</button>
-          <a href="tel:+94770000000"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.7.7 4.1.7.7 0 1.3.6 1.3 1.3v3.5c0 .7-.6 1.3-1.3 1.3C10.4 21.8 2.2 13.6 2.2 3.3 2.2 2.6 2.8 2 3.5 2H7c.7 0 1.3.6 1.3 1.3 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-2.1 2.2Z"/></svg>Call</a>
-          <button class="bookmark-btn" type="button" aria-label="Save ad">
-              <svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
-          </button>
         </div>
 
     </div>
@@ -1052,12 +1021,12 @@
 
       <!-- Top left: user -->
       <div class="pc-user">
-        <a href="customer-profile.html" class="pc-avatar">
+        <a href="customer-profile.php" class="pc-avatar">
           <img src="img/man.webp" alt="User">
         </a>
 
         <div class="pc-user-meta">
-          <a href="customer-profile.html" class="pc-user-name">John Doe</a>
+          <a href="customer-profile.php" class="pc-user-name">John Doe</a>
           <div class="pc-user-sub">
             <span class="pc-dot"></span>
             <span>Post ID 1234</span>
@@ -1098,9 +1067,7 @@
 
     <!-- 2) DETAILS AREA -->
     <div class="pc-body">
-      
-      <div class="fsb">
-        <div>
+        <div class="pc-details">
           <div class="fsb">
             <div><img src="img/location.png" alt="" class="location-image"></div>
             <span class="pc-title">Moratuwa - Lakshapathiya</span>
@@ -1133,24 +1100,10 @@
           
           
           <!-- Visit time row -->
-          <a href="single-property.html" class="fcc main-details">
+          <a href="single-property.php" class="fcc main-details">
              <span class="main-details-btn">View Details</span>
            </a>
         </div>
-      </div>
-
-     
-
-      <!-- Action buttons -->
-      <div class="response-actions">
-          <a href="single-property.html">View Details</a>
-          <button type="button"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8.7L4 20.7V4Z"/></svg>Chat</button>
-          <a href="tel:+94770000000"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.7.7 4.1.7.7 0 1.3.6 1.3 1.3v3.5c0 .7-.6 1.3-1.3 1.3C10.4 21.8 2.2 13.6 2.2 3.3 2.2 2.6 2.8 2 3.5 2H7c.7 0 1.3.6 1.3 1.3 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-2.1 2.2Z"/></svg>Call</a>
-          <button class="bookmark-btn" type="button" aria-label="Save ad">
-              <svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
-          </button>
-        </div>
-
     </div>
   </div>
 

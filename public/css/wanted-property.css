@@ -1301,6 +1301,12 @@ svg {
 /* =========================
    POST CARD (SKETCH STYLE)
 ========================= */
+.pc-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .post-card-sketch{
   border: 1px solid var(--dark-blue);
@@ -1611,7 +1617,7 @@ svg {
 }
 @media (max-width: 400px) {
   .pc-title {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 

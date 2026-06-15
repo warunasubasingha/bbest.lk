@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/vehicle-services.css">
-    <title>Home Page</title>
+    <link rel="stylesheet" href="css/vehicle-css.css">
+    <title>Vehicles</title>
     <style>
-      #d1000 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
-      #d1000 > span {color: #fefefe;}
+      #d1001 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
+      #d1001 > span {color: #fefefe;}
     </style>
 </head>
 <body>
@@ -49,7 +49,7 @@
         <img src="img/icons/search.svg" alt="">
       </button>
 
-      <a href="customer-profile.html" class="profile-btn">
+      <a href="customer-profile.php" class="profile-btn">
         <img src="img/man.webp" alt="Profile">
       </a>
     </div>
@@ -72,22 +72,22 @@
     <div class="w cat-row-inner">
 
       <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" href="index.html">
+        <a class="cat-item" id="d1000" href="index.php">
           <img src="img/icons/1.png" alt="">
           <span>Property</span>
         </a>
 
-        <a class="cat-item" href="vehicle.html">
+        <a class="cat-item" id="d1001" href="vehicle.php">
           <img src="img/icons/2.png" alt="">
           <span>Vehicles</span>
         </a>
 
-        <a class="cat-item" href="property-services.html">
+        <a class="cat-item" href="property-services.php">
           <img src="img/icons/3.png" alt="">
           <span>Property services</span>
         </a>
 
-        <a class="cat-item" id="d1000" href="vehicle-services.html">
+        <a class="cat-item" href="vehicle-services.php">
           <img src="img/icons/4.png" alt="">
           <span>Vehicle Service</span>
         </a>
@@ -114,33 +114,33 @@
       <div class="ad-track" id="adTrack">
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 1">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_1.webp" alt="Ad 1">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 2">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_2.webp" alt="Ad 2">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 3">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_3.webp" alt="Ad 3">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 4">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_4.webp" alt="Ad 4">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 5">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_2.webp" alt="Ad 5">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="single-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 6">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/vehicle_card_3.webp" alt="Ad 6">
         </div>
 
       </div>
@@ -156,95 +156,83 @@
 
       
       <!-- 5 visible categories -->
-      <button class="cat-tile" type="button" data-cat="Maintenance">
-        <span class="cat-ic"><img src="img/icons/vehicle_maintainance.png" alt=""></span>
-        <span class="cat-name">Maintenance</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile" type="button" data-cat="Car">
+        <span class="cat-ic-vehicle"><img src="img/icons/car.png" alt=""></span>
+        <span class="vehicle-cat-name">Car</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Repair">
-        <span class="cat-ic"><img src="img/icons/vehicle_repair.png" alt=""></span>
-        <span class="cat-name">Repair</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile" type="button" data-cat="SUVs / Jeeps">
+        <span class="cat-ic-vehicle"><img src="img/icons/suv.png" alt=""></span>
+        <span class="vehicle-cat-name">SUVs / Jeeps</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Electrical">
-        <span class="cat-ic"><img src="img/icons/vehicle_electrical.png" alt=""></span>
-        <span class="cat-name">Electrical</span>
-        <span class="cat-pill js-pill">Service Providers</span>
-      </button>
-
-      <button class="cat-tile" type="button" data-cat="Air Condition">
-        <span class="cat-ic"><img src="img/icons/vehicle_ac.png" alt=""></span>
-        <span class="cat-name">Air Condition</span>
-        <span class="cat-pill js-pill">Service Providers</span>
-      </button>
-
-      <button class="cat-tile is-extra" type="button" data-cat="Tires">
-        <span class="cat-ic"><img src="img/icons/vehicle_tires.png" alt=""></span>
-        <span class="cat-name">Tires</span>
-        <span class="cat-pill js-pill">Service Providers</span>
-      </button>
-
-      <!-- EXTRA categories (hidden until More) -->
-      <button class="cat-tile is-extra" type="button" data-cat="Body & Paint">
-        <span class="cat-ic"><img src="img/icons/vehicle_paint.png" alt=""></span>
-        <span class="cat-name">Body & Paint</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile" type="button" data-cat="Vans">
+        <span class="cat-ic-vehicle"><img src="img/icons/van.png" alt=""></span>
+        <span class="vehicle-cat-name">Vans</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
       
-      <button class="cat-tile is-extra" type="button" data-cat="Glass">
-        <span class="cat-ic"><img src="img/icons/vehicle_glass.png" alt=""></span>
-        <span class="cat-name">Glass</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile" type="button" data-cat="Motorcycles">
+        <span class="cat-ic-vehicle"><img src="img/icons/motorbike.png" alt=""></span>
+        <span class="vehicle-cat-name">Motorcycles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Modification">
-        <span class="cat-ic"><img src="img/icons/vehicle_modification.png" alt=""></span>
-        <span class="cat-name">Modification</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile" type="button" data-cat="Three Wheelers">
+        <span class="cat-ic-vehicle"><img src="img/icons/three-wheel.png" alt=""></span>
+        <span class="vehicle-cat-name">Three Wheelers</span>
+        <span class="cat-pill js-pill">For Sale</span>
+      </button>
+      
+      <!-- EXTRA categories (hidden until More) -->
+      <button class="cat-tile is-extra" type="button" data-cat="Buses">
+        <span class="cat-ic-vehicle"><img src="img/icons/bus.png" alt=""></span>
+        <span class="vehicle-cat-name">Buses</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Transport">
-        <span class="cat-ic"><img src="img/icons/vehicle_transport.png" alt=""></span>
-        <span class="cat-name">Transport</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Trucks & Lorries">
+        <span class="cat-ic-vehicle"><img src="img/icons/truck.png" alt=""></span>
+        <span class="vehicle-cat-name">Trucks & Lorries</span>
+        <span class="cat-pill js-pill">For Sale</span>
+      </button>
+      
+      <button class="cat-tile is-extra" type="button" data-cat="Pickups">
+        <span class="cat-ic-vehicle"><img src="img/icons/pickup.png" alt=""></span>
+        <span class="vehicle-cat-name">Pickups</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Inspection">
-        <span class="cat-ic"><img src="img/icons/vehicle_inspection.png" alt=""></span>
-        <span class="cat-name">Inspection</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Agricultural Vehicles">
+        <span class="cat-ic-vehicle"><img src="img/icons/tractor.png" alt=""></span>
+        <span class="vehicle-cat-name">Agricultural Vehicles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Driving Training">
-        <span class="cat-ic"><img src="img/icons/driving_training.png" alt=""></span>
-        <span class="cat-name">Driving Training</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Construction Vehicles">
+        <span class="cat-ic-vehicle"><img src="img/icons/excavator.png" alt=""></span>
+        <span class="vehicle-cat-name">Construction Vehicles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Technology">
-        <span class="cat-ic"><img src="img/icons/vehicle_technology.png" alt=""></span>
-        <span class="cat-name">Technology</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Industrial Vehicles">
+        <span class="cat-ic-vehicle"><img src="img/icons/forklift.png" alt=""></span>
+        <span class="vehicle-cat-name">Industrial Vehicles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Battery">
-        <span class="cat-ic"><img src="img/icons/vehicle_battery.png" alt=""></span>
-        <span class="cat-name">Battery</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Special Purpose Vehicles">
+        <span class="cat-ic-vehicle"><img src="img/icons/ambulance.png" alt=""></span>
+        <span class="vehicle-cat-name">Special Purpose Vehicles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Valuation">
-        <span class="cat-ic"><img src="img/icons/vehicle_valuation.png" alt=""></span>
-        <span class="cat-name">Valuation</span>
-        <span class="cat-pill js-pill">Service Providers</span>
-      </button>
-
-      <button class="cat-tile is-extra" type="button" data-cat="Cleaning">
-        <span class="cat-ic"><img src="img/icons/vehicle_cleaning.png" alt=""></span>
-        <span class="cat-name">Cleaning</span>
-        <span class="cat-pill js-pill">Service Providers</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Other Vehicles">
+        <span class="cat-ic-vehicle"><img src="img/icons/boat.png" alt=""></span>
+        <span class="vehicle-cat-name">Other Vehicles</span>
+        <span class="cat-pill js-pill">For Sale</span>
       </button>
 
       <!-- MORE (always visible - first) -->
@@ -253,7 +241,7 @@
           <!-- menu icon -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
         </span>
-        <span class="cat-name">More</span>
+        <span class="vehicle-cat-name">More</span>
         <span class="cat-pill">All</span>
       </button>
       
@@ -261,28 +249,29 @@
     </div>
   </div>
 </section>
+
 <!-- FILTER BUTTONS -->
 <div class="filter-group fsb">
 
   <!-- House Type -->
   <div class="filter-item">
     <button class="filter-btn fcc">
-      <span>Type & Brand</span>
+      <span>Brand</span>
       <span class="arrow">▼</span>
     </button>
 
     <ul class="filter-dropdown">
       <li>
         <img src="img/dummy1.jpg">
-        <span>Type 1</span>
+        <span>Nissan</span>
       </li>
       <li>
         <img src="img/dummy2.jpg">
-        <span>Type 2</span>
+        <span>Toyota</span>
       </li>
       <li>
         <img src="img/dummy3.jpg">
-        <span>Type 3</span>
+        <span>Honda</span>
       </li>
     </ul>
   </div>
@@ -291,25 +280,18 @@
   <div class="filter-item">
     <button class="filter-btn fcc">
 
-      <!-- ICON IMAGE -->
-      <img src="img/icons/vehicle_maintainance.png" class="btn-icon">
-
-      <span>Machine</span>
+      <span>Vehicle Condition</span>
       <span class="arrow">▼</span>
     </button>
 
     <ul class="filter-dropdown">
       <li>
         <img src="img/dummy1.jpg">
-        <span>Machine 1</span>
+        <span>Brand New</span>
       </li>
       <li>
         <img src="img/dummy2.jpg">
-        <span>Machine 2</span>
-      </li>
-      <li>
-        <img src="img/dummy3.jpg">
-        <span>Machine 3</span>
+        <span>Used</span>
       </li>
     </ul>
   </div>
@@ -318,40 +300,48 @@
   <div class="filter-item">
     <button class="filter-btn fcc">
 
-      <!-- ICON IMAGE -->
-      <img src="img/icons/vehicle_technology.png" class="btn-icon">
-
-      <span>Tools</span>
+      <span>Transmission</span>
       <span class="arrow">▼</span>
     </button>
 
     <ul class="filter-dropdown">
       <li>
         <img src="img/dummy1.jpg">
-        <span>Tool 1</span>
+        <span>Manual</span>
       </li>
       <li>
         <img src="img/dummy2.jpg">
-        <span>Tool 2</span>
+        <span>Automatic</span>
       </li>
       <li>
         <img src="img/dummy3.jpg">
-        <span>Tool 3</span>
+        <span>CVT</span>
+      </li>
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Tiptronic</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Semi Automatic</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Dual Clutch (DCT)</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>e-CVT</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Single Speed (EV)</span>
       </li>
     </ul>
   </div>
 
 </div>
 
-<!-- ✅ ONE shared popup (shows near clicked category) -->
-<div class="catpop" id="catPop" aria-hidden="true">
-  <div class="catpop-head">
-    <div class="catpop-title" id="catPopTitle">Category</div>
-    <button class="catpop-x" id="catPopClose" type="button" aria-label="Close">✕</button>
-  </div>
-  <div class="catpop-tabs" id="catPopTabs"></div>
-  <div class="catpop-list" id="catPopList"></div>
-</div>
 
 
 <!-- Wanted Slider Row -->
@@ -367,27 +357,39 @@
       <div class="wanted-track" id="wantedTrack">
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/vehicle_technology.png" alt="Van">
+            <img src="img/icons/van.png" alt="Van">
           </span>
-          <span class="wanted-name">Sensor Adjestment</span>
+          <span class="wanted-name">Nissan Caravan - For Rent</span>
         </a>
 
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/vehicle_tires.png" alt="Car">
+            <img src="img/icons/car.png" alt="Car">
           </span>
-          <span class="wanted-name">Tires for 10 vans</span>
+          <span class="wanted-name">Toyota Prius - For Sale</span>
         </a>
 
         <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/vehicle_glass.png" alt="Bus">
+            <img src="img/icons/bus.png" alt="Bus">
           </span>
-          <span class="wanted-name">Vehicle Glass for van</span>
+          <span class="wanted-name">60 Seat Bus - for Hire</span>
         </a>
       </div>
     </div>
   </div>
+</div>
+
+
+
+<!-- ✅ ONE shared popup (shows near clicked category) -->
+<div class="catpop" id="catPop" aria-hidden="true">
+  <div class="catpop-head">
+    <div class="catpop-title" id="catPopTitle">Category</div>
+    <button class="catpop-x" id="catPopClose" type="button" aria-label="Close">✕</button>
+  </div>
+  <div class="catpop-tabs" id="catPopTabs"></div>
+  <div class="catpop-list" id="catPopList"></div>
 </div>
 
 
@@ -470,6 +472,7 @@
   </div>
 </section>
 
+
 <!-- 3) Min / Max price -->
 <section>
   <div class="filter-row price-row">
@@ -533,6 +536,20 @@
   </div>
 </section>
 
+<section class="cp">
+  <div class="w all-selections fsb">
+    <div class="single-selections">District</div>
+    <div class="single-selections">City</div>
+    <div class="single-selections">Main Category</div>
+    <div class="single-selections">Reson</div>
+    <div class="single-selections">Brand</div>
+    <div class="single-selections">Condition</div>
+    <div class="single-selections">Transmission</div>
+    <div class="single-selections">Min Price</div>
+    <div class="single-selections">Max Price</div>
+  </div>
+</section>
+
 <!-- post card -->
 <section class="cp cp-bottom">
     
@@ -544,32 +561,23 @@
       <div class="pc-img">
 
         <!-- IMAGE -->
-        <img src="img/main_image.webp" alt="Ad Image" id="propertyImage">
+        <img src="img/5056.webp" alt="Ad Image" id="propertyImage">
 
         <!-- VIDEO -->
         <video id="propertyVideo" class="pc-video" controls>
-          <source src="video/property/property-01.mp4" type="video/mp4">
+          <source src="video/vehicle/vehicle-01.mp4" type="video/mp4">
         </video>
-
-        <!-- 360 VIEW -->
-        <iframe 
-          id="property360"
-          class="pc-360-view"
-          src="https://kuula.co/share/L4dn9/collection/7H3yk?logo=1&info=0&logosize=54&fs=1&vr=1&sd=1&initload=0&thumbs=1"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
 
       </div>
 
       <!-- Top left: user -->
       <div class="pc-user">
-        <a href="customer-profile.html" class="service-avatar">
-          <img src="img/man.webp" alt="Company">
+        <a href="single-profile.php" class="pc-avatar">
+          <img src="img/man.webp" alt="Customer">
         </a>
-
+        
         <div class="pc-user-meta">
-          <a href="customer-profile.html"><h3>BBest Construction</h3></a>
+          <a href="single-profile.php" class="pc-user-name">John Doe</a>
           <div class="pc-user-sub">
             <span class="pc-dot"></span>
             <span>Post ID 1234</span>
@@ -595,9 +603,6 @@
               <path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3l5-3v12l-5-3v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
             </svg>
           </span>
-
-          <!-- 360 -->
-          <span class="pc-360" id="view360Btn">360°</span>
         </div>
       </div>
 
@@ -618,34 +623,55 @@
             <span class="pc-title">Moratuwa - Lakshapathiya</span>
           </div>
           <!-- row: Perch + bed + bath + sqf -->
-          <div class="purpose">
-            <span class="purpose-idea">For Sale</span>
-            <span>-</span>
-            <span class="purpose-idea">Land</span>
+          <div class="fsb purpose">
+            <img src="img/icons/honda.png" alt="" class="vehicle-brand-logo">
+            <!-- <span>|</span> -->
+            <span class="purpose-idea">Vezel Rx</span>
+            <span>|</span>
+            <span class="vehicle-number">XXX - 2012</span>
           </div>
           <div class="pc-stats">
-            <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
     
             <div class="pc-stat pc-stat-ic">
               <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
+                <!-- outer meter -->
+                <path d="M12 5C6.48 5 2 9.48 2 15h2a8 8 0 1 1 16 0h2c0-5.52-4.48-10-10-10z"/>
+                
+                <!-- inner tick / center -->
+                <circle cx="12" cy="15" r="1.4"/>
+                
+                <!-- needle -->
+                <path d="M13 14.2l4.2-4.2-1.4-1.4-4.2 4.2z"/>
               </svg>
-              <span>3</span>
+              <span>100,000KM</span>
             </div>
     
             <div class="pc-stat pc-stat-ic">
               <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
+                <path d="M12 3a9 9 0 1 0 9 9a9 9 0 0 0-9-9zm0 2a7 7 0 0 1 6.71 5H15.7a4 4 0 0 0-7.4 0H5.29A7 7 0 0 1 12 5zm-2 7a2 2 0 1 1 4 0a2 2 0 0 1-4 0zm-4.71 0H8a4 4 0 0 0 2.5 3.69V19.5A7 7 0 0 1 5.29 12zm8.21 7.5v-3.81A4 4 0 0 0 16 12h2.71a7 7 0 0 1-5.21 7.5z"/>
               </svg>
-              <span>2</span>
+              <span>Manuel</span>
+            </div>
+
+            <div class="pc-stat pc-stat-ic">
+              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
+                <!-- fuel tank body -->
+                <path d="M5 6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z"/>
+                
+                <!-- fuel pump hose -->
+                <path d="M15 7h2l2 2v6a2 2 0 0 1-2 2h-1v-2h1v-5l-1-1h-1z"/>
+                
+                <!-- fuel level line -->
+                <path d="M7 10h6v4H7z"/>
+              </svg>
+              <span>Petrol</span>
             </div>
     
-            <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
           </div>
           
           
           <!-- Visit time row -->
-          <a href="customer-profile.html" class="main-details">
+          <a href="single-vehicle.php" class="main-details">
             <span class="main-details-btn">View Details</span>
           </a>
         </div>
@@ -654,17 +680,17 @@
           <div class="pc-loan-row">
             <div class="pc-loan-box">
               <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
+                <span class="pc-loan-lbl">Lees</span>
     
                 <button class="pc-loan-chip is-active" type="button">LOLC</button>
               </div>
     
               <div class="pc-loan-mid">
                 <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
+                <div class="pc-loan-amt">Rs 45,000</div>
               </div>
-              
-              <a  class="pc-apply" href="apply-loan.html">APPLY NOW</a>
+    
+              <a  class="pc-apply" href="apply-loan.php">APPLY NOW</a>
             </div>
           </div>
       </div>
@@ -804,7 +830,7 @@
     const q = searchInput.value.trim();
     if(!q) return;
     alert('Searching: ' + q);
-    // window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+    // window.location.href = `search.php?q=${encodeURIComponent(q)}`;
   }
 
   searchGo.addEventListener('click', doSearch);
@@ -906,14 +932,13 @@ setLanguage(saved);
 
 <script>
 /* =========================
-   Category bar + More + pill slideshow (SMOOTH SLIDE) + popup (3 tabs)
-   ✅ Updated: different subitems per category
+   Tick-mark filter subcategory popup
 ========================= */
 
 /* -------------------------
-   ✅ Smooth sliding pill text
+   Smooth sliding pill text
 ------------------------- */
-const PILL_ROTATE = ["Service Providers", "Suppliers & Shops Products", "Workers & Professionals"];
+const PILL_ROTATE = ["For Sale", "For Rent", "For Hire", "Import Only"];
 const pillEls = Array.from(document.querySelectorAll(".js-pill"));
 let pillIndex = 0;
 
@@ -940,7 +965,6 @@ function rotatePillsSmooth(){
 }
 setInterval(rotatePillsSmooth, 2000);
 
-
 /* -------------------------
    More expand/collapse
 ------------------------- */
@@ -951,10 +975,14 @@ catMoreBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   const expanded = catBar.classList.toggle("is-expanded");
   catMoreBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
-  catMoreBtn.querySelector(".cat-name").textContent = expanded ? "Less" : "More";
-  catMoreBtn.querySelector(".cat-pill").textContent = expanded ? "Hide" : "All";
-});
 
+  // FIX: your markup uses .vehicle-cat-name (not .cat-name)
+  const nameEl = catMoreBtn.querySelector(".vehicle-cat-name");
+  if (nameEl) nameEl.textContent = expanded ? "Less" : "More";
+
+  const pillEl = catMoreBtn.querySelector(".cat-pill");
+  if (pillEl) pillEl.textContent = expanded ? "Hide" : "All";
+});
 
 /* -------------------------
    Popup elements
@@ -965,674 +993,241 @@ const catPopTabs = document.getElementById("catPopTabs");
 const catPopList = document.getElementById("catPopList");
 const catPopClose = document.getElementById("catPopClose");
 
-const TABS = ["Service Providers", "Suppliers & Shops Products", "Workers & Professionals"];
+const TABS = ["For Sale", "For Rent", "For Hire", "Import Only"];
 
 let activeCat = "";
-let activeTab = "Service Providers";
+let activeTab = "For Sale";
 
 /* -------------------------
-   ✅ Different subcategories per main category
-   (10 items each tab, and each tab can be different too)
+   Your subcategory dataset
+   IMPORTANT: "Car" must also be tab-based like others
 ------------------------- */
-// ✅ Full subcategory dataset (as you requested) — use this as SUBCATS
+const VEHICLE_TABS = ["For Sale", "For Rent", "For Hire", "Import Only"];
+
+function sameForAllTabs(list){
+  return {
+    "For Sale": list,
+    "For Rent": list,
+    "For Hire": list,
+    "Import Only": list,
+  };
+}
+
 const SUBCATS = {
-  "Maintenance": {
-    "Service Providers": [
-      "Vehicle Maintenance Centers",
-      "Periodic Service Centers",
-      "Quick Service Centers",
-      "Preventive Maintenance Centers",
-      "Fleet Maintenance Companies",
-      "Mobile Maintenance Services",
-      "Lubrication Service Centers",
-      "Underbody Maintenance Centers",
-      "Multi-brand Auto Service Centers",
-      "Premium Vehicle Maintenance Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Auto Spare Parts Shops",
-      "Engine Oil Shops",
-      "Lubricant Dealers",
-      "Oil Filter Shops",
-      "Air Filter Shops",
-      "Fuel Filter Shops",
-      "Coolant Shops",
-      "Brake Fluid Shops",
-      "Transmission Oil Shops",
-      "Grease & Maintenance Chemical Shops",
-      "Car Care Product Shops",
-      "Service Consumable Suppliers"
-    ],
-    "Workers & Professionals": [
-      "Vehicle Service Technicians",
-      "Auto Maintenance Technicians",
-      "Lubrication Technicians",
-      "Preventive Maintenance Technicians",
-      "Fleet Service Technicians",
-      "Mobile Service Mechanics",
-      "Service Advisors",
-      "Workshop Supervisors",
-      "Diagnostic Maintenance Technicians",
-      "Automobile Maintenance Inspectors"
-    ]
-  },
 
-  "Repair": {
-    "Service Providers": [
-      "Auto Repair Garages",
-      "Engine Repair Centers",
-      "Gearbox Repair Centers",
-      "Transmission Repair Centers",
-      "Suspension Repair Centers",
-      "Steering Repair Centers",
-      "Brake Repair Centers",
-      "Clutch Repair Centers",
-      "Exhaust Repair Centers",
-      "Radiator Repair Centers",
-      "Fuel System Repair Centers",
-      "Differential Repair Centers",
-      "Drivetrain Repair Centers",
-      "General Mechanical Repair Centers",
-      "Heavy Vehicle Repair Workshops"
-    ],
-    "Suppliers & Shops Products": [
-      "Engine Parts Shops",
-      "Gearbox Parts Shops",
-      "Clutch Parts Shops",
-      "Brake Parts Shops",
-      "Suspension Parts Shops",
-      "Steering Parts Shops",
-      "Radiator Parts Shops",
-      "Exhaust Parts Shops",
-      "Fuel System Parts Shops",
-      "Bearing & Seal Shops",
-      "Gasket & Sealant Shops",
-      "Mechanical Spare Parts Dealers",
-      "Recondition Parts Shops"
-    ],
-    "Workers & Professionals": [
-      "Auto Mechanics",
-      "Engine Mechanics",
-      "Transmission Mechanics",
-      "Suspension Mechanics",
-      "Brake Mechanics",
-      "Steering Mechanics",
-      "Clutch Technicians",
-      "Radiator Repair Technicians",
-      "Exhaust Technicians",
-      "Fuel Injection Technicians",
-      "Drivetrain Mechanics",
-      "Workshop Repair Supervisors"
-    ]
-  },
+  "Car": sameForAllTabs([
+    "Hatchback Cars",
+    "Sedan Cars",
+    "Saloon Cars",
+    "Compact Cars",
+    "Family Cars",
+    "Luxury Cars",
+    "Sports Cars",
+    "Classic / Vintage Cars",
+    "Hybrid Cars",
+    "Electric Cars (EV)",
+    "Micro Cars"
+  ]),
 
-  "Electrical": {
-    "Service Providers": [
-      "Auto Electrical Repair Centers",
-      "Wiring Repair Centers",
-      "Alternator Repair Centers",
-      "Starter Motor Repair Centers",
-      "Lighting System Repair Centers",
-      "Power Window Repair Centers",
-      "Central Locking Repair Centers",
-      "Charging System Repair Centers",
-      "ECU/Electronic Module Repair Centers",
-      "Hybrid/EV Electrical Service Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Auto Electrical Parts Shops",
-      "Battery Cable Shops",
-      "Wiring Harness Shops",
-      "Fuse & Relay Shops",
-      "Vehicle Bulb & Lighting Shops",
-      "Alternator Parts Shops",
-      "Starter Motor Parts Shops",
-      "Sensor Shops",
-      "Switch & Control Module Shops",
-      "ECU Parts Dealers",
-      "Horn & Electrical Accessory Shops"
-    ],
-    "Workers & Professionals": [
-      "Auto Electricians",
-      "Vehicle Wiring Technicians",
-      "ECU Technicians",
-      "Electrical Diagnostic Technicians",
-      "Lighting System Technicians",
-      "Alternator Technicians",
-      "Starter Motor Technicians",
-      "Electronic Module Repair Technicians",
-      "Hybrid Vehicle Electrical Technicians",
-      "Automotive Electrical Inspectors"
-    ]
-  },
+  "SUVs / Jeeps": sameForAllTabs([
+    "SUV",
+    "Jeep",
+    "Crossover SUV",
+    "4WD Vehicles",
+    "Off-Road Vehicles",
+    "Luxury SUVs"
+  ]),
 
-  "Air Condition": {
-    "Service Providers": [
-      "Car AC Repair Centers",
-      "Car AC Gas Refilling Centers",
-      "AC Diagnostic Centers",
-      "AC Compressor Repair Centers",
-      "Climate Control Repair Centers",
-      "Bus/Van AC Service Centers",
-      "Mobile Vehicle AC Services"
-    ],
-    "Suppliers & Shops Products": [
-      "Auto AC Parts Shops",
-      "AC Compressor Shops",
-      "Condenser Shops",
-      "Evaporator Shops",
-      "AC Hose & Pipe Shops",
-      "Refrigerant Gas Dealers",
-      "AC Filter Shops",
-      "Blower Motor Shops",
-      "AC Control Unit Shops",
-      "AC Cooling Spare Parts Dealers"
-    ],
-    "Workers & Professionals": [
-      "Auto AC Technicians",
-      "AC Gas Refill Technicians",
-      "AC Diagnostic Technicians",
-      "Compressor Repair Technicians",
-      "Climate Control Technicians",
-      "Refrigeration Mechanics",
-      "Mobile AC Service Technicians"
-    ]
-  },
+  "Vans": sameForAllTabs([
+    "Mini Van",
+    "Passenger Van",
+    "Cargo Van",
+    "Panel Van",
+    "High Roof Van",
+    "Luxury Van",
+    "Crew Van"
+  ]),
 
-  "Tires": {
-    "Service Providers": [
-      "Tire Replacement Centers",
-      "Tire Repair Centers",
-      "Wheel Alignment Centers",
-      "Wheel Balancing Centers",
-      "Tire Rotation Centers",
-      "Nitrogen Filling Centers",
-      "Alloy Wheel Repair Centers",
-      "Puncture Repair Centers",
-      "Tire Inspection Centers",
-      "Fleet Tire Service Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Tire Shops",
-      "Alloy Wheel Shops",
-      "Wheel Rim Shops",
-      "Tube Shops",
-      "Valve Shops",
-      "Tire Accessory Shops",
-      "Wheel Nut & Bolt Shops",
-      "Tire Sealant Shops",
-      "Used Tire Dealers",
-      "Fleet Tire Suppliers"
-    ],
-    "Workers & Professionals": [
-      "Tire Technicians",
-      "Wheel Alignment Technicians",
-      "Wheel Balancing Technicians",
-      "Puncture Repair Technicians",
-      "Alloy Wheel Repair Technicians",
-      "Tire Fitting Technicians",
-      "Tire Inspectors"
-    ]
-  },
+   "Motorcycles": sameForAllTabs([
+    "Motorbike",
+    "Scooter",
+    "Electric Bike",
+    "Heavy Bike",
+    "Dirt Bike",
+    "ATV / Quad Bike"
+  ]),
 
-  "Body & Paint": {
-    "Service Providers": [
-      "Auto Body Repair Centers",
-      "Accident Repair Centers",
-      "Dent Repair Centers",
-      "Panel Beating Centers",
-      "Chassis Straightening Centers",
-      "Vehicle Painting Centers",
-      "Touch-up Paint Centers",
-      "Rust Repair Centers",
-      "Bumper Repair Centers",
-      "Insurance Claim Body Repair Centers",
-      "Body Restoration Workshops"
-    ],
-    "Suppliers & Shops Products": [
-      "Auto Paint Shops",
-      "Body Parts Shops",
-      "Bumper Shops",
-      "Fender & Panel Shops",
-      "Paint Mixing Shops",
-      "Putty & Filler Suppliers",
-      "Primer & Clear Coat Suppliers",
-      "Sanding Material Shops",
-      "Body Repair Tool Shops",
-      "Rust Protection Chemical Shops",
-      "Vehicle Sticker & Decal Shops"
-    ],
-    "Workers & Professionals": [
-      "Denter/Basher Workers",
-      "Panel Beaters",
-      "Vehicle Painters",
-      "Spray Painters",
-      "Body Repair Technicians",
-      "Chassis Alignment Technicians",
-      "Dent Removal Specialists",
-      "Color Matching Technicians",
-      "Auto Body Estimators",
-      "Insurance Repair Assessors"
-    ]
-  },
+  "Three Wheelers": sameForAllTabs([
+    "Passenger Three Wheeler",
+    "Cargo Three Wheeler",
+    "Electric Three Wheeler"
+  ]),
 
-  "Glass": {
-    "Service Providers": [
-      "Auto Glass Replacement Centers",
-      "Windshield Repair Centers",
-      "Windshield Replacement Centers",
-      "Door Glass Repair Centers",
-      "Rear Glass Replacement Centers",
-      "Quarter Glass Replacement Centers",
-      "Mobile Auto Glass Services",
-      "Window Tinting Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Auto Glass Shops",
-      "Windshield Dealers",
-      "Door Glass Dealers",
-      "Rear Screen Glass Shops",
-      "Tint Film Shops",
-      "Glass Rubber Beading Shops",
-      "Wiper Shops",
-      "Glass Fitting Consumable Shops",
-      "Defogger Line Repair Material Shops"
-    ],
-    "Workers & Professionals": [
-      "Auto Glass Technicians",
-      "Windshield Repair Technicians",
-      "Glass Fitting Technicians",
-      "Window Tint Technicians",
-      "Wiper System Technicians",
-      "Mobile Glass Installation Workers"
-    ]
-  },
+ 
 
-  "Modification": {
-    "Service Providers": [
-      "Vehicle Modification Garages",
-      "Performance Upgrade Centers",
-      "Off-road Modification Centers",
-      "Suspension Modification Centers",
-      "Exhaust Upgrade Centers",
-      "Body Kit Installation Centers",
-      "Vehicle Lowering/Lifting Centers",
-      "Custom Lighting Upgrade Centers",
-      "Audio Modification Centers",
-      "4x4 Accessory Fitment Centers",
-      "Vehicle Wrapping Centers",
-      "Custom Build Workshops"
-    ],
-    "Suppliers & Shops Products": [
-      "Performance Parts Shops",
-      "Body Kit Shops",
-      "Spoiler Shops",
-      "Custom Exhaust Shops",
-      "Suspension Upgrade Shops",
-      "Off-road Accessory Shops",
-      "Custom Lighting Shops",
-      "Alloy Upgrade Shops",
-      "Vehicle Wrap & Vinyl Shops",
-      "Car Audio Upgrade Shops",
-      "Turbo/Performance Accessory Shops",
-      "Seat & Interior Upgrade Shops"
-    ],
-    "Workers & Professionals": [
-      "Vehicle Modification Technicians",
-      "Performance Mechanics",
-      "Fabrication Technicians",
-      "Custom Exhaust Technicians",
-      "Suspension Modification Technicians",
-      "Car Audio Installers",
-      "Vehicle Wrap Technicians",
-      "Custom Lighting Technicians",
-      "Body Kit Installers",
-      "Tuning Specialists"
-    ]
-  },
+  "Buses": sameForAllTabs([
+    "Private Bus",
+    "School Bus",
+    "Staff Bus",
+    "Luxury Bus / Coach",
+    "Mini Bus"
+  ]),
 
-  "Interior Design": {
-    "Service Providers": [
-      "Car Interior Customization Centers",
-      "Upholstery Service Centers",
-      "Seat Repair Centers",
-      "Dashboard Repair Centers",
-      "Roof Lining Repair Centers",
-      "Carpet & Flooring Installation Centers",
-      "Interior Trim Restoration Centers",
-      "Luxury Interior Upgrade Centers",
-      "Leather Interior Service Centers",
-      "Sound Insulation Installation Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Seat Cover Shops",
-      "Upholstery Material Shops",
-      "Leather & Fabric Dealers",
-      "Dashboard Accessories Shops",
-      "Vehicle Carpet Shops",
-      "Floor Mat Shops",
-      "Interior Trim Shops",
-      "Roof Lining Material Shops",
-      "Steering Cover Shops",
-      "Soundproof Material Shops",
-      "Interior Lighting Accessory Shops"
-    ],
-    "Workers & Professionals": [
-      "Auto Upholstery Workers",
-      "Seat Repair Technicians",
-      "Interior Fitment Technicians",
-      "Dashboard Repair Technicians",
-      "Trim Technicians",
-      "Leather Work Specialists",
-      "Interior Designers for Vehicles",
-      "Soundproofing Installers",
-      "Roof Lining Workers"
-    ]
-  },
+  "Trucks & Lorries": sameForAllTabs([
+    "Light Truck",
+    "Medium Truck",
+    "Heavy Truck",
+    "Lorry",
+    "Box Truck",
+    "Flatbed Truck",
+    "Tip Lorry",
+    "Container Truck"
+  ]),
 
-  "Transport": {
-    "Service Providers": [
-      "Vehicle Transport Services",
-      "Car Carrier Transport Services",
-      "Breakdown Transport Services",
-      "Recovery Truck Services",
-      "Tow Truck Services",
-      "Vehicle Delivery Services",
-      "Intercity Vehicle Movers",
-      "Fleet Transport Services",
-      "Auction Vehicle Transport Services",
-      "New Vehicle Delivery Companies"
-    ],
-    "Suppliers & Shops Products": [
-      "Towing Equipment Shops",
-      "Recovery Equipment Dealers",
-      "Trailer Accessory Shops",
-      "Tie-down & Securing Equipment Shops",
-      "Transport Safety Equipment Shops",
-      "Vehicle Loading Ramp Suppliers"
-    ],
-    "Workers & Professionals": [
-      "Tow Truck Drivers",
-      "Recovery Vehicle Operators",
-      "Vehicle Carrier Drivers",
-      "Heavy Vehicle Transport Drivers",
-      "Loading Coordinators",
-      "Dispatch Coordinators",
-      "Vehicle Handling Staff"
-    ]
-  },
+  
 
-  "Inspection": {
-    "Service Providers": [
-      "Vehicle Inspection Centers",
-      "Pre-purchase Inspection Centers",
-      "Emission Testing Centers",
-      "Safety Inspection Centers",
-      "Insurance Inspection Centers",
-      "Fleet Inspection Services",
-      "Mechanical Inspection Centers",
-      "Accident Damage Inspection Centers",
-      "Compliance Inspection Centers",
-      "Roadworthiness Testing Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Inspection Equipment Suppliers",
-      "Emission Testing Equipment Dealers",
-      "Diagnostic Tool Shops",
-      "Safety Testing Equipment Shops",
-      "Brake Testing Equipment Dealers",
-      "Workshop Inspection Tool Suppliers"
-    ],
-    "Workers & Professionals": [
-      "Vehicle Inspectors",
-      "Mechanical Inspectors",
-      "Emission Test Technicians",
-      "Roadworthiness Inspectors",
-      "Insurance Vehicle Assessors",
-      "Pre-purchase Inspection Experts",
-      "Compliance Officers",
-      "Diagnostic Inspectors"
-    ]
-  },
+  "Pickups": sameForAllTabs([
+    "Single Cab",
+    "Double Cab",
+    "Pickup Truck",
+    "Utility Vehicle"
+  ]),
 
-  "Driving Training": {
-    "Service Providers": [
-      "Driving Schools",
-      "Driver Training Institutes",
-      "Defensive Driving Training Centers",
-      "Heavy Vehicle Training Schools",
-      "Automatic Driving Training Schools",
-      "Manual Driving Training Schools",
-      "Refresher Driving Schools",
-      "Corporate Driver Training Providers",
-      "Commercial Driver Training Centers",
-      "Simulation Driving Training Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Driving School Vehicle Suppliers",
-      "Driving Training Material Shops",
-      "Learner Signboard Shops",
-      "Dual Control Kit Suppliers",
-      "Driving Simulator Dealers",
-      "Training Cone & Road Marker Shops"
-    ],
-    "Workers & Professionals": [
-      "Driving Instructors",
-      "Defensive Driving Trainers",
-      "Heavy Vehicle Instructors",
-      "Road Safety Trainers",
-      "Driver Assessors",
-      "Driving Test Preparation Coaches",
-      "Simulator Trainers"
-    ]
-  },
+  "Agricultural Vehicles": sameForAllTabs([
+    "Tractor",
+    "Power Tiller",
+    "Harvesters",
+    "Agricultural Machinery"
+  ]),
 
-  "Technology": {
-    "Service Providers": [
-      "GPS Installation Centers",
-      "Vehicle Tracking Installation Services",
-      "Dashcam Installation Centers",
-      "Reverse Camera Installation Centers",
-      "Parking Sensor Installation Centers",
-      "Car Audio Installation Centers",
-      "Infotainment Upgrade Centers",
-      "Alarm System Installation Centers",
-      "Immobilizer Installation Centers",
-      "Remote Start Installation Centers",
-      "ECU Programming Centers",
-      "Vehicle Diagnostic Service Centers",
-      "ADAS Calibration Centers",
-      "EV Software Diagnostic Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "GPS Device Shops",
-      "Vehicle Tracker Shops",
-      "Dashcam Shops",
-      "Reverse Camera Shops",
-      "Parking Sensor Shops",
-      "Car Audio Shops",
-      "Infotainment System Shops",
-      "Alarm & Security Device Shops",
-      "Immobilizer Shops",
-      "Diagnostic Scanner Shops",
-      "ECU Programming Tool Shops",
-      "EV Diagnostic Tool Dealers",
-      "ADAS Sensor Shops"
-    ],
-    "Workers & Professionals": [
-      "GPS Installation Technicians",
-      "Vehicle Tracking Technicians",
-      "Dashcam Installers",
-      "Reverse Camera Technicians",
-      "Car Audio Technicians",
-      "Infotainment Technicians",
-      "Auto Security System Technicians",
-      "ECU Programmers",
-      "Diagnostic Technicians",
-      "ADAS Calibration Technicians",
-      "EV Electronics Technicians"
-    ]
-  },
+  "Construction Vehicles": sameForAllTabs([
+    "JCB / Backhoe Loader",
+    "Excavator",
+    "Bulldozer",
+    "Roller",
+    "Grader",
+    "Concrete Mixer"
+  ]),
 
-  "Battery": {
-    "Service Providers": [
-      "Battery Replacement Centers",
-      "Battery Charging Centers",
-      "Battery Testing Centers",
-      "Battery Repair Centers",
-      "Mobile Battery Services",
-      "Fleet Battery Service Providers",
-      "Hybrid Battery Service Centers",
-      "EV Battery Service Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Car Battery Shops",
-      "Battery Dealers",
-      "Battery Charger Shops",
-      "Jumper Cable Shops",
-      "Battery Terminal Shops",
-      "Distilled Water Shops",
-      "Inverter/Backup Battery Shops for Vehicles",
-      "Hybrid Battery Parts Dealers",
-      "EV Battery Component Dealers"
-    ],
-    "Workers & Professionals": [
-      "Battery Technicians",
-      "Mobile Battery Technicians",
-      "Battery Testing Technicians",
-      "Charging System Technicians",
-      "Hybrid Battery Technicians",
-      "EV Battery Technicians",
-      "Battery Installation Workers"
-    ]
-  },
+  "Industrial Vehicles": sameForAllTabs([
+    "Forklift",
+    "Crane",
+    "Boom Lift",
+    "Scissor Lift"
+  ]),
 
-  "Valuation": {
-    "Service Providers": [
-      "Vehicle Valuation Centers",
-      "Used Vehicle Appraisal Services",
-      "Insurance Valuation Services",
-      "Accident Damage Valuation Services",
-      "Fleet Valuation Companies",
-      "Auction Valuation Services",
-      "Pre-sale Vehicle Assessment Centers",
-      "Lease Return Evaluation Services"
-    ],
-    "Suppliers & Shops Products": [
-      "Valuation Software Providers",
-      "Vehicle History Report Service Providers",
-      "Appraisal Tool Providers",
-      "Market Pricing Data Providers"
-    ],
-    "Workers & Professionals": [
-      "Vehicle Valuers",
-      "Auto Appraisers",
-      "Insurance Assessors",
-      "Accident Damage Assessors",
-      "Fleet Evaluation Specialists",
-      "Auction Evaluators",
-      "Residual Value Analysts"
-    ]
-  },
+  "Special Purpose Vehicles": sameForAllTabs([
+    "Ambulance",
+    "Fire Truck",
+    "Hearse (Funeral Vehicle)",
+    "Armored Vehicle",
+    "Mobile Shop Vehicle",
+    "Food Truck"
+  ]),
 
-  "Cleaning": {
-    "Service Providers": [
-      "Car Wash Centers",
-      "Vehicle Detailing Centers",
-      "Interior Cleaning Centers",
-      "Exterior Cleaning Centers",
-      "Steam Cleaning Centers",
-      "Engine Bay Cleaning Centers",
-      "Seat Shampooing Centers",
-      "Foam Wash Centers",
-      "Pressure Wash Centers",
-      "Dry Wash Services",
-      "Mobile Car Wash Services",
-      "Sanitization & Odor Removal Services",
-      "Ceramic Coating Centers",
-      "Polish & Wax Centers"
-    ],
-    "Suppliers & Shops Products": [
-      "Car Cleaning Product Shops",
-      "Detailing Chemical Shops",
-      "Polish & Wax Shops",
-      "Microfiber & Cleaning Accessory Shops",
-      "Pressure Washer Dealers",
-      "Vacuum & Detailing Machine Suppliers",
-      "Ceramic Coating Product Shops",
-      "Interior Cleaning Chemical Shops",
-      "Odor Removal Product Shops"
-    ],
-    "Workers & Professionals": [
-      "Car Wash Workers",
-      "Vehicle Detailers",
-      "Interior Cleaning Technicians",
-      "Exterior Cleaning Technicians",
-      "Polishing Technicians",
-      "Ceramic Coating Technicians",
-      "Steam Cleaning Operators",
-      "Mobile Cleaning Workers"
-    ]
-  }
+  "Other Vehicles": sameForAllTabs([
+    "Boats",
+    "Speed Boats",
+    "Jet Skis",
+    "Trailers",
+    "Vehicle Carriers"
+  ])
+
 };
 
-/* ✅ Helper to safely get items per category + tab */
-function getItemsFor(activeCat, activeTab){
-  const catObj = SUBCATS[activeCat];
-  if(catObj && Array.isArray(catObj[activeTab]) && catObj[activeTab].length){
-    return catObj[activeTab]; // return all items (not limited)
-  }
-  return []; // if missing
+/* -------------------------
+   ✅ Selected filters storage
+   Structure: selected[cat][tab] = Set()
+------------------------- */
+const selected = Object.create(null);
+
+function ensureStore(cat, tab){
+  if(!selected[cat]) selected[cat] = Object.create(null);
+  if(!selected[cat][tab]) selected[cat][tab] = new Set();
+  return selected[cat][tab];
 }
 
-
-// fallback if category not found
-function makeDummyItems(tabName){
-  return Array.from({length: 10}).map((_, i) => `${tabName} - Item ${i+1}`);
+/* -------------------------
+   ✅ Get items for current Category + Tab
+------------------------- */
+function getItemsFor(cat, tab){
+  const catObj = SUBCATS[cat];
+  if(!catObj) return [];
+  const arr = catObj[tab];
+  return Array.isArray(arr) ? arr : [];
 }
 
-// ✅ NEW: get subitems by selected category + tab
-function getItemsFor(activeCat, activeTab){
-  const catObj = SUBCATS[activeCat];
-  if(catObj && catObj[activeTab] && catObj[activeTab].length){
-    return catObj[activeTab].slice(0, 10);
-  }
-  return makeDummyItems(activeTab);
-}
-
-// Render tabs + list
+/* -------------------------
+   Render tabs + tick list
+------------------------- */
 function renderPopup(){
+  // Tabs
   catPopTabs.innerHTML = "";
   TABS.forEach(t => {
     const b = document.createElement("button");
     b.type = "button";
     b.className = "cattab" + (t === activeTab ? " is-active" : "");
     b.textContent = t;
+
     b.addEventListener("click", (e) => {
       e.stopPropagation();
       activeTab = t;
       renderPopup();
     });
+
     catPopTabs.appendChild(b);
   });
 
+  // List with tick marks
   catPopList.innerHTML = "";
-  getItemsFor(activeCat, activeTab).forEach(txt => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "catpop-item";
-    btn.textContent = txt;
-    btn.addEventListener("click", () => {
-      console.log("Selected:", activeCat, activeTab, txt);
-      closePop();
+
+  const items = getItemsFor(activeCat, activeTab);
+  const store = ensureStore(activeCat, activeTab);
+
+  if(!items.length){
+    const empty = document.createElement("div");
+    empty.style.padding = "10px";
+    empty.textContent = "No subcategories.";
+    catPopList.appendChild(empty);
+    return;
+  }
+
+  items.forEach((txt, i) => {
+    const id = `sc_${activeCat}_${activeTab}_${i}`.replace(/\s+/g, "_").replace(/[^\w-]/g, "");
+
+    // label wrapper (clickable)
+    const label = document.createElement("label");
+    label.className = "catpop-check"; // you can style if you want
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = txt;
+    input.checked = store.has(txt);
+
+    input.addEventListener("change", () => {
+      if(input.checked) store.add(txt);
+      else store.delete(txt);
+
+      // ✅ you can use this to filter your results
+      console.log("Selected filters:", getSelectedFilters());
     });
-    catPopList.appendChild(btn);
+
+    const span = document.createElement("span");
+    span.className = "catpop-check-text";
+    span.textContent = txt;
+
+    label.appendChild(span);
+    label.appendChild(input);
+    catPopList.appendChild(label);
   });
 }
 
+/* -------------------------
+   Open / close popup
+------------------------- */
 function openPopForButton(btn){
   activeCat = btn.dataset.cat || "Category";
-  activeTab = "Service Providers";
+  activeTab = "For Sale";
   catPopTitle.textContent = activeCat;
 
   renderPopup();
@@ -1662,6 +1257,7 @@ function closePop(){
   catPop.setAttribute("aria-hidden", "true");
 }
 
+// Category click
 catBar.addEventListener("click", (e) => {
   const btn = e.target.closest(".cat-tile");
   if(!btn) return;
@@ -1671,17 +1267,18 @@ catBar.addEventListener("click", (e) => {
     closePop();
     return;
   }
-
   openPopForButton(btn);
 });
 
 catPopClose.addEventListener("click", closePop);
+
 document.addEventListener("click", (e) => {
   if(!catPop.classList.contains("open")) return;
   if(catPop.contains(e.target)) return;
   if(catBar.contains(e.target)) return;
   closePop();
 });
+
 document.addEventListener("keydown", (e) => {
   if(e.key === "Escape") closePop();
 });
@@ -1689,9 +1286,31 @@ document.addEventListener("keydown", (e) => {
 window.addEventListener("resize", () => {
   if(catPop.classList.contains("open")) closePop();
 });
+
 window.addEventListener("scroll", () => {
   if(catPop.classList.contains("open")) closePop();
 }, {passive:true});
+
+/* -------------------------
+   ✅ Helper: get all selected filters (for search)
+------------------------- */
+function getSelectedFilters(){
+  // returns array of {cat, tab, items:[...]}
+  const out = [];
+  Object.keys(selected).forEach(cat => {
+    Object.keys(selected[cat]).forEach(tab => {
+      const items = Array.from(selected[cat][tab]);
+      if(items.length) out.push({ cat, tab, items });
+    });
+  });
+  return out;
+}
+
+// Optional: clear filters for current category+tab
+function clearCurrentFilters(){
+  ensureStore(activeCat, activeTab).clear();
+  renderPopup();
+}
 </script>
 
 
@@ -1871,6 +1490,9 @@ renderAccordion();
 
 
 
+/* =========================
+   2) KM Slider (Dual Range)
+========================= */
 /* =========================
    2) KM Slider (Dual Range)
 ========================= */
@@ -2367,37 +1989,28 @@ window.addEventListener("scroll", () => {
 
 <script>
   const photoBtn = document.getElementById("photoBtn");
-const videoBtn = document.getElementById("videoBtn");
-const view360Btn = document.getElementById("view360Btn");
+  const videoBtn = document.getElementById("videoBtn");
 
-const image = document.getElementById("propertyImage");
-const video = document.getElementById("propertyVideo");
-const view360 = document.getElementById("property360");
+  const image = document.getElementById("propertyImage");
+  const video = document.getElementById("propertyVideo");
 
-function hideAll(){
-  image.style.display="none";
-  video.style.display="none";
-  view360.style.display="none";
-  video.pause();
-}
+  function hideAll(){
+    image.style.display="none";
+    video.style.display="none";
+    video.pause();
+  }
 
-photoBtn.addEventListener("click",function(){
-  hideAll();
-  image.style.display="block";
-});
+  photoBtn.addEventListener("click",function(){
+    hideAll();
+    image.style.display="block";
+  });
 
-videoBtn.addEventListener("click",function(){
-  hideAll();
-  video.style.display="block";
-  video.play();
-});
-
-view360Btn.addEventListener("click",function(){
-  hideAll();
-  view360.style.display="block";
-});
+  videoBtn.addEventListener("click",function(){
+    hideAll();
+    video.style.display="block";
+    video.play();
+  });
 </script>
-
 
 <script>
 /* =========================

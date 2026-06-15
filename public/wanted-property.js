@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const postBtn = document.getElementById('postWantedBtn');
   if (postBtn) {
     postBtn.addEventListener('click', () => {
-      window.location.href = 'post-wanted-property.html';
+      window.location.href = 'post-wanted-property.php';
     });
   }
 

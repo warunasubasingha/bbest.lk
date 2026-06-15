@@ -632,6 +632,15 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".company-menu-btn");
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      if (confirm("Are you sure you want to log out?")) {
+        window.location.href = "logout.php";
+      }
+    });
+  }
+
   const track = document.getElementById("companySlideTrack");
   const dots = document.querySelectorAll("#companySliderDots button");
 

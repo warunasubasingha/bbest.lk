@@ -18,7 +18,7 @@
         <div class="w topbar">
 
             <!-- Middle -->
-            <a class="single-brand" href="index.html" aria-label="Home">
+            <a class="single-brand" href="index.php" aria-label="Home">
             <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
             </a>
         </div>
@@ -1002,7 +1002,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.referrer !== "") {
       window.history.back(); // go to previous page
     } else {
-      window.location.href = "index.html"; // fallback if no history
+      window.location.href = "index.php"; // fallback if no history
     }
   });
 });

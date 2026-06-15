@@ -18,7 +18,7 @@
         <div class="w topbar">
 
             <!-- Middle -->
-            <a class="single-brand" href="index.html" aria-label="Home">
+            <a class="single-brand" href="index.php" aria-label="Home">
             <img src="img/bbest_logo.webp" alt="Bbest.lk Logo">
             </a>
         </div>
@@ -238,7 +238,7 @@
       <span class="loan-monthly-label">Monthly</span>
       <span class="loan-monthly-value">245,000</span>
     </div>
-    <a href="apply-loan.html" class="loan-apply-btn">
+    <a href="apply-loan.php" class="loan-apply-btn">
       <span class="loan-apply-icon">🏛</span>
       <span>Apply for Loan</span>
     </a>
@@ -1142,7 +1142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.referrer !== "") {
       window.history.back(); // go to previous page
     } else {
-      window.location.href = "index.html"; // fallback if no history
+      window.location.href = "index.php"; // fallback if no history
     }
   });
 });

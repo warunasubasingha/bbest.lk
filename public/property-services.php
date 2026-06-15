@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/css.css">
-    <title>Home Page</title>
+    <link rel="stylesheet" href="css/property-services-css.css">
+    <title>Property Services</title>
     <style>
-      #d1000 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
-      #d1000 > span {color: #fefefe;}
+      #d1001 {background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));}
+      #d1001 > span {color: #fefefe;}
     </style>
 </head>
 <body>
@@ -49,7 +49,7 @@
         <img src="img/icons/search.svg" alt="">
       </button>
 
-      <a href="customer-profile.html" class="profile-btn">
+      <a href="customer-profile.php" class="profile-btn">
         <img src="img/man.webp" alt="Profile">
       </a>
     </div>
@@ -72,22 +72,22 @@
     <div class="w cat-row-inner">
 
       <nav class="cat-nav" aria-label="Categories">
-        <a class="cat-item" id="d1000" href="index.html">
+        <a class="cat-item" id="d1000" href="index.php">
           <img src="img/icons/1.png" alt="">
           <span>Property</span>
         </a>
 
-        <a class="cat-item" id="d1001" href="vehicle.html">
+        <a class="cat-item" href="vehicle.php">
           <img src="img/icons/2.png" alt="">
           <span>Vehicles</span>
         </a>
 
-        <a class="cat-item" href="property-services.html">
+        <a class="cat-item" id="d1001" href="property-services.php">
           <img src="img/icons/3.png" alt="">
           <span>Property services</span>
         </a>
 
-        <a class="cat-item" href="vehicle-services.html">
+        <a class="cat-item" href="vehicle-services.php">
           <img src="img/icons/4.png" alt="">
           <span>Vehicle Service</span>
         </a>
@@ -114,33 +114,33 @@
       <div class="ad-track" id="adTrack">
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 1">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-1.webp" alt="Ad 1">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 2">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-2.webp" alt="Ad 2">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 3">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-3.webp" alt="Ad 3">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 4">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-1.webp" alt="Ad 4">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_1.webp" alt="Ad 5">
+          <a href="single-profile.php" class="ad-profile"><img src="img/man.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-2.webp" alt="Ad 5">
         </div>
 
         <div class="ad-card ad-slide">
-          <a href="customer-profile.html" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
-          <img class="ad-img" src="img/land_2.webp" alt="Ad 6">
+          <a href="single-profile.php" class="ad-profile"><img src="img/women.webp" alt="Customer"></a>
+          <img class="ad-img" src="img/property-services-3.webp" alt="Ad 6">
         </div>
 
       </div>
@@ -156,88 +156,82 @@
 
       
       <!-- 5 visible categories -->
-      <button class="cat-tile" type="button" data-cat="House">
-        <span class="cat-ic"><img src="img/icons/house.svg" alt=""></span>
-        <span class="cat-name">House</span>
+      <button class="cat-tile" type="button" data-cat="Construction Services">
+        <span class="cat-ic-vehicle"><img src="img/icons/construction_company.png" alt=""></span>
+        <span class="vehicle-cat-name">Construction Services</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Land">
-        <span class="cat-ic"><img src="img/icons/land.svg" alt=""></span>
-        <span class="cat-name">Land</span>
+      <button class="cat-tile" type="button" data-cat="Architecture & Design">
+        <span class="cat-ic-vehicle"><img src="img/icons/arhitecture-design.png" alt=""></span>
+        <span class="vehicle-cat-name">Architecture & Design</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile" type="button" data-cat="Apartment">
-        <span class="cat-ic"><img src="img/icons/apartment.svg" alt=""></span>
-        <span class="cat-name">Apartment</span>
-        <span class="cat-pill js-pill">For Sale</span>
-      </button>
-
-      <button class="cat-tile" type="button" data-cat="Commercial">
-        <span class="cat-ic"><img src="img/icons/commercial.svg" alt=""></span>
-        <span class="cat-name">Commercial</span>
-        <span class="cat-pill js-pill">For Sale</span>
-      </button>
-
-      <button class="cat-tile is-extra" type="button" data-cat="Annex">
-        <span class="cat-ic"><img src="img/icons/annex.svg" alt=""></span>
-        <span class="cat-name">Annex</span>
-        <span class="cat-pill js-pill">For Sale</span>
-      </button>
-
-      <!-- EXTRA categories (hidden until More) -->
-      <button class="cat-tile is-extra" type="button" data-cat="Villa">
-        <span class="cat-ic"><img src="img/icons/villa.svg" alt=""></span>
-        <span class="cat-name">Villa</span>
+      <button class="cat-tile" type="button" data-cat="Survey & Land Services">
+        <span class="cat-ic-vehicle"><img src="img/icons/survey_&_land_services.png" alt=""></span>
+        <span class="vehicle-cat-name">Survey & Land Services</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
       
-      <button class="cat-tile is-extra" type="button" data-cat="Office">
-        <span class="cat-ic"><img src="img/icons/office.svg" alt=""></span>
-        <span class="cat-name">Office</span>
+      <button class="cat-tile" type="button" data-cat="Legal & Documentation">
+        <span class="cat-ic-vehicle"><img src="img/icons/legal_&_documentation.png" alt=""></span>
+        <span class="vehicle-cat-name">Legal & Documentation</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Shop">
-        <span class="cat-ic"><img src="img/icons/shop.svg" alt=""></span>
-        <span class="cat-name">Shop</span>
+      <button class="cat-tile" type="button" data-cat="Property Valuation & Inspection">
+        <span class="cat-ic-vehicle"><img src="img/icons/property_valuation_&_inspection.png" alt=""></span>
+        <span class="vehicle-cat-name">Property Valuation & Inspection</span>
+        <span class="cat-pill js-pill">For Sale</span>
+      </button>
+      
+      <!-- EXTRA categories (hidden until More) -->
+      <button class="cat-tile is-extra" type="button" data-cat="Property Sales & Marketing">
+        <span class="cat-ic-vehicle"><img src="img/icons/property_sales_&_marketing.png" alt=""></span>
+        <span class="vehicle-cat-name">Property Sales & Marketing</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Warehouse">
-        <span class="cat-ic"><img src="img/icons/warehouse.svg" alt=""></span>
-        <span class="cat-name">Warehouse</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Construction Materials">
+        <span class="cat-ic-vehicle"><img src="img/icons/construction_materials.png" alt=""></span>
+        <span class="vehicle-cat-name">Construction Materials</span>
+        <span class="cat-pill js-pill">For Sale</span>
+      </button>
+      
+      <button class="cat-tile is-extra" type="button" data-cat="Installations">
+        <span class="cat-ic-vehicle"><img src="img/icons/installations.png" alt=""></span>
+        <span class="vehicle-cat-name">Installations</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Factory">
-        <span class="cat-ic"><img src="img/icons/factory.svg" alt=""></span>
-        <span class="cat-name">Factory</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Interior & Finishing">
+        <span class="cat-ic-vehicle"><img src="img/icons/interior_&_finishing.png" alt=""></span>
+        <span class="vehicle-cat-name">Interior & Finishing</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Hotel / Guest House">
-        <span class="cat-ic"><img src="img/icons/hotel.svg" alt=""></span>
-        <span class="cat-name">Hotel</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Property Maintenance">
+        <span class="cat-ic-vehicle"><img src="img/icons/property_maintenance.png" alt=""></span>
+        <span class="vehicle-cat-name">Property Maintenance</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Resort">
-        <span class="cat-ic"><img src="img/icons/resort.svg" alt=""></span>
-        <span class="cat-name">Resort</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Cleaning Services">
+        <span class="cat-ic-vehicle"><img src="img/icons/cleaning_services.png" alt=""></span>
+        <span class="vehicle-cat-name">Cleaning Services</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Agricultural Land">
-        <span class="cat-ic"><img src="img/icons/agricultural.svg" alt=""></span>
-        <span class="cat-name">Agri Land</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Security Services">
+        <span class="cat-ic-vehicle"><img src="img/icons/security_services.png" alt=""></span>
+        <span class="vehicle-cat-name">Security Services</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
-      <button class="cat-tile is-extra" type="button" data-cat="Other">
-        <span class="cat-ic"><img src="img/icons/other_lands.svg" alt=""></span>
-        <span class="cat-name">Other</span>
+      <button class="cat-tile is-extra" type="button" data-cat="Moving & Relocation">
+        <span class="cat-ic-vehicle"><img src="img/icons/moving_&_relocation.png" alt=""></span>
+        <span class="vehicle-cat-name">Moving & Relocation</span>
         <span class="cat-pill js-pill">For Sale</span>
       </button>
 
@@ -247,7 +241,7 @@
           <!-- menu icon -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
         </span>
-        <span class="cat-name">More</span>
+        <span class="vehicle-cat-name">More</span>
         <span class="cat-pill">All</span>
       </button>
       
@@ -255,6 +249,88 @@
     </div>
   </div>
 </section>
+
+<!-- FILTER BUTTONS -->
+<div class="filter-group fsb">
+
+  <!-- House Type -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+      <span>House Type</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Type 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Type 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Type 3</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Machine -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+
+      <!-- ICON IMAGE -->
+      <img src="img/icons/excavator.png" class="btn-icon">
+
+      <span>Machine</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Machine 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Machine 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Machine 3</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Tools -->
+  <div class="filter-item">
+    <button class="filter-btn fcc">
+
+      <!-- ICON IMAGE -->
+      <img src="img/icons/construction_equipment.png" class="btn-icon">
+
+      <span>Tools</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <ul class="filter-dropdown">
+      <li>
+        <img src="img/dummy1.jpg">
+        <span>Tool 1</span>
+      </li>
+      <li>
+        <img src="img/dummy2.jpg">
+        <span>Tool 2</span>
+      </li>
+      <li>
+        <img src="img/dummy3.jpg">
+        <span>Tool 3</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
 
 <!-- ✅ ONE shared popup (shows near clicked category) -->
 <div class="catpop" id="catPop" aria-hidden="true">
@@ -266,9 +342,9 @@
   <div class="catpop-list" id="catPopList"></div>
 </div>
 
+
 <!-- Wanted Slider Row -->
 <div class="wanted-row">
-  <h3 class="want-title">Post Here Anything as you want</h3>
   <div class="wanted-bar" aria-label="Wanted vehicles">
     <!-- Always visible button -->
     <button class="wanted-btn" type="button">
@@ -278,31 +354,31 @@
     <!-- Right side slider -->
     <div class="wanted-slider" id="wantedSlider">
       <div class="wanted-track" id="wantedTrack">
-        <a href="my-wanted-property.html" class="wanted-card">
+        <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/1.png" alt="Van">
+            <img src="img/icons/construction_company.png" alt="Van">
           </span>
-          <span class="wanted-name">02 Story House - For rent</span>
+          <span class="wanted-name">Building Construction Company - For Project</span>
         </a>
 
-        <a href="my-wanted-property.html" class="wanted-card">
+        <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/land.svg" alt="Car">
+            <img src="img/icons/arhitecture-design.png" alt="Car">
           </span>
-          <span class="wanted-name">Land - For Sale</span>
+          <span class="wanted-name">Architecturer for House Design</span>
         </a>
 
-        <a href="my-wanted-property.html" class="wanted-card">
+        <a href="#" class="wanted-card">
           <span class="wanted-thumb">
-            <img src="img/icons/apartment.svg" alt="Bus">
+            <img src="img/icons/interior_&_finishing.png" alt="Bus">
           </span>
-          <span class="wanted-name">Apartment - For Sale</span>
+          <span class="wanted-name">Interior Design Company  - For Project</span>
         </a>
-
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- Location List  and Fillter-->
@@ -382,6 +458,7 @@
   </div>
 </section>
 
+
 <!-- 3) Min / Max price -->
 <section>
   <div class="filter-row price-row">
@@ -445,51 +522,46 @@
   </div>
 </section>
 
+<section class="cp">
+  <div class="w all-selections fsb">
+    <div class="single-selections">District</div>
+    <div class="single-selections">City</div>
+    <div class="single-selections">Main Category</div>
+    <div class="single-selections">Reson</div>
+    <div class="single-selections">Brand</div>
+    <div class="single-selections">Condition</div>
+    <div class="single-selections">Transmission</div>
+    <div class="single-selections">Min Price</div>
+    <div class="single-selections">Max Price</div>
+  </div>
+</section>
+
 <!-- post card -->
-<section class="cp cp-bottom">
-    
-  <!--card-->
-  <div class="w post-card-sketch">
+<section class="w ps-main-card-wrap">
 
-    <!-- 1) MEDIA AREA -->
-    <div class="pc-media">
-      <div class="pc-img">
+  <article class="service-main-card">
 
-        <!-- IMAGE -->
-        <img src="img/main_image.webp" alt="Ad Image" id="propertyImage">
-
-        <!-- VIDEO -->
-        <video id="propertyVideo" class="pc-video" controls>
-          <source src="video/property/property-01.mp4" type="video/mp4">
-        </video>
-
-        <!-- 360 VIEW -->
-        <iframe 
-          id="property360"
-          class="pc-360-view"
-          src="https://kuula.co/share/L4dn9/collection/7H3yk?logo=1&info=0&logosize=54&fs=1&vr=1&sd=1&initload=0&thumbs=1"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-      <!-- Top left: user -->
-      <div class="pc-user">
-        <a href="customer-profile.html" class="pc-avatar">
-          <img src="img/man.webp" alt="User">
+    <div class="service-card-top">
+      <div class="service-company">
+        <a href="customer-profile.php" class="service-avatar">
+          <img src="img/man.webp" alt="Company">
         </a>
 
-        <div class="pc-user-meta">
-          <a href="customer-profile.html" class="pc-user-name">John Doe</a>
-          <div class="pc-user-sub">
-            <span class="pc-dot"></span>
-            <span>Post ID 1234</span>
-            <span class="pc-sep">•</span>
-            <span>27 mins ago</span>
+        <div>
+          <div class="service-name-row">
+            <a href="customer-profile.php"><h3>BBest Construction</h3></a>
+            <span class="verified-badge"><span>✔</span>  Verified Dealer</span>
+          </div>
+
+          <div class="service-sub">
+            Industrial Company <span>★★★★</span>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="service-media">
+      <img src="img/property-services-3.webp" alt="Renovation Works">
 
       <!-- Bottom left: media icons + title -->
       <div class="pc-bottom-left">
@@ -508,82 +580,300 @@
             </svg>
           </span>
 
-          <!-- 360 -->
-          <span class="pc-360" id="view360Btn">360°</span>
         </div>
-      </div>
-
-      <!-- Bottom right: price -->
-      <div class="pc-price">
-        <span class="pc-price-label">LKR :</span>
-        <span class="pc-price-val">100M</span>
       </div>
     </div>
 
-    <!-- 2) DETAILS AREA -->
-    <div class="pc-body">
-      
-      <div class="fsb">
-        <div>
-          <div class="fsb">
-            <div><img src="img/location.png" alt="" class="location-image"></div>
-            <span class="pc-title">Moratuwa - Lakshapathiya</span>
-          </div>
-          <!-- row: Perch + bed + bath + sqf -->
-          <div class="purpose">
-            <span class="purpose-idea">For Sale</span>
-            <span>-</span>
-            <span class="purpose-idea">Land</span>
-          </div>
-          <div class="pc-stats">
-            <div class="pc-stat"><span class="pc-stat-lbl">Perch:</span> 10.95</div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M4 11V7a2 2 0 0 1 2-2h6a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v4h-2v-2H6v2H4v-6z"/>
-              </svg>
-              <span>3</span>
-            </div>
-    
-            <div class="pc-stat pc-stat-ic">
-              <svg viewBox="0 0 24 24" class="pc-mini-ic" aria-hidden="true">
-                <path d="M7 3h10v2H7V3zm-1 4h12v11a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7zm3 2v9h6V9H9z"/>
-              </svg>
-              <span>2</span>
-            </div>
-    
-            <div class="pc-stat"><span class="pc-stat-lbl">Sqf:</span> 1830</div>
-          </div>
-          
-          
-          <!-- Visit time row -->
-          <a href="single-property.html" class="fcc main-details">
-             <span class="main-details-btn">View Details</span>
-           </a>
-        </div>
-    
-          <!-- Loan box + apply -->
-          <div class="pc-loan-row">
-            <div class="pc-loan-box">
-              <div class="pc-loan-top">
-                <span class="pc-loan-lbl">Loan</span>
-    
-                <button class="pc-loan-chip is-active" type="button">
-                  <img src="img/icons/lolc.jpg" alt="">
-                </button>
-              </div>
-    
-              <div class="pc-loan-mid">
-                <div class="pc-loan-month">Monthly</div>
-                <div class="pc-loan-amt">Rs 245,000</div>
-              </div>
-    
-              <a class="pc-apply" href="apply-loan.html">APPLY NOW</a>
-            </div>
-          </div>
+    <div class="service-body">
+
+      <div class="service-title-row">
+        <h2>Renovation Works</h2>
+        <span class="available-badge">Available Now</span>
       </div>
 
-     
+      <div class="service-location">
+        <img src="img/location.png" alt="">
+        <span>Colombo - No 30, Wellawatha, DB Perera Mawatha</span>
+      </div>
+
+      <div class="service-title-small">Top Services</div>
+
+      <div class="service-tags">
+        <span>🏗 Construction</span>
+        <span>🎨 Painting</span>
+        <span>▣ Tiling</span>
+        <span>🔧 Renovating</span>
+        <span>🪵 Wood Work</span>
+        <span>⚡ Electrical</span>
+      </div>
+
+      <div class="service-stats">
+        <div>
+          <strong>12+</strong>
+          <span>Years Exp.</span>
+        </div>
+        <div>
+          <strong>4.8</strong>
+          <span>Rating</span>
+        </div>
+        <div>
+          <strong>Registered</strong>
+          <span>Company</span>
+        </div>
+        <div>
+          <strong>100K</strong>
+          <span>Projects</span>
+        </div>
+      </div>
+
+      <p class="service-desc">
+        We provide company-level construction, renovation, painting, tiling, wood work and electrical services with experienced professionals.
+      </p>
+
+      <div class="service-main-actions">
+        <a href="customer-profile.php">View Details</a>
+        <!-- =========================
+QUOTE BUTTON
+========================= -->
+
+<a href="#" class="quote-btn" id="openQuoteModal">
+  GET A QUOTE
+</a>
+
+
+<!-- =========================
+QUOTE MODAL
+========================= -->
+
+<div class="quote-modal" id="quoteModal">
+
+  <!-- overlay -->
+  <div class="quote-overlay" id="closeQuoteModal"></div>
+
+  <!-- modal box -->
+  <div class="quote-box">
+
+    <!-- header -->
+    <div class="quote-header">
+
+      <div class="quote-header-left">
+        <button type="button" class="quote-back-btn" id="quoteBackBtn">
+          ←
+        </button>
+
+        <div>
+          <h2>Request a Quote</h2>
+          <span>BBest Construction</span>
+        </div>
+      </div>
+
+      <div class="verified-tag">
+        ✔ Verified Dealer
+      </div>
+
+    </div>
+
+
+    <!-- COMPANY CARD -->
+    <div class="quote-company-card">
+
+      <div class="quote-company-top">
+
+        <div class="quote-company-avatar">
+          <img src="img/man.webp" alt="">
+        </div>
+
+        <div class="quote-company-info">
+          <h3>BBest Construction</h3>
+          <p>Industrial Company ★★★★★</p>
+        </div>
+
+      </div>
+
+      <div class="quote-stats">
+
+        <div>
+          <strong>12+</strong>
+          <span>Years Exp.</span>
+        </div>
+
+        <div>
+          <strong>4.8</strong>
+          <span>Rating</span>
+        </div>
+
+        <div>
+          <strong>100K+</strong>
+          <span>Projects</span>
+        </div>
+
+        <div>
+          <strong>Colombo</strong>
+          <span>Service Area</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <form class="quote-form">
+
+      <!-- services -->
+      <div class="quote-section">
+        <h3>1. Select Service</h3>
+
+        <div class="service-grid">
+
+          <button type="button" class="service-item">
+            🏗 Construction
+          </button>
+
+          <button type="button" class="service-item">
+            🎨 Painting
+          </button>
+
+          <button type="button" class="service-item">
+            ▣ Tiling
+          </button>
+
+          <button type="button" class="service-item active">
+            🔧 Renovating ✔
+          </button>
+
+          <button type="button" class="service-item">
+            🪵 Wood Work
+          </button>
+
+          <button type="button" class="service-item">
+            ⚡ Electrical
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- project details -->
+      <div class="quote-section">
+
+        <h3>2. Project Details</h3>
+
+        <div class="field-group">
+          <label>Project Title</label>
+          <input type="text" placeholder="e.g. House Renovation">
+        </div>
+
+        <div class="field-group">
+          <label>Property Type</label>
+
+          <select>
+            <option>Select Property Type</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Commercial</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Project Location</label>
+          <input type="text" placeholder="Enter full address">
+        </div>
+
+        <div class="field-group">
+          <label>Description</label>
+
+          <textarea placeholder="Describe your project, requirements and preferences..."></textarea>
+        </div>
+
+      </div>
+
+
+      <!-- upload -->
+      <div class="quote-section">
+
+        <h3>3. Add Photos (Optional)</h3>
+
+        <label class="upload-box">
+
+          <input type="file" multiple hidden>
+
+          <div>
+            <strong>📷 Upload Photos</strong>
+            <span>You can select up to 5 images</span>
+          </div>
+
+          <small>0/5</small>
+
+        </label>
+
+      </div>
+
+
+      <!-- budget -->
+      <div class="quote-section">
+
+        <h3>4. Budget & Timeline</h3>
+
+        <div class="budget-grid">
+
+          <div class="field-group">
+            <label>Estimated Budget</label>
+
+            <select>
+              <option>Select Budget Range</option>
+              <option>LKR 100,000</option>
+              <option>LKR 500,000</option>
+              <option>LKR 1,000,000</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Preferred Start Date</label>
+
+            <input type="date">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- contact -->
+      <div class="quote-section">
+
+        <h3>5. Contact Information</h3>
+
+        <div class="field-group">
+          <input type="text" placeholder="Your Full Name">
+        </div>
+
+        <div class="field-group">
+          <input type="tel" placeholder="Your Phone Number">
+        </div>
+
+        <div class="secure-note">
+          🔒 Your information will be kept secure and only shared with the service provider.
+        </div>
+
+      </div>
+
+
+      <!-- submit -->
+      <button type="submit" class="submit-quote-btn">
+        SUBMIT QUOTE REQUEST
+      </button>
+
+      <div class="submit-note">
+        ✔ You will receive responses from BBest Construction soon.
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+      </div>
 
       <!-- Action buttons -->
       <div class="fsb pc-actions">
@@ -617,7 +907,8 @@
       </div>
 
     </div>
-  </div>
+
+  </article>
 
 </section>
 
@@ -688,201 +979,145 @@
 </html>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* =========================
-     SEARCH DRAWER
-  ========================= */
-  const header = document.getElementById("topHeader");
-  const searchToggle = document.getElementById("searchToggle");
-  const searchDrawer = document.getElementById("searchDrawer");
-  const searchInput = document.getElementById("searchInput");
-  const searchGo = document.getElementById("searchGo");
+  // ===== Search drawer =====
+  const header = document.getElementById('topHeader');
+  const searchToggle = document.getElementById('searchToggle');
+  const searchDrawer = document.getElementById('searchDrawer');
+  const searchInput = document.getElementById('searchInput');
+  const searchGo = document.getElementById('searchGo');
 
   function openSearch(){
-    if(!header || !searchToggle || !searchDrawer || !searchInput) return;
-
-    header.classList.add("is-search-open");
-    searchToggle.setAttribute("aria-expanded", "true");
-    searchDrawer.setAttribute("aria-hidden", "false");
-
+    header.classList.add('is-search-open');
+    searchToggle.setAttribute('aria-expanded', 'true');
+    searchDrawer.setAttribute('aria-hidden', 'false');
     setTimeout(() => searchInput.focus(), 80);
   }
 
   function closeSearch(){
-    if(!header || !searchToggle || !searchDrawer) return;
-
-    header.classList.remove("is-search-open");
-    searchToggle.setAttribute("aria-expanded", "false");
-    searchDrawer.setAttribute("aria-hidden", "true");
+    header.classList.remove('is-search-open');
+    searchToggle.setAttribute('aria-expanded', 'false');
+    searchDrawer.setAttribute('aria-hidden', 'true');
   }
+
+  searchToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (header.classList.contains('is-search-open')) closeSearch();
+    else openSearch();
+  });
 
   function doSearch(){
-    if(!searchInput) return;
-
     const q = searchInput.value.trim();
     if(!q) return;
-
-    alert("Searching: " + q);
-    // window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+    alert('Searching: ' + q);
+    // window.location.href = `search.php?q=${encodeURIComponent(q)}`;
   }
 
-  if(searchToggle){
-    searchToggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-
-      if(header && header.classList.contains("is-search-open")){
-        closeSearch();
-      }else{
-        openSearch();
-      }
-    });
-  }
-
-  if(searchGo){
-    searchGo.addEventListener("click", doSearch);
-  }
-
-  if(searchInput){
-    searchInput.addEventListener("keydown", (e) => {
-      if(e.key === "Enter") doSearch();
-      if(e.key === "Escape") closeSearch();
-    });
-  }
-
-  document.addEventListener("click", (e) => {
-    if(!header) return;
-    if(!header.classList.contains("is-search-open")) return;
-
-    if(!header.contains(e.target)){
-      closeSearch();
-    }
+  searchGo.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Escape') closeSearch();
   });
 
+  // Close search when click outside
+  document.addEventListener('click', (e) => {
+    if (!header.classList.contains('is-search-open')) return;
+    if (!header.contains(e.target)) closeSearch();
+  });
 
+// ===== Language dropdown (REAL LETTERS) =====
+const langDd = document.getElementById("langDd");
+const langBtn = document.getElementById("langBtn");
+const langMenu = document.getElementById("langMenu");
+const langCurrent = document.getElementById("langCurrent");
 
-  /* =========================
-     LANGUAGE DROPDOWN
-  ========================= */
-  const langDd = document.getElementById("langDd");
-  const langBtn = document.getElementById("langBtn");
-  const langMenu = document.getElementById("langMenu");
-  const langCurrent = document.getElementById("langCurrent");
+// LANGUAGE DATA
+const LANGS = [
+  { code: "EN", label: "EN" },
+  { code: "SI", label: "සි" },
+  { code: "TA", label: "தமி" }
+];
 
-  const LANGS = [
-    { code: "EN", label: "EN", google: "en" },
-    { code: "SI", label: "සි", google: "si" },
-    { code: "TA", label: "தமி", google: "ta" }
-  ];
+// OPEN DROPDOWN
+function openLang() {
+  langDd.classList.add("is-open");
+  langBtn.setAttribute("aria-expanded", "true");
+  langMenu.setAttribute("aria-hidden", "false");
+}
 
-  function openLang(){
-    if(!langDd || !langBtn || !langMenu) return;
+// CLOSE DROPDOWN
+function closeLang() {
+  langDd.classList.remove("is-open");
+  langBtn.setAttribute("aria-expanded", "false");
+  langMenu.setAttribute("aria-hidden", "true");
+}
 
-    langDd.classList.add("is-open");
-    langBtn.setAttribute("aria-expanded", "true");
-    langMenu.setAttribute("aria-hidden", "false");
-  }
+// RENDER OTHER LANGUAGES
+function renderMenu(selectedCode) {
+  const others = LANGS.filter(l => l.code !== selectedCode);
 
-  function closeLang(){
-    if(!langDd || !langBtn || !langMenu) return;
-
-    langDd.classList.remove("is-open");
-    langBtn.setAttribute("aria-expanded", "false");
-    langMenu.setAttribute("aria-hidden", "true");
-  }
-
-  function renderMenu(selectedCode){
-    if(!langMenu) return;
-
-    const others = LANGS.filter(lang => lang.code !== selectedCode);
-
-    langMenu.innerHTML = others.map(lang => `
-      <button class="lang-item" type="button" data-lang="${lang.code}">
-        ${lang.label}
+  langMenu.innerHTML = others
+    .map(item => `
+      <button class="lang-item" type="button" data-lang="${item.code}">
+        ${item.label}
       </button>
-    `).join("");
+    `)
+    .join("");
 
-    langMenu.querySelectorAll(".lang-item").forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        setLanguage(btn.dataset.lang);
-        closeLang();
-      });
-    });
-  }
-
-  function setLanguage(code){
-    const chosen = LANGS.find(lang => lang.code === code) || LANGS[0];
-
-    if(langCurrent){
-      langCurrent.textContent = chosen.label;
-    }
-
-    localStorage.setItem("site_lang", chosen.code);
-    renderMenu(chosen.code);
-
-    changeGoogleLanguage(chosen.google);
-  }
-
-  function changeGoogleLanguage(lang){
-    let tries = 0;
-
-    const interval = setInterval(() => {
-      const select = document.querySelector(".goog-te-combo");
-
-      tries++;
-
-      if(select){
-        select.value = lang;
-        select.dispatchEvent(new Event("change"));
-        clearInterval(interval);
-      }
-
-      if(tries > 20){
-        clearInterval(interval);
-      }
-    }, 300);
-  }
-
-  if(langBtn){
-    langBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-
-      if(langDd && langDd.classList.contains("is-open")){
-        closeLang();
-      }else{
-        openLang();
-      }
-    });
-  }
-
-  document.addEventListener("click", () => closeLang());
-
-  document.addEventListener("keydown", (e) => {
-    if(e.key === "Escape"){
-      closeSearch();
+  // Add click events
+  document.querySelectorAll(".lang-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
       closeLang();
-    }
+    });
   });
+}
 
-  const savedLang = localStorage.getItem("site_lang") || "EN";
-  setLanguage(savedLang);
+// SET ACTIVE LANGUAGE
+function setLanguage(code) {
+  const chosen = LANGS.find(l => l.code === code);
 
+  // SHOW REAL LETTERS IN BUTTON
+  langCurrent.textContent = chosen.label;
+
+  // SAVE
+  localStorage.setItem("site_lang", code);
+
+  // RENDER THE OTHER TWO
+  renderMenu(code);
+}
+
+// Toggle dropdown
+langBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langDd.classList.contains("is-open") ? closeLang() : openLang();
 });
+
+// Close when click outside
+document.addEventListener("click", () => closeLang());
+
+// ESC to close
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLang();
+});
+
+// INIT — DEFAULT EN
+const saved = localStorage.getItem("site_lang") || "EN";
+setLanguage(saved);
+
+
 </script>
 
 
 
 <script>
 /* =========================
-   Category bar + More + pill slideshow (SMOOTH SLIDE) + popup (3 tabs)
-   ✅ Updated: different subitems per category
+   Tick-mark filter subcategory popup
 ========================= */
 
 /* -------------------------
-   ✅ Smooth sliding pill text
+   Smooth sliding pill text
 ------------------------- */
-const PILL_ROTATE = ["For Sale", "For Rent", "For Lease"];
+const PILL_ROTATE = ["For Sale", "For Rent", "For Hire", "Import Only"];
 const pillEls = Array.from(document.querySelectorAll(".js-pill"));
 let pillIndex = 0;
 
@@ -909,7 +1144,6 @@ function rotatePillsSmooth(){
 }
 setInterval(rotatePillsSmooth, 2000);
 
-
 /* -------------------------
    More expand/collapse
 ------------------------- */
@@ -920,10 +1154,14 @@ catMoreBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   const expanded = catBar.classList.toggle("is-expanded");
   catMoreBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
-  catMoreBtn.querySelector(".cat-name").textContent = expanded ? "Less" : "More";
-  catMoreBtn.querySelector(".cat-pill").textContent = expanded ? "Hide" : "All";
-});
 
+  // FIX: your markup uses .vehicle-cat-name (not .cat-name)
+  const nameEl = catMoreBtn.querySelector(".vehicle-cat-name");
+  if (nameEl) nameEl.textContent = expanded ? "Less" : "More";
+
+  const pillEl = catMoreBtn.querySelector(".cat-pill");
+  if (pillEl) pillEl.textContent = expanded ? "Hide" : "All";
+});
 
 /* -------------------------
    Popup elements
@@ -934,396 +1172,242 @@ const catPopTabs = document.getElementById("catPopTabs");
 const catPopList = document.getElementById("catPopList");
 const catPopClose = document.getElementById("catPopClose");
 
-const TABS = ["For Sale", "For Rent", "For Lease"];
+const TABS = ["For Sale", "For Rent", "For Hire", "Import Only"];
 
 let activeCat = "";
 let activeTab = "For Sale";
 
 /* -------------------------
-   ✅ Different subcategories per main category
-   (10 items each tab, and each tab can be different too)
+   Your subcategory dataset
+   IMPORTANT: "Car" must also be tab-based like others
 ------------------------- */
-// ✅ Full subcategory dataset (as you requested) — use this as SUBCATS
+const VEHICLE_TABS = ["For Sale", "For Rent", "For Hire", "Import Only"];
+
+function sameForAllTabs(list){
+  return {
+    "For Sale": list,
+    "For Rent": list,
+    "For Hire": list,
+    "Import Only": list,
+  };
+}
+
 const SUBCATS = {
-  "House": {
-    "For Sale": [
-      "Single Storey House",
-      "Two Storey House",
-      "Three Storey House",
-      "Luxury House",
-      "Modern House",
-      "Newly Built House",
-      "Used / Pre-owned House",
-      "Old House",
-      "House with Land",
-      "House with Shop / Commercial Front",
-      "House with Separate Annex",
-      "House (Incomplete / Under Construction)",
-      "House (Facing Main Road)",
-      "House (Corner Plot)",
-      "Gated Community House",
-      "Townhouse"
-    ],
-    "For Rent": [
-      "Full House",
-      "Family House",
-      "Furnished House",
-      "Semi Furnished House",
-      "Unfurnished House",
-      "Short Term House (Daily / Weekly)",
-      "Long Term House (Monthly / Yearly)",
-      "Upper Floor House",
-      "Downstairs / Ground Floor House",
-      "Shared House (Shared Kitchen/Facilities)"
-    ],
-    "For Lease": [
-      "House Lease (Residential)",
-      "House Lease (Commercial Use)",
-      "Long Term Lease House (5–30 Years)"
-    ]
-  },
 
-  "Land": {
-    "For Sale": [
-      "Residential Land",
-      "Commercial Land",
-      "Industrial Land",
-      "Agricultural Land",
-      "Bare Land / Plot",
-      "Subdivided Plot / Lot",
-      "Road Front Land",
-      "Main Road Facing Land",
-      "Corner Land",
-      "Land with Building / Old House",
-      "Beachfront Land",
-      "River / Lake Side Land",
-      "Hilltop / Scenic Land",
-      "Investment Land"
-    ],
-    "For Rent": [
-      "Land for Temporary Use",
-      "Land for Parking",
-      "Land for Storage / Yard",
-      "Land for Events / Functions"
-    ],
-    "For Lease": [
-      "Land Lease (Residential)",
-      "Land Lease (Commercial)",
-      "Land Lease (Industrial)",
-      "Land Lease (Agricultural / Cultivation)",
-      "Long Term Land Lease (5–99 Years)"
-    ]
-  },
+  "Construction Services": sameForAllTabs([
+  "House Construction",
+  "Commercial Building Construction",
+  "Civil Infrastructure (Road / Drainage / Bridge)",
+  "Renovation & Remodeling",
+  "Roofing Contractors",
+  "Masonry / Concrete Contractors",
+  "Flooring & Tiling Contractors",
+  "Painting & Finishing Contractors",
+  "Ceiling / Partition Contractors",
+  "Aluminium / Glass Contractors",
+  "Carpentry / Woodwork Contractors",
+  "Metal / Welding Contractors",
+  "Boundary Wall / Gate Contractors",
+  "Waterproofing Contractors",
+  "Demolition Contractors"
+  ]),
 
-  "Apartment / Condominium": {
-    "For Sale": [
-      "Studio Apartment",
-      "1 Bedroom Apartment",
-      "2 Bedroom Apartment",
-      "3 Bedroom Apartment",
-      "4+ Bedroom Apartment",
-      "Condominium Unit",
-      "Luxury Condominium",
-      "Penthouse",
-      "Duplex Apartment",
-      "Serviced Apartment (Sale)"
-    ],
-    "For Rent": [
-      "Studio (Rent)",
-      "1 Bedroom (Rent)",
-      "2 Bedroom (Rent)",
-      "3 Bedroom (Rent)",
-      "Furnished Apartment",
-      "Semi Furnished Apartment",
-      "Unfurnished Apartment",
-      "Serviced Apartment (Rent)",
-      "Short Stay Apartment (Daily/Weekly)",
-      "Long Term Apartment (Monthly/Yearly)"
-    ],
-    "For Lease": [
-      "Apartment Lease (Long Term)",
-      "Condominium Lease (Long Term)",
-      "Corporate Lease Apartment",
-      "Serviced Apartment Lease"
-    ]
-  },
+  "Architecture & Design": sameForAllTabs([
+    "SUV",
+    "Jeep",
+    "Crossover SUV",
+    "4WD Vehicles",
+    "Off-Road Vehicles",
+    "Luxury SUVs"
+  ]),
 
-  "Commercial Property": {
-    "For Sale": [
-      "Commercial Building",
-      "Office Building",
-      "Shop Building",
-      "Showroom Building",
-      "Mixed-Use Building",
-      "Commercial Land with Building",
-      "Supermarket / Retail Space (Building)",
-      "Restaurant / Cafe Property",
-      "Hotel Building (Small)",
-      "Business Premises (General)"
-    ],
-    "For Rent": [
-      "Office Space",
-      "Co-working / Shared Office",
-      "Shop / Retail Space",
-      "Showroom",
-      "Restaurant / Cafe Space",
-      "Commercial Hall / Function Space",
-      "Bank / Finance Suitable Space",
-      "Medical / Clinic Space",
-      "Salon / Spa Space",
-      "Ground Floor Commercial",
-      "Upper Floor Commercial"
-    ],
-    "For Lease": [
-      "Commercial Building Lease",
-      "Long Term Shop Lease",
-      "Long Term Office Lease",
-      "Showroom Lease",
-      "Restaurant Lease",
-      "Business Lease (Turnkey Space)"
-    ]
-  },
+  "Survey & Land Services": sameForAllTabs([
+    "Mini Van",
+    "Passenger Van",
+    "Cargo Van",
+    "Panel Van",
+    "High Roof Van",
+    "Luxury Van",
+    "Crew Van"
+  ]),
 
-  "Industrial Property": {
-    "For Sale": [
-      "Factory",
-      "Warehouse",
-      "Industrial Building",
-      "Workshop",
-      "Production / Manufacturing Unit",
-      "Industrial Yard / Open Storage Yard",
-      "Industrial Land (with Utilities)",
-      "Cold Room / Cold Storage Facility"
-    ],
-    "For Rent": [
-      "Warehouse Space",
-      "Factory Space",
-      "Workshop Space",
-      "Industrial Yard (Rent)",
-      "Cold Storage (Rent)"
-    ],
-    "For Lease": [
-      "Factory Lease (Long Term)",
-      "Warehouse Lease (Long Term)",
-      "Industrial Yard Lease",
-      "Industrial Land Lease",
-      "Manufacturing Unit Lease"
-    ]
-  },
+   "Legal & Documentation": sameForAllTabs([
+    "Motorbike",
+    "Scooter",
+    "Electric Bike",
+    "Heavy Bike",
+    "Dirt Bike",
+    "ATV / Quad Bike"
+  ]),
 
-  "Villa": {
-    "For Sale": [
-      "Luxury Villa",
-      "Beach Villa",
-      "Lake / River Side Villa",
-      "Garden Villa",
-      "Holiday Villa",
-      "Private Pool Villa",
-      "Gated Community Villa"
-    ],
-    "For Rent": [
-      "Holiday Villa (Daily)",
-      "Short Term Villa (Daily/Weekly)",
-      "Long Term Villa (Monthly/Yearly)",
-      "Furnished Villa",
-      "Pool Villa (Rent)",
-      "Beach Villa (Rent)"
-    ],
-    "For Lease": [
-      "Villa Lease (Long Term)",
-      "Holiday Villa Lease (Seasonal/Long)"
-    ]
-  },
+  "Property Valuation & Inspection": sameForAllTabs([
+    "Passenger Three Wheeler",
+    "Cargo Three Wheeler",
+    "Electric Three Wheeler"
+  ]),
 
-  "Hotel / Resort": {
-    "For Sale": [
-      "Hotel",
-      "Resort",
-      "Boutique Hotel",
-      "Guest House",
-      "Villa Hotel / Villa Collection",
-      "Eco Resort / Eco Lodge",
-      "Beach Resort",
-      "Apartment Hotel / Serviced Residence",
-      "Tourism Property (Operating Business)"
-    ],
-    "For Rent": [
-      "Hotel (Rent Basis)",
-      "Restaurant Area (Hotel)",
-      "Banquet / Hall (Hotel)",
-      "Rooms / Floors (Rent)",
-      "Tourism Property (Rent)"
-    ],
-    "For Lease": [
-      "Full Hotel Lease",
-      "Resort Lease",
-      "Guest House Lease",
-      "Boutique Hotel Lease",
-      "Management Lease / Operator Lease",
-      "Restaurant Lease (Within Hotel/Resort)",
-      "Banquet Hall Lease"
-    ]
-  },
+ 
 
-  "Annex / Portion": {
-    "For Sale": [
-      "Annex (Separate Unit)",
-      "Portion (Upper Floor)",
-      "Portion (Downstairs)",
-      "Duplex Portion",
-      "House with Separate Portion (Deed/Unit)"
-    ],
-    "For Rent": [
-      "Annex (Family)",
-      "Annex (Single)",
-      "Furnished Annex",
-      "Semi Furnished Annex",
-      "Unfurnished Annex",
-      "Portion (Upper Floor) Rent",
-      "Portion (Downstairs) Rent",
-      "Short Term Annex (Daily/Weekly)",
-      "Long Term Annex (Monthly/Yearly)"
-    ],
-    "For Lease": [
-      "Annex Lease (Long Term)",
-      "Portion Lease (Long Term)"
-    ]
-  },
+  "Property Sales & Marketing": sameForAllTabs([
+    "Private Bus",
+    "School Bus",
+    "Staff Bus",
+    "Luxury Bus / Coach",
+    "Mini Bus"
+  ]),
 
-  "Boarding / Hostel": {
-    "For Sale": [
-      "Hostel Building",
-      "Boarding House",
-      "Staff Quarters Building",
-      "Student Accommodation Building"
-    ],
-    "For Rent": [
-      "Boys Hostel",
-      "Girls Hostel",
-      "Mixed Hostel",
-      "Student Boarding",
-      "Worker Hostel",
-      "Staff Accommodation",
-      "Single Rooms (Boarding)",
-      "Shared Rooms (Boarding)",
-      "Bed Space / Sharing Basis"
-    ],
-    "For Lease": [
-      "Hostel Lease (Building)",
-      "Boarding House Lease",
-      "Staff Quarters Lease",
-      "Long Term Accommodation Lease"
-    ]
-  },
+  "Construction Materials": sameForAllTabs([
+    "Light Truck",
+    "Medium Truck",
+    "Heavy Truck",
+    "Lorry",
+    "Box Truck",
+    "Flatbed Truck",
+    "Tip Lorry",
+    "Container Truck"
+  ]),
 
-  "Agricultural Property": {
-    "For Sale": [
-      "Paddy Field",
-      "Coconut Land",
-      "Tea Estate",
-      "Rubber Estate",
-      "Cinnamon Land",
-      "Pepper / Spice Land",
-      "Fruit Farm / Orchard",
-      "Farm Land (General)",
-      "Plantation Land (General)",
-      "Agricultural Land with House",
-      "Agricultural Land with Well/Water Source"
-    ],
-    "For Rent": [
-      "Cultivation Land (Short Term)",
-      "Farm Land (Seasonal Rent)",
-      "Agricultural Plot (Rent)"
-    ],
-    "For Lease": [
-      "Agricultural Land Lease",
-      "Paddy Field Lease",
-      "Plantation Lease (Tea/Rubber/Coconut)",
-      "Farm Lease (Long Term)",
-      "Orchard Lease",
-      "Livestock / Farm Yard Lease"
-    ]
-  },
+  
 
-  "New Development / Project": {
-    "For Sale": [
-      "Apartment Project Units",
-      "Condominium Project Units",
-      "Housing Scheme Units",
-      "Townhouse Project Units",
-      "Villa Project Units",
-      "Land Development Plots (Project)",
-      "Off-Plan Units",
-      "Ready-to-Move Units"
-    ],
-    "For Rent": [
-      "Project Rental Units",
-      "Brand-New Unit for Rent",
-      "Serviced Residence (Project) Rent"
-    ],
-    "For Lease": [
-      "Project Lease Units (Long Term)",
-      "Commercial Units in Project (Lease)",
-      "Shop/Office Units in Project (Lease)",
-      "Bulk Lease (Multiple Units)"
-    ]
-  }
+  "Installations": sameForAllTabs([
+    "Single Cab",
+    "Double Cab",
+    "Pickup Truck",
+    "Utility Vehicle"
+  ]),
+
+  "Interior & Finishing": sameForAllTabs([
+    "Tractor",
+    "Power Tiller",
+    "Harvesters",
+    "Agricultural Machinery"
+  ]),
+
+  "Property Maintenance": sameForAllTabs([
+    "JCB / Backhoe Loader",
+    "Excavator",
+    "Bulldozer",
+    "Roller",
+    "Grader",
+    "Concrete Mixer"
+  ]),
+
+  "Cleaning Services": sameForAllTabs([
+    "Forklift",
+    "Crane",
+    "Boom Lift",
+    "Scissor Lift"
+  ]),
+
+  "Security Services": sameForAllTabs([
+    "Ambulance",
+    "Fire Truck",
+    "Hearse (Funeral Vehicle)",
+    "Armored Vehicle",
+    "Mobile Shop Vehicle",
+    "Food Truck"
+  ]),
+
+  "Moving & Relocation": sameForAllTabs([
+    "Boats",
+    "Speed Boats",
+    "Jet Skis",
+    "Trailers",
+    "Vehicle Carriers"
+  ])
+
 };
 
-/* ✅ Helper to safely get items per category + tab */
-function getItemsFor(activeCat, activeTab){
-  const catObj = SUBCATS[activeCat];
-  if(catObj && Array.isArray(catObj[activeTab]) && catObj[activeTab].length){
-    return catObj[activeTab]; // return all items (not limited)
-  }
-  return []; // if missing
+/* -------------------------
+   ✅ Selected filters storage
+   Structure: selected[cat][tab] = Set()
+------------------------- */
+const selected = Object.create(null);
+
+function ensureStore(cat, tab){
+  if(!selected[cat]) selected[cat] = Object.create(null);
+  if(!selected[cat][tab]) selected[cat][tab] = new Set();
+  return selected[cat][tab];
 }
 
-
-// fallback if category not found
-function makeDummyItems(tabName){
-  return Array.from({length: 10}).map((_, i) => `${tabName} - Item ${i+1}`);
+/* -------------------------
+   ✅ Get items for current Category + Tab
+------------------------- */
+function getItemsFor(cat, tab){
+  const catObj = SUBCATS[cat];
+  if(!catObj) return [];
+  const arr = catObj[tab];
+  return Array.isArray(arr) ? arr : [];
 }
 
-// ✅ NEW: get subitems by selected category + tab
-function getItemsFor(activeCat, activeTab){
-  const catObj = SUBCATS[activeCat];
-  if(catObj && catObj[activeTab] && catObj[activeTab].length){
-    return catObj[activeTab].slice(0, 10);
-  }
-  return makeDummyItems(activeTab);
-}
-
-// Render tabs + list
+/* -------------------------
+   Render tabs + tick list
+------------------------- */
 function renderPopup(){
+  // Tabs
   catPopTabs.innerHTML = "";
   TABS.forEach(t => {
     const b = document.createElement("button");
     b.type = "button";
     b.className = "cattab" + (t === activeTab ? " is-active" : "");
     b.textContent = t;
+
     b.addEventListener("click", (e) => {
       e.stopPropagation();
       activeTab = t;
       renderPopup();
     });
+
     catPopTabs.appendChild(b);
   });
 
+  // List with tick marks
   catPopList.innerHTML = "";
-  getItemsFor(activeCat, activeTab).forEach(txt => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "catpop-item";
-    btn.textContent = txt;
-    btn.addEventListener("click", () => {
-      console.log("Selected:", activeCat, activeTab, txt);
-      closePop();
+
+  const items = getItemsFor(activeCat, activeTab);
+  const store = ensureStore(activeCat, activeTab);
+
+  if(!items.length){
+    const empty = document.createElement("div");
+    empty.style.padding = "10px";
+    empty.textContent = "No subcategories.";
+    catPopList.appendChild(empty);
+    return;
+  }
+
+  items.forEach((txt, i) => {
+    const id = `sc_${activeCat}_${activeTab}_${i}`.replace(/\s+/g, "_").replace(/[^\w-]/g, "");
+
+    // label wrapper (clickable)
+    const label = document.createElement("label");
+    label.className = "catpop-check"; // you can style if you want
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = txt;
+    input.checked = store.has(txt);
+
+    input.addEventListener("change", () => {
+      if(input.checked) store.add(txt);
+      else store.delete(txt);
+
+      // ✅ you can use this to filter your results
+      console.log("Selected filters:", getSelectedFilters());
     });
-    catPopList.appendChild(btn);
+
+    const span = document.createElement("span");
+    span.className = "catpop-check-text";
+    span.textContent = txt;
+
+    label.appendChild(span);
+    label.appendChild(input);
+    catPopList.appendChild(label);
   });
 }
 
+/* -------------------------
+   Open / close popup
+------------------------- */
 function openPopForButton(btn){
   activeCat = btn.dataset.cat || "Category";
   activeTab = "For Sale";
@@ -1356,6 +1440,7 @@ function closePop(){
   catPop.setAttribute("aria-hidden", "true");
 }
 
+// Category click
 catBar.addEventListener("click", (e) => {
   const btn = e.target.closest(".cat-tile");
   if(!btn) return;
@@ -1365,17 +1450,18 @@ catBar.addEventListener("click", (e) => {
     closePop();
     return;
   }
-
   openPopForButton(btn);
 });
 
 catPopClose.addEventListener("click", closePop);
+
 document.addEventListener("click", (e) => {
   if(!catPop.classList.contains("open")) return;
   if(catPop.contains(e.target)) return;
   if(catBar.contains(e.target)) return;
   closePop();
 });
+
 document.addEventListener("keydown", (e) => {
   if(e.key === "Escape") closePop();
 });
@@ -1383,9 +1469,31 @@ document.addEventListener("keydown", (e) => {
 window.addEventListener("resize", () => {
   if(catPop.classList.contains("open")) closePop();
 });
+
 window.addEventListener("scroll", () => {
   if(catPop.classList.contains("open")) closePop();
 }, {passive:true});
+
+/* -------------------------
+   ✅ Helper: get all selected filters (for search)
+------------------------- */
+function getSelectedFilters(){
+  // returns array of {cat, tab, items:[...]}
+  const out = [];
+  Object.keys(selected).forEach(cat => {
+    Object.keys(selected[cat]).forEach(tab => {
+      const items = Array.from(selected[cat][tab]);
+      if(items.length) out.push({ cat, tab, items });
+    });
+  });
+  return out;
+}
+
+// Optional: clear filters for current category+tab
+function clearCurrentFilters(){
+  ensureStore(activeCat, activeTab).clear();
+  renderPopup();
+}
 </script>
 
 
@@ -1560,10 +1668,6 @@ locSearch.addEventListener("input", () => {
 
 /* Init */
 renderAccordion();
-
-
-
-
 
 
 /* =========================
@@ -2062,35 +2166,27 @@ window.addEventListener("scroll", () => {
 
 <script>
   const photoBtn = document.getElementById("photoBtn");
-const videoBtn = document.getElementById("videoBtn");
-const view360Btn = document.getElementById("view360Btn");
+  const videoBtn = document.getElementById("videoBtn");
 
-const image = document.getElementById("propertyImage");
-const video = document.getElementById("propertyVideo");
-const view360 = document.getElementById("property360");
+  const image = document.getElementById("propertyImage");
+  const video = document.getElementById("propertyVideo");
 
-function hideAll(){
-  image.style.display="none";
-  video.style.display="none";
-  view360.style.display="none";
-  video.pause();
-}
+  function hideAll(){
+    image.style.display="none";
+    video.style.display="none";
+    video.pause();
+  }
 
-photoBtn.addEventListener("click",function(){
-  hideAll();
-  image.style.display="block";
-});
+  photoBtn.addEventListener("click",function(){
+    hideAll();
+    image.style.display="block";
+  });
 
-videoBtn.addEventListener("click",function(){
-  hideAll();
-  video.style.display="block";
-  video.play();
-});
-
-view360Btn.addEventListener("click",function(){
-  hideAll();
-  view360.style.display="block";
-});
+  videoBtn.addEventListener("click",function(){
+    hideAll();
+    video.style.display="block";
+    video.play();
+  });
 </script>
 
 <script>
@@ -2140,72 +2236,97 @@ if (wantedSlider && wantedTrack) {
 }
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const wantedBtn = document.querySelector(".wanted-btn");
-
-    if (wantedBtn) {
-      wantedBtn.addEventListener("click", function () {
-        window.location.href = "wanted-property.html";
-      });
-    }
-  });
-</script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const wantedSlider = document.getElementById("wantedSlider");
+const filters = document.querySelectorAll(".filter-item");
 
-  if (wantedSlider) {
-    wantedSlider.addEventListener("click", function () {
-      window.location.href = "wanted-property.html";
+filters.forEach(item => {
+  const btn = item.querySelector(".filter-btn");
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // close others
+    filters.forEach(i => {
+      if(i !== item) i.classList.remove("active");
     });
-  }
+
+    item.classList.toggle("active");
+  });
+});
+
+// close on outside click
+document.addEventListener("click", () => {
+  filters.forEach(i => i.classList.remove("active"));
 });
 </script>
 
-
-
 <script>
- const loanSlides = [
-  { img: "img/icons/lolc.jpg", price: "Rs 245,000" },
-  { img: "img/icons/boc.png", price: "Rs 185,000" }
-];
 
-let currentLoanSlide = 0;
+const quoteModal = document.getElementById("quoteModal");
 
-const loanImg = document.querySelector(".pc-loan-chip img");
-const loanAmount = document.querySelector(".pc-loan-amt");
+const openQuoteBtn = document.getElementById("openQuoteModal");
 
-function showLoanSlide(index) {
-  loanImg.style.transform = "translateY(-20px)";
-  loanImg.style.opacity = "0";
+const closeQuoteModal = document.getElementById("closeQuoteModal");
 
-  loanAmount.style.transform = "translateY(-20px)";
-  loanAmount.style.opacity = "0";
+const quoteBackBtn = document.getElementById("quoteBackBtn");
 
-  setTimeout(() => {
-    loanImg.src = loanSlides[index].img;
-    loanAmount.textContent = loanSlides[index].price;
 
-    loanImg.style.transform = "translateY(20px)";
-    loanAmount.style.transform = "translateY(20px)";
+// OPEN
+openQuoteBtn.addEventListener("click", function(e){
 
-    setTimeout(() => {
-      loanImg.style.transform = "translateY(0)";
-      loanImg.style.opacity = "1";
+  e.preventDefault();
 
-      loanAmount.style.transform = "translateY(0)";
-      loanAmount.style.opacity = "1";
-    }, 50);
-  }, 300);
+  quoteModal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+
+});
+
+
+// CLOSE
+function closeQuote(){
+
+  quoteModal.classList.remove("show");
+
+  document.body.style.overflow = "";
+
 }
 
-loanImg.style.transition = "all 0.4s ease";
-loanAmount.style.transition = "all 0.4s ease";
+closeQuoteModal.addEventListener("click", closeQuote);
 
-setInterval(() => {
-  currentLoanSlide = (currentLoanSlide + 1) % loanSlides.length;
-  showLoanSlide(currentLoanSlide);
-}, 3000);
+quoteBackBtn.addEventListener("click", closeQuote);
+
+
+// ESC CLOSE
+document.addEventListener("keydown", function(e){
+
+  if(e.key === "Escape"){
+
+    closeQuote();
+
+  }
+
+});
+
+
+// SERVICE SELECT
+const serviceItems = document.querySelectorAll(".service-item");
+
+serviceItems.forEach(item => {
+
+  item.addEventListener("click", function(){
+
+    serviceItems.forEach(btn => {
+
+      btn.classList.remove("active");
+
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
+
 </script>

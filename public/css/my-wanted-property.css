@@ -367,7 +367,10 @@ a {
 .responses-title {
   margin-top:48px;
 }
-
+.za1 {
+  display: flex;
+  align-items: center;
+}
 .response-card {
   padding:30px 23px 18px;
 }
@@ -2389,6 +2392,12 @@ svg {
 /* =========================
    POST CARD (SKETCH STYLE)
 ========================= */
+.pc-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .post-card-sketch{
   border: 1px solid var(--dark-blue);
@@ -2699,8 +2708,12 @@ svg {
 }
 @media (max-width: 400px) {
   .pc-title {
-    font-size: 14px;
+    font-size: 18px;
   }
+}
+
+.pc-details > .fa {
+  display: flex;
 }
 
 :root{

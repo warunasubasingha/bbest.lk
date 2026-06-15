@@ -772,6 +772,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", () => {
     menu.classList.remove("is-open");
   });
+
+  const logoutBtn = menu.querySelector(".logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      window.location.href = "logout.php";
+    });
+  }
 });
 </script>
 
@@ -783,7 +790,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.referrer !== "") {
       window.history.back(); // go to previous page
     } else {
-      window.location.href = "index.html"; // fallback if no history
+      window.location.href = "index.php"; // fallback if no history
     }
   });
 });
