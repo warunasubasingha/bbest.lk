@@ -5,6 +5,7 @@
 
 session_start();
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/lang.php';
 
 // Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
@@ -178,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register - BBest.lk</title>
+<title><?= htmlspecialchars(t('register_account')) ?> - BBest.lk</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 body {

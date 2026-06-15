@@ -1,5 +1,6 @@
+<?php require_once __DIR__ . '/../includes/lang.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars(html_lang_attr()) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/customer-profile.css">
-    <title>Customer Profile</title>
+    <title><?= htmlspecialchars(t('customer_profile')) ?></title>
 </head>
 <body>
   <div class="agent-cover-card">
@@ -27,7 +28,7 @@
       <div class="agent-info">
         <div class="agent-verify">
           <span>✔</span>
-           Verified Player
+           <?= htmlspecialchars(t('verified_player')) ?>
         </div>
 
         <h3>B Best Property</h3>
@@ -69,23 +70,23 @@
   </div>
 
   <div class="menu-grid">
-    <button>Orders</button>
-    <button>Offers</button>
-    <button>Quotation</button>
-    <button>Ad Center</button>
-    <button>Edit Profile</button>
-    <button>Payments</button>
-    <button>Verification Center</button>
-    <button>Buy List</button>
+    <button><?= htmlspecialchars(t('orders')) ?></button>
+    <button><?= htmlspecialchars(t('offers')) ?></button>
+    <button><?= htmlspecialchars(t('quotation')) ?></button>
+    <button><?= htmlspecialchars(t('ad_center')) ?></button>
+    <button><?= htmlspecialchars(t('edit_profile')) ?></button>
+    <button><?= htmlspecialchars(t('payments')) ?></button>
+    <button><?= htmlspecialchars(t('verification_center')) ?></button>
+    <button><?= htmlspecialchars(t('buy_list')) ?></button>
   </div>
 
   <div class="menu-list">
-    <button>Help & Support <span>›</span></button>
-    <button>Security <span>›</span></button>
-    <button>Settings <span>›</span></button>
+    <button><?= htmlspecialchars(t('help_support')) ?> <span>›</span></button>
+    <button><?= htmlspecialchars(t('security')) ?> <span>›</span></button>
+    <button><?= htmlspecialchars(t('settings')) ?> <span>›</span></button>
   </div>
 
-  <button class="logout-btn">Logout</button>
+  <button class="logout-btn"><?= htmlspecialchars(t('logout')) ?></button>
 </div>
 
 

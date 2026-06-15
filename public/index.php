@@ -427,14 +427,14 @@ if (isset($_SESSION['user_id'])) {
       <div class="filter-row">
         <div class="fsb">
           <button class="loc-btn" id="locOpen" type="button" aria-expanded="false">
-            <span class="loc-title">Location</span>
-            <span class="loc-value" id="locValue">Select District & City</span>
+            <span class="loc-title"><?= htmlspecialchars(t('location')) ?></span>
+            <span class="loc-value" id="locValue"><?= htmlspecialchars(t('select_district_city')) ?></span>
             <span class="loc-caret">▾</span>
           </button>
 
           <button class="filter-bottum">
             <img src="img/icons/23.png" alt="" class="filter-icon">
-            <span>Filter</span>
+            <span><?= htmlspecialchars(t('filter')) ?></span>
           </button>
         </div>
 
@@ -443,7 +443,7 @@ if (isset($_SESSION['user_id'])) {
   
           <!-- Search input -->
           <div class="fcc loc-search">
-            <input type="text" id="locSearch" placeholder="Search district or city..." autocomplete="off">
+            <input type="text" id="locSearch" placeholder="<?= htmlspecialchars(t('search_district_city')) ?>" autocomplete="off">
           </div>
 
           <ul class="dist-list" id="distList"></ul>
@@ -498,8 +498,8 @@ if (isset($_SESSION['user_id'])) {
 <!-- 3) Min / Max price -->
 <section>
   <div class="filter-row price-row">
-    <button class="price-field" id="minPriceBtn" type="button">
-      <span class="price-label">Min Price</span>
+        <button class="price-field" id="minPriceBtn" type="button">
+      <span class="price-label"><?= htmlspecialchars(t('min_price') ?? 'Min Price') ?></span>
       <span class="price-val" id="minPriceText">Any</span>
     </button>
   
@@ -517,7 +517,7 @@ if (isset($_SESSION['user_id'])) {
   
     <div class="pmodal-card" role="dialog" aria-modal="true" aria-labelledby="priceTitle">
       <div class="pmodal-top">
-        <div class="pmodal-title" id="priceTitle">Enter Price</div>
+        <div class="pmodal-title" id="priceTitle"><?= htmlspecialchars(t('enter_price')) ?></div>
         <button class="pmodal-x" id="priceClose" type="button" aria-label="Close">✕</button>
       </div>
   
@@ -551,8 +551,8 @@ if (isset($_SESSION['user_id'])) {
   
       <!-- Footer buttons -->
       <div class="pmodal-actions">
-        <button class="btn-lite" id="priceReset" type="button">Reset</button>
-        <button class="btn-main" id="priceDone" type="button">Done</button>
+        <button class="btn-lite" id="priceReset" type="button"><?= htmlspecialchars(t('reset')) ?></button>
+        <button class="btn-main" id="priceDone" type="button"><?= htmlspecialchars(t('done')) ?></button>
       </div>
     </div>
   </div>
@@ -671,7 +671,7 @@ if (isset($_SESSION['user_id'])) {
           
           <!-- Visit time row -->
           <a href="single-property.php" class="fcc main-details">
-             <span class="main-details-btn">View Details</span>
+             <span class="main-details-btn"><?= htmlspecialchars(t('view_details')) ?></span>
            </a>
         </div>
     
@@ -691,7 +691,7 @@ if (isset($_SESSION['user_id'])) {
                 <div class="pc-loan-amt">Rs 245,000</div>
               </div>
     
-              <a class="pc-apply" href="apply-loan.php">APPLY NOW</a>
+              <a class="pc-apply" href="apply-loan.php"><?= htmlspecialchars(t('apply_now')) ?></a>
             </div>
           </div>
       </div>
@@ -700,16 +700,16 @@ if (isset($_SESSION['user_id'])) {
 
       <!-- Action buttons -->
       <div class="fsb pc-actions">
-        <button class="pc-btn" type="button">List</button>
+        <button class="pc-btn" type="button"><?= htmlspecialchars(t('list_button')) ?></button>
 
         <a class="pc-btn pc-btn-call" href="tel:+94770000000">
           <img src="img/icons/call.svg" alt="" class="pc-btn-ic">
-          Call
+          <?= htmlspecialchars(t('call')) ?>
         </a>
 
         <a class="pc-btn pc-btn-whatsapp" href="https://wa.me/94770000000" target="_blank" rel="noopener">
           <img src="img/icons/whatsapp.svg" alt="" class="pc-btn-ic">
-          WhatsApp
+          <?= htmlspecialchars(t('whatsapp')) ?>
         </a>
       </div>
 
@@ -751,7 +751,7 @@ if (isset($_SESSION['user_id'])) {
           <!-- users -->
           <img src="img/icons/about-us-footer.svg" alt="" class="footer-icon">
         </span>
-        <span class="bb-txt">About Us</span>
+        <span class="bb-txt"><?= htmlspecialchars(t('about_us')) ?></span>
       </a>
   
       <a class="fcc bb-item" href="#">
@@ -759,7 +759,7 @@ if (isset($_SESSION['user_id'])) {
           <!-- chat -->
           <img src="img/icons/about-web-footer.svg" alt="" class="footer-icon">
         </span>
-        <span class="bb-txt">About Web</span>
+        <span class="bb-txt"><?= htmlspecialchars(t('about_web')) ?></span>
       </a>
     </div>
 
@@ -774,7 +774,7 @@ if (isset($_SESSION['user_id'])) {
           <!-- list -->
           <img src="img/icons/list-footer.svg" alt="" class="footer-icon">
         </span>
-        <span class="bb-txt">List</span>
+        <span class="bb-txt"><?= htmlspecialchars(t('list')) ?></span>
       </a>
   
       <a class="fcc bb-item" href="#">
@@ -782,7 +782,7 @@ if (isset($_SESSION['user_id'])) {
           <!-- bell -->
           <img src="img/icons/notification-footer.svg" alt="" class="footer-icon">
         </span>
-        <span class="bb-txt">Notification</span>
+        <span class="bb-txt"><?= htmlspecialchars(t('notification')) ?></span>
       </a>
   
       <a class="fcc bb-item" href="#">
@@ -790,7 +790,7 @@ if (isset($_SESSION['user_id'])) {
           <!-- message -->
           <img src="img/icons/message-footer.svg" alt="" class="footer-icon">
         </span>
-        <span class="bb-txt">Message</span>
+        <span class="bb-txt"><?= htmlspecialchars(t('message')) ?></span>
       </a>
     </div>
 
